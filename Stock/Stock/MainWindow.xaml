@@ -1,0 +1,87 @@
+﻿<Window x:Class="Stock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stock"
+        mc:Ignorable="d"
+        Title="Мой склад" Height="687.6" Width="1180">
+    <Grid Name="MainContent" Focusable="True" Background="#FFEFF2F7">
+
+        <Canvas Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4">
+            <Button x:Name="AddProduct" Content="Добавить товар" HorizontalAlignment="Left" Height="59" Margin="10,10,0,0" VerticalAlignment="Top" Width="209" Click="AddProductButton_Click" FontSize="24" Background="White"/>
+            <Button x:Name="AddPackage" Content=" Добавить упаковку" HorizontalAlignment="Left" Height="59" Margin="224,10,0,0" VerticalAlignment="Top" Width="228" FontSize="24" Background="White" Click="AddPackage_Click"/>
+            <Button Content="Упаковать товар" HorizontalAlignment="Left" Height="59" Margin="457,10,0,0" VerticalAlignment="Top" Width="222" FontSize="24" Background="White"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="10,137,0,0">
+                <ListView>
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Width="350">Название</GridViewColumn>
+                                <GridViewColumn Width="90">Всего</GridViewColumn>
+                                <GridViewColumn Width="90">Упаковано</GridViewColumn>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </ScrollViewer>
+            <ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="565,137,0,0">
+                <ListView>
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Width="350">Название</GridViewColumn>
+                                <GridViewColumn Width="90">Размер</GridViewColumn>
+                                <GridViewColumn Width="90">Кол-во</GridViewColumn>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </ScrollViewer>
+            <Button Content="Обновить данные" HorizontalAlignment="Left" Height="41" Margin="971,612,0,0" VerticalAlignment="Top" Width="190" Background="#FFFEFFFE" FontSize="20"/>
+            <Button Content="Выход" HorizontalAlignment="Left" Height="90" Margin="1057,10,0,0" VerticalAlignment="Top" Width="104" FontSize="18"/>
+            <TextBox HorizontalAlignment="Left" Height="46" Margin="145,86,0,0" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <TextBox HorizontalAlignment="Left" Height="46" Margin="726,86,0,0" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
+        </Canvas>
+        <Border  Name="BrdAddProduct" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="337,79,336.6,79.4" BorderThickness="2"  >
+            <Grid>
+
+
+                <Button Name="BtnExistingProduct" Width="250" Height="100" Margin="0,0,246.8,396.8" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click"  />
+                <Button Name="BtnAddNewProduct" Height="100" Margin="250,0,-0.2,396.8" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click"  />
+                <Border Name="BrdAddExistingProduct" Margin="0,100,-0.2,66.8" Background="White">
+                    <TextBox Width="100" Height="50" FontSize="18">проверка 1</TextBox>
+                </Border>
+                <Border Name="BrdAddNewProduct" Margin="0,100,-0.2,66.8" Background="White">
+                    <TextBox Width="100" Height="50" FontSize="18">проверка 2</TextBox>
+
+                </Border>
+                
+                <Button Width="120" Height="40" Margin="10,447,366.8,9.8" Content="На главную" FontSize="20" Click="ToMainButton_Click"/>
+
+
+            </Grid>
+        </Border>
+
+        <Border  Name="BrdAddPackage" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="337,79,336.6,79.4" BorderThickness="2"  >
+            <Grid>
+
+
+                <Button Name="BtnExistingPackage" Width="250" Height="100" Margin="0,0,246.8,396.8" FontSize="20" Content="Существующий" Click="BtnExistingPackage_Click"   />
+                <Button Name="BtnAddNewPackage" Height="100" Margin="250,0,-0.2,396.8" Content="Новый" FontSize="20" Click="BtnAddNewPackage_Click"   />
+                <Border Name="BrdAddExistingPackage" Margin="0,100,-0.2,61.8" Background="White">
+                    <TextBox Width="100" Height="50" FontSize="18">проверка 3</TextBox>
+
+                </Border>
+                <Border Name="BrdAddNewPackage" Margin="0,100,-0.2,61.8" Background="White">
+                    <TextBox Width="100" Height="50" FontSize="18">проверка 4</TextBox>
+
+                </Border>
+                <Button Width="120" Height="40" Margin="10,447,366.8,9.8" Content="На главную" FontSize="20" Click="ToMainButton_Click"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+
+
+</Window>
