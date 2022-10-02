@@ -7,24 +7,38 @@
         mc:Ignorable="d"
         Title="Мой склад" Height="687.6" Width="1180">
     <Grid Name="MainContent" Focusable="True" Background="#FFEFF2F7">
-
+    
         <Canvas Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4">
             <Button x:Name="AddProduct" Content="Добавить товар" HorizontalAlignment="Left" Height="59" Margin="10,10,0,0" VerticalAlignment="Top" Width="209" Click="AddProductButton_Click" FontSize="24" Background="White"/>
             <Button x:Name="AddPackage" Content=" Добавить упаковку" HorizontalAlignment="Left" Height="59" Margin="224,10,0,0" VerticalAlignment="Top" Width="228" FontSize="24" Background="White" Click="AddPackage_Click"/>
             <Button Content="Упаковать товар" HorizontalAlignment="Left" Height="59" Margin="457,10,0,0" VerticalAlignment="Top" Width="222" FontSize="24" Background="White"/>
-            <ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="10,137,0,0">
+            
+            <DataGrid x:Name="phonesGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+            RowBackground="LightGray" AlternatingRowBackground="White" Margin="10,137,0,0">
+                <DataGrid.Items>
+                    <local:Product Name="тетрадь" Count="34" Packed="20" Not_packed="14" />
+                </DataGrid.Items>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="260" />
+                    <DataGridTextColumn Header="Всего" Binding="{Binding Path=Count}" Width="90" />
+                    <DataGridTextColumn Header="Упаковано" Binding="{Binding Path=Packed}" Width="90" />
+                    <DataGridTextColumn Header="Не упаковано" Binding="{Binding Path=Not_packed}" Width="90" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <!--<ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="10,137,0,0">
                 <ListView>
                     <ListView.View>
                         <GridView>
                             <GridView.Columns>
-                                <GridViewColumn Width="350">Название</GridViewColumn>
+                                <GridViewColumn Width="260">Название</GridViewColumn>
                                 <GridViewColumn Width="90">Всего</GridViewColumn>
                                 <GridViewColumn Width="90">Упаковано</GridViewColumn>
+                                <GridViewColumn Width="90">Не упаковано</GridViewColumn>
                             </GridView.Columns>
                         </GridView>
                     </ListView.View>
                 </ListView>
-            </ScrollViewer>
+            </ScrollViewer>-->
             <ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="565,137,0,0">
                 <ListView>
                     <ListView.View>
@@ -39,7 +53,6 @@
                 </ListView>
             </ScrollViewer>
             <Button Content="Обновить данные" HorizontalAlignment="Left" Height="41" Margin="971,612,0,0" VerticalAlignment="Top" Width="190" Background="#FFFEFFFE" FontSize="20"/>
-            <Button Content="Выход" HorizontalAlignment="Left" Height="90" Margin="1057,10,0,0" VerticalAlignment="Top" Width="104" FontSize="18"/>
             <TextBox HorizontalAlignment="Left" Height="46" Margin="145,86,0,0" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
             <TextBox HorizontalAlignment="Left" Height="46" Margin="726,86,0,0" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
         </Canvas>
