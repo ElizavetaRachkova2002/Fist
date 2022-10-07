@@ -20,6 +20,7 @@ namespace Stock
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Product> MyProducts = new List<Product>();
         public MainWindow()
         {
             InitializeComponent();
@@ -81,6 +82,11 @@ namespace Stock
             BrdAddPackage.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
+        }
+
+        private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
+        {
+ //           MyProducts.Add()
         }
     }
 }
