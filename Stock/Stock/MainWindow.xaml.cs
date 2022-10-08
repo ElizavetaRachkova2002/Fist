@@ -21,11 +21,14 @@ namespace Stock
     public partial class MainWindow : Window
     {
         List<Product> MyProducts = new List<Product>();
+        List<Package> MyPackages = new List<Package>();
         public MainWindow()
         {
             InitializeComponent();
-            MyProducts.Add(new Product("dv", 5, 3, 2));
+            MyProducts.Add(new Product("тетрадь", 5, 3, 2));
             productGrid.ItemsSource = MyProducts;                 //Это для вывода
+            MyPackages.Add(new Package("коробка", "20*20", 5));
+            packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;

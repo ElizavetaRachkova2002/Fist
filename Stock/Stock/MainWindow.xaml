@@ -7,61 +7,37 @@
         mc:Ignorable="d"
         Title="Мой склад" Height="687.6" Width="1180">
     <Grid Name="MainContent" Focusable="True" HorizontalAlignment="Stretch" Background="#FFEFF2F7" Margin="0,0,-0.4,0.4">
-
-        <Canvas HorizontalAlignment="Stretch" Margin="0,0,-1,1">
+         <Canvas HorizontalAlignment="Stretch" Margin="0,0,-1,1">
             <Button x:Name="AddProduct" Content="Добавить товар" HorizontalAlignment="Left" Height="59" Margin="10,10,0,0" VerticalAlignment="Top" Width="209" Click="AddProductButton_Click" FontSize="24" Background="White"/>
             <Button x:Name="AddPackage" Content=" Добавить упаковку" HorizontalAlignment="Left" Height="59" Margin="224,10,0,0" VerticalAlignment="Top" Width="228" FontSize="24" Background="White" Click="AddPackage_Click"/>
             <Button Content="Упаковать товар" HorizontalAlignment="Left" Height="59" Margin="457,10,0,0" VerticalAlignment="Top" Width="222" FontSize="24" Background="White"/>
-
-            <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+             
+         <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
             RowBackground="White" AlternatingRowBackground="White" Margin="10,137,0,0">
-                <DataGrid.Items>
-                    
-                    <!--<local:Product Name="тетрадь" Count="34" Packed="20" Not_packed="14" />-->
-                </DataGrid.Items>
-                <DataGrid.Columns>
+                    <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="260" />
                     <DataGridTextColumn Header="Всего" Binding="{Binding Path=Count}" Width="90" />
                     <DataGridTextColumn Header="Упаковано" Binding="{Binding Path=Packed}" Width="90" />
                     <DataGridTextColumn Header="Не упаковано" Binding="{Binding Path=Not_packed}" Width="90" />
+                    </DataGrid.Columns>
+         </DataGrid>
+             
+         <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+            RowBackground="White" AlternatingRowBackground="White" Margin="565,137,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="260" />
+                    <DataGridTextColumn Header="Размер" Binding="{Binding Path=Size}" Width="90" />
+                    <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count_package}" Width="90" />
                 </DataGrid.Columns>
-            </DataGrid>
-            <!--<ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="10,137,0,0">
-                <ListView>
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Width="260">Название</GridViewColumn>
-                                <GridViewColumn Width="90">Всего</GridViewColumn>
-                                <GridViewColumn Width="90">Упаковано</GridViewColumn>
-                                <GridViewColumn Width="90">Не упаковано</GridViewColumn>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </ScrollViewer>-->
-            <ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="550" Margin="565,137,0,0">
-                <ListView>
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Width="350">Название</GridViewColumn>
-                                <GridViewColumn Width="90">Размер</GridViewColumn>
-                                <GridViewColumn Width="90">Кол-во</GridViewColumn>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </ScrollViewer>
-            <Button Content="Обновить данные" HorizontalAlignment="Left" Height="41" Margin="971,612,0,0" VerticalAlignment="Top" Width="190" Background="#FFFEFFFE" FontSize="20"/>
+         </DataGrid>
+             
+           <Button Content="Обновить данные" HorizontalAlignment="Left" Height="41" Margin="971,612,0,0" VerticalAlignment="Top" Width="190" Background="#FFFEFFFE" FontSize="20"/>
             <TextBox HorizontalAlignment="Left" Height="46" Margin="145,86,0,0" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
             <TextBox HorizontalAlignment="Left" Height="46" Margin="726,86,0,0" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
         </Canvas>
         <Border  Name="BrdAddProduct" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="30,49,644,109" BorderThickness="2"  >
             <Canvas>
-
-
-                <Button Name="BtnExistingProduct" Width="250" Height="100" Margin="0,0,33.6,396.8" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click"  />
+               <Button Name="BtnExistingProduct" Width="250" Height="100" Margin="0,0,33.6,396.8" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click"  />
                 <Button Name="BtnAddNewProduct" Height="100" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Grid.ColumnSpan="2" Canvas.Left="250" Width="247"  />
                 <Canvas Name="BrdAddNewProduct" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="100" Width="497">
                     <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
@@ -71,10 +47,8 @@
                     <TextBlock Width="100" FontSize="18" Text="Штрихкод:" Canvas.Left="23" Canvas.Top="214"/>
                     <TextBlock Width="100" FontSize="18" Text="Упаковка:" Canvas.Left="23" Canvas.Top="262"/>
                     <TextBlock Width="100" FontSize="18" Text="Кол-во" Canvas.Left="23" Canvas.Top="301"/>
-
                     <Button x:Name="Btn_Add_New_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Product_Click" Background="#FFB4D2FA"/>
-
-                    <ComboBox x:Name="TB_New_Legal_Entity" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26">
+                   <ComboBox x:Name="TB_New_Legal_Entity" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26">
                         <ComboBoxItem Content="ИП Коровкин А.И." HorizontalAlignment="Left" Width="330.4"/>
                         <ComboBoxItem Content="ИП Семенов И.Д." HorizontalAlignment="Left" Width="330"/>
                     </ComboBox>
@@ -93,36 +67,21 @@
                 </Canvas>
                 <Canvas Name="BrdAddExistingProduct" Background="White" Width="497" Height="337" Canvas.Top="105">
                     <TextBox Width="100" Height="50" FontSize="18">проверка 2</TextBox>
-
                 </Canvas>
-
-                <Button Width="120" Height="40" HorizontalAlignment="Center" Content="На главную" FontSize="20" Click="ToMainButton_Click" Canvas.Left="202" Canvas.Top="447"/>
-
-
-
-
+               <Button Width="120" Height="40" HorizontalAlignment="Center" Content="На главную" FontSize="20" Click="ToMainButton_Click" Canvas.Left="202" Canvas.Top="447"/>
             </Canvas>
         </Border>
-
         <Border  Name="BrdAddPackage" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="578,49,96,109" BorderThickness="2"  >
             <Canvas>
-
-
                 <Button Name="BtnExistingPackage" Width="250" Height="100" Margin="0,0,246.8,396.8" FontSize="20" Content="Существующий" Click="BtnExistingPackage_Click"   />
                 <Button Name="BtnAddNewPackage" Height="100" Content="Новый" FontSize="20" Click="BtnAddNewPackage_Click" Canvas.Left="250" Width="247"   />
                 <Canvas Name="BrdAddExistingPackage" Margin="0,100,-0.2,61.8" Background="White">
                     <TextBox Width="100" Height="50" FontSize="18">проверка 3</TextBox>
-
                 </Canvas>
                 <Canvas Name="BrdAddNewPackage" Margin="0,100,-0.2,61.8" Background="White">
-
-
                 </Canvas>
                 <Button Width="120" Height="40" Margin="10,447,366.8,9.8" Content="На главную" FontSize="20" Click="ToMainButton_Click"/>
-
             </Canvas>
         </Border>
     </Grid>
-
-
 </Window>
