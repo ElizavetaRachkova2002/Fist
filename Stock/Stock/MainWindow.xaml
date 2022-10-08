@@ -13,10 +13,11 @@
             <Button x:Name="AddPackage" Content=" Добавить упаковку" HorizontalAlignment="Left" Height="59" Margin="224,10,0,0" VerticalAlignment="Top" Width="228" FontSize="24" Background="White" Click="AddPackage_Click"/>
             <Button Content="Упаковать товар" HorizontalAlignment="Left" Height="59" Margin="457,10,0,0" VerticalAlignment="Top" Width="222" FontSize="24" Background="White"/>
 
-            <DataGrid x:Name="phonesGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
-            RowBackground="LightGray" AlternatingRowBackground="White" Margin="10,137,0,0">
+            <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+            RowBackground="White" AlternatingRowBackground="White" Margin="10,137,0,0">
                 <DataGrid.Items>
-                    <local:Product Name="тетрадь" Count="34" Packed="20" Not_packed="14" />
+                    
+                    <!--<local:Product Name="тетрадь" Count="34" Packed="20" Not_packed="14" />-->
                 </DataGrid.Items>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="260" />
@@ -62,7 +63,7 @@
 
                 <Button Name="BtnExistingProduct" Width="250" Height="100" Margin="0,0,33.6,396.8" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click"  />
                 <Button Name="BtnAddNewProduct" Height="100" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Grid.ColumnSpan="2" Canvas.Left="250" Width="247"  />
-                <Canvas Name="BrdAddExistingProduct" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="100" Width="497">
+                <Canvas Name="BrdAddNewProduct" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="100" Width="497">
                     <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
                     <TextBlock Width="100" FontSize="18" Text="Юр. лицо:" Canvas.Left="23" Canvas.Top="81"/>
                     <TextBlock Width="100" FontSize="18" Text="Бренд:" Canvas.Left="23" Canvas.Top="126"/>
@@ -90,7 +91,7 @@
                     <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359"/>
                     <TextBox x:Name="TB_NewProduct_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231"/>
                 </Canvas>
-                <Canvas Name="BrdAddNewProduct" Background="White" Width="497" Height="337" Canvas.Top="105">
+                <Canvas Name="BrdAddExistingProduct" Background="White" Width="497" Height="337" Canvas.Top="105">
                     <TextBox Width="100" Height="50" FontSize="18">проверка 2</TextBox>
 
                 </Canvas>

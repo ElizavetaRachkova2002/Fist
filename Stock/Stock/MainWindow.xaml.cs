@@ -24,11 +24,14 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
+            MyProducts.Add(new Product("dv", 5, 3, 2));
+            productGrid.ItemsSource = MyProducts;                 //Это для вывода
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddPackage.Visibility = Visibility.Collapsed;
+
         }
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
@@ -86,7 +89,7 @@ namespace Stock
 
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
- //           MyProducts.Add()
+            //           MyProducts.Add()
         }
     }
 }

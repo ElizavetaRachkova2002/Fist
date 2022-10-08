@@ -16,5 +16,13 @@ namespace Stock
         public int Count { get; set; }
         public int Packed { get; set; }
         public int Not_packed { get; set; }
+        public Product(string name, int count, int packed, int not_packed)
+        {
+            Name = name;
+            Count = count;
+            Packed = packed;
+            Not_packed = not_packed;
+        }
+      
     }
 }
