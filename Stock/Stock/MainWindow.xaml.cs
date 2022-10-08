@@ -25,9 +25,13 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
-            MyProducts.Add(new Product("тетрадь", 5, 3, 2));
+            
+            for (int i=0;i<40; i ++)
+            {
+                MyProducts.Add(new Product("тетрадь", "", "", "", 5667, 5, 3, 2, "Коробка", "40x40"));
+            }
             productGrid.ItemsSource = MyProducts;                 //Это для вывода
-            MyPackages.Add(new Package("коробка", "20*20", 5));
+            //MyPackages.Add(new Package("коробка", "20*20", 5));
             packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
@@ -92,7 +96,25 @@ namespace Stock
 
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
-            //           MyProducts.Add()
+            string name = TB_New_Name.Text;
+            TB_New_Name.Clear();
+            string legal = TB_New_Legal_Entity.Text;
+            string brand = TB_New_Brand.Text;
+            TB_New_Brand.Clear();
+            string vendor = TB_New_Vendor_Code.Text;
+            TB_New_Vendor_Code.Clear();
+            int barcode = int.Parse(TB_New_Barcode.Text);
+            TB_New_Barcode.Clear();
+            string packageN = TB_NewProduct_Package_Name.Text;
+            string packageS = TB_NewProduct_Package_Size.Text;
+            int count = int.Parse(TB_NewProduct_Count.Text);
+            TB_NewProduct_Count.Clear();
+            Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, packageS);
+            MyProducts.Add(new_product);
+            BrdAddPackage.Visibility = Visibility.Collapsed;
+            BrdAddProduct.Visibility = Visibility.Collapsed;
+            MainContent.Focusable = true;
+
         }
     }
 }

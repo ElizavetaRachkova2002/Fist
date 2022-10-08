@@ -51,7 +51,6 @@ Z:\Документы\Desktop\проект\Fist\Stock\Stock\bin\Debug\Stock.pdb
 Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\Stock.csprojAssemblyReference.cache
 Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\MainWindow.g.cs
 Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\App.g.cs
-Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
 Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.cache
 Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.lref
 Z:\Документы\Desktop\проект\Fist\Stock\Stock\obj\Debug\MainWindow.baml
