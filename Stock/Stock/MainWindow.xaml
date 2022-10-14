@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
+        
         mc:Ignorable="d"
         Title="Мой склад" Height="687.6" Width="1180">
     <Grid Name="MainContent" Focusable="True" HorizontalAlignment="Stretch" Background="#FFEFF2F7" Margin="0,0,-0.4,0.4">
@@ -21,6 +22,9 @@
                     <DataGridTextColumn Header="Упаковано" Binding="{Binding Path=Packed}" Width="90" />
                     <DataGridTextColumn Header="Не упаковано" Binding="{Binding Path=Not_Packed}" Width="90" />
                 </DataGrid.Columns>
+
+              
+                
             </DataGrid>
 
             <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" CanUserAddRows="False"
@@ -66,13 +70,24 @@
                     <TextBox x:Name="TB_NewProduct_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231"/>
                 </Canvas>
                 
+                
                 <Canvas Name="BrdAddExistingProduct" Background="White" Width="497" Height="337" Canvas.Top="100">
-                    <TextBox Width="100" Height="50" FontSize="18">проверка 2</TextBox>
+                    <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
+                    <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
+                    <Button x:Name="Btn_Add_Existing_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA"/>
+                    <ComboBox ItemsSource="{Binding Path=Name}" Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" >
+                    </ComboBox>
+                    <TextBox x:Name="TB_Exist_Brand" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="300"/>
+
+
+                   
                 </Canvas>
+                
+                
+                
                 <Button Width="120" Height="40" HorizontalAlignment="Center" Content="На главную" FontSize="20" Click="ToMainButton_Click" Canvas.Left="202" Canvas.Top="447"/>
             </Canvas>
-            
-        </Border>
+         </Border>
         <Border  Name="BrdAddPackage" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="612,49,62,109" BorderThickness="2"  >
             <Canvas>
                 <Button Name="BtnExistingPackage" Width="250" Height="100" Margin="0,0,246.8,396.8" FontSize="20" Content="Существующий" Click="BtnExistingPackage_Click"   />
