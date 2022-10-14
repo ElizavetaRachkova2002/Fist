@@ -25,20 +25,21 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
-            
-            for (int i=0;i<40; i ++)
+            for (int i = 0; i < 40; i++)
             {
                 MyProducts.Add(new Product("тетрадь", "", "", "", 5667, 5, 3, 2, "Коробка", "40x40"));
             }
-            productGrid.ItemsSource = MyProducts;                 //Это для вывода
-            //MyPackages.Add(new Package("коробка", "20*20", 5));
+            productGrid.ItemsSource = MyProducts;
+            for (int i = 0; i < 30; i++)
+            {
+                MyPackages.Add(new Package("коробка", "20*20", 5));
+            }
             packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddPackage.Visibility = Visibility.Collapsed;
-
         }
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
@@ -48,7 +49,6 @@ namespace Stock
             BrdAddPackage.Focusable = true;
             BrdAddExistingPackage.Visibility = Visibility.Visible;
             BrdAddNewPackage.Visibility = Visibility.Collapsed;
-
         }
 
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
@@ -58,9 +58,6 @@ namespace Stock
             BrdAddProduct.Focusable = true;
             BrdAddExistingProduct.Visibility = Visibility.Visible;
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
-
-
-
         }
 
         private void BtnAddNewProduct_Click(object sender, RoutedEventArgs e)
@@ -94,6 +91,20 @@ namespace Stock
             MainContent.Focusable = true;
         }
 
+        private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
+        {
+            string name =Pack_New_Name.Text;
+            Pack_New_Name.Clear();
+            string size =Pack_New_Size.Text;
+            Pack_New_Size.Clear();
+            int count = int.Parse(Pack_New_Count.Text);
+            Pack_New_Count.Clear();
+            Package package=new Package(name, size, count);
+            MyPackages.Add(package);
+            BrdAddPackage.Visibility = Visibility.Collapsed;
+            BrdAddProduct.Visibility = Visibility.Collapsed;
+            MainContent.Focusable = true;
+        }
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
             string name = TB_New_Name.Text;
@@ -114,7 +125,6 @@ namespace Stock
             BrdAddPackage.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
-
         }
     }
 }

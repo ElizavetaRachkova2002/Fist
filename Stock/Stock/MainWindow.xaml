@@ -12,9 +12,9 @@
             <Button x:Name="AddPackage" Content=" Добавить упаковку" HorizontalAlignment="Left" Height="59" Margin="224,10,0,0" VerticalAlignment="Top" Width="228" FontSize="24" Background="White" Click="AddPackage_Click"/>
             <Button Content="Упаковать товар" HorizontalAlignment="Left" Height="59" Margin="457,10,0,0" VerticalAlignment="Top" Width="222" FontSize="24" Background="White"/>
             <Button Content="Удалить товар" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="222" FontSize="24" Background="White" Canvas.Left="684" Canvas.Top="10"/>
-
-            <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
-            RowBackground="White" AlternatingRowBackground="White" Margin="10,137,0,0">
+            <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" CanUserAddRows="False"
+                      VerticalScrollBarVisibility="Auto" Grid.Row="0"
+            RowBackground="White" AlternatingRowBackground="White" Margin="10,137,0,0" MaxHeight="500">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="260" />
                     <DataGridTextColumn Header="Всего" Binding="{Binding Path=Count}" Width="90" />
@@ -23,16 +23,15 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-            <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
-            RowBackground="White" AlternatingRowBackground="White" Margin="565,137,0,0">
+            <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" CanUserAddRows="False"
+                       VerticalScrollBarVisibility="Auto" Grid.Row="0"
+            RowBackground="White" AlternatingRowBackground="White" Margin="580,137,0,0"  MaxHeight="500">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="260" />
                     <DataGridTextColumn Header="Размер" Binding="{Binding Path=Size}" Width="90" />
                     <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count_package}" Width="90" />
                 </DataGrid.Columns>
             </DataGrid>
-
-            <Button Content="Обновить данные" HorizontalAlignment="Left" Height="41" Margin="971,612,0,0" VerticalAlignment="Top" Width="190" Background="#FFFEFFFE" FontSize="20"/>
             <TextBox HorizontalAlignment="Left" Height="46" Margin="145,86,0,0" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
             <TextBox HorizontalAlignment="Left" Height="46" Margin="726,86,0,0" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
         </Canvas>
@@ -66,22 +65,33 @@
                     <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359"/>
                     <TextBox x:Name="TB_NewProduct_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231"/>
                 </Canvas>
+                
                 <Canvas Name="BrdAddExistingProduct" Background="White" Width="497" Height="337" Canvas.Top="100">
                     <TextBox Width="100" Height="50" FontSize="18">проверка 2</TextBox>
                 </Canvas>
                 <Button Width="120" Height="40" HorizontalAlignment="Center" Content="На главную" FontSize="20" Click="ToMainButton_Click" Canvas.Left="202" Canvas.Top="447"/>
             </Canvas>
+            
         </Border>
         <Border  Name="BrdAddPackage" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="612,49,62,109" BorderThickness="2"  >
             <Canvas>
                 <Button Name="BtnExistingPackage" Width="250" Height="100" Margin="0,0,246.8,396.8" FontSize="20" Content="Существующий" Click="BtnExistingPackage_Click"   />
                 <Button Name="BtnAddNewPackage" Height="100" Content="Новый" FontSize="20" Click="BtnAddNewPackage_Click" Canvas.Left="250" Width="247"   />
-                <Canvas Name="BrdAddExistingPackage" Margin="0,100,-0.2,61.8" Background="White">
-                    <TextBox Width="100" Height="50" FontSize="18">проверка 3</TextBox>
-                </Canvas>
-                <Canvas Name="BrdAddNewPackage" Margin="0,100,-0.2,61.8" Background="White">
 
+                <Canvas Name="BrdAddExistingPackage" Margin="0,0,0,0" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="100" Width="497">
+                
                 </Canvas>
+
+                <Canvas Name="BrdAddNewPackage" Margin="0,0,0,0" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="100" Width="497">
+                    <TextBlock Width="100" FontSize="18" Margin="23,32,0,0" Text="Название:"/>
+                    <TextBlock Width="100" FontSize="18" Margin="23,32,0,0" Text="Размер:" Canvas.Top="35"/>
+                    <TextBlock Width="100" FontSize="18"  Margin="23,32,0,0" Text="Кол-во" Canvas.Top="70"/>
+                    <Button x:Name="Btn_Add_New_Package" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Package_Click" Background="#FFB4D2FA"/>
+                    <TextBox x:Name="Pack_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="35" Width="359"/>
+                    <TextBox x:Name="Pack_New_Size" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="70" Width="359"/>
+                    <TextBox x:Name="Pack_New_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="105" Width="359"/>
+                </Canvas>
+                
                 <Button Width="120" Height="40" Margin="10,447,366.8,9.8" Content="На главную" FontSize="20" Click="ToMainButton_Click"/>
             </Canvas>
         </Border>
