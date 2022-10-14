@@ -36,10 +36,10 @@
                     <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count_package}" Width="90" />
                 </DataGrid.Columns>
             </DataGrid>
-            <TextBox HorizontalAlignment="Left" Height="46" Margin="145,86,0,0" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
-            <TextBox HorizontalAlignment="Left" Height="46" Margin="726,86,0,0" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" />
+            <TextBlock HorizontalAlignment="Left" Height="46" Margin="145,86,0,0" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30"  />
+            <TextBlock HorizontalAlignment="Left" Height="46" Margin="726,86,0,0" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" />
         </Canvas>
-        <Border  Name="BrdAddProduct" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="30,49,644,109" BorderThickness="2"  >
+        <Border  Name="BrdAddProduct" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="58,49,616,109" BorderThickness="2"  >
             <Canvas>
                 <Button Name="BtnExistingProduct" Width="250" Height="100" Margin="0,0,33.6,396.8" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click"  />
                 <Button Name="BtnAddNewProduct" Height="100" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Grid.ColumnSpan="2" Canvas.Left="250" Width="247"  />
@@ -75,7 +75,7 @@
                     <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
                     <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
                     <Button x:Name="Btn_Add_Existing_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA"/>
-                    <ComboBox ItemsSource="{Binding Path=Name}" Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" >
+                    <ComboBox x:Name="Combo_product_add"   Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" >
                     </ComboBox>
                     <TextBox x:Name="TB_Exist_Brand" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="300"/>
 

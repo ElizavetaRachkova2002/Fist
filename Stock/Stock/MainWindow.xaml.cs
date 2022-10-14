@@ -26,15 +26,18 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
-            for (int i = 0; i < 40; i++)
-            {
-                MyProducts.Add(new Product("тетрадь", "", "", "", 5667, 5, 3, 2, "Коробка", "40x40"));
-            }
+            //for (int i = 0; i < 40; i++)
+            //{
+            //    MyProducts.Add(new Product("тетрадь", "", "", "", 5667, i, 3, 2, "Коробка", "40x40"));
+            //}
+            MyProducts.Add(new Product("тетрадь 1", "", "", "", 5667, 10, 3, 2, "Коробка", "40x40"));
+            MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 3, 2, "Коробка", "40x40"));
+            MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 3, 2, "Коробка", "40x40"));
             productGrid.ItemsSource = MyProducts;
-            for (int i = 0; i < 30; i++)
-            {
-                MyPackages.Add(new Package("коробка", "20*20", 5));
-            }
+            //for (int i = 0; i < 30; i++)
+            //{
+            //    MyPackages.Add(new Package("коробка", "20*20", 5));
+            //}
             packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
@@ -54,6 +57,13 @@ namespace Stock
 
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
+            Combo_product_add.Items.Clear();
+
+            for (int i=0;i<MyProducts.Count;i++)
+            {
+                Combo_product_add.Items.Add(MyProducts[i].Name);
+            }
+
             MainContent.Focusable = false;
             BrdAddProduct.Visibility = Visibility.Visible;
             BrdAddProduct.Focusable = true;
@@ -93,6 +103,7 @@ namespace Stock
         }
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
         {
+            
         }
 
         private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
@@ -130,5 +141,6 @@ namespace Stock
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
         }
+        
     }
 }
