@@ -13,15 +13,17 @@ namespace Stock
         public string Legal_entity { get; set; }   
         public string Brand { get; set; }
         public string Vendor_code { get; set; }
-        public int Barcode { get; set; }
+        public ulong Barcode { get; set; }
         public int Count { get; set; }
         public int Packed { get; set; }
 
         public int Not_Packed { get; set; }
         public string PackageName { get; set; }
         public string PackageSize { get; set; }
+
+        public int Brak { get; set; }
         public Product() { }
-        public Product(string name,  string legal_enity, string brand, string vendor_code, int barcode, int count, int packed, int not_Packed, string packageName, string packageSize )
+        public Product(string name,  string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName, string packageSize, int brak )
         {
             Name = name;
             Legal_entity = legal_enity;
@@ -33,6 +35,7 @@ namespace Stock
             Not_Packed = not_Packed;
             PackageName = packageName;
             PackageSize = packageSize;
+            Brak = brak;
             
         }
       

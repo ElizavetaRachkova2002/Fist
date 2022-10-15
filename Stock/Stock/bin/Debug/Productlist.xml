@@ -1,2 +1,29 @@
 <?xml version="1.0"?>
-<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <Name>Кредитница</Name>
+    <Legal_entity>ИП Коровкин А.И.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>01</Vendor_code>
+    <Barcode>2028250054626</Barcode>
+    <Count>189</Count>
+    <Packed>99</Packed>
+    <Not_Packed>90</Not_Packed>
+    <PackageName>Пакет</PackageName>
+    <PackageSize>40x40</PackageSize>
+    <Brak>11</Brak>
+  </Product>
+  <Product>
+    <Name>а</Name>
+    <Legal_entity>ИП Коровкин А.И.</Legal_entity>
+    <Brand>прол</Brand>
+    <Vendor_code>ирл</Vendor_code>
+    <Barcode>5678</Barcode>
+    <Count>0</Count>
+    <Packed>0</Packed>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>Коробка</PackageName>
+    <PackageSize>40x40</PackageSize>
+    <Brak>0</Brak>
+  </Product>
+</ArrayOfProduct>

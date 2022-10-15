@@ -32,7 +32,7 @@ namespace Stock
             //MyProducts.Add(new Product("тетрадь 1", "И.П. Коровушкина", "Коровушка", "Корова", 5667, 10, 8, 2, "Коробка", "40x40"));
             //MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 4, 3, "Коробка", "40x40"));
             //MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 18, 2, "Коробка", "40x40"));
-            //productGrid.ItemsSource = MyProducts;
+            productGrid.ItemsSource = MyProducts;
             //MyPackages.Add(new Package("box", "30*30", 5));
             //MyPackages.Add(new Package("box", "130*30", 5));
             //MyPackages.Add(new Package("box", "2000*200", 5));
@@ -45,6 +45,8 @@ namespace Stock
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddPackage.Visibility = Visibility.Collapsed;
+            Brd_WarmUp.Visibility = Visibility.Collapsed;
+
         }
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
@@ -98,19 +100,20 @@ namespace Stock
         {
             BrdAddNewPackage.Visibility = Visibility.Collapsed;
             BrdAddExistingPackage.Visibility = Visibility.Visible;
-            SavePackageList();
+            
         }
 
         private void BtnAddNewPackage_Click(object sender, RoutedEventArgs e)
         {
             BrdAddExistingPackage.Visibility = Visibility.Collapsed;
             BrdAddNewPackage.Visibility = Visibility.Visible;
-            SavePackageList();
+            
         }
 
         private void ToMainButton_Click(object sender, RoutedEventArgs e)
         {
             BrdAddPackage.Visibility = Visibility.Collapsed;
+            Brd_WarmUp.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
         }
@@ -131,6 +134,7 @@ namespace Stock
             BrdAddPackage.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
+            SaveProductList();
         }
         private void grid_MouseUp_Package(object sender, MouseButtonEventArgs e)
         {
@@ -159,6 +163,7 @@ namespace Stock
             BrdAddPackage.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
+            SavePackageList();
         }
         private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
         {
@@ -173,6 +178,7 @@ namespace Stock
             BrdAddPackage.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
+            SavePackageList();
         }
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
@@ -183,17 +189,18 @@ namespace Stock
             TB_New_Brand.Clear();
             string vendor = TB_New_Vendor_Code.Text;
             TB_New_Vendor_Code.Clear();
-            int barcode = int.Parse(TB_New_Barcode.Text);
+            ulong barcode = ulong.Parse(TB_New_Barcode.Text);
             TB_New_Barcode.Clear();
             string packageN = TB_NewProduct_Package_Name.Text;
             string packageS = TB_NewProduct_Package_Size.Text;
             int count = int.Parse(TB_NewProduct_Count.Text);
             TB_NewProduct_Count.Clear();
-            Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, packageS);
+            Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, packageS,0);
             MyProducts.Add(new_product);
             BrdAddPackage.Visibility = Visibility.Collapsed;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
+            SaveProductList();
         }
 
         private void LoadProductList()
@@ -216,7 +223,7 @@ namespace Stock
             XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
             using (Stream writer = new FileStream("Productlist.xml", FileMode.Create))
             {
-                serializer.Serialize(writer, this.MyProducts);
+                serializer.Serialize(writer, MyProducts);
             }
         }
 
@@ -245,5 +252,49 @@ namespace Stock
             }
         }
 
+        private void WarmUp(int count)
+        {
+
+        }
+
+        private void Btn_WarmUp_Click(object sender, RoutedEventArgs e)
+        {
+            Brd_WarmUp.Visibility = Visibility.Visible;
+            Brd_WarmUp.Focusable = true;
+            Combo_WarmUp_Name.Items.Clear();
+            for (int i = 0; i < MyProducts.Count; i++)
+            {
+                Combo_WarmUp_Name.Items.Add(MyProducts[i].Name);
+            }
+
+
+        }
+
+        private void Btn_WarmUp_Product_Click(object sender, RoutedEventArgs e)
+        {
+            string name = Combo_WarmUp_Name.Text;
+            int count = int.Parse(WarmUp_Count.Text);
+            int brak = int.Parse(WarmUp_Brak.Text);
+
+            for (int i = 0; i < MyProducts.Count; i++)
+            {
+                if (MyProducts[i].Name == name)
+                {
+                    MyProducts[i].Count -= brak;
+                    MyProducts[i].Brak += brak;
+                    MyProducts[i].Not_Packed -= brak;
+                    MyProducts[i].Not_Packed -= count;
+                    MyProducts[i].Packed += count;
+                    WarmUp_Count.Clear();
+                    WarmUp_Brak.Clear();
+                    break;
+
+                }
+            }
+            Brd_WarmUp.Visibility = Visibility.Collapsed;
+            SaveProductList();
+
+
+        }
     }
 }
