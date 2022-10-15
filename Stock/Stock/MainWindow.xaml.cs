@@ -26,19 +26,15 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
-            //for (int i = 0; i < 40; i++)
-            //{
-            //    MyProducts.Add(new Product("тетрадь", "", "", "", 5667, i, 3, 2, "Коробка", "40x40"));
-            //}
-            MyProducts.Add(new Product("тетрадь 1", "", "", "", 5667, 10, 3, 2, "Коробка", "40x40"));
-            MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 3, 2, "Коробка", "40x40"));
-            MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 3, 2, "Коробка", "40x40"));
+            MyProducts.Add(new Product("тетрадь 1", "И.П. Коровушкина", "Коровушка", "Корова", 5667, 10, 8, 2, "Коробка", "40x40"));
+            MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 4, 3, "Коробка", "40x40"));
+            MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 18, 2, "Коробка", "40x40"));
             productGrid.ItemsSource = MyProducts;
-            //for (int i = 0; i < 30; i++)
-            //{
-            //    MyPackages.Add(new Package("коробка", "20*20", 5));
-            //}
-            packageGrid.ItemsSource = MyPackages;
+
+            MyPackages.Add(new Package("box", "30*30", 5));
+            MyPackages.Add(new Package("box", "130*30", 5));
+            MyPackages.Add(new Package("box", "2000*200", 5));
+           packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
@@ -48,6 +44,12 @@ namespace Stock
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
         {
+            Combo_package_add.Items.Clear();
+            for (int i=0;i<MyPackages.Count;i++)
+            {
+                Combo_package_add.Items.Add(MyPackages[i].ToString());
+            }
+
             MainContent.Focusable = false;
             BrdAddPackage.Visibility = Visibility.Visible;
             BrdAddPackage.Focusable = true;
@@ -101,11 +103,52 @@ namespace Stock
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
         }
+      
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
+            string name = Combo_product_add.Text;
+            for (int i = 0; i < MyProducts.Count; i++)
+            {
 
+                if (MyProducts[i].Name == name)
+                {
+                    MyProducts[i].Count +=int.Parse( TB_Exist_Count.Text);
+                    MyProducts[i].Not_Packed+=int.Parse(TB_Exist_Count.Text) ;
+                }
+            }
+            TB_Exist_Count.Clear();
+            BrdAddPackage.Visibility = Visibility.Collapsed;
+            BrdAddProduct.Visibility = Visibility.Collapsed;
+            MainContent.Focusable = true;
+        }
+        private void grid_MouseUp_Package(object sender, MouseButtonEventArgs e)
+        {
+            Package package= packageGrid.SelectedItem as Package;
+            MessageBox.Show(" Name: " + package.Name_package + "\n Размер: " + package.Size + "\n Количество: " + package.Count_package);
+        }
+        private void grid_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Product product = productGrid.SelectedItem as Product;
+            MessageBox.Show(" Name: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
+                 "\n Упаковка: " + product.PackageName + "\n Размер упаковки : " + product.PackageSize + "\n Количество : " + product.Count
+                 + "\n Упаковано : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
+        }
+        private void Btn_Add_Existing_Package_Click(object sender, RoutedEventArgs e)
+        {
+            var str = Combo_package_add.Text.Split(' ');
+            for (int i=0;i<MyPackages.Count;i++)
+            {
+                if(MyPackages[i].Name_package == str[0] && MyPackages[i].Size==str[1])
+                {
+                    MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
+                }
+            }
+
+            Pack_Exist_Count.Clear();
+            BrdAddPackage.Visibility = Visibility.Collapsed;
+            BrdAddProduct.Visibility = Visibility.Collapsed;
+            MainContent.Focusable = true;
+        }
         private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
         {
             string name =Pack_New_Name.Text;

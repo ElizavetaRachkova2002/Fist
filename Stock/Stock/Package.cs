@@ -17,5 +17,9 @@ namespace Stock
             Size = size;
             Count_package = count;
         }
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", Name_package, Size);
+        }
     }
 }
