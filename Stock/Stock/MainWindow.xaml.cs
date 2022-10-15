@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Xml.Serialization;
+using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -22,19 +24,22 @@ namespace Stock
     {
         public List<Product> MyProducts=new List<Product>();
      
-       List<Package> MyPackages = new List<Package>();
+        public List<Package> MyPackages = new List<Package>();
         public MainWindow()
         {
             InitializeComponent();
-            MyProducts.Add(new Product("тетрадь 1", "И.П. Коровушкина", "Коровушка", "Корова", 5667, 10, 8, 2, "Коробка", "40x40"));
-            MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 4, 3, "Коробка", "40x40"));
-            MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 18, 2, "Коробка", "40x40"));
-            productGrid.ItemsSource = MyProducts;
+            //for (int i=0;i<40;i++)
+            //MyProducts.Add(new Product("тетрадь 1", "И.П. Коровушкина", "Коровушка", "Корова", 5667, 10, 8, 2, "Коробка", "40x40"));
+            //MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 4, 3, "Коробка", "40x40"));
+            //MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 18, 2, "Коробка", "40x40"));
+            //productGrid.ItemsSource = MyProducts;
+            //MyPackages.Add(new Package("box", "30*30", 5));
+            //MyPackages.Add(new Package("box", "130*30", 5));
+            //MyPackages.Add(new Package("box", "2000*200", 5));
 
-            MyPackages.Add(new Package("box", "30*30", 5));
-            MyPackages.Add(new Package("box", "130*30", 5));
-            MyPackages.Add(new Package("box", "2000*200", 5));
-           packageGrid.ItemsSource = MyPackages;
+            LoadPackageList();
+            LoadProductList();
+            packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
@@ -44,6 +49,7 @@ namespace Stock
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
         {
+            Pack_Exist_Count.Clear();
             Combo_package_add.Items.Clear();
             for (int i=0;i<MyPackages.Count;i++)
             {
@@ -77,24 +83,29 @@ namespace Stock
         {
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
             BrdAddNewProduct.Visibility = Visibility.Visible;
+
+            SaveProductList();
         }
 
         private void BtnExistingProduct_Click(object sender, RoutedEventArgs e)
         {
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Visible;
+            SaveProductList();
         }
 
         private void BtnExistingPackage_Click(object sender, RoutedEventArgs e)
         {
             BrdAddNewPackage.Visibility = Visibility.Collapsed;
             BrdAddExistingPackage.Visibility = Visibility.Visible;
+            SavePackageList();
         }
 
         private void BtnAddNewPackage_Click(object sender, RoutedEventArgs e)
         {
             BrdAddExistingPackage.Visibility = Visibility.Collapsed;
             BrdAddNewPackage.Visibility = Visibility.Visible;
+            SavePackageList();
         }
 
         private void ToMainButton_Click(object sender, RoutedEventArgs e)
@@ -124,12 +135,12 @@ namespace Stock
         private void grid_MouseUp_Package(object sender, MouseButtonEventArgs e)
         {
             Package package= packageGrid.SelectedItem as Package;
-            MessageBox.Show(" Name: " + package.Name_package + "\n Размер: " + package.Size + "\n Количество: " + package.Count_package);
+            MessageBox.Show(" Наименование: " + package.Name_package + "\n Размер: " + package.Size + "\n Количество: " + package.Count_package);
         }
         private void grid_MouseUp(object sender, MouseButtonEventArgs e)
         {
             Product product = productGrid.SelectedItem as Product;
-            MessageBox.Show(" Name: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
+            MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
                  "\n Упаковка: " + product.PackageName + "\n Размер упаковки : " + product.PackageSize + "\n Количество : " + product.Count
                  + "\n Упаковано : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
         }
@@ -184,6 +195,55 @@ namespace Stock
             BrdAddProduct.Visibility = Visibility.Collapsed;
             MainContent.Focusable = true;
         }
-        
+
+        private void LoadProductList()
+        {
+            if (File.Exists("Productlist.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
+                using (Stream reader = new FileStream("Productlist.xml", FileMode.Open))
+                {
+                    List<Product> tempList = (List<Product>)serializer.Deserialize(reader);
+                    this.MyProducts.Clear();
+                    foreach (var item in tempList)
+                        this.MyProducts.Add(item);
+                }
+            }
+        }
+
+        private void SaveProductList()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
+            using (Stream writer = new FileStream("Productlist.xml", FileMode.Create))
+            {
+                serializer.Serialize(writer, this.MyProducts);
+            }
+        }
+
+
+        private void LoadPackageList()
+        {
+            if (File.Exists("Packagelist.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Package>));
+                using (Stream reader = new FileStream("Packagelist.xml", FileMode.Open))
+                {
+                    List<Package> tempList = (List<Package>)serializer.Deserialize(reader);
+                    this.MyProducts.Clear();
+                    foreach (var item in tempList)
+                        this.MyPackages.Add(item);
+                }
+            }
+        }
+
+        private void SavePackageList()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Package>));
+            using (Stream writer = new FileStream("Productlist.xml", FileMode.Create))
+            {
+                serializer.Serialize(writer, this.MyPackages);
+            }
+        }
+
     }
 }

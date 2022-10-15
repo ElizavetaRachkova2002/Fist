@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Stock
 {
-     class Package
-    {
+     public class Package
+     {
         public string Name_package { get; set; }
         public string Size { get; set; }
         public int Count_package { get; set; }
+
+        public Package() { }
         public Package(string name, string size, int count)
         {
             Name_package = name;

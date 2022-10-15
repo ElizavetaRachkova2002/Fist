@@ -20,6 +20,7 @@ namespace Stock
         public int Not_Packed { get; set; }
         public string PackageName { get; set; }
         public string PackageSize { get; set; }
+        public Product() { }
         public Product(string name,  string legal_enity, string brand, string vendor_code, int barcode, int count, int packed, int not_Packed, string packageName, string packageSize )
         {
             Name = name;
