@@ -352,5 +352,11 @@ namespace Stock
             Brd_Add_LegalEnity.Focusable = false;
 
         }
+
+        private void Cancel_Add_New_LegalEnity_Click(object sender, RoutedEventArgs e)
+        {
+            Brd_Add_LegalEnity.Visibility = Visibility.Collapsed;
+            Brd_Add_LegalEnity.Focusable = false;
+        }
     }
 }

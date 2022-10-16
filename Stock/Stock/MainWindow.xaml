@@ -50,7 +50,7 @@
 
         </Canvas>
 
-        <Border x:Name="Brd_WarmUp" Height="300" Width="400" Background="White" BorderBrush="Black" Panel.ZIndex="19" BorderThickness="1" Margin="404,198,370,160" >
+        <Border x:Name="Brd_WarmUp" Height="300" Width="400" Background="White" BorderBrush="Black" Panel.ZIndex="19" BorderThickness="1" Margin="744,203,30,155" >
             <Canvas>
                 <TextBlock Width="100" FontSize="18" Text="Название:" Canvas.Left="26" Canvas.Top="70"/>
                 <TextBlock Width="218" FontSize="18" Text="Подготовлено к продаже:" Canvas.Left="26" Canvas.Top="117"/>
@@ -69,6 +69,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="23" Margin="11,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="16" Text="Наименование:"/>
                 <TextBox x:Name="New_LegalEnity"  Width="225" Height="24" Canvas.Left="135" Canvas.Top="44" ></TextBox>
                 <Button x:Name="Add_New_LegalEnity"  Width="120" Height="40" Content="Добавить" FontSize="20"  Background="#FFB4D2FA" Canvas.Left="240" Canvas.Top="98" Click="Add_New_LegalEnity_Click"/>
+                <Button x:Name="Cancel_Add_New_LegalEnity"   Width="120" Height="40" Content="Отмена" FontSize="20"  Background="White" Canvas.Left="11" Canvas.Top="98" Click="Cancel_Add_New_LegalEnity_Click"/>
             </Canvas>
         </Border>
 
@@ -78,7 +79,7 @@
             <Canvas>
                 <Button Name="BtnExistingProduct" Width="250" Height="54" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click"  />
                 <Button Name="BtnAddNewProduct" Height="54" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Grid.ColumnSpan="2" Canvas.Left="250" Width="247"  />
-                <Canvas Name="BrdAddNewProduct" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="100" Width="497">
+                <Canvas Name="BrdAddNewProduct" Background="White" Grid.ColumnSpan="2" Height="342" Canvas.Top="59" Width="497">
                     <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
                     <TextBlock Width="100" FontSize="18" Text="Юр. лицо:" Canvas.Left="23" Canvas.Top="81"/>
                     <TextBlock Width="100" FontSize="18" Text="Бренд:" Canvas.Left="23" Canvas.Top="126"/>
@@ -105,7 +106,7 @@
                 </Canvas>
 
 
-                <Canvas Name="BrdAddExistingProduct" Background="White" Width="497" Height="337" Canvas.Top="100">
+                <Canvas Name="BrdAddExistingProduct" Background="White" Width="497" Height="337" Canvas.Top="59">
                     <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
                     <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
                     <Button x:Name="Btn_Add_Existing_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA"/>
@@ -119,6 +120,12 @@
                 <Button Width="120" Height="40" HorizontalAlignment="Center" Content="На главную" FontSize="20" Click="ToMainButton_Click" Canvas.Left="202" Canvas.Top="447"/>
             </Canvas>
         </Border>
+
+
+        
+
+
+
         <Border  Name="BrdAddPackage" Width="500" Height="500" Background="White" BorderBrush="Black" Margin="620,103,54,55" BorderThickness="2"  >
             <Canvas>
                 <Button Name="BtnExistingPackage" Width="250" Height="54" FontSize="20" Content="Существующий" Click="BtnExistingPackage_Click"   />
