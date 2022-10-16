@@ -46,11 +46,11 @@
             <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" Canvas.Left="878" Canvas.Top="15" />
             <Rectangle Fill="Black" Height="647" Canvas.Left="710" Stroke="Black" Canvas.Top="10" Width="3"/>
             <Button x:Name="ChangeProduct" Content="Изменить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="409" Canvas.Top="61"/>
-            
-            
+
+
         </Canvas>
 
-        <Border x:Name="Brd_WarmUp" Height="300" Width="400" Background="White" BorderBrush="Black" Panel.ZIndex="19" BorderThickness="1" Margin="380,192,394,166" >
+        <Border x:Name="Brd_WarmUp" Height="300" Width="400" Background="White" BorderBrush="Black" Panel.ZIndex="19" BorderThickness="1" Margin="404,198,370,160" >
             <Canvas>
                 <TextBlock Width="100" FontSize="18" Text="Название:" Canvas.Left="26" Canvas.Top="70"/>
                 <TextBlock Width="218" FontSize="18" Text="Подготовлено к продаже:" Canvas.Left="26" Canvas.Top="117"/>
@@ -61,6 +61,14 @@
                 <Button Width="120" Height="40" HorizontalAlignment="Center" Content="На главную" FontSize="20" Click="ToMainButton_Click" Canvas.Left="142" Canvas.Top="248" />
                 <Button x:Name="Btn_WarmUp_Product" Width="120" Height="40" Content="Упаковать" FontSize="20" Canvas.Left="268" Canvas.Top="184" Click="Btn_WarmUp_Product_Click" Background="#FFB4D2FA"/>
 
+            </Canvas>
+        </Border>
+
+        <Border x:Name="Brd_Add_LegalEnity" Margin="110,309,694,200" Background="White" Panel.ZIndex="20" BorderBrush="Black" BorderThickness="1">
+            <Canvas>
+                <TextBlock HorizontalAlignment="Left" Height="23" Margin="11,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="16" Text="Наименование:"/>
+                <TextBox x:Name="New_LegalEnity"  Width="225" Height="24" Canvas.Left="135" Canvas.Top="44" ></TextBox>
+                <Button x:Name="Add_New_LegalEnity"  Width="120" Height="40" Content="Добавить" FontSize="20"  Background="#FFB4D2FA" Canvas.Left="240" Canvas.Top="98" Click="Add_New_LegalEnity_Click"/>
             </Canvas>
         </Border>
 
@@ -80,8 +88,6 @@
                     <TextBlock Width="100" FontSize="18" Text="Кол-во" Canvas.Left="23" Canvas.Top="301"/>
                     <Button x:Name="Btn_Add_New_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Product_Click" Background="#FFB4D2FA"/>
                     <ComboBox x:Name="TB_New_Legal_Entity" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26">
-                        <ComboBoxItem Content="ИП Коровкин А.И." HorizontalAlignment="Left" Width="330.4"/>
-                        <ComboBoxItem Content="ИП Семенов И.Д." HorizontalAlignment="Left" Width="330"/>
                     </ComboBox>
                     <TextBox x:Name="TB_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="32" Width="359"/>
                     <TextBox x:Name="TB_New_Vendor_Code" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="171" Width="359"/>
@@ -95,6 +101,7 @@
                     </ComboBox>
                     <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359"/>
                     <TextBox x:Name="TB_NewProduct_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231"/>
+                    <Button x:Name="Add_LegalEnity" Content="+" Height="24" Canvas.Top="81" Width="20" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="3" Click="Add_LegalEnity_Click"/>
                 </Canvas>
 
 

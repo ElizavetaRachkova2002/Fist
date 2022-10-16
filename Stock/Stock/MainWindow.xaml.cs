@@ -25,6 +25,8 @@ namespace Stock
         public List<Product> MyProducts=new List<Product>();
      
         public List<Package> MyPackages = new List<Package>();
+
+        public List<string> MyLegalEnity = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,13 +34,23 @@ namespace Stock
             //MyProducts.Add(new Product("тетрадь 1", "И.П. Коровушкина", "Коровушка", "Корова", 5667, 10, 8, 2, "Коробка", "40x40"));
             //MyProducts.Add(new Product("тетрадь 2", "", "", "", 5667, 7, 4, 3, "Коробка", "40x40"));
             //MyProducts.Add(new Product("тетрадь 3", "", "", "", 5667, 20, 18, 2, "Коробка", "40x40"));
-            productGrid.ItemsSource = MyProducts;
+
             //MyPackages.Add(new Package("box", "30*30", 5));
             //MyPackages.Add(new Package("box", "130*30", 5));
             //MyPackages.Add(new Package("box", "2000*200", 5));
 
+
+            productGrid.ItemsSource = MyProducts;
+            Brd_Add_LegalEnity.Visibility = Visibility.Collapsed;
             LoadPackageList();
             LoadProductList();
+            LoadLegalEnityList();
+
+            for (int i = 0; i < MyLegalEnity.Count; i++)
+            {
+                TB_New_Legal_Entity.Items.Add(MyLegalEnity[i]);
+            }
+
             packageGrid.ItemsSource = MyPackages;
             MainContent.Visibility = Visibility.Visible;
             BrdAddProduct.Visibility = Visibility.Collapsed;
@@ -246,11 +258,38 @@ namespace Stock
         private void SavePackageList()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<Package>));
-            using (Stream writer = new FileStream("Productlist.xml", FileMode.Create))
+            using (Stream writer = new FileStream("Packacgelist.xml", FileMode.Create))
             {
                 serializer.Serialize(writer, this.MyPackages);
             }
         }
+
+
+        private void LoadLegalEnityList()
+        {
+            if (File.Exists("LegalEnitylist.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<string>));
+                using (Stream reader = new FileStream("LegalEnitylist.xml", FileMode.Open))
+                {
+                    List<string> tempList = (List<string>)serializer.Deserialize(reader);
+                    this.MyLegalEnity.Clear();
+                    foreach (var item in tempList)
+                        this.MyLegalEnity.Add(item);
+                }
+            }
+        }
+
+        private void SaveLegalEnityList()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<string>));
+            using (Stream writer = new FileStream("LegalEnitylist.xml", FileMode.Create))
+            {
+                serializer.Serialize(writer, this.MyLegalEnity);
+            }
+        }
+
+
 
         private void WarmUp(int count)
         {
@@ -294,6 +333,23 @@ namespace Stock
             Brd_WarmUp.Visibility = Visibility.Collapsed;
             SaveProductList();
 
+
+        }
+
+        private void Add_LegalEnity_Click(object sender, RoutedEventArgs e)
+        {
+            Brd_Add_LegalEnity.Visibility = Visibility.Visible;
+            Brd_Add_LegalEnity.Focusable = true;
+        }
+
+        private void Add_New_LegalEnity_Click(object sender, RoutedEventArgs e)
+        {
+            string newName = New_LegalEnity.Text;
+            MyLegalEnity.Add(newName);
+            TB_New_Legal_Entity.Items.Add(newName);
+            SaveLegalEnityList();
+            Brd_Add_LegalEnity.Visibility = Visibility.Collapsed;
+            Brd_Add_LegalEnity.Focusable = false;
 
         }
     }
