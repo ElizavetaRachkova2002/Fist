@@ -7,8 +7,8 @@
     <Vendor_code>01</Vendor_code>
     <Barcode>2028250054626</Barcode>
     <Count>189</Count>
-    <Packed>99</Packed>
-    <Not_Packed>90</Not_Packed>
+    <Packed>103</Packed>
+    <Not_Packed>86</Not_Packed>
     <PackageName>Пакет</PackageName>
     <PackageSize>40x40</PackageSize>
     <Brak>11</Brak>
@@ -19,11 +19,24 @@
     <Brand>прол</Brand>
     <Vendor_code>ирл</Vendor_code>
     <Barcode>5678</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <Not_Packed>0</Not_Packed>
+    <Count>42</Count>
+    <Packed>2</Packed>
+    <Not_Packed>40</Not_Packed>
     <PackageName>Коробка</PackageName>
     <PackageSize>40x40</PackageSize>
-    <Brak>0</Brak>
+    <Brak>8</Brak>
+  </Product>
+  <Product>
+    <Name>тетрадь</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>буква</Brand>
+    <Vendor_code>1203589</Vendor_code>
+    <Barcode>123548</Barcode>
+    <Count>45</Count>
+    <Packed>10</Packed>
+    <Not_Packed>35</Not_Packed>
+    <PackageName>Пакет</PackageName>
+    <PackageSize>40x40</PackageSize>
+    <Brak>10</Brak>
   </Product>
 </ArrayOfProduct>

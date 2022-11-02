@@ -27,6 +27,7 @@ namespace Stock
         public List<Package> MyPackages = new List<Package>();
 
         public List<string> MyLegalEnity = new List<string>();
+       public List_Brak List_brak ;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace Stock
             //MyPackages.Add(new Package("box", "130*30", 5));
             //MyPackages.Add(new Package("box", "2000*200", 5));
 
-
+          
             productGrid.ItemsSource = MyProducts;
             Brd_Add_LegalEnity.Visibility = Visibility.Collapsed;
             LoadPackageList();
@@ -58,7 +59,7 @@ namespace Stock
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddPackage.Visibility = Visibility.Collapsed;
             Brd_WarmUp.Visibility = Visibility.Collapsed;
-
+        
         }
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
@@ -157,7 +158,7 @@ namespace Stock
         {
             Product product = productGrid.SelectedItem as Product;
             MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
-                 "\n Упаковка: " + product.PackageName + "\n Размер упаковки : " + product.PackageSize + "\n Количество : " + product.Count
+                 "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  "\n Размер упаковки : " + product.PackageSize + "\n Количество : " + product.Count
                  + "\n Упаковано : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
         }
         private void Btn_Add_Existing_Package_Click(object sender, RoutedEventArgs e)
@@ -307,6 +308,33 @@ namespace Stock
             }
 
 
+        }
+
+        private void Brak_list_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (List_brak == null)
+            {
+                List_brak = new List_Brak();
+                List_brak.gridlistbrak.ItemsSource = MyProducts;
+
+
+                List_brak.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                List_brak.Activate();
+
+            }
+        }
+
+        private void Btn_all_brak_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in MyProducts)
+            {
+                item.Brak = 0;
+            }
+            
         }
 
         private void Btn_WarmUp_Product_Click(object sender, RoutedEventArgs e)

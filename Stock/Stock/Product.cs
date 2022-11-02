@@ -13,7 +13,7 @@ namespace Stock
         public string Legal_entity { get; set; }   
         public string Brand { get; set; }
         public string Vendor_code { get; set; }
-        public ulong Barcode { get; set; }
+        public ulong Barcode { get; set; } //штрих
         public int Count { get; set; }
         public int Packed { get; set; }
 

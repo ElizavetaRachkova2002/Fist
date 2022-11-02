@@ -80,7 +80,6 @@ C:\Users\rachk\source\repos\Fist\Stock\Stock\obj\Debug\Stock.pdb
 C:\Fist\Stock\Stock\bin\Debug\Stock.exe.config
 C:\Fist\Stock\Stock\bin\Debug\Stock.exe
 C:\Fist\Stock\Stock\bin\Debug\Stock.pdb
-C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.AssemblyReference.cache
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.SuggestedBindingRedirects.cache
 C:\Fist\Stock\Stock\obj\Debug\MainWindow.g.cs
 C:\Fist\Stock\Stock\obj\Debug\App.g.cs
@@ -93,3 +92,6 @@ C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.GenerateResource.cache
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
 C:\Fist\Stock\Stock\obj\Debug\Stock.exe
 C:\Fist\Stock\Stock\obj\Debug\Stock.pdb
+C:\Fist\Stock\Stock\obj\Debug\List_Brak.g.cs
+C:\Fist\Stock\Stock\obj\Debug\List_Brak.baml
+C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.AssemblyReference.cache

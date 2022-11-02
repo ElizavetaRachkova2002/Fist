@@ -1,0 +1,27 @@
+﻿<Window x:Class="Stock.List_Brak"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stock"
+        mc:Ignorable="d"
+        Title="Список товаров с браком" Height="450" Width="800">
+    
+    <Grid>
+        <Border x:Name="Brd_list_brak" Margin="0,0,0,0" Height="450" Width="850" Background="White" Panel.ZIndex="0" BorderBrush="Black" BorderThickness="1" >
+        <DataGrid x:Name="gridlistbrak" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
+                      VerticalScrollBarVisibility="Auto" Grid.Row="0" Margin="0,0,240,0"
+            RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" MaxWidth="800" Canvas.Left="10" Canvas.Top="102" Width="600" IsReadOnly="True" FontSize="14">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="150"  />
+                <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="150" />
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="200" />
+                <DataGridTextColumn Header="Брак" Binding="{Binding Path=Brak}" Width="90" />
+           </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Button x:Name="Btn_all_brak"   Margin="630,170,0,0" Width="135" Height="40" Content="Списать всё"   FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_all_brak_Click" Background="#FFB4D2FA"/>
+        <Button x:Name="Btn_part_brak" Margin="630,0,0,0" Width="135" Height="40" Content="Списать часть" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_part_brak_Click" Background="#FFB4D2FA"/>
+    </Grid>
+
+</Window>
