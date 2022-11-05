@@ -1,0 +1,17 @@
+﻿<Window x:Class="Stock.AddLegalEnity_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stock"
+        mc:Ignorable="d"
+        Title="Добавить Юр. лицо" Height="184.587" Width="370.752">
+    <Grid>
+        <Canvas>
+            <TextBlock HorizontalAlignment="Left" Height="23" Margin="11,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="16" Text="Наименование:"/>
+            <TextBox x:Name="New_LegalEnity"  Width="225" Height="24" Canvas.Left="135" Canvas.Top="44" ></TextBox>
+            <Button x:Name="Add_New_LegalEnity"  Width="120" Height="40" Content="Добавить" FontSize="20"  Background="#FFB4D2FA" Canvas.Left="240" Canvas.Top="98" Click="Add_New_LegalEnity_Click"/>
+            <Button x:Name="Cancel_Add_New_LegalEnity"   Width="120" Height="40" Content="Отмена" FontSize="20"  Background="White" Canvas.Left="11" Canvas.Top="98" Click="Cancel_Add_New_LegalEnity_Click"/>
+        </Canvas>
+    </Grid>
+</Window>
