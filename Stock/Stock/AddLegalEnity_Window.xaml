@@ -5,13 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Добавить Юр. лицо" Height="184.587" Width="370.752">
+        Title="Добавление юр. лица" Height="173.684" Width="441.579">
     <Grid>
-        <Canvas>
-            <TextBlock HorizontalAlignment="Left" Height="23" Margin="11,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="16" Text="Наименование:"/>
-            <TextBox x:Name="New_LegalEnity"  Width="225" Height="24" Canvas.Left="135" Canvas.Top="44" ></TextBox>
-            <Button x:Name="Add_New_LegalEnity"  Width="120" Height="40" Content="Добавить" FontSize="20"  Background="#FFB4D2FA" Canvas.Left="240" Canvas.Top="98" Click="Add_New_LegalEnity_Click"/>
-            <Button x:Name="Cancel_Add_New_LegalEnity"   Width="120" Height="40" Content="Отмена" FontSize="20"  Background="White" Canvas.Left="11" Canvas.Top="98" Click="Cancel_Add_New_LegalEnity_Click"/>
-        </Canvas>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="11,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" FontSize="16" Text="Наименование:"/>
+        <TextBox x:Name="New_LegalEnity" Canvas.Left="135" Canvas.Top="44" Margin="136,44,10.2,70" />
+        <Button x:Name="Add_New_LegalEnity" Content="Добавить" FontSize="20"  Background="#FFB4D2FA" Canvas.Left="240" Canvas.Top="98" Click="Add_New_LegalEnity_Click" Margin="272,88,28.2,10"/>
     </Grid>
 </Window>

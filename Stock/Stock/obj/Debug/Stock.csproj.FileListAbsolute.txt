@@ -95,3 +95,13 @@ C:\Fist\Stock\Stock\obj\Debug\Stock.pdb
 C:\Fist\Stock\Stock\obj\Debug\List_Brak.g.cs
 C:\Fist\Stock\Stock\obj\Debug\List_Brak.baml
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.AssemblyReference.cache
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\List_Brak.g.cs
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\List_Brak.baml
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\AddProduct_Window.g.cs
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\AddProduct_Window.baml
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.g.cs
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.baml
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\AddPackage_Window.g.cs
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\AddPackage_Window.baml
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\WarmUp_Window.g.cs
+Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\WarmUp_Window.baml

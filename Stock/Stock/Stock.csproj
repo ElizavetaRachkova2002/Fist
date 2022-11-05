@@ -55,6 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WarmUp_Window.xaml.cs">
+      <DependentUpon>WarmUp_Window.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddLegalEnity_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPackage_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddProduct_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="List_Brak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -63,10 +78,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddLegalEnity_Window.xaml.cs">
+      <DependentUpon>AddLegalEnity_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPackage_Window.xaml.cs">
+      <DependentUpon>AddPackage_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct_Window.xaml.cs">
+      <DependentUpon>AddProduct_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MyLegalEnitys_List.cs" />
+    <Compile Include="MyPackages_List.cs" />
+    <Compile Include="MyProducts_List.cs" />
     <Compile Include="List_Brak.xaml.cs">
       <DependentUpon>List_Brak.xaml</DependentUpon>
     </Compile>
@@ -74,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WarmUp_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Package.cs" />

@@ -24,14 +24,14 @@ namespace Stock
             InitializeComponent();
         }
 
-        private void Cancel_Add_New_LegalEnity_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Add_New_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
-
+            string newName = New_LegalEnity.Text;
+            MyLegalEnitys_List.MyLegalEnitys.Add(newName);
+            this.Close();
+            //TB_New_Legal_Entity.Items.Add(newName);
+           MyLegalEnitys_List.SaveLegalEnityList();
+            
         }
     }
 }

@@ -22,31 +22,54 @@ namespace Stock
         public AddPackage_Window()
         {
             InitializeComponent();
-        }
-
-        private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ToMainButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            Pack_Exist_Count.Clear();
+            Combo_package_add.Items.Clear();
+            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+            {
+                Combo_package_add.Items.Add(MyPackages_List.MyPackages[i].ToString());
+            }
         }
 
         private void BtnExistingPackage_Click(object sender, RoutedEventArgs e)
         {
-
+            BrdAddNewPackage.Visibility = Visibility.Collapsed;
+            BrdAddExistingPackage.Visibility = Visibility.Visible;
         }
 
         private void BtnAddNewPackage_Click(object sender, RoutedEventArgs e)
         {
-
+            BrdAddExistingPackage.Visibility = Visibility.Collapsed;
+            BrdAddNewPackage.Visibility = Visibility.Visible;
         }
 
-        private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
+        private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
         {
+            string name = Pack_New_Name.Text;
+            Pack_New_Name.Clear();
+            string size = Pack_New_Size.Text;
+            Pack_New_Size.Clear();
+            int count = int.Parse(Pack_New_Count.Text);
+            Pack_New_Count.Clear();
+            Package package = new Package(name, size, count);
+            MyPackages_List.MyPackages.Add(package);            
+            MyPackages_List.SavePackageList();
+            this.Close();
+        }
 
+        private void Btn_Add_Existing_Package_Click(object sender, RoutedEventArgs e)
+        {
+            var str = Combo_package_add.Text.Split(' ');
+            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+            {
+                if (MyPackages_List.MyPackages[i].Name_package == str[0] && MyPackages_List.MyPackages[i].Size == str[1])
+                {
+                    MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
+                }
+            }
+
+            Pack_Exist_Count.Clear();
+            MyPackages_List.SavePackageList();
+            this.Close();
         }
     }
 }

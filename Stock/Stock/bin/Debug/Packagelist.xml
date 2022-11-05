@@ -2,7 +2,7 @@
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
     <Name_package>коробка</Name_package>
-    <Size>2*2</Size>
-    <Count_package>25</Count_package>
+    <Size>40*40</Size>
+    <Count_package>800</Count_package>
   </Package>
 </ArrayOfPackage>

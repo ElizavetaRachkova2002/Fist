@@ -39,4 +39,17 @@
     <PackageSize>40x40</PackageSize>
     <Brak>10</Brak>
   </Product>
+  <Product>
+    <Name>бутылка</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>ро</Brand>
+    <Vendor_code>5678</Vendor_code>
+    <Barcode>98</Barcode>
+    <Count>98</Count>
+    <Packed>50</Packed>
+    <Not_Packed>48</Not_Packed>
+    <PackageName>Пакет</PackageName>
+    <PackageSize>40x40</PackageSize>
+    <Brak>2</Brak>
+  </Product>
 </ArrayOfProduct>
