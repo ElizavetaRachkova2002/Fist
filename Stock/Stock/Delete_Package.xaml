@@ -1,0 +1,15 @@
+﻿<Window x:Class="Stock.Delete_Package"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stock"
+        mc:Ignorable="d"
+        Title="Delete_Package" Height="175.2" Width="570.8">
+   
+    <Grid>
+        <TextBlock FontSize="18" Margin="29,32,427.8,78.6" Text="Название:"/>
+        <ComboBox x:Name="Combo_package"   Canvas.Left="128" Canvas.Top="35" Height="29" Margin="162,32,36.8,0" VerticalAlignment="Top" />
+        <Button  x:Name="Btn_Delete_Package" Content="Удалить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Delete_Package_Click" Background="#FFB4D2FA" Margin="401,82,36.8,24.6"/>
+    </Grid>
+</Window>

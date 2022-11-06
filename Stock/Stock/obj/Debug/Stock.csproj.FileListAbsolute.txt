@@ -115,3 +115,7 @@ C:\Fist\Stock\Stock\obj\Debug\AddProduct_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\WarmUp_Window.baml
 Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\DeleteProduct_Window.g.cs
 Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\DeleteProduct_Window.baml
+C:\Fist\Stock\Stock\obj\Debug\DeleteProduct_Window.g.cs
+C:\Fist\Stock\Stock\obj\Debug\DeleteProduct_Window.baml
+C:\Fist\Stock\Stock\obj\Debug\Delete_Package.g.cs
+C:\Fist\Stock\Stock\obj\Debug\Delete_Package.baml

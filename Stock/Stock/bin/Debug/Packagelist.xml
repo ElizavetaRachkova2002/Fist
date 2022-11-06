@@ -1,23 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Package>
-    <Name_package>коробка</Name_package>
-    <Size>40*40</Size>
-    <Count_package>875</Count_package>
-  </Package>
-  <Package>
-    <Name_package>пакет</Name_package>
-    <Size>20*20</Size>
-    <Count_package>400</Count_package>
-  </Package>
-  <Package>
-    <Name_package>пакет</Name_package>
-    <Size>60*60</Size>
-    <Count_package>1000</Count_package>
-  </Package>
-  <Package>
-    <Name_package>апролд</Name_package>
-    <Size>56789</Size>
-    <Count_package>100</Count_package>
-  </Package>
-</ArrayOfPackage>
+<ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

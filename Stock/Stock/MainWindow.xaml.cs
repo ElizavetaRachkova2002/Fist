@@ -27,7 +27,7 @@ namespace Stock
         public AddPackage_Window addPackage_Window;
         public WarmUp_Window warmUp_Window;
         public DeleteProduct_Window deleteProduct_Window;
-        
+        public Delete_Package delete_package;
 
         public MainWindow()
         {
@@ -117,7 +117,11 @@ namespace Stock
             deleteProduct_Window = new DeleteProduct_Window();
             deleteProduct_Window.Visibility = Visibility.Visible;
         }
-
+        private void Delete_Package_Click(object sender, RoutedEventArgs e)
+        {
+            delete_package = new Delete_Package();
+            delete_package.Visibility = Visibility.Visible;
+        }
         private void ProductGrid_MouseEnter(object sender, MouseEventArgs e)
         {
             productGrid.ItemsSource = MyProducts_List.MyProducts;

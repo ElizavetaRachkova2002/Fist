@@ -1,16 +1,29 @@
 <?xml version="1.0"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <Name>кот</Name>
-    <Legal_entity>ИП Красотка</Legal_entity>
-    <Brand>прол</Brand>
-    <Vendor_code>56</Vendor_code>
-    <Barcode>8642</Barcode>
-    <Count>295</Count>
-    <Packed>275</Packed>
+    <Name>thbetw</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>trb</Brand>
+    <Vendor_code>1436</Vendor_code>
+    <Barcode>3246</Barcode>
+    <Count>-7</Count>
+    <Packed>551</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>20</Not_Packed>
-    <PackageName>коробка 40*40</PackageName>
+    <Not_Packed>-558</Not_Packed>
+    <PackageName>Без упаковки</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>rth</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>reh</Brand>
+    <Vendor_code>2346</Vendor_code>
+    <Barcode>436</Barcode>
+    <Count>-30</Count>
+    <Packed>5</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-35</Not_Packed>
+    <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

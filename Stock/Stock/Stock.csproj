@@ -58,6 +58,9 @@
     <Compile Include="DeleteProduct_Window.xaml.cs">
       <DependentUpon>DeleteProduct_Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Delete_Package.xaml.cs">
+      <DependentUpon>Delete_Package.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WarmUp_Window.xaml.cs">
       <DependentUpon>WarmUp_Window.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DeleteProduct_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Delete_Package.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
