@@ -26,6 +26,7 @@ namespace Stock
         public AddProduct_Window addProduct_Window;
         public AddPackage_Window addPackage_Window;
         public WarmUp_Window warmUp_Window;
+        public DeleteProduct_Window deleteProduct_Window;
         
 
         public MainWindow()
@@ -46,12 +47,14 @@ namespace Stock
         {
             
             addPackage_Window = new AddPackage_Window();
+            addPackage_Window.Owner = this;
             addPackage_Window.Visibility = Visibility.Visible;            
         }
 
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
                 addProduct_Window = new AddProduct_Window();
+            addProduct_Window.Owner = this;
                 addProduct_Window.Visibility = Visibility.Visible;          
         }
 
@@ -64,7 +67,7 @@ namespace Stock
         {
             Product product = productGrid.SelectedItem as Product;
             MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
-                 "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  "\n Размер упаковки : " + product.PackageSize + "\n Количество : " + product.Count
+                 "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
                  + "\n Упаковано : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
         }
 
@@ -72,6 +75,7 @@ namespace Stock
         private void Btn_WarmUp_Click(object sender, RoutedEventArgs e)
         {
             warmUp_Window = new WarmUp_Window();
+            warmUp_Window.Owner = this;
             warmUp_Window.Visibility = Visibility.Visible;
         }
 
@@ -82,9 +86,9 @@ namespace Stock
                 MyProducts_List.MyProducts[i].IsSelected = false;
             }
             var New_List_With_Brak= new List<Product>();
-            if (list_brak == null)
-            {
+            
                 list_brak = new List_Brak();
+            list_brak.Owner = this;
                
                 foreach(var item in MyProducts_List.MyProducts)
                 {
@@ -96,9 +100,7 @@ namespace Stock
 
                 list_brak.gridlistbrak.ItemsSource = New_List_With_Brak;
                 list_brak.Visibility = Visibility.Visible;
-            }
-            else
-            { list_brak.Activate(); }
+            
         }
 
         private void Btn_all_brak_Click(object sender, RoutedEventArgs e)
@@ -110,7 +112,24 @@ namespace Stock
 
         }
 
+        private void DeleteProduct_Click(object sender, RoutedEventArgs e)
+        {
+            deleteProduct_Window = new DeleteProduct_Window();
+            deleteProduct_Window.Visibility = Visibility.Visible;
+        }
 
+        private void ProductGrid_MouseEnter(object sender, MouseEventArgs e)
+        {
+            productGrid.ItemsSource = MyProducts_List.MyProducts;
+            productGrid.Items.Refresh();
+            
+        }
 
+        private void PackageGrid_MouseEnter(object sender, MouseEventArgs e)
+        {
+            packageGrid.ItemsSource = MyPackages_List.MyPackages;
+            packageGrid.Items.Refresh();
+        }
+        
     }
 }

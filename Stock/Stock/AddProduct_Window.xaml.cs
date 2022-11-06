@@ -21,22 +21,17 @@ namespace Stock
     {
         public AddLegalEnity_Window addLegalEnity_Window;
         
+        
         public AddProduct_Window()
         {
             InitializeComponent();
 
             Combo_product_add.Items.Clear();
 
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-            {
-                Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
-            }
-
-            MyLegalEnitys_List.LoadLegalEnityList();
-
+            GiveTBProduct();            
+            GiveTBLegalEnity();
+            GiveTBPackage();
         }
-
-        
 
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
         {
@@ -63,7 +58,7 @@ namespace Stock
             BrdAddNewProduct.Visibility = Visibility.Visible;
             TB_New_Legal_Entity.Items.Clear();
 
-
+            MyLegalEnitys_List.LoadLegalEnityList();
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
                 TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
@@ -79,15 +74,58 @@ namespace Stock
             
         }
 
-        
-
         private void Add_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
             addLegalEnity_Window = new AddLegalEnity_Window();
+            addLegalEnity_Window.Owner = this;
             addLegalEnity_Window.Visibility = Visibility.Visible;
+            
+
         }
 
-        
+        public void AddNewLE(string name)
+        {
+            TB_New_Legal_Entity.Items.Add(name);
+        }
+
+        public void GiveTBLegalEnity()
+        {
+
+            TB_New_Legal_Entity.Items.Clear();
+             MyLegalEnitys_List.LoadLegalEnityList();
+
+            for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
+            {
+                TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
+            }
+        }
+
+        public void GiveTBPackage()
+        {
+
+            TB_NewProduct_Package_Name.Items.Clear();
+            MyPackages_List.LoadPackageList();
+            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+            {
+                TB_NewProduct_Package_Name.Items.Add(MyPackages_List.MyPackages[i].ToString());
+            }
+            TB_NewProduct_Package_Name.Items.Add("Без упаковки");
+
+
+        }
+
+        public void GiveTBProduct()
+        {
+
+            Combo_product_add.Items.Clear();
+            MyProducts_List.LoadProductList();
+            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            {
+                Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
+            }
+
+        }
+
 
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
@@ -101,16 +139,25 @@ namespace Stock
             ulong barcode = ulong.Parse(TB_New_Barcode.Text);
             TB_New_Barcode.Clear();
             string packageN = TB_NewProduct_Package_Name.Text;
-            string packageS = TB_NewProduct_Package_Size.Text;
+            //string packageS = TB_NewProduct_Package_Size.Text;
             int count = int.Parse(TB_NewProduct_Count.Text);
             TB_NewProduct_Count.Clear();
-            Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, packageS, 0);
+            Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, 0);
             MyProducts_List.MyProducts.Add(new_product);
 
             MyProducts_List.SaveProductList();
 
             this.Close();
 
+        }
+
+        private void TB_New_Legal_Entity_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (MyLegalEnitys_List.AddNewLE == true)
+            {
+                AddNewLE(MyLegalEnitys_List.NewLE);
+                MyLegalEnitys_List.AddNewLE = false;
+            }
         }
     }
 }

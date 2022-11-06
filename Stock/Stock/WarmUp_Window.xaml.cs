@@ -44,6 +44,16 @@ namespace Stock
                     MyProducts_List.MyProducts[i].Not_Packed -= brak;
                     MyProducts_List.MyProducts[i].Not_Packed -= count;
                     MyProducts_List.MyProducts[i].Packed += count;
+                    if (MyProducts_List.MyProducts[i].PackageName!="Без упаковки")
+                        for (int j=0; j<MyPackages_List.MyPackages.Count(); j++)
+                        {
+                            if (MyProducts_List.MyProducts[i].PackageName==MyPackages_List.MyPackages[j].ToString())
+                            {
+                                MyPackages_List.MyPackages[j].Count_package -= count;
+                                break;
+
+                            }
+                        }
                     WarmUp_Count.Clear();
                     WarmUp_Brak.Clear();
                     break;
@@ -51,6 +61,8 @@ namespace Stock
                 }
             }
             MyProducts_List.SaveProductList();
+            MyPackages_List.SavePackageList();
+            this.Close();
         }
     }
 }

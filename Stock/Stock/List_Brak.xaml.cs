@@ -35,6 +35,7 @@ namespace Stock
                 MyProducts_List.MyProducts[i].Brak = 0;
             }
             MyProducts_List.SaveProductList();
+            this.Close();
         }
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
         {
@@ -50,6 +51,7 @@ namespace Stock
             }
 
             MyProducts_List.SaveProductList();
+            this.Close();
         }
     }
 }

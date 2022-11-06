@@ -28,10 +28,13 @@ namespace Stock
         {
             string newName = New_LegalEnity.Text;
             MyLegalEnitys_List.MyLegalEnitys.Add(newName);
+            MyLegalEnitys_List.SaveLegalEnityList();
+            MyLegalEnitys_List.NewLE = newName;
+            MyLegalEnitys_List.AddNewLE = true;
             this.Close();
-            //TB_New_Legal_Entity.Items.Add(newName);
-           MyLegalEnitys_List.SaveLegalEnityList();
             
+            
+
         }
     }
 }

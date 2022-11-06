@@ -11,6 +11,8 @@ namespace Stock
     public static class MyLegalEnitys_List
     {
         public static List<string> MyLegalEnitys= new List<string>();
+        public static string NewLE="";
+        public static bool AddNewLE = false;
 
         public static void LoadLegalEnityList()
         {

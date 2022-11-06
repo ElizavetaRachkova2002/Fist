@@ -138,17 +138,13 @@
             <TextBlock Width="100" FontSize="18" Text="Упаковка:" Canvas.Left="23" Canvas.Top="262"/>
             <TextBlock Width="100" FontSize="18" Text="Кол-во" Canvas.Left="23" Canvas.Top="301"/>
             <Button Style="{DynamicResource ButtonAddNewProduct}" x:Name="Btn_Add_New_Product"  Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Product_Click" Background="#FFB4D2FA"/>
-            <ComboBox x:Name="TB_New_Legal_Entity" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26">
+            <ComboBox x:Name="TB_New_Legal_Entity" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26" GotMouseCapture="TB_New_Legal_Entity_MouseDown">
             </ComboBox>
             <TextBox x:Name="TB_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="32" Width="359"/>
             <TextBox x:Name="TB_New_Vendor_Code" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="171" Width="359"/>
             <TextBox x:Name="TB_New_Barcode" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="214" Width="359"/>
-            <ComboBox x:Name="TB_NewProduct_Package_Name" Canvas.Left="128" Canvas.Top="260" Width="246" Height="26">
-                <ComboBoxItem Content="Коробка" HorizontalAlignment="Left" Width="244.8"/>
-                <ComboBoxItem Content="Пакет" HorizontalAlignment="Left" Width="244.8"/>
-            </ComboBox>
-            <ComboBox x:Name="TB_NewProduct_Package_Size" Canvas.Left="379" Canvas.Top="260" Width="108" Height="26">
-                <ComboBoxItem Content="40x40" HorizontalAlignment="Left" Width="106.4"/>
+            <ComboBox x:Name="TB_NewProduct_Package_Name" Canvas.Left="128" Canvas.Top="260" Width="359" Height="26">
+                
             </ComboBox>
             <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359"/>
             <TextBox x:Name="TB_NewProduct_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231"/>

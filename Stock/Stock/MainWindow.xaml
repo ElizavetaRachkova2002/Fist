@@ -455,14 +455,14 @@
             <Button Style="{DynamicResource ButtonStyle7}" x:Name="AddPackage" Content=" Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Click="AddPackage_Click" Canvas.Left="723" Canvas.Top="61"/>
             <Button Style="{DynamicResource ButtonStyle2}" x:Name="Btn_WarmUp" Content="Упаковать" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="105" Canvas.Top="61" Click="Btn_WarmUp_Click"/>
             <Button Style="{DynamicResource ButtonStyle3}"  Content="Отправить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="200" Canvas.Top="61" />
-            <Button Style="{DynamicResource ButtonStyle5}" x:Name="DeleteProduct" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="504" Canvas.Top="61"/>
+            <Button Style="{DynamicResource ButtonStyle5}" x:Name="DeleteProduct" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="504" Canvas.Top="61" Click="DeleteProduct_Click"/>
             <Button Style="{DynamicResource ButtonStyle6}" x:Name="BrakProduct" Content="Брак" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="599" Canvas.Top="61" Click="Brak_list_Click"/>
 
             <Button Style="{DynamicResource ButtonStyle8}" x:Name="DeletePackage" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="818" Canvas.Top="61"/>
 
             <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
-                      VerticalScrollBarVisibility="Auto" Grid.Row="0" MouseUp="grid_MouseUp"
-            RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" Canvas.Left="10" Canvas.Top="102" Width="700" IsReadOnly="True" FontSize="14">
+                      VerticalScrollBarVisibility="Auto" Grid.Row="0" MouseUp="grid_MouseUp" MouseEnter="ProductGrid_MouseEnter"
+            RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" Canvas.Left="10" Canvas.Top="102" Width="700" IsReadOnly="True" FontSize="14" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="100" />
                     <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="150" />
@@ -478,7 +478,7 @@
             </DataGrid>
 
             <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" CanUserAddRows="False"
-                       VerticalScrollBarVisibility="Auto" Grid.Row="0"  MouseUp="grid_MouseUp_Package"
+                       VerticalScrollBarVisibility="Auto" Grid.Row="0"  MouseUp="grid_MouseUp_Package" MouseEnter="PackageGrid_MouseEnter"
             RowBackground="White" AlternatingRowBackground="White"  MaxHeight="500" Canvas.Left="735" Canvas.Top="105" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="260" />

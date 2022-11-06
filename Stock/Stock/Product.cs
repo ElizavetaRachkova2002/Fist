@@ -19,11 +19,11 @@ namespace Stock
         public bool IsSelected { get; set; }
         public int Not_Packed { get; set; }
         public string PackageName { get; set; }
-        public string PackageSize { get; set; }
+        //public string PackageSize { get; set; }
 
         public int Brak { get; set; }
         public Product() { }
-        public Product(string name,  string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName, string packageSize, int brak )
+        public Product(string name,  string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName,  int brak )
         {
             Name = name;
             Legal_entity = legal_enity;
@@ -34,7 +34,7 @@ namespace Stock
             Packed = packed;
             Not_Packed = not_Packed;
             PackageName = packageName;
-            PackageSize = packageSize;
+            //PackageSize = packageSize;
             Brak = brak;
             IsSelected = false;
             
