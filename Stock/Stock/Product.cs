@@ -16,7 +16,7 @@ namespace Stock
         public ulong Barcode { get; set; } //штрих
         public int Count { get; set; }
         public int Packed { get; set; }
-
+        public bool IsSelected { get; set; }
         public int Not_Packed { get; set; }
         public string PackageName { get; set; }
         public string PackageSize { get; set; }
@@ -36,6 +36,7 @@ namespace Stock
             PackageName = packageName;
             PackageSize = packageSize;
             Brak = brak;
+            IsSelected = false;
             
         }
       

@@ -22,7 +22,7 @@ namespace Stock
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List_Brak List_brak ;
+        public List_Brak list_brak;
         public AddProduct_Window addProduct_Window;
         public AddPackage_Window addPackage_Window;
         public WarmUp_Window warmUp_Window;
@@ -38,11 +38,8 @@ namespace Stock
 
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             MainContent.Visibility = Visibility.Visible;
-            
-            
-            
             productGrid.ItemsSource = MyProducts_List.MyProducts;
-
+           
         }
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)
@@ -70,32 +67,38 @@ namespace Stock
                  "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  "\n Размер упаковки : " + product.PackageSize + "\n Количество : " + product.Count
                  + "\n Упаковано : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
         }
-     
+
 
         private void Btn_WarmUp_Click(object sender, RoutedEventArgs e)
         {
             warmUp_Window = new WarmUp_Window();
             warmUp_Window.Visibility = Visibility.Visible;
-
-
         }
 
         private void Brak_list_Click(object sender, RoutedEventArgs e)
         {
-
-            if (List_brak == null)
+            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
-                List_brak = new List_Brak();
-                List_brak.gridlistbrak.ItemsSource = MyProducts_List.MyProducts;
+                MyProducts_List.MyProducts[i].IsSelected = false;
+            }
+            var New_List_With_Brak= new List<Product>();
+            if (list_brak == null)
+            {
+                list_brak = new List_Brak();
+               
+                foreach(var item in MyProducts_List.MyProducts)
+                {
+                    if(item.Brak>0)
+                    {
+                        New_List_With_Brak.Add(item);
+                    }
+                }
 
-
-                List_brak.Visibility = Visibility.Visible;
+                list_brak.gridlistbrak.ItemsSource = New_List_With_Brak;
+                list_brak.Visibility = Visibility.Visible;
             }
             else
-            {
-                List_brak.Activate();
-
-            }
+            { list_brak.Activate(); }
         }
 
         private void Btn_all_brak_Click(object sender, RoutedEventArgs e)
@@ -104,10 +107,10 @@ namespace Stock
             {
                 item.Brak = 0;
             }
-            
+
         }
 
-        
-    
+
+
     }
 }

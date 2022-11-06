@@ -6,12 +6,13 @@
     <Brand>40а</Brand>
     <Vendor_code>01</Vendor_code>
     <Barcode>2028250054626</Barcode>
-    <Count>189</Count>
-    <Packed>103</Packed>
-    <Not_Packed>86</Not_Packed>
+    <Count>123</Count>
+    <Packed>145</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-22</Not_Packed>
     <PackageName>Пакет</PackageName>
     <PackageSize>40x40</PackageSize>
-    <Brak>11</Brak>
+    <Brak>0</Brak>
   </Product>
   <Product>
     <Name>а</Name>
@@ -19,12 +20,13 @@
     <Brand>прол</Brand>
     <Vendor_code>ирл</Vendor_code>
     <Barcode>5678</Barcode>
-    <Count>42</Count>
-    <Packed>2</Packed>
-    <Not_Packed>40</Not_Packed>
+    <Count>6</Count>
+    <Packed>29</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-23</Not_Packed>
     <PackageName>Коробка</PackageName>
     <PackageSize>40x40</PackageSize>
-    <Brak>8</Brak>
+    <Brak>2</Brak>
   </Product>
   <Product>
     <Name>тетрадь</Name>
@@ -32,12 +34,13 @@
     <Brand>буква</Brand>
     <Vendor_code>1203589</Vendor_code>
     <Barcode>123548</Barcode>
-    <Count>45</Count>
-    <Packed>10</Packed>
-    <Not_Packed>35</Not_Packed>
+    <Count>29</Count>
+    <Packed>25</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>4</Not_Packed>
     <PackageName>Пакет</PackageName>
     <PackageSize>40x40</PackageSize>
-    <Brak>10</Brak>
+    <Brak>0</Brak>
   </Product>
   <Product>
     <Name>бутылка</Name>
@@ -45,11 +48,12 @@
     <Brand>ро</Brand>
     <Vendor_code>5678</Vendor_code>
     <Barcode>98</Barcode>
-    <Count>98</Count>
-    <Packed>50</Packed>
-    <Not_Packed>48</Not_Packed>
+    <Count>87</Count>
+    <Packed>66</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>21</Not_Packed>
     <PackageName>Пакет</PackageName>
     <PackageSize>40x40</PackageSize>
-    <Brak>2</Brak>
+    <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

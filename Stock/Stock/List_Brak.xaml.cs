@@ -24,22 +24,32 @@ namespace Stock
         public List_Brak()
         {
             InitializeComponent();
-           
+
         }
-       
+
         private void Btn_all_brak_Click(object sender, RoutedEventArgs e)
         {
             
+            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            {
+                MyProducts_List.MyProducts[i].Brak = 0;
+            }
+            MyProducts_List.SaveProductList();
         }
-
-        private void Btn_part_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
         {
 
+
+            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            {
+                if (MyProducts_List.MyProducts[i].IsSelected == true)
+                {
+                    MyProducts_List.MyProducts[i].Brak = 0;
+                }
+                MyProducts_List.MyProducts[i].IsSelected = false;
+            }
+
+            MyProducts_List.SaveProductList();
         }
     }
 }

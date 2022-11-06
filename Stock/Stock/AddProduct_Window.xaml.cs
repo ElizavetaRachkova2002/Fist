@@ -76,6 +76,7 @@ namespace Stock
         {
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Visible;
+            
         }
 
         
