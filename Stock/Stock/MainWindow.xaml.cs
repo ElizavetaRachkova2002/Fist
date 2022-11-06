@@ -115,11 +115,13 @@ namespace Stock
         private void DeleteProduct_Click(object sender, RoutedEventArgs e)
         {
             deleteProduct_Window = new DeleteProduct_Window();
+            deleteProduct_Window.Owner = this;
             deleteProduct_Window.Visibility = Visibility.Visible;
         }
         private void Delete_Package_Click(object sender, RoutedEventArgs e)
         {
             delete_package = new Delete_Package();
+            delete_package.Owner = this;
             delete_package.Visibility = Visibility.Visible;
         }
         private void ProductGrid_MouseEnter(object sender, MouseEventArgs e)
