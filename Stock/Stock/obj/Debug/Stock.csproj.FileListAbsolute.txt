@@ -148,3 +148,4 @@ Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock.exe
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock.pdb
+C:\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs

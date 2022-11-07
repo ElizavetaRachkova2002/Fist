@@ -26,4 +26,82 @@
     <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
   </Product>
+  <Product>
+    <Name>jgdjgd</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>jgdf</Brand>
+    <Vendor_code>45678</Vendor_code>
+    <Barcode>45678</Barcode>
+    <Count>49</Count>
+    <Packed>2</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>47</Not_Packed>
+    <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>sghsg</Name>
+    <Legal_entity>ИП Новиков</Legal_entity>
+    <Brand>dfgn</Brand>
+    <Vendor_code>3456</Vendor_code>
+    <Barcode>87654</Barcode>
+    <Count>-10</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-10</Not_Packed>
+    <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>wfsrhtd</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>23456</Brand>
+    <Vendor_code>234567</Vendor_code>
+    <Barcode>23456</Barcode>
+    <Count>-10</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-10</Not_Packed>
+    <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>u,mn</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>3456</Brand>
+    <Vendor_code>23456</Vendor_code>
+    <Barcode>23456</Barcode>
+    <Count>-10</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-10</Not_Packed>
+    <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>zdfxhgc</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>dsfghn</Brand>
+    <Vendor_code>2345</Vendor_code>
+    <Barcode>12345</Barcode>
+    <Count>0</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>sdfghnj</Name>
+    <Legal_entity>ИП Муравей</Legal_entity>
+    <Brand>wertyu</Brand>
+    <Vendor_code>2345678</Vendor_code>
+    <Barcode>34567</Barcode>
+    <Count>34567</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>34567</Not_Packed>
+    <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
 </ArrayOfProduct>

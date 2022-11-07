@@ -1,2 +1,8 @@
 <?xml version="1.0"?>
-<ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Package>
+    <Name_package>Box</Name_package>
+    <Size>20*20</Size>
+    <Count_package>3</Count_package>
+  </Package>
+</ArrayOfPackage>

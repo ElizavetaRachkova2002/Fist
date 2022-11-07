@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Stock
 {
-    public class Product
+    public interface IDataErrorInfo
+    {
+        string Error { get; }
+        string this[string columnCount] { get; }
+    }
+    public class Product: IDataErrorInfo
     {
         public string Name { get; set; }
         
@@ -22,8 +27,35 @@ namespace Stock
         //public string PackageSize { get; set; }
 
         public int Brak { get; set; }
+
+        public string Error => throw new NotImplementedException();
+
+        public string this[string columnCount]
+        {
+            get
+            {
+                string error = String.Empty;
+                switch (columnCount)
+                {
+                    case "Count":
+                        if (Count < 0)
+                        {
+                            error = "Количество должно быть больше 0";
+                        }
+                        break;
+                    //case "Name":
+                    //    //Обработка ошибок для свойства Name
+                    //    break;
+                    //case "Position":
+                    //    //Обработка ошибок для свойства Position
+                    //    break;
+                }
+                return error;
+            }
+        }
+
         public Product() { }
-        public Product(string name,  string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName,  int brak )
+        public Product(string name, string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName, int brak)
         {
             Name = name;
             Legal_entity = legal_enity;
@@ -37,8 +69,8 @@ namespace Stock
             //PackageSize = packageSize;
             Brak = brak;
             IsSelected = false;
-            
         }
-      
+        
+
     }
 }
