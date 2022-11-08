@@ -454,7 +454,7 @@
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="AddProduct" Content="Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Click="AddProductButton_Click" Background="White" Canvas.Left="10" Canvas.Top="61"/>
             <Button Style="{DynamicResource ButtonStyle7}" x:Name="AddPackage" Content=" Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Click="AddPackage_Click" Canvas.Left="723" Canvas.Top="61"/>
             <Button Style="{DynamicResource ButtonStyle2}" x:Name="Btn_WarmUp" Content="Упаковать" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="105" Canvas.Top="61" Click="Btn_WarmUp_Click"/>
-            <Button Style="{DynamicResource ButtonStyle3}"  Content="Отправить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="200" Canvas.Top="61" />
+            <Button Style="{DynamicResource ButtonStyle3}"  Content="Отправить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="200" Canvas.Top="61" Click="Button_Click" />
             <Button Style="{DynamicResource ButtonStyle5}" x:Name="DeleteProduct" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="504" Canvas.Top="61" Click="DeleteProduct_Click"/>
             <Button Style="{DynamicResource ButtonStyle6}" x:Name="BrakProduct" Content="Брак" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="599" Canvas.Top="61" Click="Brak_list_Click"/>
 

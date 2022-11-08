@@ -32,10 +32,10 @@
     <Brand>jgdf</Brand>
     <Vendor_code>45678</Vendor_code>
     <Barcode>45678</Barcode>
-    <Count>49</Count>
-    <Packed>2</Packed>
+    <Count>30</Count>
+    <Packed>-3</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>47</Not_Packed>
+    <Not_Packed>33</Not_Packed>
     <PackageName>Box 20*20</PackageName>
     <Brak>0</Brak>
   </Product>
@@ -58,10 +58,10 @@
     <Brand>23456</Brand>
     <Vendor_code>234567</Vendor_code>
     <Barcode>23456</Barcode>
-    <Count>-10</Count>
+    <Count>-20</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>-10</Not_Packed>
+    <Not_Packed>-20</Not_Packed>
     <PackageName>Box 20*20</PackageName>
     <Brak>0</Brak>
   </Product>
@@ -97,10 +97,10 @@
     <Brand>wertyu</Brand>
     <Vendor_code>2345678</Vendor_code>
     <Barcode>34567</Barcode>
-    <Count>34567</Count>
+    <Count>34547</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>34567</Not_Packed>
+    <Not_Packed>34547</Not_Packed>
     <PackageName>Box 20*20</PackageName>
     <Brak>0</Brak>
   </Product>

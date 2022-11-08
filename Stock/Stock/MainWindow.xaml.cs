@@ -28,6 +28,7 @@ namespace Stock
         public WarmUp_Window warmUp_Window;
         public DeleteProduct_Window deleteProduct_Window;
         public Delete_Package delete_package;
+        public Send_Window send_Window;
 
         public MainWindow()
         {
@@ -136,6 +137,12 @@ namespace Stock
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             packageGrid.Items.Refresh();
         }
-        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            send_Window = new Send_Window();
+            send_Window.Owner = this;
+            send_Window.Visibility = Visibility.Visible;
+        }
     }
 }

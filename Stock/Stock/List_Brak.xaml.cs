@@ -35,7 +35,7 @@ namespace Stock
                 MyProducts_List.MyProducts[i].Brak = 0;
             }
             MyProducts_List.SaveProductList();
-            this.Close();
+            
         }
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
         {
@@ -51,7 +51,13 @@ namespace Stock
             }
 
             MyProducts_List.SaveProductList();
-            this.Close();
+            
+        }
+
+        private void gridlistbrak_MouseEnter(object sender, MouseEventArgs e)
+        {
+            //gridlistbrak.ItemsSource = MyPackages_List.MyPackages;
+            gridlistbrak.Items.Refresh();
         }
     }
 }

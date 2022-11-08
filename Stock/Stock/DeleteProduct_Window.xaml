@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Удалить товар" Height="175.2" Width="570.8">
     <Grid>
-        <TextBlock FontSize="18" Margin="29,32,427.8,78.6" Text="Название:"/>
+        <TextBlock   FontSize="18" Margin="29,32,427.8,78.6" Text="Название:"/>
         <ComboBox x:Name="Combo_product_add"   Canvas.Left="128" Canvas.Top="35" Height="29" Margin="162,32,36.8,0" VerticalAlignment="Top" />
         <Button  x:Name="Btn_Delete_Product" Content="Удалить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA" Margin="401,82,36.8,24.6"/>
     </Grid>
