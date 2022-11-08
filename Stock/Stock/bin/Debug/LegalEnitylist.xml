@@ -1,19 +1,4 @@
 <?xml version="1.0"?>
 <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <string>ИП Муравей</string>
-  <string>ИП Крюк</string>
-  <string>ИП Красотка</string>
-  <string>ИП Соловей</string>
-  <string>ИП Иванов</string>
-  <string>ИП Смирнов</string>
-  <string>ИП Новиков</string>
-  <string>и</string>
-  <string>ф</string>
-  <string>крот</string>
-  <string>курлык</string>
-  <string>вертолет</string>
-  <string>кот</string>
-  <string>торт</string>
-  <string>конфета</string>
-  <string>кукуха</string>
+  <string>проба1</string>
 </ArrayOfString>

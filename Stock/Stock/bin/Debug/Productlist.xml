@@ -41,7 +41,7 @@
   </Product>
   <Product>
     <Name>sghsg</Name>
-    <Legal_entity>ИП Новиков</Legal_entity>
+    <Legal_entity>проба1</Legal_entity>
     <Brand>dfgn</Brand>
     <Vendor_code>3456</Vendor_code>
     <Barcode>87654</Barcode>
@@ -80,7 +80,7 @@
   </Product>
   <Product>
     <Name>zdfxhgc</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
+    <Legal_entity>ИП Новиков</Legal_entity>
     <Brand>dsfghn</Brand>
     <Vendor_code>2345</Vendor_code>
     <Barcode>12345</Barcode>
@@ -102,6 +102,19 @@
     <IsSelected>false</IsSelected>
     <Not_Packed>34547</Not_Packed>
     <PackageName>Box 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>апрол</Name>
+    <Legal_entity>зуб</Legal_entity>
+    <Brand>апмрито</Brand>
+    <Vendor_code>сапмрио</Vendor_code>
+    <Barcode>56789</Barcode>
+    <Count>0</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>коробка 40*40</PackageName>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

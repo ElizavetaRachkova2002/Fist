@@ -29,6 +29,7 @@ namespace Stock
         public DeleteProduct_Window deleteProduct_Window;
         public Delete_Package delete_package;
         public Send_Window send_Window;
+        public Change_Product_Window change_Product_Window;
 
         public MainWindow()
         {
@@ -143,6 +144,13 @@ namespace Stock
             send_Window = new Send_Window();
             send_Window.Owner = this;
             send_Window.Visibility = Visibility.Visible;
+        }
+
+        private void ChangeProduct_Click(object sender, RoutedEventArgs e)
+        {
+            change_Product_Window = new Change_Product_Window();
+            change_Product_Window.Owner = this;
+            change_Product_Window.Visibility = Visibility.Visible;
         }
     }
 }

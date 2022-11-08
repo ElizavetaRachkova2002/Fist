@@ -155,7 +155,8 @@ namespace Stock
         {
             if (MyLegalEnitys_List.AddNewLE == true)
             {
-                AddNewLE(MyLegalEnitys_List.NewLE);
+                //AddNewLE(MyLegalEnitys_List.NewLE);
+                GiveTBLegalEnity();
                 MyLegalEnitys_List.AddNewLE = false;
             }
         }

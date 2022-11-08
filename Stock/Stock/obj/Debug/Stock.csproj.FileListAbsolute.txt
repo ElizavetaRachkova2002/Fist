@@ -152,3 +152,5 @@ C:\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Send_Window.baml
+Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Change_Product_Window.g.cs
+Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Change_Product_Window.baml
