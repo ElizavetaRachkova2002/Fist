@@ -44,15 +44,22 @@ namespace Stock
 
         private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
         {
-            string name = Pack_New_Name.Text;
+            string name = Pack_New_Name.Text.Trim();
             Pack_New_Name.Clear();
-            string size = Pack_New_Size.Text;
+            string size = Pack_New_Size.Text.Trim();
             Pack_New_Size.Clear();
-            int count = int.Parse(Pack_New_Count.Text);
+            int count = int.Parse(Pack_New_Count.Text.Trim());
             Pack_New_Count.Clear();
             Package package = new Package(name, size, count);
-            MyPackages_List.MyPackages.Add(package);            
+            MyPackages_List.MyPackages.Add(package); 
             MyPackages_List.SavePackageList();
+
+            DateTime time = DateTime.Now;
+            string operation = "Добавлена новая упаковка: " + name + " " + size+ ", " + count.ToString() + " шт.";
+            History Now = new History(time, operation);
+            MyHistory_List.MyHistory.Add(Now);
+            MyHistory_List.SaveHistory();
+
             this.Close();
         }
 
@@ -64,6 +71,12 @@ namespace Stock
                 if (MyPackages_List.MyPackages[i].Name_package == str[0] && MyPackages_List.MyPackages[i].Size == str[1])
                 {
                     MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
+
+                    DateTime time = DateTime.Now;
+                    string operation = "Добавлена упаковка: " + str[0] +" "+ str[1] +", "+ Pack_Exist_Count.Text + " шт.";
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                 }
             }
 

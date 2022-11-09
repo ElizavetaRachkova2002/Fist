@@ -43,6 +43,12 @@ namespace Stock
                 {
                     MyProducts_List.MyProducts[i].Count += int.Parse(TB_Exist_Count.Text);
                     MyProducts_List.MyProducts[i].Not_Packed += int.Parse(TB_Exist_Count.Text);
+
+                    DateTime time = DateTime.Now;
+                    string operation = "Добавлен товар: " + name + ", " + TB_Exist_Count.Text+" шт.";
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                 }
             }
             TB_Exist_Count.Clear();
@@ -129,23 +135,29 @@ namespace Stock
 
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
-            string name = TB_New_Name.Text;
+            string name = TB_New_Name.Text.Trim();
             TB_New_Name.Clear();
-            string legal = TB_New_Legal_Entity.Text;
-            string brand = TB_New_Brand.Text;
+            string legal = TB_New_Legal_Entity.Text.Trim();
+            string brand = TB_New_Brand.Text.Trim();
             TB_New_Brand.Clear();
-            string vendor = TB_New_Vendor_Code.Text;
+            string vendor = TB_New_Vendor_Code.Text.Trim();
             TB_New_Vendor_Code.Clear();
-            ulong barcode = ulong.Parse(TB_New_Barcode.Text);
+            ulong barcode = ulong.Parse(TB_New_Barcode.Text.Trim());
             TB_New_Barcode.Clear();
-            string packageN = TB_NewProduct_Package_Name.Text;
+            string packageN = TB_NewProduct_Package_Name.Text.Trim();
             //string packageS = TB_NewProduct_Package_Size.Text;
-            int count = int.Parse(TB_NewProduct_Count.Text);
+            int count = int.Parse(TB_NewProduct_Count.Text.Trim());
             TB_NewProduct_Count.Clear();
             Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, 0);
             MyProducts_List.MyProducts.Add(new_product);
 
             MyProducts_List.SaveProductList();
+
+            DateTime time = DateTime.Now;
+            string operation = "Добавлен новый товар: "+name+", "+count.ToString()+" шт.";
+            History Now = new History(time, operation);
+            MyHistory_List.MyHistory.Add(Now);
+            MyHistory_List.SaveHistory();
 
             this.Close();
 
@@ -159,6 +171,14 @@ namespace Stock
                 GiveTBLegalEnity();
                 MyLegalEnitys_List.AddNewLE = false;
             }
+        }
+
+        private void TB_NewProduct_Package_Name_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+            GiveTBPackage();
+
+
         }
     }
 }

@@ -41,9 +41,16 @@ namespace Stock
                 if (MyProducts_List.MyProducts[i].Name==Combo_product_add.Text)
                 {
                     MyProducts_List.MyProducts.RemoveAt(i);
+                    DateTime time = DateTime.Now;
+                    string operation = "Удалён товар: " + Combo_product_add.Text;
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                     break;
                 }
             MyProducts_List.SaveProductList();
+
+            
             this.Close();
         }
     }

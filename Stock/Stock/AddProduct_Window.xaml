@@ -164,7 +164,7 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ComboBox x:Name="TB_NewProduct_Package_Name" Canvas.Left="128" Canvas.Top="260" Width="359" Height="26">
+            <ComboBox x:Name="TB_NewProduct_Package_Name" MouseEnter="TB_NewProduct_Package_Name_MouseEnter" Canvas.Left="128" Canvas.Top="260" Width="359" Height="26">
                 
             </ComboBox>
             <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359">

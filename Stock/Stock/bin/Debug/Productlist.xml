@@ -1,120 +1,29 @@
 <?xml version="1.0"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <Name>thbetw</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
-    <Brand>trb</Brand>
-    <Vendor_code>1436</Vendor_code>
-    <Barcode>3246</Barcode>
-    <Count>-7</Count>
-    <Packed>551</Packed>
+    <Name>Кредитница розовая</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>001</Vendor_code>
+    <Barcode>123456789</Barcode>
+    <Count>654</Count>
+    <Packed>50</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>-558</Not_Packed>
-    <PackageName>Без упаковки</PackageName>
-    <Brak>0</Brak>
+    <Not_Packed>604</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Brak>2</Brak>
   </Product>
   <Product>
-    <Name>rth</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
-    <Brand>reh</Brand>
-    <Vendor_code>2346</Vendor_code>
-    <Barcode>436</Barcode>
-    <Count>-30</Count>
-    <Packed>5</Packed>
+    <Name>Кредитница голубая</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>002</Vendor_code>
+    <Barcode>987654321</Barcode>
+    <Count>500</Count>
+    <Packed>100</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>-35</Not_Packed>
-    <PackageName>Без упаковки</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>jgdjgd</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
-    <Brand>jgdf</Brand>
-    <Vendor_code>45678</Vendor_code>
-    <Barcode>45678</Barcode>
-    <Count>30</Count>
-    <Packed>-3</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>33</Not_Packed>
-    <PackageName>Box 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>sghsg</Name>
-    <Legal_entity>проба1</Legal_entity>
-    <Brand>dfgn</Brand>
-    <Vendor_code>3456</Vendor_code>
-    <Barcode>87654</Barcode>
-    <Count>-10</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>-10</Not_Packed>
-    <PackageName>Box 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>wfsrhtd</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
-    <Brand>23456</Brand>
-    <Vendor_code>234567</Vendor_code>
-    <Barcode>23456</Barcode>
-    <Count>-20</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>-20</Not_Packed>
-    <PackageName>Box 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>u,mn</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
-    <Brand>3456</Brand>
-    <Vendor_code>23456</Vendor_code>
-    <Barcode>23456</Barcode>
-    <Count>-10</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>-10</Not_Packed>
-    <PackageName>Box 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>zdfxhgc</Name>
-    <Legal_entity>ИП Новиков</Legal_entity>
-    <Brand>dsfghn</Brand>
-    <Vendor_code>2345</Vendor_code>
-    <Barcode>12345</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
-    <PackageName>Box 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>sdfghnj</Name>
-    <Legal_entity>ИП Муравей</Legal_entity>
-    <Brand>wertyu</Brand>
-    <Vendor_code>2345678</Vendor_code>
-    <Barcode>34567</Barcode>
-    <Count>34547</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>34547</Not_Packed>
-    <PackageName>Box 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>апрол</Name>
-    <Legal_entity>зуб</Legal_entity>
-    <Brand>апмрито</Brand>
-    <Vendor_code>сапмрио</Vendor_code>
-    <Barcode>56789</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
-    <PackageName>коробка 40*40</PackageName>
+    <Not_Packed>400</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

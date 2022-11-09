@@ -466,7 +466,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="100" />
                     <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="150" />
-                    
+
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="150" />
                     <DataGridTextColumn Header="Всего" Binding="{Binding Path=Count}" Width="95" />
                     <DataGridTextColumn Header="Упаковано" Binding="{Binding Path=Packed}" Width="90" />
@@ -491,10 +491,11 @@
             <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" Canvas.Left="878" Canvas.Top="15" />
             <Rectangle Fill="Black" Height="647" Canvas.Left="710" Stroke="Black" Canvas.Top="10" Width="3"/>
             <Button Style="{DynamicResource ButtonStyle4}" x:Name="ChangeProduct" Content="Изменить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="409" Canvas.Top="61" Click="ChangeProduct_Click"/>
+            <Button x:Name="History_button" Content="История" Height="28" Canvas.Left="1051" Canvas.Top="10" Width="113" Background="White" Click="History_button_Click"/>
 
 
         </Canvas>
 
-       
+
     </Grid>
 </Window>

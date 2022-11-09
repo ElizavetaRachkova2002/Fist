@@ -34,6 +34,12 @@ namespace Stock
                 {
                     MyProducts_List.MyProducts[i].Count -= count;
                     MyProducts_List.MyProducts[i].Packed -= count;
+                    DateTime time = DateTime.Now;
+
+                    string operation = "Отправлен товар: " + name +", "+count.ToString()+" шт.";
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                     break;
                 }
             MyProducts_List.SaveProductList();

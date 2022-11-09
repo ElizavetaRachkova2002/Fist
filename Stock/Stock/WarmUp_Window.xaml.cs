@@ -56,6 +56,11 @@ namespace Stock
                         }
                     WarmUp_Count.Clear();
                     WarmUp_Brak.Clear();
+                    DateTime time = DateTime.Now;
+                    string operation = name + ". Подготовлено к продаже: "+count.ToString()+" шт., Брак: "+brak+" шт." ;
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                     break;
 
                 }

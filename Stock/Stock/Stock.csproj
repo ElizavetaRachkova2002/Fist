@@ -58,12 +58,17 @@
     <Compile Include="Change_Product_Window.xaml.cs">
       <DependentUpon>Change_Product_Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="History.cs" />
     <Compile Include="DeleteProduct_Window.xaml.cs">
       <DependentUpon>DeleteProduct_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Delete_Package.xaml.cs">
       <DependentUpon>Delete_Package.xaml</DependentUpon>
     </Compile>
+    <Compile Include="History_Window.xaml.cs">
+      <DependentUpon>History_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyHistory_List.cs" />
     <Compile Include="Send_Window.xaml.cs">
       <DependentUpon>Send_Window.xaml</DependentUpon>
     </Compile>
@@ -91,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Delete_Package.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="History_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

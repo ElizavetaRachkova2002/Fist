@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Delete_Package" Height="175.2" Width="570.8">
+        Title="Удалить упаковку" Height="175.2" Width="570.8">
    
     <Grid>
         <TextBlock FontSize="18" Margin="29,32,427.8,78.6" Text="Название:"/>

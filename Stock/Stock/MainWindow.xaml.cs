@@ -30,6 +30,7 @@ namespace Stock
         public Delete_Package delete_package;
         public Send_Window send_Window;
         public Change_Product_Window change_Product_Window;
+        public History_Window history_Window;
 
         public MainWindow()
         {
@@ -38,10 +39,12 @@ namespace Stock
             MyPackages_List.LoadPackageList();
             MyProducts_List.LoadProductList();
             MyLegalEnitys_List.LoadLegalEnityList();
+            MyHistory_List.LoadHistory();
 
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             MainContent.Visibility = Visibility.Visible;
             productGrid.ItemsSource = MyProducts_List.MyProducts;
+
            
         }
 
@@ -151,6 +154,13 @@ namespace Stock
             change_Product_Window = new Change_Product_Window();
             change_Product_Window.Owner = this;
             change_Product_Window.Visibility = Visibility.Visible;
+        }
+
+        private void History_button_Click(object sender, RoutedEventArgs e)
+        {
+            history_Window = new History_Window();
+            history_Window.Owner = this;
+            history_Window.Visibility = Visibility.Visible;
         }
     }
 }

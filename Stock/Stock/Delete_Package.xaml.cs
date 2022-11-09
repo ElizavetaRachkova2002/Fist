@@ -32,19 +32,32 @@ namespace Stock
             
             for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
             {
-                Combo_package.Items.Add(MyPackages_List.MyPackages[i].Name_package);
+                Combo_package.Items.Add(MyPackages_List.MyPackages[i].Name_package+" " + MyPackages_List.MyPackages[i].Size);
             }
 
         }
         private void Btn_Delete_Package_Click(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < MyPackages_List.MyPackages.Count(); i++)
-                if (MyPackages_List.MyPackages[i].Name_package == Combo_package.Text)
+            {
+                int spaceBar = Combo_package.Text.LastIndexOf(" ");
+                string name = Combo_package.Text.Substring(0, spaceBar);
+                string size = Combo_package.Text.Substring(spaceBar+1);
+
+                if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size==size)
                 {
+                    string operation = "Удалена упаковка: " + Combo_package.Text;
                     MyPackages_List.MyPackages.RemoveAt(i);
+                    DateTime time = DateTime.Now;
+
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                     break;
                 }
+            }
             MyPackages_List.SavePackageList();
+
             this.Close();
         }
     }
