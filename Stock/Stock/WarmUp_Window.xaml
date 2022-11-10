@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="Упаковать" Height="304" Width="396.8"
         WindowStartupLocation="Manual" Top="200" Left="300">
     <Window.Resources>

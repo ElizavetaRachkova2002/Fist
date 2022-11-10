@@ -488,25 +488,25 @@
     </Window.Resources>
     <Grid Name="MainContent" Focusable="True" HorizontalAlignment="Stretch" Background="#FFEFF2F7" Margin="0,0,-0.4,0.4">
         <Canvas HorizontalAlignment="Stretch" Margin="0,0,-1,1">
-            <Button Style="{DynamicResource ButtonStyle1}" x:Name="AddProduct" Content="Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Click="AddProductButton_Click" Background="White" Canvas.Left="10" Canvas.Top="61"/>
-            <Button Style="{DynamicResource ButtonStyle7}" x:Name="AddPackage" Content=" Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Click="AddPackage_Click" Canvas.Left="723" Canvas.Top="61"/>
-            <Button Style="{DynamicResource ButtonStyle2}" x:Name="Btn_WarmUp" Content="Упаковать" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="105" Canvas.Top="61" Click="Btn_WarmUp_Click"/>
-            <Button Style="{DynamicResource ButtonStyle3}"  Content="Отправить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="200" Canvas.Top="61" Click="Button_Click" />
-            <Button Style="{DynamicResource ButtonStyle5}" x:Name="DeleteProduct" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="504" Canvas.Top="61" Click="DeleteProduct_Click"/>
-            <Button Style="{DynamicResource ButtonStyle6}" x:Name="BrakProduct" Content="Брак" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="599" Canvas.Top="61" Click="Brak_list_Click"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="AddProduct" Content="Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Click="AddProductButton_Click" Background="White" Canvas.Left="10" Canvas.Top="87"/>
+            <Button Style="{DynamicResource ButtonStyle7}" x:Name="AddPackage" Content=" Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Click="AddPackage_Click" Canvas.Left="780" Canvas.Top="87"/>
+            <Button Style="{DynamicResource ButtonStyle2}" x:Name="Btn_WarmUp" Content="Упаковать" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="105" Canvas.Top="87" Click="Btn_WarmUp_Click"/>
+            <Button Style="{DynamicResource ButtonStyle3}"  Content="Отправить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="200" Canvas.Top="87" Click="Button_Click" />
+            <Button Style="{DynamicResource ButtonStyle5}" x:Name="DeleteProduct" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="525" Canvas.Top="87" Click="DeleteProduct_Click"/>
+            <Button Style="{DynamicResource ButtonStyle6}" x:Name="BrakProduct" Content="Брак" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="620" Canvas.Top="87" Click="Brak_list_Click"/>
 
-            <Button Style="{DynamicResource ButtonStyle8}" x:Name="DeletePackage" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="818" Canvas.Top="61" Click="Delete_Package_Click"/>
+            <Button Style="{DynamicResource ButtonStyle8}" x:Name="DeletePackage" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="878" Canvas.Top="87" Click="Delete_Package_Click"/>
 
-            <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
+            <DataGrid x:Name="productGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFB7B7B7" CanUserAddRows="False"
                       VerticalScrollBarVisibility="Auto" Grid.Row="0" MouseUp="grid_MouseUp" MouseEnter="ProductGrid_MouseEnter"
-            RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" Canvas.Left="10" Canvas.Top="102" Width="700" IsReadOnly="True" FontSize="14" >
+            RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" Canvas.Left="10" Canvas.Top="125" Width="700" IsReadOnly="True" VerticalGridLinesBrush="#FFB7B7B7" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="100" />
-                    <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="150" />
+                    <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="90" />
 
-                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="150" />
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="210" />
                     <DataGridTextColumn Header="Всего" Binding="{Binding Path=Count}" Width="95" />
-                    <DataGridTextColumn Header="Упаковано" Binding="{Binding Path=Packed}" Width="90" />
+                    <DataGridTextColumn Header="К продаже" Binding="{Binding Path=Packed}" Width="90" />
                     <DataGridTextColumn Header="Не упаковано" Binding="{Binding Path=Not_Packed}" Width="110" />
                 </DataGrid.Columns>
 
@@ -514,20 +514,20 @@
 
             </DataGrid>
 
-            <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" CanUserAddRows="False"
+            <DataGrid x:Name="packageGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFB7B7B7" CanUserAddRows="False"
                        VerticalScrollBarVisibility="Auto" Grid.Row="0"  MouseUp="grid_MouseUp_Package" MouseEnter="PackageGrid_MouseEnter"
-            RowBackground="White" AlternatingRowBackground="White"  MaxHeight="500" Canvas.Left="735" Canvas.Top="105" IsReadOnly="True">
+            RowBackground="White" AlternatingRowBackground="White"  MaxHeight="500" Canvas.Left="780" Canvas.Top="125" IsReadOnly="True" VerticalGridLinesBrush="#FFB7B7B7">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="260" />
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="230" />
                     <DataGridTextColumn Header="Размер" Binding="{Binding Path=Size}" Width="90" />
                     <DataGridTextColumn Header="Кол-во" Binding="{Binding Path=Count_package}" Width="50" />
                 </DataGrid.Columns>
             </DataGrid>
 
-            <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="30" Canvas.Left="297" Canvas.Top="10"  />
-            <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="258" FontSize="30" Canvas.Left="878" Canvas.Top="15" />
-            <Rectangle Fill="Black" Height="647" Canvas.Left="710" Stroke="Black" Canvas.Top="10" Width="3"/>
-            <Button Style="{DynamicResource ButtonStyle4}" x:Name="ChangeProduct" Content="Изменить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="409" Canvas.Top="61" Click="ChangeProduct_Click"/>
+            <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Товары" VerticalAlignment="Top"  Width="258" FontSize="20" Canvas.Left="10" Canvas.Top="36" FontWeight="Bold"  />
+            <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="146" FontSize="20" Canvas.Left="780" Canvas.Top="41" FontWeight="Bold" RenderTransformOrigin="0.586,0.539" />
+
+            <Button Style="{DynamicResource ButtonStyle4}" x:Name="ChangeProduct" Content="Изменить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="430" Canvas.Top="87" Click="ChangeProduct_Click" RenderTransformOrigin="0.526,1.708"/>
             <Button x:Name="History_button" Content="История" Height="28" Canvas.Left="1051" Canvas.Top="10" Width="113" Background="#FFE4E4E4" Click="History_button_Click" Style="{DynamicResource ButtonStyleHistory}"/>
 
 

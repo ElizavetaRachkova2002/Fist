@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="Удалить товар" Height="175.2" Width="570.8"
         WindowStartupLocation="Manual" Top="300" Left="200">
     <Window.Resources>

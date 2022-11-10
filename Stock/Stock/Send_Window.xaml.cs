@@ -38,7 +38,7 @@ namespace Stock
 
                     string operation = "Отправлен товар: " + name +", "+count.ToString()+" шт.";
                     History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
                     break;
                 }

@@ -27,7 +27,8 @@ namespace Stock
             InitializeComponent();
 
             Combo_product_add.Items.Clear();
-
+            BrdAddExistingProduct.Visibility = Visibility.Visible;
+            BrdAddNewProduct.Visibility = Visibility.Collapsed;
             GiveTBProduct();            
             GiveTBLegalEnity();
             GiveTBPackage();
@@ -47,7 +48,7 @@ namespace Stock
                     DateTime time = DateTime.Now;
                     string operation = "Добавлен товар: " + name + ", " + TB_Exist_Count.Text+" шт.";
                     History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
                 }
             }
@@ -158,7 +159,7 @@ namespace Stock
             DateTime time = DateTime.Now;
             string operation = "Добавлен новый товар: "+name+", "+count.ToString()+" шт.";
             History Now = new History(time, operation);
-            MyHistory_List.MyHistory.Add(Now);
+            MyHistory_List.MyHistory.Insert(0, Now);
             MyHistory_List.SaveHistory();
 
             this.Close();

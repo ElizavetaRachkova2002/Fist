@@ -25,7 +25,8 @@ namespace Stock
             Combo_WarmUp_Name.Items.Clear();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
-                Combo_WarmUp_Name.Items.Add(MyProducts_List.MyProducts[i].Name);
+                Combo_WarmUp_Name.Items.Add(MyProducts_List.MyProducts[i].Name);                
+                    
             }
         }
 
@@ -59,7 +60,7 @@ namespace Stock
                     DateTime time = DateTime.Now;
                     string operation = name + ". Подготовлено к продаже: "+count.ToString()+" шт., Брак: "+brak+" шт." ;
                     History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
                     break;
 

@@ -38,7 +38,7 @@ namespace Stock
                     DateTime time = DateTime.Now;
                     string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
                     History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
                     MyProducts_List.MyProducts[i].Brak = 0;
                 }
@@ -59,7 +59,7 @@ namespace Stock
                     DateTime time = DateTime.Now;
                     string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
                     History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
                     MyProducts_List.MyProducts[i].Brak = 0;
                 }

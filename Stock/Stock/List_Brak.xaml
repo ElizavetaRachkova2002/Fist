@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
         Title="Список товаров с браком" Height="450" Width="800"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterOwner">
     <Window.Resources>
         <Style x:Key="FocusVisual">

@@ -74,7 +74,7 @@ namespace Stock
             Product product = productGrid.SelectedItem as Product;
             MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
                  "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
-                 + "\n Упаковано : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
+                 + "\n К продаже : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
         }
 
 

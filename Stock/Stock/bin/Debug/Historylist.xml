@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-11T00:10:19.8621161+03:00</Time>
+    <Operation>Отправлен товар: Кредитница розовая, 100 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T00:09:03.4957517+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 290 шт., Брак: 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T23:44:02.6259463+03:00</Time>
+    <Operation>Удалён товар: про</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T23:43:57.3498145+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая, 100 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-10T16:49:54.7408781+03:00</Time>
     <Operation>Кредитница голубая. Подготовлено к продаже: 100 шт., Брак: 0 шт.</Operation>
   </History>
@@ -67,5 +83,33 @@
   <History>
     <Time>2022-11-10T18:31:57.7995369+03:00</Time>
     <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T21:22:35.5192725+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 0 шт., Брак: 15 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T21:22:52.6221825+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 20 шт., Брак: 3 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T21:40:34.5765173+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 0 шт., Брак: 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T21:47:41.5932929+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 20 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T21:50:49.4229212+03:00</Time>
+    <Operation>Добавлен новый товар: про, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T21:51:08.6594065+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая, 100 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T22:05:55.1223781+03:00</Time>
+    <Operation>Отправлен товар: про, 110 шт.</Operation>
   </History>
 </ArrayOfHistory>

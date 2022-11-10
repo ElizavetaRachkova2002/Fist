@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="Добавление товара" Height="430" Width="506.9"
         WindowStartupLocation="Manual"
         Top="200" Left="250">
@@ -126,16 +127,16 @@
     </Window.Resources>
     <Grid Margin="0,0,4,0.4">
 
-        <Button Name="BtnExistingProduct" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click" RenderTransformOrigin="0.643,0.771" Margin="249,0,-5.2,349.4"  />
-        <Button Name="BtnAddNewProduct" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Margin="0,0,247.8,349.4"  />
-        <Canvas x:Name="BrdAddExistingProduct" Background="White" Width="497" Margin="0,51,-0.2,0">
+        <Button Name="BtnExistingProduct" FontSize="16" Content="Существующий" Click="BtnExistingProduct_Click" RenderTransformOrigin="0.643,0.771" Margin="0,0,243.8,361.4"  />
+        <Button Name="BtnAddNewProduct" Content="Новый" FontSize="16" Click="BtnAddNewProduct_Click" Margin="253,0,-5.2,361.4"  />
+        <Canvas x:Name="BrdAddExistingProduct" Background="White" Width="497" Margin="0,44,-0.2,6.4">
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
             <Button Style="{DynamicResource ButtonAddExistingProduct}" x:Name="Btn_Add_Existing_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA"/>
             <ComboBox x:Name="Combo_product_add"   Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" />
-            <TextBox x:Name="TB_Exist_Count" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="300"/>
+            <TextBox x:Name="TB_Exist_Count" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="327"/>
         </Canvas>
-        <Canvas Name="BrdAddNewProduct" Background="White" Width="497" Margin="0,51,-0.2,29.4">
+        <Canvas Name="BrdAddNewProduct" Background="White" Width="497" Margin="0,44,-0.2,33.4">
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Text="Юр. лицо:" Canvas.Left="23" Canvas.Top="81"/>
             <TextBlock Width="100" FontSize="18" Text="Бренд:" Canvas.Left="23" Canvas.Top="126"/>
@@ -190,7 +191,7 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <Button x:Name="Add_LegalEnity" Content="+" Height="24" Canvas.Top="81" Width="20" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="3" Click="Add_LegalEnity_Click"/>
+            <Button x:Name="Add_LegalEnity" Content="+" Height="20" Canvas.Top="83" Width="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Add_LegalEnity_Click" Canvas.Left="2"/>
         </Canvas>
     </Grid>
 </Window>

@@ -57,7 +57,7 @@ namespace Stock
             DateTime time = DateTime.Now;
             string operation = "Добавлена новая упаковка: " + name + " " + size+ ", " + count.ToString() + " шт.";
             History Now = new History(time, operation);
-            MyHistory_List.MyHistory.Add(Now);
+            MyHistory_List.MyHistory.Insert(0,Now);
             MyHistory_List.SaveHistory();
 
             this.Close();
@@ -75,7 +75,7 @@ namespace Stock
                     DateTime time = DateTime.Now;
                     string operation = "Добавлена упаковка: " + str[0] +" "+ str[1] +", "+ Pack_Exist_Count.Text + " шт.";
                     History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
                 }
             }
