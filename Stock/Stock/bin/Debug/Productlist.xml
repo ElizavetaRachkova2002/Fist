@@ -6,12 +6,12 @@
     <Brand>40а</Brand>
     <Vendor_code>001</Vendor_code>
     <Barcode>123456789</Barcode>
-    <Count>654</Count>
-    <Packed>50</Packed>
+    <Count>636</Count>
+    <Packed>60</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>604</Not_Packed>
+    <Not_Packed>576</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
-    <Brak>2</Brak>
+    <Brak>0</Brak>
   </Product>
   <Product>
     <Name>Кредитница голубая</Name>
@@ -19,10 +19,10 @@
     <Brand>40а</Brand>
     <Vendor_code>002</Vendor_code>
     <Barcode>987654321</Barcode>
-    <Count>500</Count>
-    <Packed>200</Packed>
+    <Count>483</Count>
+    <Packed>201</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>300</Not_Packed>
+    <Not_Packed>282</Not_Packed>
     <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
   </Product>

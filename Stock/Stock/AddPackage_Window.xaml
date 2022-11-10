@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Добавление упаковки" Height="453" Width="510.8">
+        Title="Добавление упаковки" Height="430" Width="510.8" WindowStartupLocation="Manual" Top="200" Left="800">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -121,24 +121,24 @@
     <Grid>
 
 
-        <Canvas x:Name="BrdAddNewPackage" Margin="0,81,7,0.2" Background="White" Height="342" Width="497">
+        <Canvas x:Name="BrdAddNewPackage" Margin="0,59,7,9.8" Background="White" Width="497">
             <TextBlock Width="100" FontSize="18" Margin="23,32,0,0" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Margin="23,32,0,0" Text="Размер:" Canvas.Top="35"/>
             <TextBlock Width="100" FontSize="18"  Margin="23,32,0,0" Text="Кол-во" Canvas.Top="70"/>
-            <Button Style="{DynamicResource ButtonAddNEwPackage}" x:Name="Btn_Add_New_Package" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Package_Click" Background="#FFB4D2FA"/>
+            <Button Style="{DynamicResource ButtonAddNEwPackage}" x:Name="Btn_Add_New_Package" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="271" Click="Btn_Add_New_Package_Click" Background="#FFB4D2FA"/>
             <TextBox x:Name="Pack_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="35" Width="359"/>
             <TextBox x:Name="Pack_New_Size" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="70" Width="359"/>
             <TextBox x:Name="Pack_New_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="105" Width="359"/>
         </Canvas>
 
 
-        <Button x:Name="BtnExistingPackage" FontSize="20" Content="Существующая" Click="BtnExistingPackage_Click" Margin="0,0,249,364.2"   />
-        <Button x:Name="BtnAddNewPackage" Content="Новая" FontSize="20" Click="BtnAddNewPackage_Click" Margin="255,0,0,364.2"   />
+        <Button x:Name="BtnExistingPackage" FontSize="20" Content="Существующая" Click="BtnExistingPackage_Click" Margin="0,0,249,341.8"   />
+        <Button x:Name="BtnAddNewPackage" Content="Новая" FontSize="20" Click="BtnAddNewPackage_Click" Margin="255,0,0,341.8"   />
 
-        <Canvas x:Name="BrdAddExistingPackage" Margin="0,79,7,57.4" Background="White" Height="342" Width="497">
+        <Canvas x:Name="BrdAddExistingPackage" Margin="0,59,7,20.8" Background="White" Width="497">
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
-            <Button Style="{DynamicResource ButtonAddExistingPackage}" x:Name="Btn_Add_Existing_Pachage" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Package_Click" Background="#FFB4D2FA"/>
+            <Button Style="{DynamicResource ButtonAddExistingPackage}" x:Name="Btn_Add_Existing_Pachage" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="271" Click="Btn_Add_Existing_Package_Click" Background="#FFB4D2FA"/>
             <ComboBox x:Name="Combo_package_add"   Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" />
             <TextBox x:Name="Pack_Exist_Count" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="300"/>
         </Canvas>

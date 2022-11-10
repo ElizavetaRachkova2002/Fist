@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Отправить товар" Height="230.461" Width="580.461">
+        Title="Отправить товар" Height="230.461" Width="580.461"
+        WindowStartupLocation="Manual" Top="200" Left="300">
     <Grid>
         <TextBlock FontSize="18" Margin="29,32,427.4,139.8" Text="Название:"/>
         <TextBlock FontSize="18" Margin="29,83,427.4,83.8" Text="Кол-во:"/>

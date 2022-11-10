@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Упаковать" Height="304" Width="396.8">
+        Title="Упаковать" Height="304" Width="396.8"
+        WindowStartupLocation="Manual" Top="200" Left="300">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

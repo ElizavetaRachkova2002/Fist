@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="История" Height="450" Width="650">
+        Title="История" Height="450" Width="650"
+        WindowStartupLocation="CenterOwner">
     <Grid Margin="0,0,3.6,-5">
 
         <DataGrid x:Name="HistoryGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"

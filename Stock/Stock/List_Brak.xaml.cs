@@ -32,9 +32,19 @@ namespace Stock
             
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
-                MyProducts_List.MyProducts[i].Brak = 0;
+                if (MyProducts_List.MyProducts[i].Brak != 0)
+                {
+                    
+                    DateTime time = DateTime.Now;
+                    string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
+                    MyProducts_List.MyProducts[i].Brak = 0;
+                }
             }
             MyProducts_List.SaveProductList();
+            this.Close();
             
         }
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
@@ -45,6 +55,12 @@ namespace Stock
             {
                 if (MyProducts_List.MyProducts[i].IsSelected == true)
                 {
+                   
+                    DateTime time = DateTime.Now;
+                    string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Add(Now);
+                    MyHistory_List.SaveHistory();
                     MyProducts_List.MyProducts[i].Brak = 0;
                 }
                 MyProducts_List.MyProducts[i].IsSelected = false;

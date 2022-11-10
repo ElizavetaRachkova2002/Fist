@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Добавление товара" Height="428.208" Width="506.9">
+        Title="Добавление товара" Height="430" Width="506.9"
+        WindowStartupLocation="Manual"
+        Top="200" Left="250">
+
     <Window.DataContext>
         <local:Product/>
     </Window.DataContext>
@@ -123,8 +126,8 @@
     </Window.Resources>
     <Grid Margin="0,0,4,0.4">
 
-        <Button Name="BtnExistingProduct" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click" RenderTransformOrigin="0.643,0.771" Margin="249,0,-5.2,344"  />
-        <Button Name="BtnAddNewProduct" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Margin="0,0,247.8,344"  />
+        <Button Name="BtnExistingProduct" FontSize="20" Content="Существующий" Click="BtnExistingProduct_Click" RenderTransformOrigin="0.643,0.771" Margin="249,0,-5.2,349.4"  />
+        <Button Name="BtnAddNewProduct" Content="Новый" FontSize="20" Click="BtnAddNewProduct_Click" Margin="0,0,247.8,349.4"  />
         <Canvas x:Name="BrdAddExistingProduct" Background="White" Width="497" Margin="0,51,-0.2,0">
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
@@ -132,7 +135,7 @@
             <ComboBox x:Name="Combo_product_add"   Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" />
             <TextBox x:Name="TB_Exist_Count" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="300"/>
         </Canvas>
-        <Canvas Name="BrdAddNewProduct" Background="White" Height="342" Width="497" Margin="0,56,-0.2,0">
+        <Canvas Name="BrdAddNewProduct" Background="White" Width="497" Margin="0,51,-0.2,29.4">
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Text="Юр. лицо:" Canvas.Left="23" Canvas.Top="81"/>
             <TextBlock Width="100" FontSize="18" Text="Бренд:" Canvas.Left="23" Canvas.Top="126"/>
@@ -165,7 +168,7 @@
                 </TextBox.Text>
             </TextBox>
             <ComboBox x:Name="TB_NewProduct_Package_Name" MouseEnter="TB_NewProduct_Package_Name_MouseEnter" Canvas.Left="128" Canvas.Top="260" Width="359" Height="26">
-                
+
             </ComboBox>
             <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359">
                 <TextBox.Text>
@@ -180,11 +183,11 @@
             <TextBox x:Name="TB_NewProduct_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231" >
                 <TextBox.Text>
                     <Binding Path="Count" ValidatesOnExceptions="True" UpdateSourceTrigger="PropertyChanged" >
-                    <Binding.ValidationRules>
+                        <Binding.ValidationRules>
                             <ExceptionValidationRule />
-                          
+
                         </Binding.ValidationRules>
-                </Binding>
+                    </Binding>
                 </TextBox.Text>
             </TextBox>
             <Button x:Name="Add_LegalEnity" Content="+" Height="24" Canvas.Top="81" Width="20" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="3" Click="Add_LegalEnity_Click"/>

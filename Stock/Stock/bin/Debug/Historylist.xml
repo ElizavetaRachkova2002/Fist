@@ -16,4 +16,56 @@
     <Time>2022-11-10T17:25:31.2278056+03:00</Time>
     <Operation>Добавлена новая упаковка: коробка 20*20, 100 шт.</Operation>
   </History>
+  <History>
+    <Time>2022-11-10T18:28:18.5540456+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 0 шт., Брак: 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:28:34.2711404+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 0 шт., Брак: 7 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:28:46.6718112+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:28:46.6756573+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:30:37.2011912+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 0 шт., Брак: 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:30:47.7945156+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 0 шт., Брак: 9 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:30:55.5017006+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:30:55.5039228+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 9 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:31:22.4746895+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 10 шт., Брак: 9 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:31:31.2713632+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:31:41.7127401+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 9 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:31:57.7954932+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-10T18:31:57.7995369+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
 </ArrayOfHistory>
