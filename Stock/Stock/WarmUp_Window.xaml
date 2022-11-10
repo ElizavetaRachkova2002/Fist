@@ -71,6 +71,6 @@
         <TextBox x:Name="WarmUp_Count" Canvas.Left="249" Canvas.Top="117" Margin="241,80,10.4,163.4" />
         <TextBox x:Name="WarmUp_Brak" Canvas.Left="83" Canvas.Top="155" Margin="100,126,10.4,116.4" />
 
-        <Button Style="{DynamicResource ButtonWarmUpProduct}" x:Name="Btn_WarmUp_Product" Content="Упаковать" FontSize="20" Canvas.Left="268" Canvas.Top="184" Click="Btn_WarmUp_Product_Click" Background="#FFB4D2FA" Margin="242,186,18.4,52.4"/>
+        <Button Style="{DynamicResource ButtonWarmUpProduct}" x:Name="Btn_WarmUp_Product" Content="Упаковать" FontSize="20" Canvas.Left="268" Canvas.Top="184" Click="Btn_WarmUp_Product_Click" Background="#FFB4D2FA" Margin="242,186,10.4,45.4"/>
     </Grid>
 </Window>

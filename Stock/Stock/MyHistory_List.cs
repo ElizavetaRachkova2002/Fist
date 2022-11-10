@@ -23,8 +23,12 @@ namespace Stock
                 {
                     List<History> tempList = (List<History>)serializer.Deserialize(reader);
                     currentH_list.Clear();
+                    DateTime time = DateTime.Now.AddDays(-14);
                     foreach (var item in tempList)
+                    {
+                        if (item.Time>time)
                         currentH_list.Add(item);
+                    }
                 }
                 MyHistory.Clear();
                 MyHistory = currentH_list;

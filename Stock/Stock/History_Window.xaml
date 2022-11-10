@@ -12,8 +12,8 @@
                       VerticalScrollBarVisibility="Auto" Grid.Row="0"  MouseEnter="HistoryGrid_MouseEnter"
             RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" IsReadOnly="True" FontSize="14" Margin="0,0,-0.2,0" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата" Binding="{Binding Path=Time}" Width="150" />
-                <DataGridTextColumn Header="Действие" Binding="{Binding Path=Operation}" Width="500" />
+                <DataGridTextColumn Header="Дата" Binding="{Binding Path=Time}" Width="170" />
+                <DataGridTextColumn Header="Действие" Binding="{Binding Path=Operation}" Width="450" />
             </DataGrid.Columns>
 
 

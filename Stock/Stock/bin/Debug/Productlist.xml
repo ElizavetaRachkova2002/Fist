@@ -20,10 +20,10 @@
     <Vendor_code>002</Vendor_code>
     <Barcode>987654321</Barcode>
     <Count>500</Count>
-    <Packed>100</Packed>
+    <Packed>200</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>400</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
+    <Not_Packed>300</Not_Packed>
+    <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

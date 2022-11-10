@@ -99,6 +99,13 @@ namespace Stock
             }
         }
 
+        private void TB_New_Package_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            GiveTBPackage();
+
+        }
+
         private void Add_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
             addLegalEnity_Window = new AddLegalEnity_Window();
@@ -121,7 +128,7 @@ namespace Stock
 
         public void GiveTBPackage()
         {
-
+            int now = TB_NewProduct_Package_Name.SelectedIndex;
             TB_NewProduct_Package_Name.Items.Clear();
             MyPackages_List.LoadPackageList();
             for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
@@ -129,7 +136,7 @@ namespace Stock
                 TB_NewProduct_Package_Name.Items.Add(MyPackages_List.MyPackages[i].ToString());
             }
             TB_NewProduct_Package_Name.Items.Add("Без упаковки");
-
+            TB_NewProduct_Package_Name.SelectedIndex=now;
 
         }
 

@@ -40,6 +40,7 @@ namespace Stock
             MyProducts_List.LoadProductList();
             MyLegalEnitys_List.LoadLegalEnityList();
             MyHistory_List.LoadHistory();
+            MyHistory_List.SaveHistory();
 
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             MainContent.Visibility = Visibility.Visible;

@@ -2,4 +2,6 @@
 <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <string>проба1</string>
   <string>ИП Иванов И.А</string>
+  <string>ИП Суриков В.В.</string>
+  <string>ИП Дрозд К.К.</string>
 </ArrayOfString>
