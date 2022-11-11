@@ -528,7 +528,7 @@
             <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Упаковка" VerticalAlignment="Top"  Width="146" FontSize="20" Canvas.Left="780" Canvas.Top="41" FontWeight="Bold" RenderTransformOrigin="0.586,0.539" />
 
             <Button Style="{DynamicResource ButtonStyle4}" x:Name="ChangeProduct" Content="Изменить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Canvas.Left="430" Canvas.Top="87" Click="ChangeProduct_Click" RenderTransformOrigin="0.526,1.708"/>
-            <Button x:Name="History_button" Content="История" Height="28" Canvas.Left="1051" Canvas.Top="10" Width="113" Background="#FFE4E4E4" Click="History_button_Click" Style="{DynamicResource ButtonStyleHistory}"/>
+            <Button x:Name="History_button" Content="История" Height="28" Canvas.Left="1038" Canvas.Top="17" Width="113" Background="#FFE4E4E4" Click="History_button_Click" Style="{DynamicResource ButtonStyleHistory}"/>
 
 
         </Canvas>

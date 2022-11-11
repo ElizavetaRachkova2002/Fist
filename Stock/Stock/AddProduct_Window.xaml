@@ -191,7 +191,7 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <Button x:Name="Add_LegalEnity" Content="+" Height="20" Canvas.Top="83" Width="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Add_LegalEnity_Click" Canvas.Left="2"/>
+            <Button x:Name="Add_LegalEnity" Content="Р" Height="20" Canvas.Top="83" Width="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Add_LegalEnity_Click" Canvas.Left="2"/>
         </Canvas>
     </Grid>
 </Window>

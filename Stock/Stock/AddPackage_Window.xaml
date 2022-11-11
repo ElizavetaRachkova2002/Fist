@@ -125,7 +125,7 @@
         <Canvas x:Name="BrdAddNewPackage" Margin="0,59,7,9.8" Background="White" Width="497">
             <TextBlock Width="100" FontSize="18" Margin="23,32,0,0" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Margin="23,32,0,0" Text="Размер:" Canvas.Top="35"/>
-            <TextBlock Width="100" FontSize="18"  Margin="23,32,0,0" Text="Кол-во" Canvas.Top="70"/>
+            <TextBlock Width="100" FontSize="18"  Margin="23,32,0,0" Text="Количество:" Canvas.Top="70"/>
             <Button Style="{DynamicResource ButtonAddNEwPackage}" x:Name="Btn_Add_New_Package" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="271" Click="Btn_Add_New_Package_Click" Background="#FFB4D2FA"/>
             <TextBox x:Name="Pack_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="35" Width="359"/>
             <TextBox x:Name="Pack_New_Size" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="70" Width="359"/>
@@ -141,7 +141,7 @@
             <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
             <Button Style="{DynamicResource ButtonAddExistingPackage}" x:Name="Btn_Add_Existing_Pachage" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="271" Click="Btn_Add_Existing_Package_Click" Background="#FFB4D2FA"/>
             <ComboBox x:Name="Combo_package_add"   Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" />
-            <TextBox x:Name="Pack_Exist_Count" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="327"/>
+            <TextBox x:Name="Pack_Exist_Count" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="85" Width="359"/>
         </Canvas>
     </Grid>
 </Window>

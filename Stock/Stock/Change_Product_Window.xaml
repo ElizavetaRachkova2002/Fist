@@ -152,7 +152,7 @@
                 </TextBox.Text>
             </TextBox>
 
-            <Button x:Name="Add_LegalEnity" Content="+" Height="24" Canvas.Top="81" Width="24"   Canvas.Left="-11" Click="Add_LegalEnity_Click" />
+            <Button x:Name="Add_LegalEnity" Content="Р" Height="24" Canvas.Top="81" Width="24"   Canvas.Left="-11" Click="Add_LegalEnity_Click" />
         </Canvas>
         <Rectangle Fill="#FFC8C8E0" HorizontalAlignment="Left" Height="4" Margin="0,138,0,0" Stroke="Black" VerticalAlignment="Top" Width="552"/>
     </Grid>

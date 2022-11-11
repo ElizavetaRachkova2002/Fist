@@ -32,6 +32,8 @@ namespace Stock
             GiveTBProduct();            
             GiveTBLegalEnity();
             GiveTBPackage();
+            BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightGray);
+            BtnExistingProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
         }
 
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
@@ -71,14 +73,20 @@ namespace Stock
                 TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
             }
 
+            BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
+            BtnExistingProduct.Background = new SolidColorBrush(Colors.LightGray);
+
             MyProducts_List.SaveProductList();
+
         }
 
         private void BtnExistingProduct_Click(object sender, RoutedEventArgs e)
         {
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             BrdAddExistingProduct.Visibility = Visibility.Visible;
-            
+            BtnAddNewProduct.Background= new SolidColorBrush(Colors.LightGray);
+            BtnExistingProduct.Background= new SolidColorBrush(Colors.LightSkyBlue);
+
         }
 
         private void Add_LegalEnity_Click(object sender, RoutedEventArgs e)

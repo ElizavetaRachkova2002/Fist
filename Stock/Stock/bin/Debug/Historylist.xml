@@ -1,6 +1,86 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-11T19:38:48.878593+03:00</Time>
+    <Operation>Отправлен товар. для касс. Aртикул: 001 Кол-во: 5; Aртикул: 002 Кол-во: 5; Aртикул: 984 Кол-во: 5; Aртикул: оу833 Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T19:37:25.4070304+03:00</Time>
+    <Operation>тетрадь 2. Подготовлено к продаже: 10 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T19:37:14.4795263+03:00</Time>
+    <Operation>тетрадь. Подготовлено к продаже: 10 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T19:37:05.4482199+03:00</Time>
+    <Operation>Добавлен товар: тетрадь 2, 100 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T19:36:56.4087929+03:00</Time>
+    <Operation>Добавлен товар: тетрадь, 100 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T19:36:37.9622076+03:00</Time>
+    <Operation>Добавлен новый товар: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T19:35:57.334384+03:00</Time>
+    <Operation>Добавлен новый товар: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T18:23:04.6641636+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 3 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T18:23:04.6611715+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T17:54:05.1473179+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 001 Кол-во: 20; Aртикул: 002 Кол-во: 20; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T17:53:11.2880593+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 100 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T17:52:51.6989927+03:00</Time>
+    <Operation>Отправлен товар. ozon. Aртикул: 001 Кол-во: 20; Aртикул: 002 Кол-во: 20; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T17:47:42.1476723+03:00</Time>
+    <Operation>Отправлен товар. на wb. Aртикул: 001 Кол-во: 1; Aртикул: 002 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T17:46:17.4087275+03:00</Time>
+    <Operation>Отправлен товар. Aртикул: 002 Кол-во: 100; Aртикул: 001 Кол-во: 100; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T17:44:04.0759472+03:00</Time>
+    <Operation>Отправлен товар: артикул 001 Кол-во: 100артикул 002 Кол-во: 100</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T12:13:34.5250622+03:00</Time>
+    <Operation>Удалено юр. лицо: проба1</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T12:12:29.1553761+03:00</Time>
+    <Operation>Удалено юр. лицо: ип</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T12:08:57.2422454+03:00</Time>
+    <Operation>Удалено юр. лицо: </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T11:00:24.2300664+03:00</Time>
+    <Operation>Удалён товар: </Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T11:00:12.7651636+03:00</Time>
+    <Operation>Добавлен новый товар: , 0 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-11T00:10:19.8621161+03:00</Time>
     <Operation>Отправлен товар: Кредитница розовая, 100 шт.</Operation>
   </History>

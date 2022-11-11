@@ -6,12 +6,12 @@
     <Brand>40а</Brand>
     <Vendor_code>001</Vendor_code>
     <Barcode>123456789</Barcode>
-    <Count>506</Count>
-    <Packed>250</Packed>
-    <IsSelected>false</IsSelected>
+    <Count>260</Count>
+    <Packed>4</Packed>
+    <IsSelected>true</IsSelected>
     <Not_Packed>256</Not_Packed>
     <PackageName>Без упаковки</PackageName>
-    <Brak>10</Brak>
+    <Brak>0</Brak>
   </Product>
   <Product>
     <Name>Кредитница голубая</Name>
@@ -19,11 +19,37 @@
     <Brand>40а</Brand>
     <Vendor_code>002</Vendor_code>
     <Barcode>987654321</Barcode>
-    <Count>680</Count>
-    <Packed>221</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>459</Not_Packed>
+    <Count>434</Count>
+    <Packed>75</Packed>
+    <IsSelected>true</IsSelected>
+    <Not_Packed>359</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
-    <Brak>3</Brak>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>тетрадь</Name>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>984</Vendor_code>
+    <Barcode>87654</Barcode>
+    <Count>95</Count>
+    <Packed>5</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>90</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>тетрадь 2</Name>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>оу833</Vendor_code>
+    <Barcode>876524</Barcode>
+    <Count>95</Count>
+    <Packed>5</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>90</Not_Packed>
+    <PackageName>коробка 20*20</PackageName>
+    <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

@@ -28,18 +28,24 @@ namespace Stock
             {
                 Combo_package_add.Items.Add(MyPackages_List.MyPackages[i].ToString());
             }
+            BtnAddNewPackage.Background = new SolidColorBrush(Colors.LightGray);
+            BtnExistingPackage.Background = new SolidColorBrush(Colors.LightSkyBlue);
         }
 
         private void BtnExistingPackage_Click(object sender, RoutedEventArgs e)
         {
             BrdAddNewPackage.Visibility = Visibility.Collapsed;
             BrdAddExistingPackage.Visibility = Visibility.Visible;
+            BtnAddNewPackage.Background = new SolidColorBrush(Colors.LightGray);
+            BtnExistingPackage.Background = new SolidColorBrush(Colors.LightSkyBlue);
         }
 
         private void BtnAddNewPackage_Click(object sender, RoutedEventArgs e)
         {
             BrdAddExistingPackage.Visibility = Visibility.Collapsed;
             BrdAddNewPackage.Visibility = Visibility.Visible;
+            BtnAddNewPackage.Background = new SolidColorBrush(Colors.LightSkyBlue);
+            BtnExistingPackage.Background = new SolidColorBrush(Colors.LightGray);
         }
 
         private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
