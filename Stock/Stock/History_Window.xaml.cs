@@ -24,7 +24,12 @@ namespace Stock
             InitializeComponent();
             HistoryGrid.ItemsSource = MyHistory_List.MyHistory;
         }
-
+        public void grid_MouseUp_History(object sender, MouseButtonEventArgs e)
+        {
+            History history = HistoryGrid.SelectedItem as History;
+           
+            MessageBox.Show(history.Operation);
+        }
         private void HistoryGrid_MouseEnter(object sender, MouseEventArgs e)
         {
             HistoryGrid.ItemsSource = MyHistory_List.MyHistory;

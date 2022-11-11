@@ -11,7 +11,7 @@
     <Grid Margin="0,0,3.6,-5">
 
         <DataGrid x:Name="HistoryGrid" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFB7B7B7" CanUserAddRows="False"
-                      VerticalScrollBarVisibility="Auto" Grid.Row="0"  MouseEnter="HistoryGrid_MouseEnter"
+                      VerticalScrollBarVisibility="Auto" Grid.Row="0" MouseUp="grid_MouseUp_History" MouseEnter="HistoryGrid_MouseEnter"
             RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" IsReadOnly="True" FontSize="14" Margin="0,0,-0.2,0" VerticalGridLinesBrush="#FFB7B7B7" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Дата" Binding="{Binding Path=Time}" Width="170" />
