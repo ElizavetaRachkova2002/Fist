@@ -1,6 +1,646 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-12T13:23:31.6302969+03:00</Time>
+    <Operation>Списан брак: erhrst, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.6253044+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.6213068+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.6170013+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.613047+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.6089302+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.6049171+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.6020596+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.5990558+03:00</Time>
+    <Operation>Списан брак: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.5942389+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:31.5912534+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:23:26.3996591+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1250231+03:00</Time>
+    <Operation>Списан брак: erhrst, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1229137+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1210792+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1200896+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1190814+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1180776+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1140944+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.111088+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1090691+03:00</Time>
+    <Operation>Списан брак: тетрадь, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1060273+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:47.1030766+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:44.3755705+03:00</Time>
+    <Operation>erhrst. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:39.0289877+03:00</Time>
+    <Operation>тетрадь. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:34.4800152+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.3040095+03:00</Time>
+    <Operation>Списан брак: erhrst, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2999499+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2950826+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2920772+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2880826+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2850777+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2819119+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2789022+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2759038+03:00</Time>
+    <Operation>Списан брак: тетрадь, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2727633+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:27.2697499+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:24.8514724+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:13.837375+03:00</Time>
+    <Operation>тетрадь. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:08.2920637+03:00</Time>
+    <Operation>erhrst. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:22:02.5175874+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2503471+03:00</Time>
+    <Operation>Списан брак: erhrst, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2473018+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2443586+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2423202+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2393067+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2363692+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2322218+03:00</Time>
+    <Operation>Списан брак: терадь, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.230226+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2251871+03:00</Time>
+    <Operation>Списан брак: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.2221719+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:45.218152+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:21:24.9263415+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:38.2597661+03:00</Time>
+    <Operation>терадь. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:32.916114+03:00</Time>
+    <Operation>erhrst. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:16.8021948+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8924345+03:00</Time>
+    <Operation>Списан брак: erhrst, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8903858+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8873798+03:00</Time>
+    <Operation>Списан брак: fgj, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8844516+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8812059+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.878214+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8752056+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8722175+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8692136+03:00</Time>
+    <Operation>Списан брак: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8658579+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:09.8627878+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:13:05.3583615+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:53.1674903+03:00</Time>
+    <Operation>erhrst. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:47.4291637+03:00</Time>
+    <Operation>fgj. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:40.8430075+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6620354+03:00</Time>
+    <Operation>Списан брак: erhrst, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6590346+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6560493+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6530403+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6500508+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.647028+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6440064+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6404422+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6374771+03:00</Time>
+    <Operation>Списан брак: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.6334714+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:12:29.627472+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:08:44.039446+03:00</Time>
+    <Operation>erhrst. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:08:39.572777+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.769906+03:00</Time>
+    <Operation>Списан брак: erhrst, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7659491+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7616447+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7582314+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7554574+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7512529+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7294284+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7259452+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7229425+03:00</Time>
+    <Operation>Списан брак: тетрадь, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7199133+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:25.7168095+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:07:02.5917782+03:00</Time>
+    <Operation>erhrst. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:54.5961084+03:00</Time>
+    <Operation>тетрадь. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:46.180106+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 5 шт., Брак: 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3290134+03:00</Time>
+    <Operation>Списан брак: erhrst, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3260464+03:00</Time>
+    <Operation>Списан брак: pp, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3240678+03:00</Time>
+    <Operation>Списан брак: fgj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3210327+03:00</Time>
+    <Operation>Списан брак: atjh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3180127+03:00</Time>
+    <Operation>Списан брак: srtthj, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.315024+03:00</Time>
+    <Operation>Списан брак: 678, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3108011+03:00</Time>
+    <Operation>Списан брак: терадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3077914+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3037935+03:00</Time>
+    <Operation>Списан брак: тетрадь, 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.3007874+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T13:06:04.2973743+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 12 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T10:32:57.6369001+03:00</Time>
+    <Operation>Добавлен новый товар: erhrst, 67 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T10:31:25.2758885+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 3 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T10:31:12.1653401+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:46:55.2928728+03:00</Time>
+    <Operation>pp. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:46:28.3891177+03:00</Time>
+    <Operation>Добавлен новый товар: pp, 12 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:45:54.4406605+03:00</Time>
+    <Operation>Добавлена новая упаковка: рр 7*7, 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:30:16.753361+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 984 Кол-во: 1; Aртикул: 3456 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:30:16.7053643+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 984 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:25:00.9067832+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 002 Кол-во: 75; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:24:47.2928473+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 002 Кол-во: 8; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:24:02.3623888+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:23:48.0837376+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:23:32.6200848+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 002 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:23:07.9617767+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 002 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:22:12.9567177+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:21:32.2444113+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:21:19.8434033+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:21:12.6996236+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:21:01.3469058+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:20:25.2655679+03:00</Time>
+    <Operation>Отправлен товар. . </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T09:18:57.8247246+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 001 Кол-во: 100; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:49:49.1408946+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:48:42.2480661+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:41:37.213132+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:41:20.7900718+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:40:47.3158827+03:00</Time>
+    <Operation>терадь. Подготовлено к продаже: 10 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:37:17.3737591+03:00</Time>
+    <Operation>Добавлен новый товар: fgj, 567 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:35:56.9443236+03:00</Time>
+    <Operation>Добавлен новый товар: atjh, 347 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:35:27.844471+03:00</Time>
+    <Operation>Добавлен новый товар: srtthj, 5426 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:35:02.9096998+03:00</Time>
+    <Operation>Добавлен новый товар: 678, 768 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-12T08:15:10.5971268+03:00</Time>
+    <Operation>Добавлен новый товар: терадь, 2345 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:13:32.857547+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 8 шт., Брак: 12 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:13:24.491963+03:00</Time>
+    <Operation>тетрадь. Подготовлено к продаже: 8 шт., Брак: 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:13:15.6535031+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 8 шт., Брак: 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:03:25.0000339+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:03:24.9965632+03:00</Time>
+    <Operation>Списан брак: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:03:24.9911118+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:03:24.9861208+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:03:10.6459472+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 2 шт., Брак: 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T23:02:51.564766+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 2 шт., Брак: 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:32:44.374113+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:32:44.3711166+03:00</Time>
+    <Operation>Списан брак: тетрадь, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:32:44.3681169+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:32:44.3661156+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 6 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:32:28.4031346+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 6 шт., Брак: 6 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:30:11.480408+03:00</Time>
+    <Operation>Списан брак: тетрадь 2, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:30:11.4764553+03:00</Time>
+    <Operation>Списан брак: тетрадь, 7 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:30:11.4737737+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:30:11.4692552+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 6 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:29:46.1406775+03:00</Time>
+    <Operation>тетрадь. Подготовлено к продаже: 7 шт., Брак: 7 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-11T22:29:18.998021+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 6 шт., Брак: 6 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-11T19:38:48.878593+03:00</Time>
     <Operation>Отправлен товар. для касс. Aртикул: 001 Кол-во: 5; Aртикул: 002 Кол-во: 5; Aртикул: 984 Кол-во: 5; Aртикул: оу833 Кол-во: 5; </Operation>
   </History>

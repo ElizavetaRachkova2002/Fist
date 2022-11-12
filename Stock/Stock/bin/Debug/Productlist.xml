@@ -6,10 +6,10 @@
     <Brand>40а</Brand>
     <Vendor_code>001</Vendor_code>
     <Barcode>123456789</Barcode>
-    <Count>260</Count>
-    <Packed>4</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>256</Not_Packed>
+    <Count>128</Count>
+    <Packed>-66</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>194</Not_Packed>
     <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
   </Product>
@@ -19,10 +19,10 @@
     <Brand>40а</Brand>
     <Vendor_code>002</Vendor_code>
     <Barcode>987654321</Barcode>
-    <Count>434</Count>
-    <Packed>75</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>359</Not_Packed>
+    <Count>331</Count>
+    <Packed>17</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>314</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
   </Product>
@@ -32,10 +32,10 @@
     <Brand>40а</Brand>
     <Vendor_code>984</Vendor_code>
     <Barcode>87654</Barcode>
-    <Count>95</Count>
-    <Packed>5</Packed>
+    <Count>76</Count>
+    <Packed>22</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>90</Not_Packed>
+    <Not_Packed>54</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
   </Product>
@@ -50,6 +50,97 @@
     <IsSelected>false</IsSelected>
     <Not_Packed>90</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>терадь</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>вапр</Brand>
+    <Vendor_code>3456</Vendor_code>
+    <Barcode>3245</Barcode>
+    <Count>2343</Count>
+    <Packed>10</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>2333</Not_Packed>
+    <PackageName>Без упаковки</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>678</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>76768</Brand>
+    <Vendor_code>0016</Vendor_code>
+    <Barcode>780</Barcode>
+    <Count>768</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>768</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>srtthj</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>stj</Brand>
+    <Vendor_code>4575</Vendor_code>
+    <Barcode>56</Barcode>
+    <Count>5426</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>5426</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>atjh</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>tru</Brand>
+    <Vendor_code>001654</Vendor_code>
+    <Barcode>547</Barcode>
+    <Count>347</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>347</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>fgj</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>fdh</Brand>
+    <Vendor_code>0022</Vendor_code>
+    <Barcode>657</Barcode>
+    <Count>566</Count>
+    <Packed>1</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>565</Not_Packed>
+    <PackageName>коробка 20*20</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>pp</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>555</Brand>
+    <Vendor_code>765</Vendor_code>
+    <Barcode>899</Barcode>
+    <Count>12</Count>
+    <Packed>2</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>10</Not_Packed>
+    <PackageName>рр 7*7</PackageName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>erhrst</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>3457</Brand>
+    <Vendor_code>001544</Vendor_code>
+    <Barcode>336575</Barcode>
+    <Count>61</Count>
+    <Packed>6</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>55</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

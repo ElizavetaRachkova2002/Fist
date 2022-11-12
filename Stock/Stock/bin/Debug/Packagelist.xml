@@ -3,11 +3,16 @@
   <Package>
     <Name_package>пакет</Name_package>
     <Size>30*30</Size>
-    <Count_package>380</Count_package>
+    <Count_package>329</Count_package>
   </Package>
   <Package>
     <Name_package>коробка</Name_package>
     <Size>20*20</Size>
-    <Count_package>90</Count_package>
+    <Count_package>89</Count_package>
+  </Package>
+  <Package>
+    <Name_package>рр</Name_package>
+    <Size>7*7</Size>
+    <Count_package>0</Count_package>
   </Package>
 </ArrayOfPackage>

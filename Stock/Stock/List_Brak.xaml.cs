@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Xml.Serialization;
+using System.Data;
 
 namespace Stock
 {
@@ -27,26 +28,53 @@ namespace Stock
 
         }
 
-        private void Btn_all_brak_Click(object sender, RoutedEventArgs e)
+        //private void Btn_all_brak_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //    for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+        //    {
+        //        if (MyProducts_List.MyProducts[i].Brak != 0)
+        //        {
+
+        //            DateTime time = DateTime.Now;
+        //            string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
+        //            History Now = new History(time, operation);
+        //            MyHistory_List.MyHistory.Insert(0, Now);
+        //            MyHistory_List.SaveHistory();
+        //            MyProducts_List.MyProducts[i].Brak = 0;
+        //        }
+        //    }
+        //    MyProducts_List.SaveProductList();
+        //    this.Close();
+
+        //}
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            
+            //for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            //{
+            //    MyProducts_List.MyProducts[i].IsSelected=
+
+            //}
+
+            //MyProducts_List.SaveProductList();
+
+        }
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+           
+            var chk = (CheckBox)sender;
+            chk.IsChecked = true;
+           
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
-                if (MyProducts_List.MyProducts[i].Brak != 0)
-                {
-                    
-                    DateTime time = DateTime.Now;
-                    string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
-                    MyProducts_List.MyProducts[i].Brak = 0;
-                }
+                MyProducts_List.MyProducts[i].IsSelected = true;
+              
             }
             MyProducts_List.SaveProductList();
-            this.Close();
-            
+           
+
         }
+       
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
         {
 

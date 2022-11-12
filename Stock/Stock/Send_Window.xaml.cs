@@ -35,30 +35,52 @@ namespace Stock
         private void Btn_Add_Send_Product_Click(object sender, RoutedEventArgs e)
         {
             string operation = "Отправлен товар. "+TB_Comment.Text+". ";
+            bool flag = false;
             for (int j = 0; j < ComboName_List.Count; j++)
             {
 
                 string name = ComboName_List[j].Text;
                 int count = int.Parse(TBCount_List[j].Text);
+                
                 for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                {
                     if (MyProducts_List.MyProducts[i].Name == name)
                     {
-                        MyProducts_List.MyProducts[i].Count -= count;
-                        MyProducts_List.MyProducts[i].Packed -= count;
-
-
-                        operation = operation + "Aртикул: " + MyProducts_List.MyProducts[i].Vendor_code+ " Кол-во: " +count.ToString()+"; ";
-                        
-                        break;
+                        if (MyProducts_List.MyProducts[i].Packed < count)
+                        {
+                            flag = true;
+                        }
                     }
+                }
+               
+                if (flag == false)
+                {
+
+                    for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                        if (MyProducts_List.MyProducts[i].Name == name)
+                        {
+                            MyProducts_List.MyProducts[i].Count -= count;
+                            MyProducts_List.MyProducts[i].Packed -= count;
+
+
+                            operation = operation + "Aртикул: " + MyProducts_List.MyProducts[i].Vendor_code + " Кол-во: " + count.ToString() + "; ";
+
+                            break;
+                        }
+
+                    DateTime time = DateTime.Now;
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Insert(0, Now);
+                    MyHistory_List.SaveHistory();
+                    MyProducts_List.SaveProductList();
+                    this.Close();
+                }
             }
-            DateTime time = DateTime.Now;
-            History Now = new History(time, operation);
-            MyHistory_List.MyHistory.Insert(0, Now);
-            MyHistory_List.SaveHistory();
-            MyProducts_List.SaveProductList();
-            this.Close();
-           
+
+            if (flag == true)
+            {
+                MessageBox.Show("Кол-во упакованного товара меньше, чем вы выбрали");
+            }
         }
 
         public void GiveTBProduct()

@@ -122,6 +122,7 @@
     </Window.Resources>
     
     <Grid>
+        
         <Border x:Name="Brd_list_brak" Margin="0,0,0,0" Height="450" Width="850" Background="White" Panel.ZIndex="0" BorderBrush="Black" BorderThickness="1" >
         <DataGrid x:Name="gridlistbrak" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
                       VerticalScrollBarVisibility="Auto" Grid.Row="0" Margin="0,0,215,0" MouseEnter="gridlistbrak_MouseEnter"
@@ -131,18 +132,22 @@
                 <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="150" />
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="210" />
                 <DataGridTextColumn Header="Брак" Binding="{Binding Path=Brak}" Width="90" />
-                <DataGridTemplateColumn >
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
+                   <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.Header>
+                            <CheckBox x:Name="chkHeader" Checked="CheckBox_Checked"    Unchecked="CheckBox_Unchecked" />
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
                                 <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
+                                <!--<CheckBox IsChecked="{Binding IsChecked, ElementName=chkHeader, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" />-->
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
-        <Button Style="{DynamicResource ButtonPartBrak}" x:Name="Btn_all_brak"   Margin="630,170,0,0" Width="135" Height="40" Content="Списать всё"   FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_all_brak_Click" Background="#FFB4D2FA"/>
-        <Button Style="{DynamicResource ButtonAllBrak}" x:Name="Btn_part_brak" Margin="630,0,0,0" Width="135" Height="40" Content="Списать часть" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_part_brak_Click" Background="#FFB4D2FA"/>
+       
+        <Button Style="{DynamicResource ButtonAllBrak}" x:Name="Btn_part_brak" Margin="630,0,0,0" Width="135" Height="40" Content="Списать" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_part_brak_Click" Background="#FFB4D2FA"/>
     </Grid>
 
 </Window>

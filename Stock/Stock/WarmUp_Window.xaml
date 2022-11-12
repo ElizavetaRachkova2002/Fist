@@ -66,13 +66,19 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBlock FontSize="18" Text="Название:" Canvas.Left="26" Canvas.Top="70" Margin="18,34,260.4,199.4"/>
-        <TextBlock Width="218" FontSize="18" Text="Подготовлено к продаже:" Canvas.Left="26" Canvas.Top="117" Margin="18,80,154.4,163.4"/>
-        <TextBlock FontSize="18" Text="Брак:" Canvas.Left="26" Canvas.Top="155" Margin="18,126,310.4,116.4"/>
-        <ComboBox x:Name="Combo_WarmUp_Name" Canvas.Left="131" Canvas.Top="72" Margin="135,34,10.4,209.4"  />
-        <TextBox x:Name="WarmUp_Count" Canvas.Left="249" Canvas.Top="117" Margin="241,80,10.4,163.4" />
-        <TextBox x:Name="WarmUp_Brak" Canvas.Left="83" Canvas.Top="155" Margin="100,126,10.4,116.4" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="320*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="18" Text="Название:" Margin="18,34,261,199" Grid.ColumnSpan="4"/>
+        <TextBlock Width="218" FontSize="18" Text="Подготовлено к продаже:" Margin="21,80,158,163" Grid.ColumnSpan="4"/>
+        <TextBlock FontSize="18" Text="Брак:" Margin="18,126,311,116" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="Combo_WarmUp_Name" Margin="58,34,11,209" Grid.Column="3"  />
+        <TextBox x:Name="WarmUp_Count" Margin="164,80,11,163" Grid.Column="3" />
+        <TextBox x:Name="WarmUp_Brak" Margin="23,126,11,116" Grid.Column="3" />
 
-        <Button Style="{DynamicResource ButtonWarmUpProduct}" x:Name="Btn_WarmUp_Product" Content="Упаковать" FontSize="20" Canvas.Left="268" Canvas.Top="184" Click="Btn_WarmUp_Product_Click" Background="#FFB4D2FA" Margin="242,186,10.4,45.4"/>
+        <Button Style="{DynamicResource ButtonWarmUpProduct}" x:Name="Btn_WarmUp_Product" Content="Упаковать" FontSize="20" Click="Btn_WarmUp_Product_Click" Background="#FFB4D2FA" Margin="165,186,11,45" Grid.Column="3"/>
     </Grid>
 </Window>
