@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Stock"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="Мой склад" Height="687.6" Width="1180">
+        
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
