@@ -8,7 +8,7 @@
     <Barcode>123456789</Barcode>
     <Count>128</Count>
     <Packed>-66</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>194</Not_Packed>
     <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
@@ -21,7 +21,7 @@
     <Barcode>987654321</Barcode>
     <Count>331</Count>
     <Packed>17</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>314</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
@@ -34,7 +34,7 @@
     <Barcode>87654</Barcode>
     <Count>76</Count>
     <Packed>22</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>54</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
@@ -47,7 +47,7 @@
     <Barcode>876524</Barcode>
     <Count>95</Count>
     <Packed>5</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>90</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
     <Brak>0</Brak>
@@ -60,7 +60,7 @@
     <Barcode>3245</Barcode>
     <Count>2343</Count>
     <Packed>10</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>2333</Not_Packed>
     <PackageName>Без упаковки</PackageName>
     <Brak>0</Brak>
@@ -73,7 +73,7 @@
     <Barcode>780</Barcode>
     <Count>768</Count>
     <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>768</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
@@ -86,7 +86,7 @@
     <Barcode>56</Barcode>
     <Count>5426</Count>
     <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>5426</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
@@ -99,7 +99,7 @@
     <Barcode>547</Barcode>
     <Count>347</Count>
     <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>347</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
@@ -112,7 +112,7 @@
     <Barcode>657</Barcode>
     <Count>566</Count>
     <Packed>1</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>565</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
     <Brak>0</Brak>
@@ -125,7 +125,7 @@
     <Barcode>899</Barcode>
     <Count>12</Count>
     <Packed>2</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>10</Not_Packed>
     <PackageName>рр 7*7</PackageName>
     <Brak>0</Brak>
@@ -138,7 +138,7 @@
     <Barcode>336575</Barcode>
     <Count>61</Count>
     <Packed>6</Packed>
-    <IsSelected>false</IsSelected>
+    <IsSelected>true</IsSelected>
     <Not_Packed>55</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
