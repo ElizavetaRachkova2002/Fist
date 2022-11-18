@@ -162,3 +162,39 @@ C:\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
 C:\Fist\Stock\Stock\obj\Debug\Change_Product_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\History_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\Send_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Stock.exe.config
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Stock.exe
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Stock.pdb
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csprojAssemblyReference.cache
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddPackage_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddProduct_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Change_Product_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\DeleteProduct_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Delete_Package.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\History_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\List_Brak.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\MainWindow.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\WarmUp_Window.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\App.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.cache
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.lref
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddPackage_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddProduct_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Change_Product_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\DeleteProduct_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Delete_Package.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\History_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\List_Brak.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\MainWindow.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Send_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\WarmUp_Window.baml
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.g.resources
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.Properties.Resources.resources
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csproj.GenerateResource.cache
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.exe
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.pdb

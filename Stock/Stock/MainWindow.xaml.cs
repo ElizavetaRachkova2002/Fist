@@ -163,5 +163,9 @@ namespace Stock
             history_Window.Owner = this;
             history_Window.Visibility = Visibility.Visible;
         }
+
+        
+
+        
     }
 }
