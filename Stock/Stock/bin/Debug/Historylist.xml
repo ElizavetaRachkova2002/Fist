@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-19T12:21:11.8081442+03:00</Time>
+    <Operation>Добавлен новый товар: rtut, 5670 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-18T21:38:19.2211343+03:00</Time>
     <Operation>Добавлен товар: тетрадь 2, 100 шт.</Operation>
   </History>

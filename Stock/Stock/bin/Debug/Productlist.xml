@@ -143,4 +143,17 @@
     <PackageName>пакет 30*30</PackageName>
     <Brak>0</Brak>
   </Product>
+  <Product>
+    <Name>rtut</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>hsfdh</Brand>
+    <Vendor_code>3567</Vendor_code>
+    <Barcode>6575367</Barcode>
+    <Count>5670</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>5670</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Brak>0</Brak>
+  </Product>
 </ArrayOfProduct>

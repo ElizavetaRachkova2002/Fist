@@ -66,15 +66,24 @@ namespace Stock
 
         private void grid_MouseUp_Package(object sender, MouseButtonEventArgs e)
         {
-            Package package= packageGrid.SelectedItem as Package;
-            MessageBox.Show(" Наименование: " + package.Name_package + "\n Размер: " + package.Size + "\n Количество: " + package.Count_package);
+            Package package = packageGrid.SelectedItem as Package;
+            if (package != null)
+            {
+                MessageBox.Show(" Наименование: " + package.Name_package + "\n Размер: " + package.Size + "\n Количество: " + package.Count_package);
+            }
+            else { }
         }
         private void grid_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Product product = productGrid.SelectedItem as Product;
-            MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
-                 "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
-                 + "\n К продаже : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
+            Product product = null;
+             product = productGrid.SelectedItem as Product;
+            if (product != null)
+            {
+                MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
+                   "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
+                   + "\n К продаже : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
+            }
+            else { }
         }
 
 
