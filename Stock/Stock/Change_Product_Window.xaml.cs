@@ -22,11 +22,13 @@ namespace Stock
         bool flag_OK = false;
         int current_product_number;
         AddLegalEnity_Window addLegalEnity_Window;
+        Add_Brand_Window add_Brand_Window;
         public Change_Product_Window()
         {
             InitializeComponent();
 
             GiveTBProduct();
+            GiveTBBrand();
             GiveTBLegalEnity();
             GiveTBPackage();
 
@@ -85,9 +87,15 @@ namespace Stock
             else MessageBox.Show("Введите наименование товара для изменения");
         }
 
-        public void AddNewLE(string name)
+        
+
+        private void TB_New_Brand_MouseDown(object sender, MouseEventArgs e)
         {
-            TB_New_Legal_Entity.Items.Add(name);
+            if (Brand_List.AddNewBr == true)
+            {
+                GiveTBBrand();
+                Brand_List.AddNewBr = false;
+            }
         }
 
         private void TB_New_Legal_Entity_MouseDown(object sender, MouseEventArgs e)
@@ -126,6 +134,18 @@ namespace Stock
             }
         }
 
+        public void GiveTBBrand()
+        {
+
+            TB_New_Brand.Items.Clear();
+            Brand_List.LoadBrandList();
+
+            for (int i = 0; i < Brand_List.MyBrand.Count; i++)
+            {
+                TB_New_Brand.Items.Add(Brand_List.MyBrand[i]);
+            }
+        }
+
         public void GiveTBPackage()
         {
             int now = TB_NewProduct_Package_Name.SelectedIndex;
@@ -150,6 +170,13 @@ namespace Stock
                 Combo_Current_Product.Items.Add(MyProducts_List.MyProducts[i].Name);
             }
 
+        }
+
+        private void Add_Brand_Click(object sender, RoutedEventArgs e)
+        {
+            add_Brand_Window = new Add_Brand_Window();
+            add_Brand_Window.Owner = this;
+            add_Brand_Window.Visibility = Visibility.Visible;
         }
     }
 }

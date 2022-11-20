@@ -1,6 +1,30 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-20T19:45:02.2774264+03:00</Time>
+    <Operation>Добавлен новый бренд: Домик</Operation>
+  </History>
+  <History>
+    <Time>2022-11-20T19:44:46.791831+03:00</Time>
+    <Operation>Удален бренд: Лапки</Operation>
+  </History>
+  <History>
+    <Time>2022-11-20T19:28:52.3433142+03:00</Time>
+    <Operation>Добавлен новый бренд: Лапки</Operation>
+  </History>
+  <History>
+    <Time>2022-11-20T19:28:20.3404236+03:00</Time>
+    <Operation>Добавлен новый бренд: 40а</Operation>
+  </History>
+  <History>
+    <Time>2022-11-20T19:28:10.7907488+03:00</Time>
+    <Operation>Удалено юр. лицо: 40а</Operation>
+  </History>
+  <History>
+    <Time>2022-11-20T19:24:50.5162575+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: 40а</Operation>
+  </History>
+  <History>
     <Time>2022-11-19T12:21:11.8081442+03:00</Time>
     <Operation>Добавлен новый товар: rtut, 5670 шт.</Operation>
   </History>

@@ -6,11 +6,9 @@
         xmlns:local="clr-namespace:Stock"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-       
-        Title="Мой склад"
-        
-    Height="750"
-    Width="1400"
+        Title="Мой склад"       
+        Height="750"
+        Width="1400"
         MinHeight="750" MinWidth="1400">
 
     <Window.Resources>
@@ -541,9 +539,9 @@
 
         </Grid>
 
-        <DataGrid x:Name="productGrid"  Grid.Row="2" Background="#FFEFF2F7" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFB7B7B7" CanUserAddRows="False"
+        <DataGrid x:Name="productGrid" Grid.Row="2" Background="#FFEFF2F7" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFB7B7B7" CanUserAddRows="False"
                       VerticalScrollBarVisibility="Auto"  Grid.Column="0" MouseUp="grid_MouseUp" MouseEnter="ProductGrid_MouseEnter"
-                      RowBackground="White" AlternatingRowBackground="White"   IsReadOnly="True" VerticalGridLinesBrush="#FFB7B7B7" Margin="10,10.4,81.8,61.8" Grid.ColumnSpan="2"   >
+                      RowBackground="White" AlternatingRowBackground="White"   IsReadOnly="True" VerticalGridLinesBrush="#FFB7B7B7" Margin="10,10.4,81.8,61.8" Grid.ColumnSpan="2" BorderThickness="0"   >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="110" />
                 <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="110" />
@@ -556,7 +554,7 @@
 
         <DataGrid x:Name="packageGrid" Background="#FFEFF2F7" AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFB7B7B7" CanUserAddRows="False"
                        VerticalScrollBarVisibility="Auto" Grid.Row="2"  MouseUp="grid_MouseUp_Package" MouseEnter="PackageGrid_MouseEnter"
-            RowBackground="White" AlternatingRowBackground="White"  IsReadOnly="True" VerticalGridLinesBrush="#FFB7B7B7" Margin="0.2,10.4,6.6,61.8" Grid.Column="2" >
+            RowBackground="White" AlternatingRowBackground="White"  IsReadOnly="True" VerticalGridLinesBrush="#FFB7B7B7" Margin="0.2,10.4,6.6,61.8" Grid.Column="2" BorderThickness="0" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="*" />
                 <DataGridTextColumn Header="Размер" Binding="{Binding Path=Size}" Width="*" />

@@ -20,6 +20,7 @@ namespace Stock
     public partial class AddProduct_Window : Window
     {
         public AddLegalEnity_Window addLegalEnity_Window;
+        public Add_Brand_Window add_Brand_Window;
         
         
         public AddProduct_Window()
@@ -31,6 +32,7 @@ namespace Stock
             BrdAddNewProduct.Visibility = Visibility.Collapsed;
             GiveTBProduct();            
             GiveTBLegalEnity();
+            GiveTBBrand();
             GiveTBPackage();
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightGray);
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
@@ -68,10 +70,9 @@ namespace Stock
             TB_New_Legal_Entity.Items.Clear();
 
             MyLegalEnitys_List.LoadLegalEnityList();
-            for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
-            {
-                TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
-            }
+            GiveTBLegalEnity();
+            Brand_List.LoadBrandList();
+            GiveTBBrand();
 
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightGray);
@@ -98,10 +99,10 @@ namespace Stock
 
         }
 
-        public void AddNewLE(string name)
-        {
-            TB_New_Legal_Entity.Items.Add(name);
-        }
+        //public void AddNewLE(string name)
+        //{
+        //    TB_New_Legal_Entity.Items.Add(name);
+        //}
 
         public void GiveTBLegalEnity()
         {
@@ -112,6 +113,18 @@ namespace Stock
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
                 TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
+            }
+        }
+
+        public void GiveTBBrand()
+        {
+
+            TB_New_Brand.Items.Clear();
+            Brand_List.LoadBrandList();
+
+            for (int i = 0; i < Brand_List.MyBrand.Count; i++)
+            {
+                TB_New_Brand.Items.Add(Brand_List.MyBrand[i]);
             }
         }
 
@@ -195,7 +208,7 @@ namespace Stock
 
                 TB_New_Name.Clear();
                 TB_New_Legal_Entity.Items.Clear();
-                TB_New_Brand.Clear();
+                TB_New_Brand.Items.Clear();
                 TB_New_Vendor_Code.Clear();
                 TB_New_Barcode.Clear();
                 TB_NewProduct_Package_Name.Items.Clear();
@@ -236,9 +249,31 @@ namespace Stock
             }
         }
 
+        private void TB_New_Brand_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (Brand_List.AddNewBr == true)
+            {
+                //AddNewLE(MyLegalEnitys_List.NewLE);
+                GiveTBBrand();
+                Brand_List.AddNewBr = false;
+            }
+        }
+
         private void TB_NewProduct_Package_Name_MouseEnter(object sender, MouseEventArgs e)
         {
             GiveTBPackage();
+        }
+
+        private void Add_Brand_Click(object sender, RoutedEventArgs e)
+        {
+            add_Brand_Window = new Add_Brand_Window();
+            add_Brand_Window.Owner = this;
+            add_Brand_Window.Visibility = Visibility.Visible;
+        }
+
+        private void Add_More_Package_btn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

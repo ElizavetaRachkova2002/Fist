@@ -117,6 +117,8 @@
             <Button  x:Name="Btn_Add_New_Product"  Width="109" Height="24" Content="Изменить" FontSize="14" Canvas.Left="378" Canvas.Top="292" Click="Btn_Change_Product_Click" Background="#FFB4D2FA" Style="{DynamicResource ButtonStyleChange}"/>
             <ComboBox x:Name="TB_New_Legal_Entity" MouseEnter="TB_New_Legal_Entity_MouseDown" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26" >
             </ComboBox>
+            <ComboBox x:Name="TB_New_Brand" MouseEnter="TB_New_Brand_MouseDown" Canvas.Left="128" Canvas.Top="126" Width="359" Height="26" >
+            </ComboBox>
             <TextBox x:Name="TB_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="32" Width="359"/>
             <TextBox x:Name="TB_New_Vendor_Code" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="171" Width="359">
                 <TextBox.Text>
@@ -141,18 +143,10 @@
             <ComboBox x:Name="TB_NewProduct_Package_Name" MouseEnter="TB_New_Package_MouseDown" Canvas.Left="128" Canvas.Top="260" Width="359" Height="26">
 
             </ComboBox>
-            <TextBox x:Name="TB_New_Brand" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="126" Width="359">
-                <TextBox.Text>
-                    <Binding Path="Brand" ValidatesOnExceptions="True" UpdateSourceTrigger="PropertyChanged" >
-                        <Binding.ValidationRules>
-                            <ExceptionValidationRule />
-
-                        </Binding.ValidationRules>
-                    </Binding>
-                </TextBox.Text>
-            </TextBox>
+            
 
             <Button x:Name="Add_LegalEnity" Content="Р" Height="24" Canvas.Top="81" Width="24"   Canvas.Left="-11" Click="Add_LegalEnity_Click" />
+            <Button x:Name="Add_Brand" Content="Р" Height="24" Canvas.Top="126" Width="24"   Canvas.Left="-11" Click="Add_Brand_Click" />
         </Canvas>
         <Rectangle Fill="#FFC8C8E0" HorizontalAlignment="Left" Height="4" Margin="0,138,0,0" Stroke="Black" VerticalAlignment="Top" Width="552"/>
     </Grid>

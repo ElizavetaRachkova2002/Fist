@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        Title="Добавление юр. лица" Height="194.451" Width="441.579"
+        Title="Добавить/удалить юр. лицо" Height="194.451" Width="441.579"
         ResizeMode="CanMinimize">
     <Window.Resources>
         <Style x:Key="FocusVisual">

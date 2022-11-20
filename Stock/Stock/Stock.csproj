@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add_Brand_Window.xaml.cs">
+      <DependentUpon>Add_Brand_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Brand_List.cs" />
     <Compile Include="Change_Product_Window.xaml.cs">
       <DependentUpon>Change_Product_Window.xaml</DependentUpon>
     </Compile>
@@ -84,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddProduct_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add_Brand_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
