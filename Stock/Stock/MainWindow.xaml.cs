@@ -46,7 +46,7 @@ namespace Stock
             MainContent.Visibility = Visibility.Visible;
             productGrid.ItemsSource = MyProducts_List.MyProducts;
 
-           
+    
         }
 
         private void AddPackage_Click(object sender, RoutedEventArgs e)

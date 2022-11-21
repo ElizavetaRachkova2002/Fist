@@ -36,6 +36,7 @@ namespace Stock
             GiveTBPackage();
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightGray);
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
+          
         }
 
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
@@ -62,7 +63,13 @@ namespace Stock
             MyProducts_List.SaveProductList ();
             this.Close();
         }
-
+        private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
+        {
+            if (e.Action == ValidationErrorEventAction.Added)
+            {
+                MessageBox.Show(e.Error.ErrorContent.ToString());
+            }
+        }
         private void BtnAddNewProduct_Click(object sender, RoutedEventArgs e)
         {
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
@@ -275,5 +282,10 @@ namespace Stock
         {
 
         }
+
+        //private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
+        //{
+
+        //}
     }
 }

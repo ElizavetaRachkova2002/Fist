@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Stock
 {
-    public interface IDataErrorInfo
-    {
-        string Error { get; }
-        string this[string columnCount] { get; }
-    }
-    public class Product: IDataErrorInfo
+    //public interface IDataErrorInfo
+    //{
+    //    string Error { get; }
+    //    string this[string columnCount] { get; }
+    //}
+    public class Product //: IDataErrorInfo
     {
         public string Name { get; set; }
         
@@ -24,35 +24,50 @@ namespace Stock
         public bool IsSelected { get; set; }
         public int Not_Packed { get; set; }
         public string PackageName { get; set; }
-        //public string PackageSize { get; set; }
+
+       
+
+        public int StudentName
+        {
+            get { return Count; }
+            set
+            {
+                if (value <0)
+                {
+                  throw new ArgumentException("Name should be between range 6-50");
+                }
+
+                Count = value;
+            }
+        }
 
         public int Brak { get; set; }
 
-        public string Error => throw new NotImplementedException();
+        //public string Error => throw new NotImplementedException();
 
-        public string this[string columnCount]
-        {
-            get
-            {
-                string error = String.Empty;
-                switch (columnCount)
-                {
-                    case "Count":
-                        if (Count < 0)
-                        {
-                            error = "Количество должно быть больше 0";
-                        }
-                        break;
-                    //case "Name":
-                    //    //Обработка ошибок для свойства Name
-                    //    break;
-                    //case "Position":
-                    //    //Обработка ошибок для свойства Position
-                    //    break;
-                }
-                return error;
-            }
-        }
+        //public string this[string columnCount]
+        //{
+        //    get
+        //    {
+        //        string error = String.Empty;
+        //        switch (columnCount)
+        //        {
+        //            case "Count":
+        //                if (Count < 0)
+        //                {
+        //                    error = "Количество должно быть больше 0";
+        //                }
+        //                break;
+        //            //case "Name":
+        //            //    //Обработка ошибок для свойства Name
+        //            //    break;
+        //            //case "Position":
+        //            //    //Обработка ошибок для свойства Position
+        //            //    break;
+        //        }
+        //        return error;
+        //    }
+        //}
 
         public Product() { }
         public Product(string name, string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName, int brak)

@@ -1,6 +1,106 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-21T19:40:47.432649+03:00</Time>
+    <Operation>Добавлен новый товар: hg, 254 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:39:58.9588332+03:00</Time>
+    <Operation>Добавлен новый товар: hgv, -545 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:39:03.6161834+03:00</Time>
+    <Operation>Удалён товар: hjgc</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:37:47.9552764+03:00</Time>
+    <Operation>Добавлен новый товар: hjgc, -4545 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:37:05.0405342+03:00</Time>
+    <Operation>Удалён товар: sdfb</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:24.6706916+03:00</Time>
+    <Operation>Удалён товар: pp</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:21.8783393+03:00</Time>
+    <Operation>Удалён товар: turu</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:18.9609377+03:00</Time>
+    <Operation>Удалён товар: wethrt</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:12.1825438+03:00</Time>
+    <Operation>Удалён товар: ty</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:08.3026544+03:00</Time>
+    <Operation>Удалён товар: ht</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:05.0450986+03:00</Time>
+    <Operation>Удалён товар: tyh</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:36:01.9543846+03:00</Time>
+    <Operation>Удалён товар: wtrh</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:35:58.1565406+03:00</Time>
+    <Operation>Удалён товар: lk</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:35:53.7823906+03:00</Time>
+    <Operation>Удалён товар: bv</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:21:30.2552576+03:00</Time>
+    <Operation>Добавлен новый товар: bv, -985 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:14:27.5870029+03:00</Time>
+    <Operation>Добавлен новый товар: lk, -987 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T19:13:35.906606+03:00</Time>
+    <Operation>Добавлен новый товар: ht, -98 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:44:45.1862873+03:00</Time>
+    <Operation>Добавлен новый товар: ty, 99999 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:43:50.2118503+03:00</Time>
+    <Operation>Добавлен новый товар: gshf, 99999 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:42:01.0448265+03:00</Time>
+    <Operation>Добавлен новый товар: wtrh, 9242 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:38:59.1306237+03:00</Time>
+    <Operation>Добавлен новый товар: sdfb, -53535 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:35:01.347658+03:00</Time>
+    <Operation>Добавлен новый товар: tyh, -8567 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:34:12.1186602+03:00</Time>
+    <Operation>Добавлен новый товар: wethrt, -8687 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:33:26.8097132+03:00</Time>
+    <Operation>Добавлен новый товар: turu, -5773 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-21T18:27:46.2725682+03:00</Time>
+    <Operation>Добавлен новый товар: hrt, 547 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-20T19:45:02.2774264+03:00</Time>
     <Operation>Добавлен новый бренд: Домик</Operation>
   </History>

@@ -11,6 +11,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>194</Not_Packed>
     <PackageName>Без упаковки</PackageName>
+    <StudentName>128</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -24,6 +25,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>314</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>331</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -37,6 +39,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>54</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>76</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -50,6 +53,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>190</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
+    <StudentName>195</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -63,6 +67,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>2333</Not_Packed>
     <PackageName>Без упаковки</PackageName>
+    <StudentName>2343</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -76,6 +81,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>768</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>768</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -89,6 +95,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>5426</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>5426</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -102,6 +109,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>347</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>347</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -115,19 +123,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>565</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>pp</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>555</Brand>
-    <Vendor_code>765</Vendor_code>
-    <Barcode>899</Barcode>
-    <Count>12</Count>
-    <Packed>2</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>10</Not_Packed>
-    <PackageName>рр 7*7</PackageName>
+    <StudentName>566</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -141,6 +137,7 @@
     <IsSelected>true</IsSelected>
     <Not_Packed>55</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>61</StudentName>
     <Brak>0</Brak>
   </Product>
   <Product>
@@ -154,6 +151,63 @@
     <IsSelected>false</IsSelected>
     <Not_Packed>5670</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
+    <StudentName>5670</StudentName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>hrt</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>3457</Vendor_code>
+    <Barcode>457</Barcode>
+    <Count>547</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>547</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <StudentName>547</StudentName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>gshf</Name>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>98989</Vendor_code>
+    <Barcode>23650</Barcode>
+    <Count>99999</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>99999</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <StudentName>99999</StudentName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>hgv</Name>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>2</Vendor_code>
+    <Barcode>98956</Barcode>
+    <Count>-545</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>-545</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <StudentName>-545</StudentName>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Name>hg</Name>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>324</Vendor_code>
+    <Barcode>2350</Barcode>
+    <Count>254</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>254</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <StudentName>254</StudentName>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>
