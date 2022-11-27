@@ -1,6 +1,446 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-27T13:56:12.0639974+03:00</Time>
+    <Operation>Кредитница голубая 1. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T13:43:51.7200144+03:00</Time>
+    <Operation>Кредитница голубая 1. Подготовлено к продаже: 3 шт., Брак: 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T13:40:07.7456349+03:00</Time>
+    <Operation>Кредитница голубая 1. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T13:03:16.8498816+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 4575 Кол-во: 1; Aртикул: 4575 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T13:03:16.7785388+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 4575 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T12:01:01.8650422+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 4575 Кол-во: 25; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T12:00:47.7847929+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 4575 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:41:21.1353929+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 002 Кол-во: 27; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:41:10.8471143+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая, 20 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:40:52.233006+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 002 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:37:58.642618+03:00</Time>
+    <Operation>Добавлен новый товар: апрпр, 25 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:56.8300682+03:00</Time>
+    <Operation>Удалён товар: уккеуц</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:54.4543751+03:00</Time>
+    <Operation>Удалён товар: 4435</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:42.3396931+03:00</Time>
+    <Operation>Удалён товар: куфп</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:39.7069478+03:00</Time>
+    <Operation>Удалён товар: ыавраывр</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:36.5885389+03:00</Time>
+    <Operation>Удалён товар: grhgr</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:33.8934226+03:00</Time>
+    <Operation>Удалён товар: gfdhfh</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:30.0738484+03:00</Time>
+    <Operation>Удалён товар: vvv</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:35:27.148922+03:00</Time>
+    <Operation>Удалён товар: gsfg</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:40.8153937+03:00</Time>
+    <Operation>Кредитница розовая. Подготовлено к продаже: 5431 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5646247+03:00</Time>
+    <Operation>Списан брак: gsfg, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5626293+03:00</Time>
+    <Operation>Списан брак: vvv, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5616891+03:00</Time>
+    <Operation>Списан брак: gfdhfh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5596845+03:00</Time>
+    <Operation>Списан брак: grhgr, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5576261+03:00</Time>
+    <Operation>Списан брак: ыавраывр, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5566236+03:00</Time>
+    <Operation>Списан брак: куфп, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5452022+03:00</Time>
+    <Operation>Списан брак: 4435, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5431374+03:00</Time>
+    <Operation>Списан брак: уккеуц, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5411383+03:00</Time>
+    <Operation>Списан брак: dfhdh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5401377+03:00</Time>
+    <Operation>Списан брак: парпар, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5381382+03:00</Time>
+    <Operation>Списан брак: ро, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5361384+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:34:14.5341402+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая, 310 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:33:27.5025263+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 0 шт., Брак: 310 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:32:52.2073834+03:00</Time>
+    <Operation>Кредитница голубая. Подготовлено к продаже: 11 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:48.2444946+03:00</Time>
+    <Operation>Добавлена новая упаковка: коробка 2*2, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:25.6889683+03:00</Time>
+    <Operation>Удалена упаковка: 252 258225-25</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:21.8708333+03:00</Time>
+    <Operation>Удалена упаковка: 14 25272-25252</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:18.6907206+03:00</Time>
+    <Operation>Удалена упаковка: 52 2052582*858585</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:14.9218784+03:00</Time>
+    <Operation>Удалена упаковка: milk </Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:11.5589506+03:00</Time>
+    <Operation>Удалена упаковка: нен ркег</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:31:06.3069371+03:00</Time>
+    <Operation>Добавлена новая упаковка: 52 2052582*858585, 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:27:07.4114868+03:00</Time>
+    <Operation>Добавлена новая упаковка: 14 25272-25252, 2 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T11:26:42.0604169+03:00</Time>
+    <Operation>Добавлена новая упаковка: 252 258225-25, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:53:54.1074606+03:00</Time>
+    <Operation>Добавлена новая упаковка: нен ркег, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:51:58.0984621+03:00</Time>
+    <Operation>Добавлена новая упаковка: milk , 8532 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:39:54.3684707+03:00</Time>
+    <Operation>Добавлен новый товар: gsfg, 4334 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:35:32.0517447+03:00</Time>
+    <Operation>Добавлен новый товар: vvv, 457 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:21:59.0208186+03:00</Time>
+    <Operation>Добавлена упаковка: коробка 20*20, 54765 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:12:04.7030918+03:00</Time>
+    <Operation>Удалена упаковка: пакет 30*30</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:06:40.9979262+03:00</Time>
+    <Operation>Добавлена упаковка: пакет 30*30, 25 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:06:08.2790491+03:00</Time>
+    <Operation>Добавлена упаковка: коробка 20*20, 25 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T10:00:29.1595325+03:00</Time>
+    <Operation>Добавлена упаковка: пакет 30*30, 757 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T09:38:59.8521996+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T09:34:37.9004186+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая, 6 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T09:24:38.7175382+03:00</Time>
+    <Operation>Добавлен новый товар: gfdhfh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T09:23:59.0449027+03:00</Time>
+    <Operation>Добавлен новый товар: grhgr, 4567 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T09:23:19.7653523+03:00</Time>
+    <Operation>Удалён товар: тетрадь 2</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T15:33:35.9074009+03:00</Time>
+    <Operation>Удалён товар: тетрадь</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T15:32:56.6410624+03:00</Time>
+    <Operation>Удалён товар: терадь</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T15:10:37.6475581+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая, -14 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T15:10:20.2134557+03:00</Time>
+    <Operation>Добавлен товар: тетрадь, -20 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:53:48.0983531+03:00</Time>
+    <Operation>Добавлен новый товар: ыавраывр, 98 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:52:51.5963992+03:00</Time>
+    <Operation>Добавлен новый товар: куфп, 345 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:51:42.4412894+03:00</Time>
+    <Operation>Добавлен новый товар: 4435, 45 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:44:56.0342613+03:00</Time>
+    <Operation>Добавлен новый товар: уккеуц, 4354 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:35:34.5807519+03:00</Time>
+    <Operation>Добавлен новый товар: dfhdh, 5765 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:21:27.8403006+03:00</Time>
+    <Operation>Добавлен новый товар: парпар, 5676 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:19:34.2075723+03:00</Time>
+    <Operation>Добавлен новый товар: ро, 7878 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:16:11.7756649+03:00</Time>
+    <Operation>Удалён товар: atjh</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:16:08.4225243+03:00</Time>
+    <Operation>Удалён товар: hjt</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:16:03.5976951+03:00</Time>
+    <Operation>Удалён товар: hjkjhk</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:16:00.0386152+03:00</Time>
+    <Operation>Удалён товар: uktktk</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:15:57.2537035+03:00</Time>
+    <Operation>Удалён товар: hjyt</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:15:53.744004+03:00</Time>
+    <Operation>Удалён товар: eyj</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:15:50.0390817+03:00</Time>
+    <Operation>Удалён товар: chf</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:15:47.3624765+03:00</Time>
+    <Operation>Удалён товар: sdfvsfv</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:15:44.2565132+03:00</Time>
+    <Operation>Удалён товар: hukihl</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:07:03.3961207+03:00</Time>
+    <Operation>Добавлен новый товар: hukihl, 78678 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:05:41.2157599+03:00</Time>
+    <Operation>Добавлен новый товар: chf, 424 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T14:03:26.5822048+03:00</Time>
+    <Operation>Добавлен новый товар: hjyt, 657 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:55:44.7301779+03:00</Time>
+    <Operation>Добавлен новый товар: eyj, 787 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:55:08.1749799+03:00</Time>
+    <Operation>Добавлен новый товар: hjt, 67657 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:51:43.5922881+03:00</Time>
+    <Operation>Добавлен новый товар: sdfvsfv, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:31:12.7407835+03:00</Time>
+    <Operation>Добавлен новый товар: uktktk, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:21:57.061156+03:00</Time>
+    <Operation>Добавлен новый товар: hjkjhk, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:20:25.4498372+03:00</Time>
+    <Operation>Удалён товар: 678</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:20:21.2660418+03:00</Time>
+    <Operation>Удалён товар: fgj</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:20:18.688497+03:00</Time>
+    <Operation>Удалён товар: erhrst</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:20:13.3233622+03:00</Time>
+    <Operation>Удалён товар: rtut</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:20:10.3937802+03:00</Time>
+    <Operation>Удалён товар: gshf</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:20:06.706875+03:00</Time>
+    <Operation>Удалён товар: Кредитница розовая</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:56.3869208+03:00</Time>
+    <Operation>Удалён товар: ро</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:53.8570262+03:00</Time>
+    <Operation>Удалён товар: hg</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:50.0184336+03:00</Time>
+    <Operation>Удалён товар: 111</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:46.5379661+03:00</Time>
+    <Operation>Удалён товар: 65</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:42.7422868+03:00</Time>
+    <Operation>Удалён товар: 988</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:39.3388077+03:00</Time>
+    <Operation>Удалён товар: 53423</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T13:19:35.5947738+03:00</Time>
+    <Operation>Удалён товар: jhk,jhk,</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:48:38.3389716+03:00</Time>
+    <Operation>Добавлен товар: Кредитница розовая, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:48:38.3370012+03:00</Time>
+    <Operation>Добавлен товар: Кредитница розовая, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:45:49.6498703+03:00</Time>
+    <Operation>Добавлен новый товар: 988, 99 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:22:30.3139487+03:00</Time>
+    <Operation>Добавлен новый товар: 111, 22 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:21:44.5717788+03:00</Time>
+    <Operation>Удалён товар: </Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:17:25.6785991+03:00</Time>
+    <Operation>Добавлен новый товар: ро, -52 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:16:49.0230459+03:00</Time>
+    <Operation>Удалён товар: hgv</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:16:42.8754465+03:00</Time>
+    <Operation>Удалён товар: hrt</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:15:54.0633614+03:00</Time>
+    <Operation>Удалён товар: пр</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:14:34.5833128+03:00</Time>
+    <Operation>Добавлен новый товар: пр, -50 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-26T12:13:46.3183358+03:00</Time>
+    <Operation>Добавлен новый товар: , 56 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-21T19:40:47.432649+03:00</Time>
     <Operation>Добавлен новый товар: hg, 254 шт.</Operation>
   </History>

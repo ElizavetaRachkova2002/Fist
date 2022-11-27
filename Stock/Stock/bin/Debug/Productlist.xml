@@ -1,213 +1,123 @@
 <?xml version="1.0"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <Name>Кредитница розовая</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>40а</Brand>
-    <Vendor_code>001</Vendor_code>
-    <Barcode>123456789</Barcode>
-    <Count>128</Count>
-    <Packed>-66</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>194</Not_Packed>
-    <PackageName>Без упаковки</PackageName>
-    <StudentName>128</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>Кредитница голубая</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>40а</Brand>
-    <Vendor_code>002</Vendor_code>
-    <Barcode>987654321</Barcode>
-    <Count>331</Count>
-    <Packed>17</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>314</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>331</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>тетрадь</Name>
-    <Legal_entity>ИП Суриков В.В.</Legal_entity>
-    <Brand>40а</Brand>
-    <Vendor_code>984</Vendor_code>
-    <Barcode>87654</Barcode>
-    <Count>76</Count>
-    <Packed>22</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>54</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>76</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>тетрадь 2</Name>
-    <Legal_entity>ИП Суриков В.В.</Legal_entity>
-    <Brand>40а</Brand>
-    <Vendor_code>оу833</Vendor_code>
-    <Barcode>876524</Barcode>
-    <Count>195</Count>
-    <Packed>5</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>190</Not_Packed>
-    <PackageName>коробка 20*20</PackageName>
-    <StudentName>195</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>терадь</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>вапр</Brand>
-    <Vendor_code>3456</Vendor_code>
-    <Barcode>3245</Barcode>
-    <Count>2343</Count>
-    <Packed>10</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>2333</Not_Packed>
-    <PackageName>Без упаковки</PackageName>
-    <StudentName>2343</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>678</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>76768</Brand>
-    <Vendor_code>0016</Vendor_code>
-    <Barcode>780</Barcode>
-    <Count>768</Count>
-    <Packed>0</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>768</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>768</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>Кредитница розовая</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>40а</Brand>
-    <Vendor_code>4575</Vendor_code>
-    <Barcode>56</Barcode>
-    <Count>5426</Count>
-    <Packed>0</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>5426</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>5426</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>atjh</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>tru</Brand>
-    <Vendor_code>001654</Vendor_code>
-    <Barcode>547</Barcode>
-    <Count>347</Count>
-    <Packed>0</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>347</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>347</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>fgj</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>fdh</Brand>
-    <Vendor_code>0022</Vendor_code>
-    <Barcode>657</Barcode>
-    <Count>566</Count>
-    <Packed>1</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>565</Not_Packed>
-    <PackageName>коробка 20*20</PackageName>
-    <StudentName>566</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>erhrst</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>3457</Brand>
-    <Vendor_code>001544</Vendor_code>
-    <Barcode>336575</Barcode>
-    <Count>61</Count>
-    <Packed>6</Packed>
-    <IsSelected>true</IsSelected>
-    <Not_Packed>55</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>61</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>rtut</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>hsfdh</Brand>
-    <Vendor_code>3567</Vendor_code>
-    <Barcode>6575367</Barcode>
-    <Count>5670</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>5670</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>5670</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>hrt</Name>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>40а</Brand>
-    <Vendor_code>3457</Vendor_code>
-    <Barcode>457</Barcode>
-    <Count>547</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>547</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
-    <StudentName>547</StudentName>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Name>gshf</Name>
+    <_name>Кредитница голубая 1</_name>
+    <_legal_entity>ИП Иванов И.А</_legal_entity>
+    <_brand>Домик</_brand>
+    <_vendor_code>kyiyi</_vendor_code>
+    <_barcode>547</_barcode>
+    <_count>7</_count>
+    <_packageName>коробка 20*20</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>Домик</Brand>
-    <Vendor_code>98989</Vendor_code>
-    <Barcode>23650</Barcode>
-    <Count>99999</Count>
-    <Packed>0</Packed>
+    <Vendor_code>kyiyi</Vendor_code>
+    <Barcode>547</Barcode>
+    <Count>7</Count>
+    <Packed>5</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>99999</Not_Packed>
+    <Not_Packed>2</Not_Packed>
+    <PackageName>коробка 20*20</PackageName>
+    <Name>Кредитница голубая 1</Name>
+    <Brak>3</Brak>
+  </Product>
+  <Product>
+    <_name>Кредитница розовая 1</_name>
+    <_legal_entity>ИП Иванов И.А</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>45755</_vendor_code>
+    <_barcode>56</_barcode>
+    <_count>5403</_count>
+    <_packageName>пакет 30*30</_packageName>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>45755</Vendor_code>
+    <Barcode>56</Barcode>
+    <Count>5403</Count>
+    <Packed>5403</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
-    <StudentName>99999</StudentName>
+    <Name>Кредитница розовая 1</Name>
     <Brak>0</Brak>
   </Product>
   <Product>
-    <Name>hgv</Name>
+    <_name>ро</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>егнег</_vendor_code>
+    <_barcode>0</_barcode>
+    <_count>7878</_count>
+    <_packageName>пакет 30*30</_packageName>
     <Legal_entity>ИП Суриков В.В.</Legal_entity>
     <Brand>40а</Brand>
-    <Vendor_code>2</Vendor_code>
-    <Barcode>98956</Barcode>
-    <Count>-545</Count>
+    <Vendor_code>егнег</Vendor_code>
+    <Barcode>0</Barcode>
+    <Count>7878</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>-545</Not_Packed>
+    <Not_Packed>7878</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
-    <StudentName>-545</StudentName>
+    <Name>ро</Name>
     <Brak>0</Brak>
   </Product>
   <Product>
-    <Name>hg</Name>
+    <_name>парпар</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>657567</_vendor_code>
+    <_barcode>45764576</_barcode>
+    <_count>5676</_count>
+    <_packageName>пакет 30*30</_packageName>
     <Legal_entity>ИП Суриков В.В.</Legal_entity>
     <Brand>40а</Brand>
-    <Vendor_code>324</Vendor_code>
-    <Barcode>2350</Barcode>
-    <Count>254</Count>
+    <Vendor_code>657567</Vendor_code>
+    <Barcode>45764576</Barcode>
+    <Count>5676</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>254</Not_Packed>
+    <Not_Packed>5676</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
-    <StudentName>254</StudentName>
+    <Name>парпар</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>dfhdh</_name>
+    <_legal_entity>ИП Иванов И.А</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>45767</_vendor_code>
+    <_barcode>54645</_barcode>
+    <_count>5765</_count>
+    <_packageName>пакет 30*30</_packageName>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>45767</Vendor_code>
+    <Barcode>54645</Barcode>
+    <Count>5765</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>5765</Not_Packed>
+    <PackageName>пакет 30*30</PackageName>
+    <Name>dfhdh</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>апрпр</_name>
+    <_legal_entity>ИП Иванов И.А</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>вапо</_vendor_code>
+    <_barcode>85282</_barcode>
+    <_count>25</_count>
+    <_packageName>коробка 20*20</_packageName>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>вапо</Vendor_code>
+    <Barcode>85282</Barcode>
+    <Count>25</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>25</Not_Packed>
+    <PackageName>коробка 20*20</PackageName>
+    <Name>апрпр</Name>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

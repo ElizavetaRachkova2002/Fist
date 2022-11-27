@@ -34,52 +34,97 @@ namespace Stock
 
         private void Btn_Add_Send_Product_Click(object sender, RoutedEventArgs e)
         {
-            string operation = "Отправлен товар. "+TB_Comment.Text+". ";
-            bool flag = false;
-            for (int j = 0; j < ComboName_List.Count; j++)
+            try
             {
-
-                string name = ComboName_List[j].Text;
-                int count = int.Parse(TBCount_List[j].Text);
-                
-                for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                string operation = "Отправлен товар. " + TB_Comment.Text + ". ";
+                bool flag = false;
+                for (int j = 0; j < ComboName_List.Count; j++)
                 {
-                    if (MyProducts_List.MyProducts[i].Name == name)
+                    if (String.IsNullOrEmpty(ComboName_List[j].Text))
                     {
-                        if (MyProducts_List.MyProducts[i].Packed < count)
-                        {
-                            flag = true;
-                        }
+                        throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
                     }
-                }
-               
-                if (flag == false)
-                {
+                    if (String.IsNullOrEmpty(TBCount_List[j].Text))
+                    {
+                        throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                    }
+                    if (int.TryParse(TBCount_List[j].Text, out int _count1) != true)
+                    {
+                        throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
+                    }
+                    if (int.Parse(TBCount_List[j].Text)<0)
+                    {
+                        throw new MyExceptionCountLessThanZero("Количество товара больше 0");
+                    }
+                    
+                    string name = ComboName_List[j].Text;
+                    int count = int.Parse(TBCount_List[j].Text);
 
                     for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                    {
                         if (MyProducts_List.MyProducts[i].Name == name)
                         {
-                            MyProducts_List.MyProducts[i].Count -= count;
-                            MyProducts_List.MyProducts[i].Packed -= count;
-
-
-                            operation = operation + "Aртикул: " + MyProducts_List.MyProducts[i].Vendor_code + " Кол-во: " + count.ToString() + "; ";
-
-                            break;
+                            if (MyProducts_List.MyProducts[i].Packed < count)
+                            {
+                                flag = true;
+                            }
                         }
+                    }
 
-                    DateTime time = DateTime.Now;
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
-                    MyProducts_List.SaveProductList();
-                    this.Close();
+                    if (flag == false)
+                    {
+
+                        for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                            if (MyProducts_List.MyProducts[i].Name == name)
+                            {
+                                MyProducts_List.MyProducts[i].Count -= count;
+                                MyProducts_List.MyProducts[i].Packed -= count;
+
+
+                                operation = operation + "Aртикул: " + MyProducts_List.MyProducts[i].Vendor_code + " Кол-во: " + count.ToString() + "; ";
+
+                                break;
+                            }
+
+                        DateTime time = DateTime.Now;
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+                        MyProducts_List.SaveProductList();
+                        this.Close();
+                    }
+                }
+
+                if (flag == true)
+                {
+                    throw new MyExceptionCountOfProductLessThenCountOfProductForSend("Кол-во упакованного товара меньше, чем вы выбрали");
+                    
                 }
             }
-
-            if (flag == true)
+            catch (MyExceptionCountOfProductLessThenCountOfProductForSend ex)
+                 {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldCount ex)
+                {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionCountLessThanZero ex)
+             
             {
-                MessageBox.Show("Кол-во упакованного товара меньше, чем вы выбрали");
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionCountOfProductIsDigit ex)
+                {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldNameOfProduct ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

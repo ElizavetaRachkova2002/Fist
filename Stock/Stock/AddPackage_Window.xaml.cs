@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace Stock
 {
@@ -50,45 +51,137 @@ namespace Stock
 
         private void Btn_Add_New_Package_Click(object sender, RoutedEventArgs e)
         {
-            string name = Pack_New_Name.Text.Trim();
-            Pack_New_Name.Clear();
-            string size = Pack_New_Size.Text.Trim();
-            Pack_New_Size.Clear();
-            int count = int.Parse(Pack_New_Count.Text.Trim());
-            Pack_New_Count.Clear();
-            Package package = new Package(name, size, count);
-            MyPackages_List.MyPackages.Add(package); 
-            MyPackages_List.SavePackageList();
+            try
+            {
+                Regex regex = new Regex(@"\d+\*\d+");
+                bool flag = false;
+                MatchCollection matches = regex.Matches(Pack_New_Size.Text);
+                if (matches.Count > 0)
+                {
+                    flag = true;
+                }
+                if (String.IsNullOrEmpty(Pack_New_Name.Text))
+                {
+                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите название упаковки");
+                }
+                if (String.IsNullOrEmpty(Pack_New_Size.Text))
+                {
+                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите размер упаковки");
+                }
+                if(flag==false)
+                {
+                    throw new MyExceptionWrongSizeOfPackage("Неверный размер упаковки");
+                }
+                if (String.IsNullOrEmpty(Pack_New_Count.Text))
+                {
+                    throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество упаковки");
+                }
+                if (int.TryParse(Pack_New_Count.Text, out int _count) != true)
+                {
+                    throw new MyExceptionCountOfPackageIsDigit("кол-во товара это число");
+                }
+                if (int.Parse(Pack_New_Count.Text) < 0)
+                {
+                    throw new MyExceptionCountOfPackageLessZero("Количество товара больше 0");
+                }
+                string name = Pack_New_Name.Text.Trim();
+                Pack_New_Name.Clear();
+                string size = Pack_New_Size.Text.Trim();
+                Pack_New_Size.Clear();
+                int count = int.Parse(Pack_New_Count.Text.Trim());
+                Pack_New_Count.Clear();
 
-            DateTime time = DateTime.Now;
-            string operation = "Добавлена новая упаковка: " + name + " " + size+ ", " + count.ToString() + " шт.";
-            History Now = new History(time, operation);
-            MyHistory_List.MyHistory.Insert(0,Now);
-            MyHistory_List.SaveHistory();
 
-            this.Close();
+
+                Package package = new Package(name, size, count);
+                MyPackages_List.MyPackages.Add(package);
+                MyPackages_List.SavePackageList();
+
+                DateTime time = DateTime.Now;
+                string operation = "Добавлена новая упаковка: " + name + " " + size + ", " + count.ToString() + " шт.";
+                History Now = new History(time, operation);
+                MyHistory_List.MyHistory.Insert(0, Now);
+                MyHistory_List.SaveHistory();
+
+                this.Close();
+            }
+            catch (MyExceptionEmpyFieldNameOfPackage ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            catch (MyExceptionWrongSizeOfPackage ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmpyFieldCountOfPackage ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch ( MyExceptionEmptyFieldSizeOfPackage ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionCountOfPackageIsDigit ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionCountOfPackageLessZero ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Btn_Add_Existing_Package_Click(object sender, RoutedEventArgs e)
         {
-            var str = Combo_package_add.Text.Split(' ');
-            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+            try
             {
-                if (MyPackages_List.MyPackages[i].Name_package == str[0] && MyPackages_List.MyPackages[i].Size == str[1])
+                var str = Combo_package_add.Text.Split(' ');
+                if (String.IsNullOrEmpty(str[0]))
                 {
-                    MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
-
-                    DateTime time = DateTime.Now;
-                    string operation = "Добавлена упаковка: " + str[0] +" "+ str[1] +", "+ Pack_Exist_Count.Text + " шт.";
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
+                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите название упаковки");
                 }
-            }
+                if (String.IsNullOrEmpty(Pack_Exist_Count.Text))
+                {
+                    throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество упаковки");
+                }
+                if (int.TryParse(Pack_Exist_Count.Text, out int count) != true)
+                {
+                    throw new MyExceptionCountOfPackageIsDigit("кол-во товара это число");
+                }
+                if (int.Parse(Pack_Exist_Count.Text) < 0)
+                {
+                    throw new MyExceptionCountOfPackageLessZero("Количество товара больше 0");
+                }
+                
 
-            Pack_Exist_Count.Clear();
-            MyPackages_List.SavePackageList();
-            this.Close();
+                for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+                {
+                    if (MyPackages_List.MyPackages[i].Name_package == str[0] && MyPackages_List.MyPackages[i].Size == str[1])
+                    {
+                        MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
+
+                        DateTime time = DateTime.Now;
+                        string operation = "Добавлена упаковка: " + str[0] + " " + str[1] + ", " + Pack_Exist_Count.Text + " шт.";
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+                    }
+                }
+
+                Pack_Exist_Count.Clear();
+                MyPackages_List.SavePackageList();
+                this.Close();
+            }
+          
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

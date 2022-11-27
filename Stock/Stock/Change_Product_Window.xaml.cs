@@ -43,49 +43,147 @@ namespace Stock
 
         private void Btn_Change_OK_Click(object sender, RoutedEventArgs e)
         {
-            TB_NewProduct_Package_Name.IsReadOnly = false;
-            TB_New_Barcode.IsReadOnly = false;
-            TB_New_Brand.IsReadOnly = false;
-            TB_New_Legal_Entity.IsReadOnly = false;
-            TB_New_Name.IsReadOnly = false;
-            TB_New_Vendor_Code.IsReadOnly = false;
-
-            for (int i=0; i<MyProducts_List.MyProducts.Count;i++)
+            try
             {
-                if (Combo_Current_Product.Text==MyProducts_List.MyProducts[i].Name)
+                if (String.IsNullOrEmpty(Combo_Current_Product.Text))
                 {
-                    TB_New_Name.Text = MyProducts_List.MyProducts[i].Name;
-                    TB_New_Legal_Entity.Text = MyProducts_List.MyProducts[i].Legal_entity;
-                    TB_New_Brand.Text = MyProducts_List.MyProducts[i].Brand;
-                    TB_New_Barcode.Text = MyProducts_List.MyProducts[i].Barcode.ToString();
-                    TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
-                    TB_New_Vendor_Code.Text = MyProducts_List.MyProducts[i].Vendor_code;
-                    current_product_number = i;
-                    break;
+                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
                 }
-            }
-            flag_OK = true;
+                TB_NewProduct_Package_Name.IsReadOnly = false;
+                TB_New_Barcode.IsReadOnly = false;
+                TB_New_Brand.IsReadOnly = false;
+                TB_New_Legal_Entity.IsReadOnly = false;
+                TB_New_Name.IsReadOnly = false;
+                TB_New_Vendor_Code.IsReadOnly = false;
 
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+                    if (Combo_Current_Product.Text == MyProducts_List.MyProducts[i].Name)
+                    {
+                        TB_New_Name.Text = MyProducts_List.MyProducts[i].Name;
+                        TB_New_Legal_Entity.Text = MyProducts_List.MyProducts[i].Legal_entity;
+                        TB_New_Brand.Text = MyProducts_List.MyProducts[i].Brand;
+                        TB_New_Barcode.Text = MyProducts_List.MyProducts[i].Barcode.ToString();
+                        TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
+                        TB_New_Vendor_Code.Text = MyProducts_List.MyProducts[i].Vendor_code;
+                        current_product_number = i;
+                        break;
+                    }
+                }
+                flag_OK = true;
+            }
+            catch (MyExceptionEmptyFieldNameOfProduct ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Btn_Change_Product_Click(object sender, RoutedEventArgs e)
         {
-            if (flag_OK == true)
+            try 
             {
-                MyProducts_List.MyProducts[current_product_number].Name = TB_New_Name.Text;
-                MyProducts_List.MyProducts[current_product_number].Legal_entity = TB_New_Legal_Entity.Text;
-                MyProducts_List.MyProducts[current_product_number].PackageName = TB_NewProduct_Package_Name.Text;
-                MyProducts_List.MyProducts[current_product_number].Vendor_code = TB_New_Vendor_Code.Text;
-                MyProducts_List.MyProducts[current_product_number].Barcode = ulong.Parse(TB_New_Barcode.Text);
-                MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;
+                if (String.IsNullOrEmpty(TB_New_Name.Text))
+                {
+                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете название товара");
+                }
+                if (String.IsNullOrEmpty(TB_New_Legal_Entity.Text))
+                {
+                    throw new MyExceptionEmptyFieldLegalEntity("Выберете юр лицо товара");
+                }
+                if (String.IsNullOrEmpty(TB_New_Brand.Text))
+                {
+                    throw new MyExceptionEmptyFieldBrand("Выберете бренд товара");
+                }
+                if (String.IsNullOrEmpty(TB_New_Vendor_Code.Text))
+                {
+                    throw new MyExceptionEmptyFieldVendorCode("Выберете артикул товара");
 
-                MyProducts_List.SaveProductList();
+                }
+                if (String.IsNullOrEmpty(TB_New_Barcode.Text))
+                {
+                    throw new MyExceptionEmptyFieldBarcode("Выберете штрихкод товара");
+                }
+                if (ulong.TryParse(TB_New_Barcode.Text, out ulong _barcode) != true && TB_New_Barcode.Text.Trim() != "")
+                {
+                    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
+                }
 
-                this.Close();
+                if (String.IsNullOrEmpty(TB_NewProduct_Package_Name.Text))
+                {
+                    throw new MyExceptionEmptyFieldPackageName("Выберете упаковку товара");
+
+                }
+
+
+                if (flag_OK == true)
+                {
+
+
+                    MyProducts_List.MyProducts[current_product_number].Name = TB_New_Name.Text;
+                    MyProducts_List.MyProducts[current_product_number].Legal_entity = TB_New_Legal_Entity.Text;
+                    MyProducts_List.MyProducts[current_product_number].PackageName = TB_NewProduct_Package_Name.Text;
+                    MyProducts_List.MyProducts[current_product_number].Vendor_code = TB_New_Vendor_Code.Text;
+                    MyProducts_List.MyProducts[current_product_number].Barcode = ulong.Parse(TB_New_Barcode.Text);
+                    MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;
+
+                    MyProducts_List.SaveProductList();
+
+                    this.Close();
+
+                }
+                else MessageBox.Show("Введите наименование товара для изменения");
+            }
+          
+            catch (MyExceptionBarcodeOfProductIsDigit ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
+            catch (MyExceptionBarcodeLessThanZero ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldNameOfProduct ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldLegalEntity ex)
+            {
+                MessageBox.Show(ex.Message);
 
             }
-            else MessageBox.Show("Введите наименование товара для изменения");
+
+            catch (MyExceptionEmptyFieldBrand ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldVendorCode ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldBarcode ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldPackageName ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            catch (OverflowException ex)
+            {
+                MessageBox.Show("Значение штрихкода положительное");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
 
         
 

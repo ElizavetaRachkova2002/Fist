@@ -38,27 +38,34 @@ namespace Stock
         }
         private void Btn_Delete_Package_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < MyPackages_List.MyPackages.Count(); i++)
+            if (string.IsNullOrEmpty(Combo_package.Text))
             {
-                int spaceBar = Combo_package.Text.LastIndexOf(" ");
-                string name = Combo_package.Text.Substring(0, spaceBar);
-                string size = Combo_package.Text.Substring(spaceBar+1);
-
-                if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size==size)
-                {
-                    string operation = "Удалена упаковка: " + Combo_package.Text;
-                    MyPackages_List.MyPackages.RemoveAt(i);
-                    DateTime time = DateTime.Now;
-
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
-                    break;
-                }
+                MessageBox.Show("Упаковка не выбран");
             }
-            MyPackages_List.SavePackageList();
+            else
+            {
+                for (int i = 0; i < MyPackages_List.MyPackages.Count(); i++)
+                {
+                    int spaceBar = Combo_package.Text.LastIndexOf(" ");
+                    string name = Combo_package.Text.Substring(0, spaceBar);
+                    string size = Combo_package.Text.Substring(spaceBar + 1);
 
-            this.Close();
+                    if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size == size)
+                    {
+                        string operation = "Удалена упаковка: " + Combo_package.Text;
+                        MyPackages_List.MyPackages.RemoveAt(i);
+                        DateTime time = DateTime.Now;
+
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+                        break;
+                    }
+                }
+                MyPackages_List.SavePackageList();
+
+                this.Close();
+            }
         }
     }
 }

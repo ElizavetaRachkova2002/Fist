@@ -41,35 +41,62 @@ namespace Stock
 
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
         {
-            string name = Combo_product_add.Text;
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            try
             {
-
-                if (MyProducts_List.MyProducts[i].Name == name)
+                string name = Combo_product_add.Text;
+                if (String.IsNullOrEmpty(name))
                 {
-                    MyProducts_List.MyProducts[i].Count += int.Parse(TB_Exist_Count.Text);
-                    MyProducts_List.MyProducts[i].Not_Packed += int.Parse(TB_Exist_Count.Text);
+                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете название товара");
+                }
+                if (String.IsNullOrEmpty(TB_Exist_Count.Text))
+                {
+                    throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                }
+                if (int.Parse(TB_Exist_Count.Text) < 0)
+                {
+                    throw new MyExceptionCountLessThanZero("Количество должно быть больше 0");
+                }
 
-                    DateTime time = DateTime.Now;
-                    string operation = "Добавлен товар: " + name + ", " + TB_Exist_Count.Text+" шт.";
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+
+                    if (MyProducts_List.MyProducts[i].Name == name)
+                    {
+
+                        MyProducts_List.MyProducts[i].Count += int.Parse(TB_Exist_Count.Text);
+                        MyProducts_List.MyProducts[i].Not_Packed += int.Parse(TB_Exist_Count.Text);
+
+                        DateTime time = DateTime.Now;
+                        string operation = "Добавлен товар: " + name + ", " + TB_Exist_Count.Text + " шт.";
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+                        TB_Exist_Count.Clear();
+
+
+                        MyProducts_List.SaveProductList();
+                        this.Close();
+
+
+                    }
                 }
             }
-            TB_Exist_Count.Clear();
-            
-            
-            MyProducts_List.SaveProductList ();
-            this.Close();
-        }
-        private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
-        {
-            if (e.Action == ValidationErrorEventAction.Added)
+
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Error.ErrorContent.ToString());
+                MessageBox.Show(ex.Message);
             }
+           
+                
+            
         }
+        //private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
+        //{
+        //    if (e.Action == ValidationErrorEventAction.Added)
+        //    {
+        //        MessageBox.Show(e.Error.ErrorContent.ToString());
+        //    }
+        //}
         private void BtnAddNewProduct_Click(object sender, RoutedEventArgs e)
         {
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
@@ -166,84 +193,165 @@ namespace Stock
 
         private void Btn_Add_New_Product_Click(object sender, RoutedEventArgs e)
         {
-            string name = TB_New_Name.Text.Trim();
-            //TB_New_Name.Clear();
-            string legal = TB_New_Legal_Entity.Text.Trim();
-            //TB_New_Legal_Entity.Items.Clear();
-            string brand = TB_New_Brand.Text.Trim();
-            //TB_New_Brand.Clear();
-            string vendor = TB_New_Vendor_Code.Text.Trim();
-            //TB_New_Vendor_Code.Clear();
-            ulong barcode = ulong.Parse(TB_New_Barcode.Text.Trim());
-            //TB_New_Barcode.Clear();
-            string packageN = TB_NewProduct_Package_Name.Text.Trim();
-            //TB_NewProduct_Package_Name.Items.Clear();
-            //string packageS = TB_NewProduct_Package_Size.Text;
-            int count = int.Parse(TB_NewProduct_Count.Text.Trim());
-            //TB_NewProduct_Count.Clear();
-            bool flag_name = false;
-            bool flag_vendor = false;
-            bool flad_barcode = false;
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            try
             {
-
-                if (MyProducts_List.MyProducts[i].Vendor_code == vendor )
+                string name = TB_New_Name.Text.Trim();
+                //TB_New_Name.Clear();
+                string legal = TB_New_Legal_Entity.Text.Trim();
+                //TB_New_Legal_Entity.Items.Clear();
+                string brand = TB_New_Brand.Text.Trim();
+                //TB_New_Brand.Clear();
+                string vendor = TB_New_Vendor_Code.Text.Trim();
+                //TB_New_Vendor_Code.Clear();
+                ulong barcode;
+                if (ulong.TryParse(TB_New_Barcode.Text, out ulong _barcode) != true && TB_New_Barcode.Text.Trim() != "")
                 {
-                    flag_vendor = true;
+                    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
                 }
-            }
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-            {
-
-                if ( MyProducts_List.MyProducts[i].Name == name)
+                if (TB_New_Barcode.Text.Trim() != "")
+                { 
+                    barcode = ulong.Parse(TB_New_Barcode.Text.Trim()); 
+                    
+                }
+               
+                else
                 {
-                    flag_name = true;
+                    throw new MyExceptionEmptyFieldBarcode("Введите штрихкод");
                 }
-            }
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-            {
-
-                if (MyProducts_List.MyProducts[i].Barcode == barcode)
+                //TB_New_Barcode.Clear();
+                string packageN = TB_NewProduct_Package_Name.Text.Trim();
+                //TB_NewProduct_Package_Name.Items.Clear();
+                //string packageS = TB_NewProduct_Package_Size.Text;
+                int count;
+                if (int.TryParse(TB_NewProduct_Count.Text, out int _count) != true && TB_NewProduct_Count.Text.Trim() != "")
                 {
-                    flad_barcode = true;
+                    throw new MyExceptionCountOfProductIsDigit("Количество товара это число");
                 }
+                if (TB_NewProduct_Count.Text.Trim() != "")
+                {  count = int.Parse(TB_NewProduct_Count.Text.Trim()); }
+                else
+                {
+                    throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                }
+                //TB_NewProduct_Count.Clear();
+                bool flag_name = false;
+                bool flag_vendor = false;
+                bool flad_barcode = false;
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+
+                    if (MyProducts_List.MyProducts[i].Vendor_code == vendor)
+                    {
+                        flag_vendor = true;
+                    }
+                }
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+
+                    if (MyProducts_List.MyProducts[i].Name == name)
+                    {
+                        flag_name = true;
+                    }
+                }
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+
+                    if (MyProducts_List.MyProducts[i].Barcode == barcode)
+                    {
+                        flad_barcode = true;
+                    }
+                }
+                if (flag_vendor == false && flag_name == false && flad_barcode == false)
+                {
+                    Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, 0);
+                    MyProducts_List.MyProducts.Add(new_product);
+                    MyProducts_List.SaveProductList();
+
+                    TB_New_Name.Clear();
+                    TB_New_Legal_Entity.Items.Clear();
+                    TB_New_Brand.Items.Clear();
+                    TB_New_Vendor_Code.Clear();
+                    TB_New_Barcode.Clear();
+                    TB_NewProduct_Package_Name.Items.Clear();
+                    TB_NewProduct_Count.Clear();
+
+
+
+                    DateTime time = DateTime.Now;
+                    string operation = "Добавлен новый товар: " + name + ", " + count.ToString() + " шт.";
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Insert(0, Now);
+                    MyHistory_List.SaveHistory();
+                    this.Close();
+                }
+                else if (flag_name == true)
+                {
+                    MessageBox.Show("Товар с таким наименованием уже существует");
+                }
+                else if (flag_vendor == true)
+                {
+                    MessageBox.Show("Товар с таким артикулом уже существует");
+                }
+                else if (flad_barcode == true)
+                {
+                    MessageBox.Show("Товар с таким штрих-кодом уже существует");
+                }
+                //this.Close();
             }
-            if (flag_vendor == false && flag_name == false && flad_barcode==false)
-            { Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, 0);
-                MyProducts_List.MyProducts.Add(new_product);
-                MyProducts_List.SaveProductList();
-
-                TB_New_Name.Clear();
-                TB_New_Legal_Entity.Items.Clear();
-                TB_New_Brand.Items.Clear();
-                TB_New_Vendor_Code.Clear();
-                TB_New_Barcode.Clear();
-                TB_NewProduct_Package_Name.Items.Clear();
-                TB_NewProduct_Count.Clear();
-
-
-
-                DateTime time = DateTime.Now;
-                string operation = "Добавлен новый товар: " + name + ", " + count.ToString() + " шт.";
-                History Now = new History(time, operation);
-                MyHistory_List.MyHistory.Insert(0, Now);
-                MyHistory_List.SaveHistory();
-                this.Close();
-            }
-            else if (flag_name == true)
+            catch (MyExceptionCountLessThanZero ex)
             {
-                MessageBox.Show("Товар с таким наименованием уже существует");
+                MessageBox.Show(ex.Message);
             }
-            else if( flag_vendor== true)
+            catch (MyExceptionBarcodeOfProductIsDigit ex)
             {
-                MessageBox.Show("Товар с таким артикулом уже существует");
+                MessageBox.Show(ex.Message);
             }
-            else if (flad_barcode == true)
+            catch (MyExceptionCountOfProductIsDigit ex)
             {
-                MessageBox.Show("Товар с таким штрих-кодом уже существует");
+                MessageBox.Show(ex.Message);
             }
-            //this.Close();
+            catch (MyExceptionBarcodeLessThanZero ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldNameOfProduct ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldLegalEntity ex)
+            {
+                MessageBox.Show(ex.Message);
 
+            }
+          
+            catch (MyExceptionEmptyFieldBrand ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldVendorCode ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldBarcode ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldPackageName ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldCount ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (OverflowException ex)
+            {
+                MessageBox.Show("Значение штрихкода положительное");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void TB_New_Legal_Entity_MouseDown(object sender, MouseEventArgs e)

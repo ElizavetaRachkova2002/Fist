@@ -73,7 +73,7 @@
             <ColumnDefinition Width="320*"/>
         </Grid.ColumnDefinitions>
         <TextBlock FontSize="18" Text="Название:" Margin="18,34,261,199" Grid.ColumnSpan="4"/>
-        <TextBlock Width="218" FontSize="18" Text="Подготовлено к продаже:" Margin="21,80,158,163" Grid.ColumnSpan="4"/>
+        <TextBlock Width="218" FontSize="18" Text="Подготовлено к продаже:" Margin="18,80,158,163" Grid.ColumnSpan="4"/>
         <TextBlock FontSize="18" Text="Брак:" Margin="18,126,311,116" Grid.ColumnSpan="4"/>
         <ComboBox x:Name="Combo_WarmUp_Name" Margin="58,34,11,209" Grid.Column="3"  />
         <TextBox x:Name="WarmUp_Count" Margin="164,80,11,163" Grid.Column="3" />

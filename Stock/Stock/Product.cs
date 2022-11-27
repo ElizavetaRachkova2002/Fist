@@ -6,68 +6,247 @@ using System.Threading.Tasks;
 
 namespace Stock
 {
-    //public interface IDataErrorInfo
-    //{
-    //    string Error { get; }
-    //    string this[string columnCount] { get; }
-    //}
+   
+
+    [Serializable]
+    public class MyExceptionEmptyFieldNameOfProduct : Exception
+    {
+        public MyExceptionEmptyFieldNameOfProduct() { }
+        public MyExceptionEmptyFieldNameOfProduct(string message) : base(message) { }
+        public MyExceptionEmptyFieldNameOfProduct(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldNameOfProduct(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+
+
+    [Serializable]
+    public class MyExceptionEmptyFieldLegalEntity : Exception
+    {
+        public MyExceptionEmptyFieldLegalEntity() { }
+        public MyExceptionEmptyFieldLegalEntity(string message) : base(message) { }
+        public MyExceptionEmptyFieldLegalEntity(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldLegalEntity(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+
+    [Serializable]
+    public class MyExceptionEmptyFieldBrand : Exception
+    {
+        public MyExceptionEmptyFieldBrand() { }
+        public MyExceptionEmptyFieldBrand(string message) : base(message) { }
+        public MyExceptionEmptyFieldBrand(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldBrand(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionEmptyFieldVendorCode : Exception
+    {
+        public MyExceptionEmptyFieldVendorCode() { }
+        public MyExceptionEmptyFieldVendorCode(string message) : base(message) { }
+        public MyExceptionEmptyFieldVendorCode(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldVendorCode(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionEmptyFieldPackageName : Exception
+    {
+        public MyExceptionEmptyFieldPackageName() { }
+        public MyExceptionEmptyFieldPackageName(string message) : base(message) { }
+        public MyExceptionEmptyFieldPackageName(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldPackageName(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionEmptyFieldBarcode : Exception
+    {
+        public MyExceptionEmptyFieldBarcode() { }
+        public MyExceptionEmptyFieldBarcode(string message) : base(message) { }
+        public MyExceptionEmptyFieldBarcode(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldBarcode(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionEmptyFieldCount : Exception
+    {
+        public MyExceptionEmptyFieldCount() { }
+        public MyExceptionEmptyFieldCount(string message) : base(message) { }
+        public MyExceptionEmptyFieldCount(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionEmptyFieldCount(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionCountLessThanZero : Exception
+    {
+        public MyExceptionCountLessThanZero() { }
+        public MyExceptionCountLessThanZero(string message) : base(message) { }
+        public MyExceptionCountLessThanZero(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionCountLessThanZero(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionBarcodeLessThanZero : Exception
+    {
+        public MyExceptionBarcodeLessThanZero() { }
+        public MyExceptionBarcodeLessThanZero(string message) : base(message) { }
+        public MyExceptionBarcodeLessThanZero(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionBarcodeLessThanZero(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionCountOfProductIsDigit : Exception
+    {
+        public MyExceptionCountOfProductIsDigit() { }
+        public MyExceptionCountOfProductIsDigit(string message) : base(message) { }
+        public MyExceptionCountOfProductIsDigit(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionCountOfProductIsDigit(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionBarcodeOfProductIsDigit : Exception
+    {
+        public MyExceptionBarcodeOfProductIsDigit() { }
+        public MyExceptionBarcodeOfProductIsDigit(string message) : base(message) { }
+        public MyExceptionBarcodeOfProductIsDigit(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionBarcodeOfProductIsDigit(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionCountOfProductLessThenCountOfProductForSend : Exception
+    {
+        public MyExceptionCountOfProductLessThenCountOfProductForSend() { }
+        public MyExceptionCountOfProductLessThenCountOfProductForSend(string message) : base(message) { }
+        public MyExceptionCountOfProductLessThenCountOfProductForSend(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionCountOfProductLessThenCountOfProductForSend(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
     public class Product //: IDataErrorInfo
     {
-        public string Name { get; set; }
+        public string _name;
+        public string _legal_entity;
+
+        public string _brand;
+        public string _vendor_code;
+        public ulong _barcode; //штрих
+        public int _count;
+        public string _packageName;
+
+       
+        public string Legal_entity {
+            get { return _legal_entity; }
+            set
+            {
+                _legal_entity = value;
+                if (String.IsNullOrEmpty(value))
+                {
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо товара");
+                }
+            }
+        }   
+        public string Brand
+        {
+            get { return _brand; }
+            set
+            {
+                _brand = value;
+                if (String.IsNullOrEmpty(value))
+                {
+                    throw new MyExceptionEmptyFieldBrand("Введите бренд товара");
+                }
+            }
+        }
+        public string Vendor_code {
+            get { return _vendor_code; }
+            set
+            {
+                _vendor_code = value;
+                if (String.IsNullOrEmpty(value))
+                {
+                    throw new MyExceptionEmptyFieldVendorCode("Введите артикул товара");
+                }
+            }
         
-        public string Legal_entity { get; set; }   
-        public string Brand { get; set; }
-        public string Vendor_code { get; set; }
-        public ulong Barcode { get; set; } //штрих
-        public int Count { get; set; }
+        }
+        public ulong Barcode {
+            get { return _barcode; }
+            set
+            {
+                _barcode = value;
+
+                if (value.ToString() == "")
+                {
+                    throw new MyExceptionEmptyFieldBarcode("Введите штрихкод товара");
+                }
+                if (value < 0)
+                {
+                    throw new MyExceptionBarcodeLessThanZero("Штрихкод меньше нуля");
+                }
+                //if (value.ToString().All(char.IsDigit))
+                //{
+                //    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
+                //}
+            }
+        } //штрих
+        public int Count {
+            get { return _count; }
+            set
+            {
+                _count = value;
+                if (String.IsNullOrEmpty(value.ToString()))
+                {
+                   throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                }
+                if (value < 0)
+                {
+                    throw new MyExceptionCountLessThanZero("Количество меньше нуля");
+                }
+                //if (int.TryParse(Pack_Exist_Count.Text, out int count) != true)
+                //{
+                //    throw new MyExceptionCountOfPackageLessZero("кол-во товара это число");
+                //}
+            }
+        }
         public int Packed { get; set; }
         public bool IsSelected { get; set; }
         public int Not_Packed { get; set; }
-        public string PackageName { get; set; }
-
-       
-
-        public int StudentName
-        {
-            get { return Count; }
+        public string PackageName {
+            get { return _packageName; }
             set
             {
-                if (value <0)
+                _packageName = value;
+                if (String.IsNullOrEmpty(value))
                 {
-                  throw new ArgumentException("Name should be between range 6-50");
+                    throw new MyExceptionEmptyFieldBrand("Введите упаковку для товара");
                 }
+            }
+        }
+       
 
-                Count = value;
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                if (String.IsNullOrEmpty(value))
+                {
+                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
+                }
             }
         }
 
         public int Brak { get; set; }
-
-        //public string Error => throw new NotImplementedException();
-
-        //public string this[string columnCount]
-        //{
-        //    get
-        //    {
-        //        string error = String.Empty;
-        //        switch (columnCount)
-        //        {
-        //            case "Count":
-        //                if (Count < 0)
-        //                {
-        //                    error = "Количество должно быть больше 0";
-        //                }
-        //                break;
-        //            //case "Name":
-        //            //    //Обработка ошибок для свойства Name
-        //            //    break;
-        //            //case "Position":
-        //            //    //Обработка ошибок для свойства Position
-        //            //    break;
-        //        }
-        //        return error;
-        //    }
-        //}
 
         public Product() { }
         public Product(string name, string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName, int brak)

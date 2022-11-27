@@ -37,21 +37,31 @@ namespace Stock
         }
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
         {
-            for (int i=0;i<MyProducts_List.MyProducts.Count();i++)
-                if (MyProducts_List.MyProducts[i].Name==Combo_product_add.Text)
-                {
-                    MyProducts_List.MyProducts.RemoveAt(i);
-                    DateTime time = DateTime.Now;
-                    string operation = "Удалён товар: " + Combo_product_add.Text;
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
-                    break;
-                }
-            MyProducts_List.SaveProductList();
+            if (string.IsNullOrEmpty(Combo_product_add.Text))
+            {
+               
+                //throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
+                MessageBox.Show("Товар не выбран");
+            }
+            else
+            {
+                for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                    if (MyProducts_List.MyProducts[i].Name == Combo_product_add.Text)
+                    {
+                        MyProducts_List.MyProducts.RemoveAt(i);
+                        DateTime time = DateTime.Now;
 
-            
-            this.Close();
+                        string operation = "Удалён товар: " + Combo_product_add.Text;
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+                        break;
+                    }
+                MyProducts_List.SaveProductList();
+
+
+                this.Close();
+            }
         }
     }
 }
