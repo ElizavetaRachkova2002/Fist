@@ -25,7 +25,16 @@ namespace Stock
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
-
+    [Serializable]
+    public class MyExceptionNotEnoughUnPackadeProducts : Exception
+    {
+        public MyExceptionNotEnoughUnPackadeProducts() { }
+        public MyExceptionNotEnoughUnPackadeProducts(string message) : base(message) { }
+        public MyExceptionNotEnoughUnPackadeProducts(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionNotEnoughUnPackadeProducts(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
 
     [Serializable]
     public class MyExceptionEmptyFieldBrak : Exception
@@ -37,7 +46,16 @@ namespace Stock
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
-
+    [Serializable]
+    public class MyExceptionNotEnoughPackaging : Exception
+    {
+        public MyExceptionNotEnoughPackaging() { }
+        public MyExceptionNotEnoughPackaging(string message) : base(message) { }
+        public MyExceptionNotEnoughPackaging(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionNotEnoughPackaging(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
 
     [Serializable]
     public class MyExceptionBrakIsDigit : Exception
@@ -119,7 +137,7 @@ namespace Stock
                 {
                     throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
                 }
-
+               
                 string name = Combo_WarmUp_Name.Text;
                 int count = int.Parse(WarmUp_Count.Text);
                 int brak = int.Parse(WarmUp_Brak.Text);
@@ -129,6 +147,10 @@ namespace Stock
                 {
                     if (MyProducts_List.MyProducts[i].Name == name)
                     {
+                        if (int.Parse(WarmUp_Brak.Text) + int.Parse(WarmUp_Count.Text) > MyProducts_List.MyProducts[i].Not_Packed)
+                        {
+                         throw new MyExceptionNotEnoughUnPackadeProducts("Количество брака и подготовленого товара к продаже больше чем неупакованного товара");
+                        }
                         if (MyProducts_List.MyProducts[i].Not_Packed < count)
                         {
                             flag_count = true;
@@ -211,6 +233,14 @@ namespace Stock
                 MessageBox.Show(ex.Message);
             }
             catch (MyExceptionCountOfBrakLessZero ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionNotEnoughUnPackadeProducts ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionNotEnoughPackaging ex)
             {
                 MessageBox.Show(ex.Message);
             }

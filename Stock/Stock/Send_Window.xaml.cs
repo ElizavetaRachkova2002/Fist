@@ -133,6 +133,7 @@ namespace Stock
 
             Combo_product_send_1.Items.Clear();
             MyProducts_List.LoadProductList();
+
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_send_1.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -143,80 +144,113 @@ namespace Stock
 
         private void Btn_Plus_Product_For_Delete_Click(object sender, RoutedEventArgs e)
         {
-            RowCount++;
-            if (RowCount<5)
-            this.Height += 120;
-            NewGrid.Height += 120;
-           
-            row = new RowDefinition();
-            MyGrid.RowDefinitions.Add(row);
-            Grid.SetRow(Canvas_Last,RowCount-1);
-
-            Canvas New = new Canvas();
-            MyGrid.Children.Add(New);
-            TextBlock Nametext = new TextBlock();
-            Nametext.Text = "Название";
-            New.Children.Add(Nametext);
-            Canvas.SetTop(Nametext, 15);
-            Canvas.SetLeft(Nametext, 30);
-            Nametext.FontSize = 16;
-
-            TextBlock Counttext = new TextBlock();
-            Counttext.Text = "Кол-во";
-            New.Children.Add(Counttext);
-            Canvas.SetTop(Counttext, 60);
-            Canvas.SetLeft(Counttext, 30);
-            Counttext.FontSize = 16;
-            New.Height = 120;
-            New.Margin = new Thickness(0, 0, 0, 0);
-
-            TextBox CountValue = new TextBox();            
-            New.Children.Add(CountValue);
-            Canvas.SetTop(CountValue, 60);
-            Canvas.SetLeft(CountValue, 150);
-            CountValue.Width = 356;
-            CountValue.Height = 24;
-            CountValue.FontSize = 16;
-            string Name_countValue = "TB_Send_Product_Count";
-            TBCount_List.Add(CountValue);
-            Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
-            CountValue.Name = Name_countValue;
-            CountValue.FontSize = 12;
-            //New.Height = 120;
-            //New.Margin = new Thickness(0, 0, 0, 0);
-
-            Rectangle rec = new Rectangle();
-
-            New.Children.Add(rec);
-            Canvas.SetTop(rec, 92);
-            rec.Width = 557;
-            rec.Height = 3;
-            rec.Fill = Brushes.LightSkyBlue;
-            rec.Stroke = Brushes.LightSkyBlue;
-
-            ComboBox NameValue = new ComboBox();
-            New.Children.Add(NameValue);
-            Canvas.SetTop(NameValue, 15);
-            Canvas.SetLeft(NameValue, 150);
-            NameValue.Width = 356;
-            NameValue.Height = 23;
-            NameValue.FontSize = 16;
-
-            Name_countValue = "Combo_product_send";
-            Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
-            NameValue.Name = Name_countValue;
-            ComboName_List.Add(NameValue);
-            NameValue.Items.Clear();
-            NameValue.FontSize = 12;
-            MyProducts_List.LoadProductList();
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            try
             {
-               NameValue.Items.Add(MyProducts_List.MyProducts[i].Name);
+                string Name_countValue = "TB_Send_Product_Count";
+                ComboBox NameValue = new ComboBox();
+                //if (String.IsNullOrEmpty(NameValue.Text))
+                //{
+                //    throw new MyExceptionEmptyFieldCount("Введите название товара");
+                //}
+                //if (String.IsNullOrEmpty(NameValue.Text))
+                //{
+                //    throw new MyExceptionEmptyFieldNameOfProduct("Введите количество товара");
+                //}
+                RowCount++;
+                if (RowCount < 5)
+                    this.Height += 120;
+                NewGrid.Height += 120;
+
+                row = new RowDefinition();
+                MyGrid.RowDefinitions.Add(row);
+                Grid.SetRow(Canvas_Last, RowCount - 1);
+
+                Canvas New = new Canvas();
+                MyGrid.Children.Add(New);
+                TextBlock Nametext = new TextBlock();
+                Nametext.Text = "Название";
+                New.Children.Add(Nametext);
+                Canvas.SetTop(Nametext, 15);
+                Canvas.SetLeft(Nametext, 30);
+                Nametext.FontSize = 16;
+
+                TextBlock Counttext = new TextBlock();
+                Counttext.Text = "Кол-во";
+                New.Children.Add(Counttext);
+                Canvas.SetTop(Counttext, 60);
+                Canvas.SetLeft(Counttext, 30);
+                Counttext.FontSize = 16;
+                New.Height = 120;
+                New.Margin = new Thickness(0, 0, 0, 0);
+
+                TextBox CountValue = new TextBox();
+                New.Children.Add(CountValue);
+                Canvas.SetTop(CountValue, 60);
+                Canvas.SetLeft(CountValue, 150);
+                CountValue.Width = 356;
+                CountValue.Height = 24;
+                CountValue.FontSize = 16;
+                //string Name_countValue = "TB_Send_Product_Count";
+                //if (String.IsNullOrEmpty(Name_countValue))
+                //{
+                //    throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                //}
+                TBCount_List.Add(CountValue); /////////
+                Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
+                CountValue.Name = Name_countValue;
+                CountValue.FontSize = 12;
+                //New.Height = 120;
+                //New.Margin = new Thickness(0, 0, 0, 0);
+
+                Rectangle rec = new Rectangle();
+
+                New.Children.Add(rec);
+                Canvas.SetTop(rec, 92);
+                rec.Width = 557;
+                rec.Height = 3;
+                rec.Fill = Brushes.LightSkyBlue;
+                rec.Stroke = Brushes.LightSkyBlue;
+
+                //ComboBox NameValue = new ComboBox();
+                New.Children.Add(NameValue);
+                Canvas.SetTop(NameValue, 15);
+                Canvas.SetLeft(NameValue, 150);
+                NameValue.Width = 356;
+                NameValue.Height = 23;
+                NameValue.FontSize = 16;
+
+                Name_countValue = "Combo_product_send";
+                Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
+                NameValue.Name = Name_countValue;
+                //if (String.IsNullOrEmpty(NameValue.Text))
+                //{
+                //    throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
+                //}
+                ComboName_List.Add(NameValue); ////////////////
+                NameValue.Items.Clear();
+                NameValue.FontSize = 12;
+                MyProducts_List.LoadProductList();
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+                    NameValue.Items.Add(MyProducts_List.MyProducts[i].Name);
+                }
+
+
+                Grid.SetRow(New, RowCount - 2);
             }
-
-
-            Grid.SetRow(New, RowCount - 2);
-
+            catch (MyExceptionEmptyFieldCount ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            catch (MyExceptionEmptyFieldNameOfProduct ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         

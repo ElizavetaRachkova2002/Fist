@@ -1,6 +1,46 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-28T21:49:46.0482909+03:00</Time>
+    <Operation>Добавлен товар: vvv, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:49:04.5377669+03:00</Time>
+    <Operation>vvv. Подготовлено к продаже: 3 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:48:42.3072059+03:00</Time>
+    <Operation>Добавлен новый товар: vvv, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:43:39.501635+03:00</Time>
+    <Operation>Удалён товар: ро</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:43:25.4769507+03:00</Time>
+    <Operation>парпар. Подготовлено к продаже: 5675 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:07:49.0930823+03:00</Time>
+    <Operation>Удалена упаковка: коробка 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:03:19.6149493+03:00</Time>
+    <Operation>ро. Подготовлено к продаже: 7869 шт., Брак: 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-28T21:02:30.3040823+03:00</Time>
+    <Operation>Кредитница голубая 1. Подготовлено к продаже: 0 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T14:04:44.9522143+03:00</Time>
+    <Operation>ро. Подготовлено к продаже: 0 шт., Брак: 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-27T14:04:25.7700468+03:00</Time>
+    <Operation>Кредитница голубая 1. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-27T13:56:12.0639974+03:00</Time>
     <Operation>Кредитница голубая 1. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
   </History>
