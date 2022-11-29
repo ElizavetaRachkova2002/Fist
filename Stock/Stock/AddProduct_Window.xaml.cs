@@ -128,8 +128,8 @@ namespace Stock
         {
             addLegalEnity_Window = new AddLegalEnity_Window();
             addLegalEnity_Window.Owner = this;
-            addLegalEnity_Window.Visibility = Visibility.Visible;
-            
+            //addLegalEnity_Window.Visibility = Visibility.Visible;
+            addLegalEnity_Window.ShowDialog();
 
         }
 
@@ -282,6 +282,7 @@ namespace Stock
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();
+                    this.Owner.Visibility = Visibility.Visible;
                     this.Close();
                 }
                 else if (flag_name == true)
@@ -352,6 +353,12 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                
+                this.Owner.Visibility = Visibility.Visible;
+            }
+            
         }
 
         private void TB_New_Legal_Entity_MouseDown(object sender, MouseEventArgs e)

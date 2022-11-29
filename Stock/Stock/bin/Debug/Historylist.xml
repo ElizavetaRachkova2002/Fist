@@ -1,6 +1,30 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-29T18:09:08.2632627+03:00</Time>
+    <Operation>Добавлен новый товар: мпро, 9 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T17:48:18.0848194+03:00</Time>
+    <Operation>Добавлен новый товар: пролв, 9 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T17:46:39.1838988+03:00</Time>
+    <Operation>Добавлен новый товар: апро, 98 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T17:44:04.859642+03:00</Time>
+    <Operation>ролд. Подготовлено к продаже: 0 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T17:40:42.3177994+03:00</Time>
+    <Operation>Добавлен новый товар: ролд, 1234 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T17:37:02.219154+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: </Operation>
+  </History>
+  <History>
     <Time>2022-11-28T21:49:46.0482909+03:00</Time>
     <Operation>Добавлен товар: vvv, 5 шт.</Operation>
   </History>

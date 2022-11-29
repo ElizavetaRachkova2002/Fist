@@ -60,8 +60,9 @@ namespace Stock
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
                 addProduct_Window = new AddProduct_Window();
-            addProduct_Window.Owner = this;
-                addProduct_Window.Visibility = Visibility.Visible;          
+                addProduct_Window.Owner = this;
+            //addProduct_Window.Visibility = Visibility.Visible;
+            addProduct_Window.ShowDialog();
         }
 
         private void grid_MouseUp_Package(object sender, MouseButtonEventArgs e)

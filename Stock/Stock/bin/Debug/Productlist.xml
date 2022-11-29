@@ -120,4 +120,84 @@
     <Name>vvv</Name>
     <Brak>0</Brak>
   </Product>
+  <Product>
+    <_name>ролд</_name>
+    <_legal_entity>ИП Дрозд К.К.</_legal_entity>
+    <_brand>Домик</_brand>
+    <_vendor_code>пролд</_vendor_code>
+    <_barcode>1234</_barcode>
+    <_count>1234</_count>
+    <_packageName>Без упаковки</_packageName>
+    <Legal_entity>ИП Дрозд К.К.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>пролд</Vendor_code>
+    <Barcode>1234</Barcode>
+    <Count>1234</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>1234</Not_Packed>
+    <PackageName>Без упаковки</PackageName>
+    <Name>ролд</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>апро</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>Домик</_brand>
+    <_vendor_code>ролд</_vendor_code>
+    <_barcode>6789</_barcode>
+    <_count>98</_count>
+    <_packageName>коробка 2*2</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>ролд</Vendor_code>
+    <Barcode>6789</Barcode>
+    <Count>98</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>98</Not_Packed>
+    <PackageName>коробка 2*2</PackageName>
+    <Name>апро</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>пролв</_name>
+    <_legal_entity>ИП Иванов И.А</_legal_entity>
+    <_brand>Домик</_brand>
+    <_vendor_code>пронпорп</_vendor_code>
+    <_barcode>789</_barcode>
+    <_count>9</_count>
+    <_packageName>коробка 2*2</_packageName>
+    <Legal_entity>ИП Иванов И.А</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>пронпорп</Vendor_code>
+    <Barcode>789</Barcode>
+    <Count>9</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>9</Not_Packed>
+    <PackageName>коробка 2*2</PackageName>
+    <Name>пролв</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>мпро</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>Домик</_brand>
+    <_vendor_code>мпр</_vendor_code>
+    <_barcode>865</_barcode>
+    <_count>9</_count>
+    <_packageName>коробка 2*2</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>мпр</Vendor_code>
+    <Barcode>865</Barcode>
+    <Count>9</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>9</Not_Packed>
+    <PackageName>коробка 2*2</PackageName>
+    <Name>мпро</Name>
+    <Brak>0</Brak>
+  </Product>
 </ArrayOfProduct>
