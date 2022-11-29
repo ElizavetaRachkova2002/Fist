@@ -128,7 +128,7 @@ namespace Stock
         {
             addLegalEnity_Window = new AddLegalEnity_Window();
             addLegalEnity_Window.Owner = this;
-            //addLegalEnity_Window.Visibility = Visibility.Visible;
+            
             addLegalEnity_Window.ShowDialog();
 
         }
@@ -390,7 +390,7 @@ namespace Stock
         {
             add_Brand_Window = new Add_Brand_Window();
             add_Brand_Window.Owner = this;
-            add_Brand_Window.Visibility = Visibility.Visible;
+            add_Brand_Window.ShowDialog();
         }
 
         private void Add_More_Package_btn_Click(object sender, RoutedEventArgs e)

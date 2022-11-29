@@ -7,11 +7,4 @@
     <Name_package>рр</Name_package>
     <Count_package>0</Count_package>
   </Package>
-  <Package>
-    <_name_package>коробка</_name_package>
-    <_count_package>2</_count_package>
-    <Size>2*2</Size>
-    <Name_package>коробка</Name_package>
-    <Count_package>2</Count_package>
-  </Package>
 </ArrayOfPackage>

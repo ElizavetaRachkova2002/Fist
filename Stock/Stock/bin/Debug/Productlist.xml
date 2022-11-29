@@ -27,7 +27,7 @@
     <_vendor_code>45755</_vendor_code>
     <_barcode>56</_barcode>
     <_count>5403</_count>
-    <_packageName>пакет 30*30</_packageName>
+    <_packageName>Без упаковки</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>40а</Brand>
     <Vendor_code>45755</Vendor_code>
@@ -36,7 +36,7 @@
     <Packed>5403</Packed>
     <IsSelected>false</IsSelected>
     <Not_Packed>0</Not_Packed>
-    <PackageName>пакет 30*30</PackageName>
+    <PackageName>Без упаковки</PackageName>
     <Name>Кредитница розовая 1</Name>
     <Brak>0</Brak>
   </Product>
@@ -87,7 +87,7 @@
     <_vendor_code>вапо</_vendor_code>
     <_barcode>85282</_barcode>
     <_count>25</_count>
-    <_packageName>коробка 20*20</_packageName>
+    <_packageName>коробка 2*2</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>40а</Brand>
     <Vendor_code>вапо</Vendor_code>
@@ -96,7 +96,7 @@
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
     <Not_Packed>25</Not_Packed>
-    <PackageName>коробка 20*20</PackageName>
+    <PackageName>коробка 2*2</PackageName>
     <Name>апрпр</Name>
     <Brak>0</Brak>
   </Product>
@@ -118,26 +118,6 @@
     <Not_Packed>7</Not_Packed>
     <PackageName>коробка 2*2</PackageName>
     <Name>vvv</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <_name>ролд</_name>
-    <_legal_entity>ИП Дрозд К.К.</_legal_entity>
-    <_brand>Домик</_brand>
-    <_vendor_code>пролд</_vendor_code>
-    <_barcode>1234</_barcode>
-    <_count>1234</_count>
-    <_packageName>Без упаковки</_packageName>
-    <Legal_entity>ИП Дрозд К.К.</Legal_entity>
-    <Brand>Домик</Brand>
-    <Vendor_code>пролд</Vendor_code>
-    <Barcode>1234</Barcode>
-    <Count>1234</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>1234</Not_Packed>
-    <PackageName>Без упаковки</PackageName>
-    <Name>ролд</Name>
     <Brak>0</Brak>
   </Product>
   <Product>

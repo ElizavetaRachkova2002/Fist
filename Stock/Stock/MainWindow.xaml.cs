@@ -54,14 +54,13 @@ namespace Stock
             
             addPackage_Window = new AddPackage_Window();
             addPackage_Window.Owner = this;
-            addPackage_Window.Visibility = Visibility.Visible;            
+            addPackage_Window.ShowDialog();            
         }
 
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
-                addProduct_Window = new AddProduct_Window();
-                addProduct_Window.Owner = this;
-            //addProduct_Window.Visibility = Visibility.Visible;
+            addProduct_Window = new AddProduct_Window();
+            addProduct_Window.Owner = this;
             addProduct_Window.ShowDialog();
         }
 
@@ -92,7 +91,7 @@ namespace Stock
         {
             warmUp_Window = new WarmUp_Window();
             warmUp_Window.Owner = this;
-            warmUp_Window.Visibility = Visibility.Visible;
+            warmUp_Window.ShowDialog();
         }
 
         private void Brak_list_Click(object sender, RoutedEventArgs e)
@@ -115,7 +114,7 @@ namespace Stock
                 }
 
                 list_brak.gridlistbrak.ItemsSource = New_List_With_Brak;
-                list_brak.Visibility = Visibility.Visible;
+            list_brak.ShowDialog();
             
         }
 
@@ -132,13 +131,13 @@ namespace Stock
         {
             deleteProduct_Window = new DeleteProduct_Window();
             deleteProduct_Window.Owner = this;
-            deleteProduct_Window.Visibility = Visibility.Visible;
+            deleteProduct_Window.ShowDialog();
         }
         private void Delete_Package_Click(object sender, RoutedEventArgs e)
         {
             delete_package = new Delete_Package();
             delete_package.Owner = this;
-            delete_package.Visibility = Visibility.Visible;
+            delete_package.ShowDialog();
         }
         private void ProductGrid_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -157,25 +156,22 @@ namespace Stock
         {
             send_Window = new Send_Window();
             send_Window.Owner = this;
-            send_Window.Visibility = Visibility.Visible;
+            send_Window.ShowDialog();
         }
 
         private void ChangeProduct_Click(object sender, RoutedEventArgs e)
         {
             change_Product_Window = new Change_Product_Window();
             change_Product_Window.Owner = this;
-            change_Product_Window.Visibility = Visibility.Visible;
+            change_Product_Window.ShowDialog();
         }
 
         private void History_button_Click(object sender, RoutedEventArgs e)
         {
             history_Window = new History_Window();
             history_Window.Owner = this;
-            history_Window.Visibility = Visibility.Visible;
+            history_Window.ShowDialog();
         }
-
-        
-
-        
+   
     }
 }
