@@ -84,7 +84,7 @@ namespace Stock
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
            
                 
@@ -301,63 +301,59 @@ namespace Stock
             }
             catch (MyExceptionCountLessThanZero ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionBarcodeOfProductIsDigit ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionCountOfProductIsDigit ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionBarcodeLessThanZero ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldLegalEntity ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
           
             catch (MyExceptionEmptyFieldBrand ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldVendorCode ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldBarcode ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldPackageName ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldCount ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (OverflowException ex)
             {
-                MessageBox.Show("Значение штрихкода положительное");
+                MessageBox.Show("Значение штрихкода положительное", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            finally
-            {
-                
-                this.Owner.Visibility = Visibility.Visible;
-            }
+            
             
         }
 
@@ -398,9 +394,5 @@ namespace Stock
 
         }
 
-        //private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
-        //{
-
-        //}
     }
 }

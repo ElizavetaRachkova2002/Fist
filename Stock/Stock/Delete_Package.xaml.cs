@@ -40,7 +40,7 @@ namespace Stock
         {
             if (string.IsNullOrEmpty(Combo_package.Text))
             {
-                MessageBox.Show("Упаковка не выбран");
+                MessageBox.Show( "Упаковка не выбранa", "Ошибка заполнения",MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {

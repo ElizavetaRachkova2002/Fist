@@ -2,9 +2,9 @@
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
     <_name_package>рр</_name_package>
-    <_count_package>0</_count_package>
+    <_count_package>10</_count_package>
     <Size>7*7</Size>
     <Name_package>рр</Name_package>
-    <Count_package>0</Count_package>
+    <Count_package>10</Count_package>
   </Package>
 </ArrayOfPackage>

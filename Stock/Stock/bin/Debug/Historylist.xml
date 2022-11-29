@@ -1,6 +1,106 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-29T23:57:21.4562307+03:00</Time>
+    <Operation>Удалён товар: vvv</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:40:02.0788787+03:00</Time>
+    <Operation>Удалён товар: мпро</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:25:07.3222895+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 45755 Кол-во: 5; Aртикул: kyiyi Кол-во: 10; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:24:17.0953398+03:00</Time>
+    <Operation>Кредитница голубая 1. Подготовлено к продаже: 50 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:23:51.8735619+03:00</Time>
+    <Operation>Добавлен товар: Кредитница голубая 1, 100 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:22:57.1478327+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: kyiyi Кол-во: 1; Aртикул: 45755 Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:20:36.3117448+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 45755 Кол-во: 10; Aртикул: kyiyi Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:15:57.5448239+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 45755 Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:12:41.704768+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 45755 Кол-во: 3; Aртикул: 657567 Кол-во: 5; Aртикул: 3243 Кол-во: 3; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:12:41.701774+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 45755 Кол-во: 3; Aртикул: 657567 Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T23:12:41.6619063+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 45755 Кол-во: 3; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.354894+03:00</Time>
+    <Operation>Списан брак: мпро, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3519022+03:00</Time>
+    <Operation>Списан брак: пролв, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3479058+03:00</Time>
+    <Operation>Списан брак: апро, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3439319+03:00</Time>
+    <Operation>Списан брак: vvv, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3399319+03:00</Time>
+    <Operation>Списан брак: апрпр, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3368984+03:00</Time>
+    <Operation>Списан брак: dfhdh, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3319543+03:00</Time>
+    <Operation>Списан брак: парпар, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3279599+03:00</Time>
+    <Operation>Списан брак: Кредитница розовая 1, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:57:33.3229283+03:00</Time>
+    <Operation>Списан брак: Кредитница голубая 1, 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:48:26.1827467+03:00</Time>
+    <Operation>Отправлен товар. иу. Aртикул: 45767 Кол-во: 0; Aртикул: вапо Кол-во: 0; Aртикул: kyiyi Кол-во: 0; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:48:26.1777629+03:00</Time>
+    <Operation>Отправлен товар. иу. Aртикул: 45767 Кол-во: 0; Aртикул: вапо Кол-во: 0; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:48:26.1369235+03:00</Time>
+    <Operation>Отправлен товар. иу. Aртикул: 45767 Кол-во: 0; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:45:51.6652091+03:00</Time>
+    <Operation>Отправлен товар. ВБ. Aртикул: 45755 Кол-во: 10; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-29T22:26:34.6504784+03:00</Time>
+    <Operation>Добавлена упаковка: рр 7*7, 10 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-29T22:09:39.5561971+03:00</Time>
     <Operation>Удалён товар: ролд</Operation>
   </History>

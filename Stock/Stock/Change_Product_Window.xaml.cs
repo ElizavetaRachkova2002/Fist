@@ -74,11 +74,11 @@ namespace Stock
             }
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -135,52 +135,52 @@ namespace Stock
                     this.Close();
 
                 }
-                else MessageBox.Show("Введите наименование товара для изменения");
+                else MessageBox.Show("Введите наименование товара для изменения", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
           
             catch (MyExceptionBarcodeOfProductIsDigit ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
           
             catch (MyExceptionBarcodeLessThanZero ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldLegalEntity ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
 
             catch (MyExceptionEmptyFieldBrand ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldVendorCode ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldBarcode ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldPackageName ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
             catch (OverflowException ex)
             {
-                MessageBox.Show("Значение штрихкода положительное");
+                MessageBox.Show("Значение штрихкода положительное", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -216,7 +216,7 @@ namespace Stock
         {
             addLegalEnity_Window = new AddLegalEnity_Window();
             addLegalEnity_Window.Owner = this;
-            addLegalEnity_Window.Visibility = Visibility.Visible;
+            addLegalEnity_Window.ShowDialog();
         }
 
 
@@ -274,7 +274,7 @@ namespace Stock
         {
             add_Brand_Window = new Add_Brand_Window();
             add_Brand_Window.Owner = this;
-            add_Brand_Window.Visibility = Visibility.Visible;
+            add_Brand_Window.ShowDialog();
         }
     }
 }

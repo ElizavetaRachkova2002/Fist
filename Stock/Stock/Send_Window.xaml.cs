@@ -86,45 +86,47 @@ namespace Stock
                                 break;
                             }
 
-                        DateTime time = DateTime.Now;
-                        History Now = new History(time, operation);
-                        MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
-                        MyProducts_List.SaveProductList();
-                        this.Close();
+                        
+                        //this.Close();
                     }
                 }
+                DateTime time = DateTime.Now;
+                History Now = new History(time, operation);
+                MyHistory_List.MyHistory.Insert(0, Now);
+                MyHistory_List.SaveHistory();
+                MyProducts_List.SaveProductList();
+                this.Close();
 
                 if (flag == true)
                 {
-                    throw new MyExceptionCountOfProductLessThenCountOfProductForSend("Кол-во упакованного товара меньше, чем вы выбрали");
+                    throw new MyExceptionCountOfProductLessThenCountOfProductForSend("Кол-во упакованного товара меньше, чем Вы выбрали");
                     
                 }
             }
             catch (MyExceptionCountOfProductLessThenCountOfProductForSend ex)
                  {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldCount ex)
                 {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionCountLessThanZero ex)
              
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionCountOfProductIsDigit ex)
                 {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -240,16 +242,16 @@ namespace Stock
             }
             catch (MyExceptionEmptyFieldCount ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

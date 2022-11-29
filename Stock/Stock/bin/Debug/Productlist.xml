@@ -6,19 +6,19 @@
     <_brand>Домик</_brand>
     <_vendor_code>kyiyi</_vendor_code>
     <_barcode>547</_barcode>
-    <_count>6</_count>
+    <_count>90</_count>
     <_packageName>коробка 20*20</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>Домик</Brand>
     <Vendor_code>kyiyi</Vendor_code>
     <Barcode>547</Barcode>
-    <Count>6</Count>
-    <Packed>6</Packed>
+    <Count>90</Count>
+    <Packed>40</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
+    <Not_Packed>50</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
     <Name>Кредитница голубая 1</Name>
-    <Brak>4</Brak>
+    <Brak>0</Brak>
   </Product>
   <Product>
     <_name>Кредитница розовая 1</_name>
@@ -26,14 +26,14 @@
     <_brand>40а</_brand>
     <_vendor_code>45755</_vendor_code>
     <_barcode>56</_barcode>
-    <_count>5403</_count>
+    <_count>5365</_count>
     <_packageName>Без упаковки</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>40а</Brand>
     <Vendor_code>45755</Vendor_code>
     <Barcode>56</Barcode>
-    <Count>5403</Count>
-    <Packed>5403</Packed>
+    <Count>5365</Count>
+    <Packed>5365</Packed>
     <IsSelected>false</IsSelected>
     <Not_Packed>0</Not_Packed>
     <PackageName>Без упаковки</PackageName>
@@ -46,19 +46,19 @@
     <_brand>40а</_brand>
     <_vendor_code>657567</_vendor_code>
     <_barcode>45764576</_barcode>
-    <_count>5675</_count>
+    <_count>5670</_count>
     <_packageName>пакет 30*30</_packageName>
     <Legal_entity>ИП Суриков В.В.</Legal_entity>
     <Brand>40а</Brand>
     <Vendor_code>657567</Vendor_code>
     <Barcode>45764576</Barcode>
-    <Count>5675</Count>
-    <Packed>5675</Packed>
+    <Count>5670</Count>
+    <Packed>5670</Packed>
     <IsSelected>false</IsSelected>
     <Not_Packed>0</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Name>парпар</Name>
-    <Brak>1</Brak>
+    <Brak>0</Brak>
   </Product>
   <Product>
     <_name>dfhdh</_name>
@@ -101,26 +101,6 @@
     <Brak>0</Brak>
   </Product>
   <Product>
-    <_name>vvv</_name>
-    <_legal_entity>ИП Иванов И.А</_legal_entity>
-    <_brand>Домик</_brand>
-    <_vendor_code>3243</_vendor_code>
-    <_barcode>32434</_barcode>
-    <_count>10</_count>
-    <_packageName>коробка 2*2</_packageName>
-    <Legal_entity>ИП Иванов И.А</Legal_entity>
-    <Brand>Домик</Brand>
-    <Vendor_code>3243</Vendor_code>
-    <Barcode>32434</Barcode>
-    <Count>10</Count>
-    <Packed>3</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>7</Not_Packed>
-    <PackageName>коробка 2*2</PackageName>
-    <Name>vvv</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
     <_name>апро</_name>
     <_legal_entity>ИП Суриков В.В.</_legal_entity>
     <_brand>Домик</_brand>
@@ -158,26 +138,6 @@
     <Not_Packed>9</Not_Packed>
     <PackageName>коробка 2*2</PackageName>
     <Name>пролв</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <_name>мпро</_name>
-    <_legal_entity>ИП Суриков В.В.</_legal_entity>
-    <_brand>Домик</_brand>
-    <_vendor_code>мпр</_vendor_code>
-    <_barcode>865</_barcode>
-    <_count>9</_count>
-    <_packageName>коробка 2*2</_packageName>
-    <Legal_entity>ИП Суриков В.В.</Legal_entity>
-    <Brand>Домик</Brand>
-    <Vendor_code>мпр</Vendor_code>
-    <Barcode>865</Barcode>
-    <Count>9</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>9</Not_Packed>
-    <PackageName>коробка 2*2</PackageName>
-    <Name>мпро</Name>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -41,26 +42,32 @@ namespace Stock
             {
                
                 //throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
-                MessageBox.Show("Товар не выбран");
+                MessageBox.Show("Товар не выбран", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
-                    if (MyProducts_List.MyProducts[i].Name == Combo_product_add.Text)
-                    {
-                        MyProducts_List.MyProducts.RemoveAt(i);
-                        DateTime time = DateTime.Now;
+             
+                if (MessageBox.Show("Вы собираетесь безвозвратно удалить товар '" + Combo_product_add.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                {
+                    for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                        if (MyProducts_List.MyProducts[i].Name == Combo_product_add.Text)
+                        {
+                            MyProducts_List.MyProducts.RemoveAt(i);
+                            DateTime time = DateTime.Now;
 
-                        string operation = "Удалён товар: " + Combo_product_add.Text;
-                        History Now = new History(time, operation);
-                        MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
-                        break;
-                    }
-                MyProducts_List.SaveProductList();
+                            string operation = "Удалён товар: " + Combo_product_add.Text;
+                            History Now = new History(time, operation);
+                            MyHistory_List.MyHistory.Insert(0, Now);
+                            MyHistory_List.SaveHistory();
+                            break;
+                        }
+
+                    MyProducts_List.SaveProductList();
 
 
-                this.Close();
+                    this.Close();
+                }
+                
             }
         }
     }
