@@ -73,6 +73,9 @@
     <Compile Include="History_Window.xaml.cs">
       <DependentUpon>History_Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListOfPackages.xaml.cs">
+      <DependentUpon>ListOfPackages.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyHistory_List.cs" />
     <Compile Include="Send_Window.xaml.cs">
       <DependentUpon>Send_Window.xaml</DependentUpon>
@@ -109,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="History_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListOfPackages.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -32,19 +32,34 @@ namespace Stock
 
         private void Add_New_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
-            string newName = New_LegalEnity.Text;
-            MyLegalEnitys_List.MyLegalEnitys.Add(newName);
-            MyLegalEnitys_List.SaveLegalEnityList();
-            MyLegalEnitys_List.NewLE = newName;
-            MyLegalEnitys_List.AddNewLE = true;
-            string operation = "Добавлено новое юр. лицо: " + New_LegalEnity.Text;
+            try
+            {
+                string newName = New_LegalEnity.Text;
+                if (String.IsNullOrEmpty(newName))
+                {
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите название юридического лица");
+                }
+                MyLegalEnitys_List.MyLegalEnitys.Add(newName);
+                MyLegalEnitys_List.SaveLegalEnityList();
+                MyLegalEnitys_List.NewLE = newName;
+                MyLegalEnitys_List.AddNewLE = true;
+                string operation = "Добавлено новое юр. лицо: " + New_LegalEnity.Text;
 
-            DateTime time = DateTime.Now;
+                DateTime time = DateTime.Now;
 
-            History Now = new History(time, operation);
-            MyHistory_List.MyHistory.Insert(0, Now);
-            MyHistory_List.SaveHistory();
-            this.Close();
+                History Now = new History(time, operation);
+                MyHistory_List.MyHistory.Insert(0, Now);
+                MyHistory_List.SaveHistory();
+                this.Close();
+            }
+            catch (MyExceptionEmptyFieldLegalEntity ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public void GiveTBLegalEnity()
@@ -61,26 +76,43 @@ namespace Stock
 
         private void Delete_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
+            try
             {
-                if(MyLegalEnitys_List.MyLegalEnitys[i]==TB_Delete_LE.Text)
+                if (String.IsNullOrEmpty(TB_Delete_LE.Text))
                 {
-                    MyLegalEnitys_List.MyLegalEnitys.RemoveAt(i);
-                    string operation = "Удалено юр. лицо: " + TB_Delete_LE.Text;
-                    
-                    DateTime time = DateTime.Now;
-
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
-
-                    break;
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо для удаления");
 
                 }
+                for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
+                {
+                    if (MyLegalEnitys_List.MyLegalEnitys[i] == TB_Delete_LE.Text)
+                    {
+                        MyLegalEnitys_List.MyLegalEnitys.RemoveAt(i);
+                        string operation = "Удалено юр. лицо: " + TB_Delete_LE.Text;
 
+                        DateTime time = DateTime.Now;
+
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+
+                        break;
+
+                    }
+
+                }
+                MyLegalEnitys_List.SaveLegalEnityList();
+                this.Close();
             }
-            MyLegalEnitys_List.SaveLegalEnityList();
-            this.Close();
+            catch (MyExceptionEmptyFieldLegalEntity ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
         }
 
         private void Btn_New_LE_Click(object sender, RoutedEventArgs e)

@@ -137,13 +137,34 @@ namespace Stock
                 {
                     throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
                 }
-               
+                
+
                 string name = Combo_WarmUp_Name.Text;
                 int count = int.Parse(WarmUp_Count.Text);
                 int brak = int.Parse(WarmUp_Brak.Text);
                 bool flag_count = false;
                 bool flag_package = false;
+                bool flag_does_not_exist_package = false;
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+                    if (MyProducts_List.MyProducts[i].Name == name)
+                    { 
+                        for (int j=0; j<MyPackages_List.MyPackages.Count; j++)
+                        {
+                            if(MyProducts_List.MyProducts[i].PackageName != MyPackages_List.MyPackages[j].Name_package)
+                            {
+                               
+                                //if (MyPackages_List.MyPackages[j].Count_package==0)
+                                //{
+                                //    throw new MyExceptionNotEnoughPackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте упаковку.");
+                                //}
+                            }
+                        }
+                    }
+                }
+
+
+                        for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
                     if (MyProducts_List.MyProducts[i].Name == name)
                     {
@@ -163,12 +184,13 @@ namespace Stock
                     {
                         for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
                         {
-                            if (MyProducts_List.MyProducts[i].PackageName == MyPackages_List.MyPackages[j].ToString())
+                            if (MyProducts_List.MyProducts[i].PackageName == MyPackages_List.MyPackages[j].Name_package)
                             {
+                               
+                               
                                 if (MyPackages_List.MyPackages[j].Count_package < count)
                                 { flag_package = true; }
-
-                            }
+                                                            }
                         }
                     }
                 }

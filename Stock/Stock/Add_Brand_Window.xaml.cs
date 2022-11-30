@@ -43,43 +43,76 @@ namespace Stock
 
         private void Delete_Brand_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < Brand_List.MyBrand.Count; i++)
+            try
             {
-                if (Brand_List.MyBrand[i] == TB_Delete_Br.Text)
+                if (string.IsNullOrEmpty(TB_Delete_Br.Text))
                 {
-                    Brand_List.MyBrand.RemoveAt(i);
-                    string operation = "Удален бренд: " + TB_Delete_Br.Text;
+                    throw new MyExceptionEmptyFieldBrand("Укажите название бренда");
+                }
+                for (int i = 0; i < Brand_List.MyBrand.Count; i++)
+                {
+                    if (Brand_List.MyBrand[i] == TB_Delete_Br.Text)
+                    {
+                        Brand_List.MyBrand.RemoveAt(i);
+                        string operation = "Удален бренд: " + TB_Delete_Br.Text;
 
-                    DateTime time = DateTime.Now;
+                        DateTime time = DateTime.Now;
 
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
 
-                    break;
+                        break;
+
+                    }
 
                 }
+                Brand_List.SaveBrandList();
+                this.Close();
+            }
+            catch (MyExceptionEmptyFieldBrand ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
-            Brand_List.SaveBrandList();
-            this.Close();
         }
 
         private void Add_New_Brand_Click(object sender, RoutedEventArgs e)
         {
-            string newName = New_Brand.Text;
-            Brand_List.MyBrand.Add(newName);
-            Brand_List.SaveBrandList();
-            Brand_List.NewBr = newName;
-            Brand_List.AddNewBr = true;
-            string operation = "Добавлен новый бренд: " + New_Brand.Text;
+            try
+            {
+                if (string.IsNullOrEmpty(New_Brand.Text))
+                {
+                    throw new MyExceptionEmptyFieldBrand("Укажите название бренда");
+                }
+                string newName = New_Brand.Text;
+                Brand_List.MyBrand.Add(newName);
+                Brand_List.SaveBrandList();
+                Brand_List.NewBr = newName;
+                Brand_List.AddNewBr = true;
+                string operation = "Добавлен новый бренд: " + New_Brand.Text;
 
-            DateTime time = DateTime.Now;
+                DateTime time = DateTime.Now;
 
-            History Now = new History(time, operation);
-            MyHistory_List.MyHistory.Insert(0, Now);
-            MyHistory_List.SaveHistory();
-            this.Close();
+                History Now = new History(time, operation);
+                MyHistory_List.MyHistory.Insert(0, Now);
+                MyHistory_List.SaveHistory();
+                this.Close();
+            }
+            catch (MyExceptionEmptyFieldBrand ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+
         }
 
         private void Btn_Br_Click(object sender, RoutedEventArgs e)

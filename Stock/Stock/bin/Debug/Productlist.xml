@@ -6,19 +6,19 @@
     <_brand>Домик</_brand>
     <_vendor_code>kyiyi</_vendor_code>
     <_barcode>547</_barcode>
-    <_count>90</_count>
+    <_count>87</_count>
     <_packageName>коробка 20*20</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>Домик</Brand>
     <Vendor_code>kyiyi</Vendor_code>
     <Barcode>547</Barcode>
-    <Count>90</Count>
-    <Packed>40</Packed>
+    <Count>87</Count>
+    <Packed>43</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>50</Not_Packed>
+    <Not_Packed>44</Not_Packed>
     <PackageName>коробка 20*20</PackageName>
     <Name>Кредитница голубая 1</Name>
-    <Brak>0</Brak>
+    <Brak>2</Brak>
   </Product>
   <Product>
     <_name>Кредитница розовая 1</_name>
@@ -66,19 +66,19 @@
     <_brand>40а</_brand>
     <_vendor_code>45767</_vendor_code>
     <_barcode>54645</_barcode>
-    <_count>5765</_count>
+    <_count>5764</_count>
     <_packageName>пакет 30*30</_packageName>
     <Legal_entity>ИП Иванов И.А</Legal_entity>
     <Brand>40а</Brand>
     <Vendor_code>45767</Vendor_code>
     <Barcode>54645</Barcode>
-    <Count>5765</Count>
-    <Packed>0</Packed>
+    <Count>5764</Count>
+    <Packed>1</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>5765</Not_Packed>
+    <Not_Packed>5763</Not_Packed>
     <PackageName>пакет 30*30</PackageName>
     <Name>dfhdh</Name>
-    <Brak>0</Brak>
+    <Brak>1</Brak>
   </Product>
   <Product>
     <_name>апрпр</_name>
@@ -138,6 +138,106 @@
     <Not_Packed>9</Not_Packed>
     <PackageName>коробка 2*2</PackageName>
     <Name>пролв</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>ыапо</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>ке467</_vendor_code>
+    <_barcode>657446</_barcode>
+    <_count>2</_count>
+    <_packageName>екр 56*154</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>ке467</Vendor_code>
+    <Barcode>657446</Barcode>
+    <Count>2</Count>
+    <Packed>2</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>екр 56*154</PackageName>
+    <Name>ыапо</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>лллл</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>67</_vendor_code>
+    <_barcode>6567657</_barcode>
+    <_count>10</_count>
+    <_packageName>рр 7*7</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>67</Vendor_code>
+    <Barcode>6567657</Barcode>
+    <Count>10</Count>
+    <Packed>10</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>рр 7*7</PackageName>
+    <Name>лллл</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>ewf</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>ewr</_vendor_code>
+    <_barcode>23432</_barcode>
+    <_count>33</_count>
+    <_packageName>wet 30*20</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>ewr</Vendor_code>
+    <Barcode>23432</Barcode>
+    <Count>33</Count>
+    <Packed>33</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>wet 30*20</PackageName>
+    <Name>ewf</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>sfdg</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>43t5</_vendor_code>
+    <_barcode>54623</_barcode>
+    <_count>4</_count>
+    <_packageName>y54y 66*66</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>43t5</Vendor_code>
+    <Barcode>54623</Barcode>
+    <Count>4</Count>
+    <Packed>4</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>y54y 66*66</PackageName>
+    <Name>sfdg</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <_name>ehrreg</_name>
+    <_legal_entity>ИП Суриков В.В.</_legal_entity>
+    <_brand>40а</_brand>
+    <_vendor_code>3242</_vendor_code>
+    <_barcode>3424</_barcode>
+    <_count>2</_count>
+    <_packageName>rtyjytj 20*20</_packageName>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>3242</Vendor_code>
+    <Barcode>3424</Barcode>
+    <Count>2</Count>
+    <Packed>2</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>rtyjytj 20*20</PackageName>
+    <Name>ehrreg</Name>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

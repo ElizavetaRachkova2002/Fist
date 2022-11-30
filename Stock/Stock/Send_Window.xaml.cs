@@ -42,19 +42,20 @@ namespace Stock
                 {
                     if (String.IsNullOrEmpty(ComboName_List[j].Text))
                     {
-                        throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
+                        throw new MyExceptionEmptyFieldNameOfProduct(string.Format("Введите название товара в поле {0}", j+1));
                     }
                     if (String.IsNullOrEmpty(TBCount_List[j].Text))
                     {
-                        throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                        throw new MyExceptionEmptyFieldCount(string.Format("Введите количество товара {0}", ComboName_List[j].Text));
+
                     }
                     if (int.TryParse(TBCount_List[j].Text, out int _count1) != true)
                     {
-                        throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
+                        throw new MyExceptionCountOfProductIsDigit(string.Format("Количество товара является числом в {0}", ComboName_List[j].Text));
                     }
                     if (int.Parse(TBCount_List[j].Text)<0)
                     {
-                        throw new MyExceptionCountLessThanZero("Количество товара больше 0");
+                        throw new MyExceptionCountLessThanZero(string.Format("Количество товара больше нуля {0}", ComboName_List[j].Text));
                     }
                     
                     string name = ComboName_List[j].Text;
@@ -95,13 +96,14 @@ namespace Stock
                 MyHistory_List.MyHistory.Insert(0, Now);
                 MyHistory_List.SaveHistory();
                 MyProducts_List.SaveProductList();
-                this.Close();
+               
 
                 if (flag == true)
                 {
                     throw new MyExceptionCountOfProductLessThenCountOfProductForSend("Кол-во упакованного товара меньше, чем Вы выбрали");
                     
                 }
+                this.Close();
             }
             catch (MyExceptionCountOfProductLessThenCountOfProductForSend ex)
                  {

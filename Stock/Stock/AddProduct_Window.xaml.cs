@@ -21,7 +21,7 @@ namespace Stock
     {
         public AddLegalEnity_Window addLegalEnity_Window;
         public Add_Brand_Window add_Brand_Window;
-        
+        public ListOfPackages listOfPackages;
         
         public AddProduct_Window()
         {
@@ -196,12 +196,28 @@ namespace Stock
             try
             {
                 string name = TB_New_Name.Text.Trim();
+                if (String.IsNullOrEmpty(name))
+                {
+                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
+                }
                 //TB_New_Name.Clear();
                 string legal = TB_New_Legal_Entity.Text.Trim();
+                if (String.IsNullOrEmpty(legal))
+                {
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо товара");
+                }
                 //TB_New_Legal_Entity.Items.Clear();
                 string brand = TB_New_Brand.Text.Trim();
+                if (String.IsNullOrEmpty(brand))
+                {
+                    throw new MyExceptionEmptyFieldBrand("Введите бренд товара");
+                }
                 //TB_New_Brand.Clear();
                 string vendor = TB_New_Vendor_Code.Text.Trim();
+                if (String.IsNullOrEmpty(vendor))
+                {
+                    throw new MyExceptionEmptyFieldVendorCode("Введите артикул товара");
+                }
                 //TB_New_Vendor_Code.Clear();
                 ulong barcode;
                 if (ulong.TryParse(TB_New_Barcode.Text, out ulong _barcode) != true && TB_New_Barcode.Text.Trim() != "")
@@ -220,6 +236,11 @@ namespace Stock
                 }
                 //TB_New_Barcode.Clear();
                 string packageN = TB_NewProduct_Package_Name.Text.Trim();
+                if (String.IsNullOrEmpty(packageN))
+                {
+                    throw new MyExceptionEmptyFieldPackageName("Введите упаковку товара");
+                }
+
                 //TB_NewProduct_Package_Name.Items.Clear();
                 //string packageS = TB_NewProduct_Package_Size.Text;
                 int count;
@@ -391,7 +412,11 @@ namespace Stock
 
         private void Add_More_Package_btn_Click(object sender, RoutedEventArgs e)
         {
+            listOfPackages = new ListOfPackages();
+            listOfPackages.Owner = this;
 
+
+            listOfPackages.ShowDialog();
         }
 
     }
