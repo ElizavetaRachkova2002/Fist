@@ -62,6 +62,7 @@ namespace Stock
             addProduct_Window = new AddProduct_Window();
             addProduct_Window.Owner = this;
             addProduct_Window.ShowDialog();
+
         }
 
         private void grid_MouseUp_Package(object sender, MouseButtonEventArgs e)
@@ -79,8 +80,15 @@ namespace Stock
              product = productGrid.SelectedItem as Product;
             if (product != null)
             {
+                string pack = "";
+                for (int i=0;i<product.PackageName.Count;i++)
+                {
+                    if (i == 0)
+                        pack = product.PackageName[i];
+                    else pack=pack+"; "+ product.PackageName[i];
+                }
                 MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
-                   "\n Упаковка: " + product.PackageName + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
+                   "\n Упаковка: " + pack + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
                    + "\n К продаже : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
             }
             else { }
@@ -141,15 +149,19 @@ namespace Stock
         }
         private void ProductGrid_MouseEnter(object sender, MouseEventArgs e)
         {
+            this.Visibility = Visibility.Visible;
             productGrid.ItemsSource = MyProducts_List.MyProducts;
             productGrid.Items.Refresh();
-            
+            this.Visibility = Visibility.Visible;
+
         }
 
         private void PackageGrid_MouseEnter(object sender, MouseEventArgs e)
         {
+            this.Visibility = Visibility.Visible;
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             packageGrid.Items.Refresh();
+            this.Visibility = Visibility.Visible;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -172,6 +184,9 @@ namespace Stock
             history_Window.Owner = this;
             history_Window.ShowDialog();
         }
-   
+
+      
+
+
     }
 }

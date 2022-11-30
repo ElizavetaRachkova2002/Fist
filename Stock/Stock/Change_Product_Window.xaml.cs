@@ -64,7 +64,7 @@ namespace Stock
                         TB_New_Legal_Entity.Text = MyProducts_List.MyProducts[i].Legal_entity;
                         TB_New_Brand.Text = MyProducts_List.MyProducts[i].Brand;
                         TB_New_Barcode.Text = MyProducts_List.MyProducts[i].Barcode.ToString();
-                        TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
+                      //  TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
                         TB_New_Vendor_Code.Text = MyProducts_List.MyProducts[i].Vendor_code;
                         current_product_number = i;
                         break;
@@ -125,7 +125,7 @@ namespace Stock
 
                     MyProducts_List.MyProducts[current_product_number].Name = TB_New_Name.Text;
                     MyProducts_List.MyProducts[current_product_number].Legal_entity = TB_New_Legal_Entity.Text;
-                    MyProducts_List.MyProducts[current_product_number].PackageName = TB_NewProduct_Package_Name.Text;
+                    MyProducts_List.MyProducts[current_product_number].PackageName.Add(TB_NewProduct_Package_Name.Text);
                     MyProducts_List.MyProducts[current_product_number].Vendor_code = TB_New_Vendor_Code.Text;
                     MyProducts_List.MyProducts[current_product_number].Barcode = ulong.Parse(TB_New_Barcode.Text);
                     MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;

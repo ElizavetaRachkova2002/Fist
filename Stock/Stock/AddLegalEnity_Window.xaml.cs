@@ -83,26 +83,29 @@ namespace Stock
                     throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо для удаления");
 
                 }
-                for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
+                if (MessageBox.Show("Вы собираетесь безвозвратно удалить юр.лицо '" + TB_Delete_LE.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                 {
-                    if (MyLegalEnitys_List.MyLegalEnitys[i] == TB_Delete_LE.Text)
+                    for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
                     {
-                        MyLegalEnitys_List.MyLegalEnitys.RemoveAt(i);
-                        string operation = "Удалено юр. лицо: " + TB_Delete_LE.Text;
+                        if (MyLegalEnitys_List.MyLegalEnitys[i] == TB_Delete_LE.Text)
+                        {
+                            MyLegalEnitys_List.MyLegalEnitys.RemoveAt(i);
+                            string operation = "Удалено юр. лицо: " + TB_Delete_LE.Text;
 
-                        DateTime time = DateTime.Now;
+                            DateTime time = DateTime.Now;
 
-                        History Now = new History(time, operation);
-                        MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
+                            History Now = new History(time, operation);
+                            MyHistory_List.MyHistory.Insert(0, Now);
+                            MyHistory_List.SaveHistory();
 
-                        break;
+                            break;
+
+                        }
 
                     }
-
+                    MyLegalEnitys_List.SaveLegalEnityList();
+                    this.Close();
                 }
-                MyLegalEnitys_List.SaveLegalEnityList();
-                this.Close();
             }
             catch (MyExceptionEmptyFieldLegalEntity ex)
             {

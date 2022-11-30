@@ -22,6 +22,7 @@ namespace Stock
         public AddLegalEnity_Window addLegalEnity_Window;
         public Add_Brand_Window add_Brand_Window;
         public ListOfPackages listOfPackages;
+        public List<string> currentPackageList = new List<string>();
         
         public AddProduct_Window()
         {
@@ -33,7 +34,7 @@ namespace Stock
             GiveTBProduct();            
             GiveTBLegalEnity();
             GiveTBBrand();
-            GiveTBPackage();
+            //GiveTBPackage();
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightGray);
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
           
@@ -76,6 +77,7 @@ namespace Stock
 
                         MyProducts_List.SaveProductList();
                         this.Close();
+                        this.Owner.Visibility = Visibility.Visible;
 
 
                     }
@@ -162,21 +164,21 @@ namespace Stock
             }
         }
 
-        public void GiveTBPackage()
-        {
-            int now = TB_NewProduct_Package_Name.SelectedIndex;
-            TB_NewProduct_Package_Name.Items.Clear();
-            MyPackages_List.LoadPackageList();
-            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
-            {
-                TB_NewProduct_Package_Name.Items.Add(MyPackages_List.MyPackages[i].ToString());
-            }
-            TB_NewProduct_Package_Name.Items.Add("Без упаковки");
-            TB_NewProduct_Package_Name.SelectedIndex = now;
+        //public void GiveTBPackage()
+        //{
+        //    int now = TB_NewProduct_Package_Name.SelectedIndex;
+        //    TB_NewProduct_Package_Name.Items.Clear();
+        //    MyPackages_List.LoadPackageList();
+        //    for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+        //    {
+        //        TB_NewProduct_Package_Name.Items.Add(MyPackages_List.MyPackages[i].ToString());
+        //    }
+        //    TB_NewProduct_Package_Name.Items.Add("Без упаковки");
+        //    TB_NewProduct_Package_Name.SelectedIndex = now;
 
 
 
-        }
+        //}
 
         public void GiveTBProduct()
         {
@@ -234,15 +236,15 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldBarcode("Введите штрихкод");
                 }
-                //TB_New_Barcode.Clear();
-                string packageN = TB_NewProduct_Package_Name.Text.Trim();
+
+
+                string packageN = TB_NewProduct_Package_Name.Text;
                 if (String.IsNullOrEmpty(packageN))
                 {
-                    throw new MyExceptionEmptyFieldPackageName("Введите упаковку товара");
+                    throw new MyExceptionEmptyFieldPackageName("Выберите упаковку товара");
                 }
 
-                //TB_NewProduct_Package_Name.Items.Clear();
-                //string packageS = TB_NewProduct_Package_Size.Text;
+
                 int count;
                 if (int.TryParse(TB_NewProduct_Count.Text, out int _count) != true && TB_NewProduct_Count.Text.Trim() != "")
                 {
@@ -284,7 +286,7 @@ namespace Stock
                 }
                 if (flag_vendor == false && flag_name == false && flad_barcode == false)
                 {
-                    Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, packageN, 0);
+                    Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, currentPackageList, 0);
                     MyProducts_List.MyProducts.Add(new_product);
                     MyProducts_List.SaveProductList();
 
@@ -293,7 +295,7 @@ namespace Stock
                     TB_New_Brand.Items.Clear();
                     TB_New_Vendor_Code.Clear();
                     TB_New_Barcode.Clear();
-                    TB_NewProduct_Package_Name.Items.Clear();
+                    //TB_NewProduct_Package_Name.Items.Clear();
                     TB_NewProduct_Count.Clear();
 
 
@@ -400,7 +402,7 @@ namespace Stock
 
         private void TB_NewProduct_Package_Name_MouseEnter(object sender, MouseEventArgs e)
         {
-            GiveTBPackage();
+            //GiveTBPackage();
         }
 
         private void Add_Brand_Click(object sender, RoutedEventArgs e)
@@ -414,10 +416,27 @@ namespace Stock
         {
             listOfPackages = new ListOfPackages();
             listOfPackages.Owner = this;
-
+            currentPackageList.Clear();
 
             listOfPackages.ShowDialog();
+            
+            TB_NewProduct_Package_Name.Clear();
+            for (int i = 0; i < listOfPackages.currentPackage.Count; i++)
+            {
+                if (i==0)
+                    TB_NewProduct_Package_Name.Text = listOfPackages.currentPackage[i];
+                else
+                TB_NewProduct_Package_Name.Text = TB_NewProduct_Package_Name.Text + "; " + listOfPackages.currentPackage[i];
+            }
+            string[] cur = new string[listOfPackages.currentPackage.Count];
+            listOfPackages.currentPackage.CopyTo(cur);
+            for (int i = 0; i < listOfPackages.currentPackage.Count; i++)
+                currentPackageList.Add(cur[i]);
         }
+
+        
+
+
 
     }
 }

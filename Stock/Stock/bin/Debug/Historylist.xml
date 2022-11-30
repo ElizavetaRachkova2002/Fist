@@ -1,6 +1,94 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-11-30T22:48:40.8655649+03:00</Time>
+    <Operation>Удален бренд: 40а</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:45:51.6376534+03:00</Time>
+    <Operation>Удалена упаковка: arg 32*20</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:40:17.2292498+03:00</Time>
+    <Operation>Списан брак: 872, 6 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:39:43.9234799+03:00</Time>
+    <Operation>Добавлен новый товар: гном, 79248 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:27:16.24357+03:00</Time>
+    <Operation>ром. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:26:03.9692122+03:00</Time>
+    <Operation>Добавлен новый товар: ром, 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:21:33.4683538+03:00</Time>
+    <Operation>872. Подготовлено к продаже: 50 шт., Брак: 3 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:18:22.8422966+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5792 Кол-во: 20; </Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:10:14.4276418+03:00</Time>
+    <Operation>872. Подготовлено к продаже: 20 шт., Брак: 3 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:09:38.0055418+03:00</Time>
+    <Operation>Добавлен новый товар: 872, 128 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:05:07.7511351+03:00</Time>
+    <Operation>Добавлен новый товар: гора, 975 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T22:01:28.7139376+03:00</Time>
+    <Operation>Добавлен новый товар: сок, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:53:52.9207139+03:00</Time>
+    <Operation>Добавлен новый товар: рыба, 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:31:59.6660597+03:00</Time>
+    <Operation>Удалён товар: 765</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:31:50.5129147+03:00</Time>
+    <Operation>Удалён товар: dfhdh</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:31:04.4331165+03:00</Time>
+    <Operation>Добавлен новый товар: 765, 864 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:29:10.9019852+03:00</Time>
+    <Operation>Добавлен новый бренд: 40а</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:28:00.8496667+03:00</Time>
+    <Operation>Добавлен новый товар: шор, 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:18:09.1473218+03:00</Time>
+    <Operation>Добавлен новый товар: лом, 98 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T21:17:22.7633868+03:00</Time>
+    <Operation>Добавлен новый товар: грот, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T20:00:07.178784+03:00</Time>
+    <Operation>Добавлен товар: апрпр, 100 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T17:23:24.9775269+03:00</Time>
+    <Operation>Добавлена новая упаковка: пмлрл 8*8, 100 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-30T16:38:51.2698895+03:00</Time>
     <Operation>dfhdh. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
   </History>

@@ -13,7 +13,7 @@
     <Window.DataContext>
         <local:Product/>
     </Window.DataContext>
-    
+
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -125,17 +125,17 @@
                 </Setter.Value>
             </Setter>
         </Style>
-       
-            <ControlTemplate x:Key="validationFailed">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="Violet" BorderThickness="2">
-                        <AdornedElementPlaceholder />
-                    </Border>
-                    <TextBlock Foreground="Red" FontSize="26" FontWeight="Bold">!</TextBlock>
-                </StackPanel>
-            </ControlTemplate>
-        </Window.Resources>
-   
+
+        <ControlTemplate x:Key="validationFailed">
+            <StackPanel Orientation="Horizontal">
+                <Border BorderBrush="Violet" BorderThickness="2">
+                    <AdornedElementPlaceholder />
+                </Border>
+                <TextBlock Foreground="Red" FontSize="26" FontWeight="Bold">!</TextBlock>
+            </StackPanel>
+        </ControlTemplate>
+    </Window.Resources>
+
     <Grid Margin="0,0,4,0.4">
 
         <Button Name="BtnExistingProduct" FontSize="16" Content="Существующий" Click="BtnExistingProduct_Click" RenderTransformOrigin="0.643,0.771" Margin="0,0,243.8,361.4"  />
@@ -173,9 +173,6 @@
                     </Binding>
                 </TextBox.Text>-->
             </TextBox>
-            <ComboBox x:Name="TB_NewProduct_Package_Name" MouseEnter="TB_NewProduct_Package_Name_MouseEnter" Canvas.Left="128" Canvas.Top="260" Width="328" Height="26">
-
-            </ComboBox>
             <ComboBox x:Name="TB_New_Brand" Canvas.Left="128" Canvas.Top="124" Width="359" Height="26" GotMouseCapture="TB_New_Brand_MouseDown">
             </ComboBox>
             <TextBox x:Name="TB_NewProduct_Count" Height="24"  Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231" >
@@ -185,11 +182,12 @@
                     </Binding>
                 </TextBox.Text>-->
             </TextBox>
-           
-            
+
+
             <Button x:Name="Add_Brand" Content="Р" Height="20" Canvas.Top="130" Width="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Add_Brand_Click" Canvas.Left="3" RenderTransformOrigin="0.49,0.54"/>
             <Button x:Name="Add_LegalEnity" Content="Р" Height="20" Canvas.Top="85" Width="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Add_LegalEnity_Click" Canvas.Left="3"/>
-            <Button x:Name="Add_More_Package_btn" Content="+" Height="26" Canvas.Top="260" Width="26" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Canvas.Left="461" Click="Add_More_Package_btn_Click" />
+            <Button x:Name="Add_More_Package_btn" Content="Выбрать" Height="26" Canvas.Top="260" Width="68" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Canvas.Left="128" Click="Add_More_Package_btn_Click" />
+            <TextBox  x:Name="TB_NewProduct_Package_Name" Height="24" Canvas.Left="214" IsReadOnly="True" TextWrapping="Wrap" Text="" Canvas.Top="262" Width="273"/>
         </Canvas>
     </Grid>
 </Window>

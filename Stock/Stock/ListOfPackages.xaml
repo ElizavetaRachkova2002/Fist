@@ -88,6 +88,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
-        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_add_packages" Content="Добавить" Margin="630,0,0,0" Width="135" Height="40" FontSize="20" Canvas.Left="367" Canvas.Top="292" Background="#FFB4D2FA"/>
+        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_add_packages" Content="Добавить" Margin="630,0,0,0" Width="135" Height="40" FontSize="20" Canvas.Left="367" Canvas.Top="292" Background="#FFB4D2FA" Click="btn_add_packages_Click"/>
+        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_WithoutPackage" Content="Без упаковки" Margin="644,252,14.6,128" Width="135" Height="40" FontSize="20" Canvas.Left="367" Canvas.Top="292" Background="#FFB4D2FA" Click="btn_without_Package_Click"/>
     </Grid>
 </Window>

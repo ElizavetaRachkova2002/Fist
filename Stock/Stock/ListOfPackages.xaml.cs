@@ -19,22 +19,15 @@ namespace Stock
     /// </summary>
     public partial class ListOfPackages : Window
     {
+        public List<string> currentPackage= new List<string>();
         public ListOfPackages()
         {
             InitializeComponent();
+            gridlistbrak.ItemsSource = MyPackages_List.MyPackages;
         }
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
-            //var chk = (CheckBox)sender;
-            //chk.IsChecked = true;
-
-            //for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-            //{
-            //    MyProducts_List.MyProducts[i].IsSelected = true;
-
-            //}
-            //MyProducts_List.SaveProductList();
 
 
         }
@@ -44,23 +37,27 @@ namespace Stock
         {
 
 
-            //for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-            //{
-            //    if (MyProducts_List.MyProducts[i].IsSelected == true)
-            //    {
+        }
 
-            //        DateTime time = DateTime.Now;
-            //        string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
-            //        History Now = new History(time, operation);
-            //        MyHistory_List.MyHistory.Insert(0, Now);
-            //        MyHistory_List.SaveHistory();
-            //        MyProducts_List.MyProducts[i].Brak = 0;
-            //    }
-            //    MyProducts_List.MyProducts[i].IsSelected = false;
-            //}
+        private void btn_add_packages_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i=0;i<MyPackages_List.MyPackages.Count;i++)
+            {
+                if (MyPackages_List.MyPackages[i].IsSelected==true)
+                {
+                    string cur = MyPackages_List.MyPackages[i].Name_package+" "+ MyPackages_List.MyPackages[i].Size;
+                    currentPackage.Add(cur);
+                    
+                }
+                MyPackages_List.MyPackages[i].IsSelected = false;
+            }
+            this.Close();
+        }
 
-            //MyProducts_List.SaveProductList();
-
+        private void btn_without_Package_Click(object sender, RoutedEventArgs e)
+        {
+            currentPackage.Add("Без упаковки");
+            this.Close();
         }
     }
 }

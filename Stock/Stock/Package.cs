@@ -70,6 +70,7 @@ namespace Stock
      {
         public string _name_package; 
         public string Size { get; set; }
+        public bool IsSelected { get; set; }
         public int _count_package;
         public string Name_package
         {
@@ -106,6 +107,7 @@ namespace Stock
             Name_package = name;
             Size = size;
             Count_package = count;
+            IsSelected = false;
         }
         public override string ToString()
         {

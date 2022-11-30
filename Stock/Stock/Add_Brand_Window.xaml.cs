@@ -49,26 +49,29 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldBrand("Укажите название бренда");
                 }
-                for (int i = 0; i < Brand_List.MyBrand.Count; i++)
+                if (MessageBox.Show("Вы собираетесь безвозвратно удалить бренд '" + TB_Delete_Br.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                 {
-                    if (Brand_List.MyBrand[i] == TB_Delete_Br.Text)
+                    for (int i = 0; i < Brand_List.MyBrand.Count; i++)
                     {
-                        Brand_List.MyBrand.RemoveAt(i);
-                        string operation = "Удален бренд: " + TB_Delete_Br.Text;
+                        if (Brand_List.MyBrand[i] == TB_Delete_Br.Text)
+                        {
+                            Brand_List.MyBrand.RemoveAt(i);
+                            string operation = "Удален бренд: " + TB_Delete_Br.Text;
 
-                        DateTime time = DateTime.Now;
+                            DateTime time = DateTime.Now;
 
-                        History Now = new History(time, operation);
-                        MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
+                            History Now = new History(time, operation);
+                            MyHistory_List.MyHistory.Insert(0, Now);
+                            MyHistory_List.SaveHistory();
 
-                        break;
+                            break;
+
+                        }
 
                     }
-
-                }
-                Brand_List.SaveBrandList();
-                this.Close();
+                    Brand_List.SaveBrandList();
+                    this.Close();
+                }  
             }
             catch (MyExceptionEmptyFieldBrand ex)
             {

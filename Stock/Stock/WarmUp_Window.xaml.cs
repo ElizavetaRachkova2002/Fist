@@ -145,26 +145,26 @@ namespace Stock
                 bool flag_count = false;
                 bool flag_package = false;
                 bool flag_does_not_exist_package = false;
+                //for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                //{
+                //    if (MyProducts_List.MyProducts[i].Name == name)
+                //    {
+                //        for (int j = 0; j < MyPackages_List.MyPackages.Count; j++)
+                //        {
+                //            if (MyProducts_List.MyProducts[i].PackageName != MyPackages_List.MyPackages[j].Name_package)
+                //            {
+
+                //                //if (MyPackages_List.MyPackages[j].Count_package==0)
+                //                //{
+                //                //    throw new MyExceptionNotEnoughPackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте упаковку.");
+                //                //}
+                //            }
+                //        }
+                //    }
+                //}
+
+
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-                {
-                    if (MyProducts_List.MyProducts[i].Name == name)
-                    { 
-                        for (int j=0; j<MyPackages_List.MyPackages.Count; j++)
-                        {
-                            if(MyProducts_List.MyProducts[i].PackageName != MyPackages_List.MyPackages[j].Name_package)
-                            {
-                               
-                                //if (MyPackages_List.MyPackages[j].Count_package==0)
-                                //{
-                                //    throw new MyExceptionNotEnoughPackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте упаковку.");
-                                //}
-                            }
-                        }
-                    }
-                }
-
-
-                        for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
                     if (MyProducts_List.MyProducts[i].Name == name)
                     {
@@ -178,22 +178,22 @@ namespace Stock
                         }
                     }
                 }
-                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-                {
-                    if (MyProducts_List.MyProducts[i].Name == name)
-                    {
-                        for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
-                        {
-                            if (MyProducts_List.MyProducts[i].PackageName == MyPackages_List.MyPackages[j].Name_package)
-                            {
-                               
-                               
-                                if (MyPackages_List.MyPackages[j].Count_package < count)
-                                { flag_package = true; }
-                                                            }
-                        }
-                    }
-                }
+                ////for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                ////{
+                ////    if (MyProducts_List.MyProducts[i].Name == name)
+                ////    {
+                ////        for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
+                ////        {
+                ////            if (MyProducts_List.MyProducts[i].PackageName == MyPackages_List.MyPackages[j].Name_package)
+                ////            {
+
+
+                ////                if (MyPackages_List.MyPackages[j].Count_package < count)
+                ////                { flag_package = true; }
+                ////            }
+                ////        }
+                ////    }
+                ////}
 
                 if (flag_count == true)
                 {
@@ -218,16 +218,19 @@ namespace Stock
                             MyProducts_List.MyProducts[i].Not_Packed -= brak;
                             MyProducts_List.MyProducts[i].Not_Packed -= count;
                             MyProducts_List.MyProducts[i].Packed += count;
-                            if (MyProducts_List.MyProducts[i].PackageName != "Без упаковки")
-                                for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
-                                {
-                                    if (MyProducts_List.MyProducts[i].PackageName == MyPackages_List.MyPackages[j].ToString())
+                            for (int j = 0; j < MyProducts_List.MyProducts[i].PackageName.Count; j++)
+                            {
+                                if (MyProducts_List.MyProducts[i].PackageName[j] != "Без упаковки")
+                                    for (int k = 0; k < MyPackages_List.MyPackages.Count(); k++)
                                     {
-                                        MyPackages_List.MyPackages[j].Count_package -= count;
-                                        break;
+                                        if (MyProducts_List.MyProducts[i].PackageName[j] == MyPackages_List.MyPackages[k].ToString())
+                                        {
+                                            MyPackages_List.MyPackages[k].Count_package -= count;
+                                            
 
+                                        }
                                     }
-                                }
+                            }
                             WarmUp_Count.Clear();
                             WarmUp_Brak.Clear();
                             DateTime time = DateTime.Now;

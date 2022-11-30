@@ -204,3 +204,5 @@ C:\Fist\Stock\Stock\obj\Debug\Add_Brand_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\ListOfPackages.g.cs
 C:\Fist\Stock\Stock\obj\Debug\ListOfPackages.baml
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.AssemblyReference.cache
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\ListOfPackages.g.cs
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\ListOfPackages.baml

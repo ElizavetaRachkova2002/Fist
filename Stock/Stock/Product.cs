@@ -140,7 +140,7 @@ namespace Stock
         public string _vendor_code;
         public ulong _barcode; //штрих
         public int _count;
-        public string _packageName;
+        public List<string> _packageName;
 
        
         public string Legal_entity {
@@ -220,12 +220,13 @@ namespace Stock
         public int Packed { get; set; }
         public bool IsSelected { get; set; }
         public int Not_Packed { get; set; }
-        public string PackageName {
+        public List<string> PackageName {
             get { return _packageName; }
             set
             {
                 _packageName = value;
-                if (String.IsNullOrEmpty(value))
+                for (int i=0;i<value.Count;i++)
+                if (String.IsNullOrEmpty(value[i]))
                 {
                     throw new MyExceptionEmptyFieldBrand("Введите упаковку для товара");
                 }
@@ -249,7 +250,7 @@ namespace Stock
         public int Brak { get; set; }
 
         public Product() { }
-        public Product(string name, string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, string packageName, int brak)
+        public Product(string name, string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, List<string> packageName, int brak)
         {
             Name = name;
             Legal_entity = legal_enity;
