@@ -125,7 +125,7 @@
         
         <Border x:Name="Brd_list_brak" Margin="0,0,0,0" Height="450" Width="850" Background="White" Panel.ZIndex="0" BorderBrush="Black" BorderThickness="1" >
         <DataGrid x:Name="gridlistbrak" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
-                      VerticalScrollBarVisibility="Auto" Grid.Row="0" Margin="-0.8,-0.8,218.8,0.8" MouseEnter="gridlistbrak_MouseEnter"
+                      VerticalScrollBarVisibility="Auto" Grid.Row="0" Margin="-0.8,-0.8,218.8,0.8"
             RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" MaxWidth="805" Canvas.Left="10" Canvas.Top="102" Width="630" IsReadOnly="True" FontSize="14">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="153"  />
@@ -147,7 +147,7 @@
             </DataGrid>
         </Border>
        
-        <Button Style="{DynamicResource ButtonAllBrak}" x:Name="Btn_part_brak" Margin="630,0,0,0" Width="135" Height="40" Content="Списать" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_part_brak_Click" Background="#FFB4D2FA"/>
+        <Button Style="{DynamicResource ButtonAllBrak}" x:Name="Btn_part_brak" Margin="630,0,0,0" Width="110" Height="33" Content="Списать" FontSize="16" Canvas.Left="367" Canvas.Top="292" Click="Btn_part_brak_Click" Background="#FFB4D2FA"/>
     </Grid>
 
 </Window>

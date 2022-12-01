@@ -23,16 +23,37 @@ namespace Stock
         public ListOfPackages()
         {
             InitializeComponent();
-            gridlistbrak.ItemsSource = MyPackages_List.MyPackages;
+            gridlistpackage.ItemsSource = MyPackages_List.MyPackages;
+            
+        }
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i <MyPackages_List.MyPackages.Count;i++)
+            {
+                MyPackages_List.MyPackages[i].IsSelected = false;
+
+            }
+
+            MyPackages_List.SavePackageList();
+            gridlistpackage.Items.Refresh();
+
         }
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
+            var chk = (CheckBox)sender;
+            chk.IsChecked = true;
+
+            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
+            {
+               MyPackages_List.MyPackages[i].IsSelected = true;
+
+            }
+            gridlistpackage.Items.Refresh();
+            MyPackages_List.SavePackageList();
 
 
         }
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        { }
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
         {
 

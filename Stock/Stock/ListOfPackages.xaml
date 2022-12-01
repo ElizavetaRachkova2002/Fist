@@ -66,7 +66,7 @@
     
     <Grid>
         <Border x:Name="Brd_list_packages" Margin="0,0,0,0" Height="450" Width="850" Background="White" Panel.ZIndex="0" BorderBrush="Black" BorderThickness="1" >
-            <DataGrid x:Name="gridlistbrak" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
+            <DataGrid x:Name="gridlistpackage" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" CanUserAddRows="False"
                       VerticalScrollBarVisibility="Auto" Grid.Row="0" Margin="0,0,215,0"
             RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" MaxWidth="805" Canvas.Left="10" Canvas.Top="102" Width="630" IsReadOnly="True" FontSize="14">
                 <DataGrid.Columns>
@@ -87,8 +87,9 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
+            
         </Border>
-        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_add_packages" Content="Добавить" Margin="630,0,0,0" Width="135" Height="40" FontSize="20" Canvas.Left="367" Canvas.Top="292" Background="#FFB4D2FA" Click="btn_add_packages_Click"/>
-        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_WithoutPackage" Content="Без упаковки" Margin="644,252,14.6,128" Width="135" Height="40" FontSize="20" Canvas.Left="367" Canvas.Top="292" Background="#FFB4D2FA" Click="btn_without_Package_Click"/>
+        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_add_packages" Content="Добавить" Margin="648,166,25.6,214" Width="110" Height="33" FontSize="16"  Background="#FFB4D2FA" Click="btn_add_packages_Click"/>
+        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_WithoutPackage" Content="Без упаковки" Margin="642,222,16.6,158" Width="110" Height="33" FontSize="16"  Background="#FFB4D2FA" Click="btn_without_Package_Click"/>
     </Grid>
 </Window>

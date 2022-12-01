@@ -105,7 +105,7 @@
     <Grid>
         <TextBlock FontSize="18" Margin="29,32,428,421.4" Text="Название:"/>
         <ComboBox x:Name="Combo_Current_Product"   Canvas.Left="128" Canvas.Top="35" Height="29" Margin="162,32,36.8,0" VerticalAlignment="Top" />
-        <Button  x:Name="Btn_Delete_Package" Content="Просмотр" FontSize="14"  Click="Btn_Change_OK_Click" Background="#FFB4D2FA" Margin="396,82,37,370.4" Style="{DynamicResource ButtonStyleOK}"/>
+        <Button  x:Name="Btn_Change_OK" Content="Просмотр" FontSize="14"  Click="Btn_Change_OK_Click" Background="#FFB4D2FA" Margin="396,82,37,370.4" Style="{DynamicResource ButtonStyleOK}"/>
         <Canvas Name="BrdAddNewProduct" Background="White" Width="497" Margin="29,129,26,16.4" >
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Text="Юр. лицо:" Canvas.Left="23" Canvas.Top="81"/>
@@ -119,6 +119,7 @@
             </ComboBox>
             <ComboBox x:Name="TB_New_Brand" MouseEnter="TB_New_Brand_MouseDown" Canvas.Left="128" Canvas.Top="126" Width="359" Height="26" >
             </ComboBox>
+            <Button x:Name="Btn_GivePackageList" Width="91" Height="24" Content="Выбрать" Canvas.Left="128" Canvas.Top="262" Click="Btn_GivePackageList_Click"/>
             <TextBox x:Name="TB_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="32" Width="359"/>
             <TextBox x:Name="TB_New_Vendor_Code" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="171" Width="359">
                 <TextBox.Text>
@@ -140,13 +141,11 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <ComboBox x:Name="TB_NewProduct_Package_Name" MouseEnter="TB_New_Package_MouseDown" Canvas.Left="128" Canvas.Top="260" Width="359" Height="26">
 
-            </ComboBox>
-            
 
             <Button x:Name="Add_LegalEnity" Content="Р" Height="24" Canvas.Top="81" Width="24"   Canvas.Left="-11" Click="Add_LegalEnity_Click" />
             <Button x:Name="Add_Brand" Content="Р" Height="24" Canvas.Top="126" Width="24"   Canvas.Left="-11" Click="Add_Brand_Click" />
+            <TextBox  x:Name="TB_NewProduct_Package_Name" Height="24" IsReadOnly="true" Canvas.Left="244" TextWrapping="Wrap" Canvas.Top="262" Width="243"/>
         </Canvas>
         <Rectangle Fill="#FFC8C8E0" HorizontalAlignment="Left" Height="4" Margin="0,138,0,0" Stroke="Black" VerticalAlignment="Top" Width="552"/>
     </Grid>

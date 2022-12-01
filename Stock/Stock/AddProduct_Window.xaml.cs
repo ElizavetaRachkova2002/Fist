@@ -454,10 +454,9 @@ namespace Stock
                 else
                 TB_NewProduct_Package_Name.Text = TB_NewProduct_Package_Name.Text + "; " + listOfPackages.currentPackage[i];
             }
-            string[] cur = new string[listOfPackages.currentPackage.Count];
-            listOfPackages.currentPackage.CopyTo(cur);
-            for (int i = 0; i < listOfPackages.currentPackage.Count; i++)
-                currentPackageList.Add(cur[i]);
+            //string[] cur = new string[listOfPackages.currentPackage.Count];
+            currentPackageList=listOfPackages.currentPackage;
+            
         }
 
         

@@ -19,10 +19,21 @@ namespace Stock
     /// </summary>
     public partial class Change_Product_Window : Window
     {
+        string oldname = "";
+        string oldLE = "";
+        string oldBand = "";
+        string oldBarcode="";
+        string oldVendorCode = "";
+        string oldPackage = "";
+        string newPackage = "";
+
+
         bool flag_OK = false;
+        public List<string> currentPackage_change = new List<string>();
         int current_product_number;
         AddLegalEnity_Window addLegalEnity_Window;
         Add_Brand_Window add_Brand_Window;
+        ListOfPackages listOfPackages;
         public Change_Product_Window()
         {
             InitializeComponent();
@@ -30,9 +41,11 @@ namespace Stock
             GiveTBProduct();
             GiveTBBrand();
             GiveTBLegalEnity();
-            GiveTBPackage();
 
-            TB_NewProduct_Package_Name.IsReadOnly = true;
+            Btn_GivePackageList.Visibility = Visibility.Collapsed;
+            
+
+            
             TB_New_Barcode.IsReadOnly = true;
             TB_New_Brand.IsReadOnly = true;
             TB_New_Legal_Entity.IsReadOnly = true;
@@ -45,12 +58,13 @@ namespace Stock
         {
             try
             {
+
                 if (String.IsNullOrEmpty(Combo_Current_Product.Text))
                 {
                     throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
                 }
-                TB_NewProduct_Package_Name.IsReadOnly = false;
-                TB_New_Barcode.IsReadOnly = false;
+                
+                
                 TB_New_Brand.IsReadOnly = false;
                 TB_New_Legal_Entity.IsReadOnly = false;
                 TB_New_Name.IsReadOnly = false;
@@ -61,12 +75,34 @@ namespace Stock
                     if (Combo_Current_Product.Text == MyProducts_List.MyProducts[i].Name)
                     {
                         TB_New_Name.Text = MyProducts_List.MyProducts[i].Name;
+                        oldname = MyProducts_List.MyProducts[i].Name;
                         TB_New_Legal_Entity.Text = MyProducts_List.MyProducts[i].Legal_entity;
+                        oldLE = MyProducts_List.MyProducts[i].Legal_entity;
                         TB_New_Brand.Text = MyProducts_List.MyProducts[i].Brand;
+                        oldBand = MyProducts_List.MyProducts[i].Brand;
                         TB_New_Barcode.Text = MyProducts_List.MyProducts[i].Barcode.ToString();
-                      //  TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
+                        oldBarcode= MyProducts_List.MyProducts[i].Barcode.ToString();
+                        //  TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
+                        for (int j=0;j<MyProducts_List.MyProducts[i].PackageName.Count;j++)
+                        {
+
+                            if (j == 0)
+                            {
+                                TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName[j];
+                               
+                            }
+                            else
+                            {
+                                TB_NewProduct_Package_Name.Text = TB_NewProduct_Package_Name.Text+"; "+ MyProducts_List.MyProducts[i].PackageName[j];
+                            }
+                            currentPackage_change.Add(MyProducts_List.MyProducts[i].PackageName[j]);
+                        }
+                        oldPackage = TB_NewProduct_Package_Name.Text;
                         TB_New_Vendor_Code.Text = MyProducts_List.MyProducts[i].Vendor_code;
+                        oldVendorCode = MyProducts_List.MyProducts[i].Vendor_code;
                         current_product_number = i;
+                        Btn_GivePackageList.Visibility = Visibility.Visible;
+
                         break;
                     }
                 }
@@ -123,15 +159,24 @@ namespace Stock
 
                 if (flag_OK == true)
                 {
-
+                    DateTime time = DateTime.Now;
+                    string operation = "Изменение товара"+"\n Название: " + oldname+ " ----> " + TB_New_Name.Text + "\n Юр. лицо: " + oldLE + " ----> "+ TB_New_Legal_Entity.Text
+                        + "\n Бренд: " + oldBand + " ----> "+ TB_New_Brand.Text + "\n Артикул: " + oldVendorCode + " ----> " + TB_New_Vendor_Code.Text + "\n Штрих-код: " + oldBarcode
+                        + " ----> "+ TB_New_Barcode.Text + "\n Упаковка: " + oldPackage + " ----> "+ newPackage ;
+                    History Now = new History(time, operation);
+                    MyHistory_List.MyHistory.Insert(0, Now);
+                    MyHistory_List.SaveHistory();
+                    
+                    
 
                     MyProducts_List.MyProducts[current_product_number].Name = TB_New_Name.Text;
                     MyProducts_List.MyProducts[current_product_number].Legal_entity = TB_New_Legal_Entity.Text;
-                    MyProducts_List.MyProducts[current_product_number].PackageName.Add(TB_NewProduct_Package_Name.Text);
+                    MyProducts_List.MyProducts[current_product_number].PackageName=currentPackage_change;
                     MyProducts_List.MyProducts[current_product_number].Vendor_code = TB_New_Vendor_Code.Text;
                     MyProducts_List.MyProducts[current_product_number].Barcode = ulong.Parse(TB_New_Barcode.Text);
                     MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;
 
+                    
                     MyProducts_List.SaveProductList();
 
                     this.Close();
@@ -209,12 +254,7 @@ namespace Stock
             }
         }
 
-        private void TB_New_Package_MouseDown(object sender, MouseEventArgs e)
-        {
-
-            GiveTBPackage();
-
-        }
+        
 
         private void Add_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
@@ -248,19 +288,7 @@ namespace Stock
             }
         }
 
-        public void GiveTBPackage()
-        {
-            int now = TB_NewProduct_Package_Name.SelectedIndex;
-            TB_NewProduct_Package_Name.Items.Clear();
-            MyPackages_List.LoadPackageList();
-            for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
-            {
-                TB_NewProduct_Package_Name.Items.Add(MyPackages_List.MyPackages[i].ToString());
-            }
-            TB_NewProduct_Package_Name.Items.Add("Без упаковки");
-            TB_NewProduct_Package_Name.SelectedIndex=now;
-
-        }
+       
 
         public void GiveTBProduct()
         {
@@ -279,6 +307,39 @@ namespace Stock
             add_Brand_Window = new Add_Brand_Window();
             add_Brand_Window.Owner = this;
             add_Brand_Window.ShowDialog();
+        }
+
+        private void Btn_GivePackageList_Click(object sender, RoutedEventArgs e)
+        {
+            listOfPackages = new ListOfPackages();
+            listOfPackages.Owner = this;
+            
+            
+            listOfPackages.ShowDialog();
+            
+            if (listOfPackages.currentPackage.Count != 0)
+            {
+                TB_NewProduct_Package_Name.Clear();
+                
+                for (int i = 0; i < listOfPackages.currentPackage.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        TB_NewProduct_Package_Name.Text = listOfPackages.currentPackage[i];
+                        newPackage = listOfPackages.currentPackage[i];
+                    }
+                    else
+                    {
+                        TB_NewProduct_Package_Name.Text = TB_NewProduct_Package_Name.Text + "; " + listOfPackages.currentPackage[i];
+                        newPackage = newPackage + "; " + listOfPackages.currentPackage[i];
+                    }
+                }
+
+                currentPackage_change = listOfPackages.currentPackage;
+            }
+
+
+
         }
     }
 }
