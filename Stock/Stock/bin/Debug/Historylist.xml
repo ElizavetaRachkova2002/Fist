@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-01T15:39:31.5065038+03:00</Time>
+    <Operation>Добавлен товар: ьарпим, 456567 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T15:26:01.3953438+03:00</Time>
+    <Operation>Добавлен товар: ьарпим, 343 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-01T14:17:57.0507609+03:00</Time>
     <Operation>Списан брак: ьарпим, 4 шт.</Operation>
   </History>

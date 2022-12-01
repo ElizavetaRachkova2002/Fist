@@ -26,12 +26,22 @@ namespace Stock
         }
         public void grid_MouseUp_History(object sender, MouseButtonEventArgs e)
         {
-            History history = HistoryGrid.SelectedItem as History;
-           
-            MessageBox.Show(history.Operation);
+            try
+            {
+                History history = HistoryGrid.SelectedItem as History;
+
+                MessageBox.Show(history.Operation);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+               
+            }
         }
         private void HistoryGrid_MouseEnter(object sender, MouseEventArgs e)
         {
+            
             HistoryGrid.ItemsSource = MyHistory_List.MyHistory;
             HistoryGrid.Items.Refresh();
 

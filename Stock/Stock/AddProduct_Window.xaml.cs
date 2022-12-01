@@ -53,11 +53,16 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldCount("Введите количество товара");
                 }
+                if (int.TryParse(TB_Exist_Count.Text, out int _count) != true && TB_Exist_Count.Text.Trim() != "")
+               
+                {
+                    throw new MyExceptionCountOfProductIsDigit("Количество товара это число");
+                }
                 if (int.Parse(TB_Exist_Count.Text) < 0)
                 {
                     throw new MyExceptionCountLessThanZero("Количество должно быть больше 0");
                 }
-
+                
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
 
@@ -83,7 +88,24 @@ namespace Stock
                     }
                 }
             }
-
+            catch (MyExceptionEmptyFieldNameOfProduct ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionEmptyFieldCount ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+                catch (MyExceptionCountOfProductIsDigit ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (MyExceptionCountLessThanZero ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             catch (Exception)
             {
 

@@ -77,25 +77,33 @@ namespace Stock
        
         private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
         {
-
-
-            for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+            try
             {
-                if (MyProducts_List.MyProducts[i].IsSelected == true)
+
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
-                   
-                    DateTime time = DateTime.Now;
-                    string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
-                    History Now = new History(time, operation);
-                    MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
-                    MyProducts_List.MyProducts[i].Brak = 0;
+                    if (MyProducts_List.MyProducts[i].IsSelected == true)
+                    {
+
+                        DateTime time = DateTime.Now;
+                        string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
+                        History Now = new History(time, operation);
+                        MyHistory_List.MyHistory.Insert(0, Now);
+                        MyHistory_List.SaveHistory();
+                        MyProducts_List.MyProducts[i].Brak = 0;
+                    }
+                    MyProducts_List.MyProducts[i].IsSelected = false;
                 }
-                MyProducts_List.MyProducts[i].IsSelected = false;
+
+                MyProducts_List.SaveProductList();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                
             }
 
-            MyProducts_List.SaveProductList();
-            
         }
 
         private void gridlistbrak_MouseEnter(object sender, MouseEventArgs e)
