@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.IO;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -128,7 +129,16 @@ namespace Stock
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
+
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
         }
 
@@ -152,14 +162,6 @@ namespace Stock
             {
                 string Name_countValue = "TB_Send_Product_Count";
                 ComboBox NameValue = new ComboBox();
-                //if (String.IsNullOrEmpty(NameValue.Text))
-                //{
-                //    throw new MyExceptionEmptyFieldCount("Введите название товара");
-                //}
-                //if (String.IsNullOrEmpty(NameValue.Text))
-                //{
-                //    throw new MyExceptionEmptyFieldNameOfProduct("Введите количество товара");
-                //}
                 RowCount++;
                 if (RowCount < 5)
                     this.Height += 120;
@@ -194,12 +196,7 @@ namespace Stock
                 CountValue.Width = 356;
                 CountValue.Height = 24;
                 CountValue.FontSize = 16;
-                //string Name_countValue = "TB_Send_Product_Count";
-                //if (String.IsNullOrEmpty(Name_countValue))
-                //{
-                //    throw new MyExceptionEmptyFieldCount("Введите количество товара");
-                //}
-                TBCount_List.Add(CountValue); /////////
+                TBCount_List.Add(CountValue); 
                 Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
                 CountValue.Name = Name_countValue;
                 CountValue.FontSize = 12;
@@ -226,11 +223,7 @@ namespace Stock
                 Name_countValue = "Combo_product_send";
                 Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
                 NameValue.Name = Name_countValue;
-                //if (String.IsNullOrEmpty(NameValue.Text))
-                //{
-                //    throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
-                //}
-                ComboName_List.Add(NameValue); ////////////////
+                ComboName_List.Add(NameValue); 
                 NameValue.Items.Clear();
                 NameValue.FontSize = 12;
                 MyProducts_List.LoadProductList();
@@ -251,9 +244,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
         }
 

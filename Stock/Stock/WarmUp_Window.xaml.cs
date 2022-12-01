@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.IO;
 using System.Windows.Shapes;
 
 namespace Stock
@@ -145,19 +146,23 @@ namespace Stock
                 bool flag_count = false;
                 bool flag_package = false;
                 bool flag_does_not_exist_package = false;
+
                 //for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 //{
                 //    if (MyProducts_List.MyProducts[i].Name == name)
                 //    {
                 //        for (int j = 0; j < MyPackages_List.MyPackages.Count; j++)
                 //        {
-                //            if (MyProducts_List.MyProducts[i].PackageName != MyPackages_List.MyPackages[j].Name_package)
+                //            for (int k = 0; k < MyProducts_List.MyProducts[i].PackageName.Count; k++)
                 //            {
+                //                if (MyProducts_List.MyProducts[i].PackageName != MyPackages_List.MyPackages[j].Name_package)
+                //                {
 
-                //                //if (MyPackages_List.MyPackages[j].Count_package==0)
-                //                //{
-                //                //    throw new MyExceptionNotEnoughPackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте упаковку.");
-                //                //}
+                //                    if (MyPackages_List.MyPackages[j].Count_package == 0)
+                //                    {
+                //                        throw new MyExceptionNotEnoughPackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте упаковку.");
+                //                    }
+                //                }
                 //            }
                 //        }
                 //    }
@@ -299,7 +304,16 @@ namespace Stock
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
+
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
         }
     }

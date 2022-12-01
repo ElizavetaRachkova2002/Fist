@@ -81,9 +81,16 @@ namespace Stock
                 MyProducts_List.SaveProductList();
                 gridlistbrak.Items.Refresh();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
 
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
                 
             }

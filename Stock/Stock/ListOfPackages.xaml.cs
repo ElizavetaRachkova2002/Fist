@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -62,23 +63,56 @@ namespace Stock
 
         private void btn_add_packages_Click(object sender, RoutedEventArgs e)
         {
-            for (int i=0;i<MyPackages_List.MyPackages.Count;i++)
+            try
             {
-                if (MyPackages_List.MyPackages[i].IsSelected==true)
+                for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
                 {
-                    string cur = MyPackages_List.MyPackages[i].Name_package+" "+ MyPackages_List.MyPackages[i].Size;
-                    currentPackage.Add(cur);
-                    
+                    if (MyPackages_List.MyPackages[i].IsSelected == true)
+                    {
+                        string cur = MyPackages_List.MyPackages[i].Name_package + " " + MyPackages_List.MyPackages[i].Size;
+                        currentPackage.Add(cur);
+
+                    }
+                    MyPackages_List.MyPackages[i].IsSelected = false;
                 }
-                MyPackages_List.MyPackages[i].IsSelected = false;
+                this.Close();
             }
-            this.Close();
+
+            catch (Exception ex)
+            {
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
+
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
         }
 
         private void btn_without_Package_Click(object sender, RoutedEventArgs e)
         {
-            currentPackage.Add("Без упаковки");
-            this.Close();
+            try
+            {
+                currentPackage.Add("Без упаковки");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
+
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
         }
     }
 }

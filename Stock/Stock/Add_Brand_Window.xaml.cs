@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Stock
 {
@@ -57,17 +58,12 @@ namespace Stock
                         {
                             Brand_List.MyBrand.RemoveAt(i);
                             string operation = "Удален бренд: " + TB_Delete_Br.Text;
-
                             DateTime time = DateTime.Now;
-
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
                             MyHistory_List.SaveHistory();
-
                             break;
-
                         }
-
                     }
                     Brand_List.SaveBrandList();
                     this.Close();
@@ -77,9 +73,15 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception )
+            catch (Exception ex )
             {
-
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
                 this.Close();
             }
@@ -99,9 +101,7 @@ namespace Stock
                 Brand_List.NewBr = newName;
                 Brand_List.AddNewBr = true;
                 string operation = "Добавлен новый бренд: " + New_Brand.Text;
-
                 DateTime time = DateTime.Now;
-
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
                 MyHistory_List.SaveHistory();
@@ -111,15 +111,19 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-
+                StreamWriter log;
+                if (!File.Exists("log.txt"))
+                { log = new StreamWriter("log.txt"); }
+                else { log = File.AppendText("log.txt"); }
+                log.WriteLine("Data Time:" + DateTime.Now);
+                log.WriteLine("Exception Name:" + ex.Message);
+                log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
                 this.Close();
             }
-
         }
-
         private void Btn_Br_Click(object sender, RoutedEventArgs e)
         {
             Canvas_Add.Visibility = Visibility.Visible;
