@@ -77,10 +77,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show("", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
 
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
         }
 
@@ -110,10 +111,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show("", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
 
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
 
         }

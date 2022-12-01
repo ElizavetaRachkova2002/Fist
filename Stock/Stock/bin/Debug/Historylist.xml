@@ -1,6 +1,202 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-01T14:17:57.0507609+03:00</Time>
+    <Operation>Списан брак: ьарпим, 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T13:01:06.9094452+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 4нп Кол-во: 7; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T13:00:57.5711862+03:00</Time>
+    <Operation>ьарпим. Подготовлено к продаже: 10 шт., Брак: 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T13:00:48.6803898+03:00</Time>
+    <Operation>ьарпим. Подготовлено к продаже: 0 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T13:00:29.5884028+03:00</Time>
+    <Operation>Добавлен товар: ьарпим, 533 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:58:13.0991507+03:00</Time>
+    <Operation>Добавлен новый товар: ьарпим, 784 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:09:09.7696819+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:09:02.1862364+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:07:31.237601+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:06:55.9061276+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:03:32.6113103+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:03:24.4911638+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 11 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T12:03:11.1079388+03:00</Time>
+    <Operation>Добавлен товар: мпр, 435 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:56:32.6030367+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:56:26.4814297+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:54:27.977429+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:53:14.9262059+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 5; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:53:07.3720524+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 10 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:52:57.0482434+03:00</Time>
+    <Operation>Добавлен товар: мпр, 11 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:52:15.5959867+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:52:06.9884409+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:51:32.4386121+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 5555 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:51:25.0115986+03:00</Time>
+    <Operation>мпр. Подготовлено к продаже: 1 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:51:12.4562876+03:00</Time>
+    <Operation>Добавлен новый товар: мпр, 3 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:46:10.5663927+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 3453333 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:46:02.0987393+03:00</Time>
+    <Operation>пар. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:45:41.4644565+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 3453333 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:45:35.3125013+03:00</Time>
+    <Operation>пар. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:45:24.976109+03:00</Time>
+    <Operation>Добавлен новый товар: пар, 77 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:42:51.5847914+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: лл Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:42:06.2778662+03:00</Time>
+    <Operation>рр. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:41:56.4291406+03:00</Time>
+    <Operation>Добавлен новый товар: рр, 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:37:14.8476913+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 435 Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:37:04.5154818+03:00</Time>
+    <Operation>куе. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:36:38.4954853+03:00</Time>
+    <Operation>Добавлен новый товар: куе, 33 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:34:52.2696961+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: ропо Кол-во: 1; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T11:34:34.5980062+03:00</Time>
+    <Operation>рот. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T08:36:48.2171953+03:00</Time>
+    <Operation>Добавлен новый товар: крот, 754 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T08:23:06.9557445+03:00</Time>
+    <Operation>Добавлен новый товар: рот, 68 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T08:10:43.1542292+03:00</Time>
+    <Operation>Добавлен новый товар: сон, 9754 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T08:07:10.0262736+03:00</Time>
+    <Operation>Добавлен новый товар: гром, 74287 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T08:03:03.6106313+03:00</Time>
+    <Operation>Добавлен новый товар: кот, 8690 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T07:57:54.6518802+03:00</Time>
+    <Operation>Добавлен новый товар: сад, 86479 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T07:54:19.9562188+03:00</Time>
+    <Operation>Добавлен новый товар: олаар, 96468 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T07:52:57.3266375+03:00</Time>
+    <Operation>Добавлен новый товар: иамьтф, 90 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T07:52:24.4360984+03:00</Time>
+    <Operation>Добавлена новая упаковка: фрим 90*765, 10000 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T07:37:47.6592048+03:00</Time>
+    <Operation>торт. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-01T07:35:42.8653908+03:00</Time>
+    <Operation>Добавлен новый товар: торт, 76 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-11-30T23:13:19.233729+03:00</Time>
+    <Operation>Добавлен новый товар: зонт, 765 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-11-30T22:48:40.8655649+03:00</Time>
     <Operation>Удален бренд: 40а</Operation>
   </History>

@@ -8,6 +8,7 @@ using System.Xml.Serialization;
 
 namespace Stock
 {
+    [Serializable]
     public static class MyProducts_List
     {
         public static List<Product> MyProducts = new List<Product>();
@@ -27,7 +28,11 @@ namespace Stock
                         currentPr_list.Add(item);
                 }
                 MyProducts.Clear();
-                MyProducts = currentPr_list;
+                Product[] cur = new Product[currentPr_list.Count];
+                currentPr_list.CopyTo(cur);
+                for (int i=0;i<currentPr_list.Count;i++)
+
+                MyProducts.Add(cur[i]);
             }
             
             

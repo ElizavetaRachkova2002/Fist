@@ -38,37 +38,48 @@ namespace Stock
         }
         private void Btn_Delete_Package_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(Combo_package.Text))
-            {
-                MessageBox.Show( "Упаковка не выбранa", "Ошибка заполнения",MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-
-            {
-                if (MessageBox.Show("Вы собираетесь безвозвратно удалить упаковку '" + Combo_package.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+            try {
+                if (string.IsNullOrEmpty(Combo_package.Text))
                 {
-                    for (int i = 0; i < MyPackages_List.MyPackages.Count(); i++)
-                    {
-                        int spaceBar = Combo_package.Text.LastIndexOf(" ");
-                        string name = Combo_package.Text.Substring(0, spaceBar);
-                        string size = Combo_package.Text.Substring(spaceBar + 1);
-
-                        if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size == size)
-                        {
-                            string operation = "Удалена упаковка: " + Combo_package.Text;
-                            MyPackages_List.MyPackages.RemoveAt(i);
-                            DateTime time = DateTime.Now;
-
-                            History Now = new History(time, operation);
-                            MyHistory_List.MyHistory.Insert(0, Now);
-                            MyHistory_List.SaveHistory();
-                            break;
-                        }
-                    }
-                    MyPackages_List.SavePackageList();
-
-                    this.Close();
+                   throw new MyExceptionEmpyFieldNameOfPackage("Упаковка не выбранa");
                 }
+                else
+
+                {
+                    if (MessageBox.Show("Вы собираетесь безвозвратно удалить упаковку '" + Combo_package.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                    {
+                        for (int i = 0; i < MyPackages_List.MyPackages.Count(); i++)
+                        {
+                            int spaceBar = Combo_package.Text.LastIndexOf(" ");
+                            string name = Combo_package.Text.Substring(0, spaceBar);
+                            string size = Combo_package.Text.Substring(spaceBar + 1);
+
+                            if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size == size)
+                            {
+                                string operation = "Удалена упаковка: " + Combo_package.Text;
+                                MyPackages_List.MyPackages.RemoveAt(i);
+                                DateTime time = DateTime.Now;
+
+                                History Now = new History(time, operation);
+                                MyHistory_List.MyHistory.Insert(0, Now);
+                                MyHistory_List.SaveHistory();
+                                break;
+                            }
+                        }
+                        MyPackages_List.SavePackageList();
+
+                        this.Close();
+                    } }
+            }
+            catch (MyExceptionEmpyFieldNameOfPackage ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
         }
     }

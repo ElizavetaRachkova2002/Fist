@@ -117,6 +117,7 @@ namespace Stock
             catch (MyExceptionEmpyFieldCountOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+               
             }
             catch ( MyExceptionEmptyFieldSizeOfPackage ex)
             {
@@ -130,9 +131,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
         }
 
@@ -177,10 +180,29 @@ namespace Stock
                 MyPackages_List.SavePackageList();
                 this.Close();
             }
-          
-            catch (Exception ex)
+            catch (MyExceptionEmpyFieldNameOfPackage ex)
             {
-                MessageBox.Show(ex.Message,"Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+            catch (MyExceptionEmpyFieldCountOfPackage ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+           
+            catch (MyExceptionCountOfPackageIsDigit ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (MyExceptionCountOfPackageLessZero ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception )
+            {
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
         }
     }

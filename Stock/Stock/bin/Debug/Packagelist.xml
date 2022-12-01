@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
-    <_name_package>пмлрл</_name_package>
-    <_count_package>98</_count_package>
-    <Size>8*8</Size>
+    <_name_package>фрим</_name_package>
+    <_count_package>9958</_count_package>
+    <Size>90*765</Size>
     <IsSelected>false</IsSelected>
-    <Name_package>пмлрл</Name_package>
-    <Count_package>98</Count_package>
+    <Name_package>фрим</Name_package>
+    <Count_package>9958</Count_package>
   </Package>
 </ArrayOfPackage>

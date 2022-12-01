@@ -131,16 +131,23 @@ namespace Stock
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
+    [Serializable]
     public class Product //: IDataErrorInfo
     {
-        public string _name;
-        public string _legal_entity;
-
-        public string _brand;
-        public string _vendor_code;
-        public ulong _barcode; //штрих
-        public int _count;
-        public List<string> _packageName;
+    
+        private string _name;
+      
+         string _legal_entity;
+       
+        string _brand;
+     
+        string _vendor_code;
+       
+        ulong _barcode; //штрих
+  
+       int _count;
+        
+         List<string> _packageName;
 
        
         public string Legal_entity {
@@ -153,7 +160,7 @@ namespace Stock
                     throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо товара");
                 }
             }
-        }   
+        }
         public string Brand
         {
             get { return _brand; }
@@ -178,6 +185,7 @@ namespace Stock
             }
         
         }
+      
         public ulong Barcode {
             get { return _barcode; }
             set
@@ -205,7 +213,7 @@ namespace Stock
                 _count = value;
                 if (String.IsNullOrEmpty(value.ToString()))
                 {
-                   throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                    throw new MyExceptionEmptyFieldCount("Введите количество товара");
                 }
                 if (value < 0)
                 {
@@ -220,19 +228,22 @@ namespace Stock
         public int Packed { get; set; }
         public bool IsSelected { get; set; }
         public int Not_Packed { get; set; }
-        public List<string> PackageName {
+        
+        public List<string> PackageName
+        {
             get { return _packageName; }
             set
             {
+                
+                for (int i = 0; i < value.Count; i++)
+                    if (String.IsNullOrEmpty(value[i]))
+                    {
+                        throw new MyExceptionEmptyFieldBrand("Введите упаковку для товара");
+                    }
                 _packageName = value;
-                for (int i=0;i<value.Count;i++)
-                if (String.IsNullOrEmpty(value[i]))
-                {
-                    throw new MyExceptionEmptyFieldBrand("Введите упаковку для товара");
-                }
             }
         }
-       
+
 
         public string Name
         {
@@ -261,11 +272,9 @@ namespace Stock
             Packed = packed;
             Not_Packed = not_Packed;
             PackageName = packageName;
-            //PackageSize = packageSize;
             Brak = brak;
             IsSelected = false;
-        }
-        
+        }        
 
     }
 }

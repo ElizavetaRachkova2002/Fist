@@ -38,36 +38,47 @@ namespace Stock
         }
         private void Btn_Add_Existing_Product_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(Combo_product_add.Text))
-            {
-               
-                //throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
-                MessageBox.Show("Товар не выбран", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-            {
-             
-                if (MessageBox.Show("Вы собираетесь безвозвратно удалить товар '" + Combo_product_add.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+            try {
+                if (string.IsNullOrEmpty(Combo_product_add.Text))
                 {
-                    for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
-                        if (MyProducts_List.MyProducts[i].Name == Combo_product_add.Text)
-                        {
-                            MyProducts_List.MyProducts.RemoveAt(i);
-                            DateTime time = DateTime.Now;
 
-                            string operation = "Удалён товар: " + Combo_product_add.Text;
-                            History Now = new History(time, operation);
-                            MyHistory_List.MyHistory.Insert(0, Now);
-                            MyHistory_List.SaveHistory();
-                            break;
-                        }
+                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
+                }
+                else
+                {
 
-                    MyProducts_List.SaveProductList();
+                    if (MessageBox.Show("Вы собираетесь безвозвратно удалить товар '" + Combo_product_add.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                    {
+                        for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
+                            if (MyProducts_List.MyProducts[i].Name == Combo_product_add.Text)
+                            {
+                                MyProducts_List.MyProducts.RemoveAt(i);
+                                DateTime time = DateTime.Now;
+
+                                string operation = "Удалён товар: " + Combo_product_add.Text;
+                                History Now = new History(time, operation);
+                                MyHistory_List.MyHistory.Insert(0, Now);
+                                MyHistory_List.SaveHistory();
+                                break;
+                            }
+
+                        MyProducts_List.SaveProductList();
 
 
-                    this.Close();
+                        this.Close();
+                    }
                 }
                 
+            }
+            catch(MyExceptionEmptyFieldNameOfProduct ex)
+            {
+               MessageBox.Show( ex.Message);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
         }
     }

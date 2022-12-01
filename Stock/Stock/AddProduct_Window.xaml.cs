@@ -84,13 +84,15 @@ namespace Stock
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
-           
-                
-            
+
+
+
         }
         //private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
         //{
@@ -144,7 +146,7 @@ namespace Stock
         {
 
             TB_New_Legal_Entity.Items.Clear();
-             MyLegalEnitys_List.LoadLegalEnityList();
+          //   MyLegalEnitys_List.LoadLegalEnityList();
 
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
@@ -184,7 +186,7 @@ namespace Stock
         {
 
             Combo_product_add.Items.Clear();
-            MyProducts_List.LoadProductList();
+      //      MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -372,12 +374,14 @@ namespace Stock
             {
                 MessageBox.Show("Значение штрихкода положительное", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
-            
-            
+
+
         }
 
         private void TB_New_Legal_Entity_MouseDown(object sender, MouseEventArgs e)

@@ -37,7 +37,7 @@ namespace Stock
                 string newName = New_LegalEnity.Text;
                 if (String.IsNullOrEmpty(newName))
                 {
-                    throw new MyExceptionEmptyFieldLegalEntity("Введите название юридического лица");
+                   throw new MyExceptionEmptyFieldLegalEntity("Введите название юридического лица");
                 }
                 MyLegalEnitys_List.MyLegalEnitys.Add(newName);
                 MyLegalEnitys_List.SaveLegalEnityList();
@@ -56,9 +56,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
         }
 
@@ -111,11 +113,13 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
-            
+
         }
 
         private void Btn_New_LE_Click(object sender, RoutedEventArgs e)

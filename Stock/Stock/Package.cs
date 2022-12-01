@@ -96,7 +96,7 @@ namespace Stock
                 }
                 if (value<0)
                 {
-                    throw new MyExceptionCountOfPackageLessZero("Введите количество упаковки должно быть больше 0");
+                    throw new MyExceptionCountOfPackageLessZero("Введите количество упаковки должно быть большеe 0");
                 }
                
             }
