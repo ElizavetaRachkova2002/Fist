@@ -37,7 +37,11 @@ namespace Stock
         {
             try
             {
-                string operation = "Отправлен товар. " + TB_Comment.Text + ". ";
+                string operation = "";
+                if (TB_Comment.Text != "")
+                    operation = "Отправлен товар. " + TB_Comment.Text + ". \n";
+                else operation = "Отправлен товар. \n";
+
                 bool flag = false;
                 for (int j = 0; j < ComboName_List.Count; j++)
                 {
@@ -83,7 +87,7 @@ namespace Stock
                                 MyProducts_List.MyProducts[i].Packed -= count;
 
 
-                                operation = operation + "Aртикул: " + MyProducts_List.MyProducts[i].Vendor_code + " Кол-во: " + count.ToString() + "; ";
+                                operation = operation +"Название: "+ MyProducts_List.MyProducts[i].Name+", Aртикул: " + MyProducts_List.MyProducts[i].Vendor_code + ", Кол-во: " + count.ToString() + "; \n";
 
                                 break;
                             }

@@ -240,9 +240,35 @@ namespace Stock
                 if (flag_OK == true)
                 {
                     DateTime time = DateTime.Now;
-                    string operation = "Изменение товара"+"\n Название: " + oldname+ " ----> " + TB_New_Name.Text + "\n Юр. лицо: " + oldLE + " ----> "+ TB_New_Legal_Entity.Text
-                        + "\n Бренд: " + oldBand + " ----> "+ TB_New_Brand.Text + "\n Артикул: " + oldVendorCode + " ----> " + TB_New_Vendor_Code.Text + "\n Штрих-код: " + oldBarcode
-                        + " ----> "+ TB_New_Barcode.Text + "\n Упаковка: " + oldPackage + " ----> "+ newPackage ;
+
+                    //string operation = "Изменение товара"+"\n Название: " + oldname+ " ----> " + TB_New_Name.Text + "\n Юр. лицо: " + oldLE + " ----> "+ TB_New_Legal_Entity.Text
+                    //    + "\n Бренд: " + oldBand + " ----> "+ TB_New_Brand.Text + "\n Артикул: " + oldVendorCode + " ----> " + TB_New_Vendor_Code.Text + "\n Штрих-код: " + oldBarcode
+                    //    + " ----> "+ TB_New_Barcode.Text + "\n Упаковка: " + oldPackage + " ----> "+ newPackage ;
+                    string operation = "Изменение товара \n";
+                    if(oldname!= TB_New_Name.Text)
+                    {
+                        operation = operation + "Название: " + oldname + " ----> " + TB_New_Name.Text + "\n";
+                    }
+                    if (oldLE!= TB_New_Legal_Entity.Text)
+                    {
+                        operation = operation + "Юр.лицо: " + oldLE + "---- > " + TB_New_Legal_Entity.Text + "\n";
+                    }
+                    if (oldBand!= TB_New_Brand.Text)
+                    {
+                        operation = operation + "Бренд: " + oldBand + " ----> " + TB_New_Brand.Text + "\n";
+                    }
+                    if (oldVendorCode != TB_New_Vendor_Code.Text)
+                    {
+                        operation = operation + "Артикул: " + oldVendorCode + " ----> " + TB_New_Vendor_Code.Text + "\n";
+                    }
+                    if (oldBarcode!= TB_New_Barcode.Text)
+                    {
+                        operation = operation + "Штрих-код: " + oldBarcode + " ----> " + TB_New_Barcode.Text + "\n";
+                    }
+                    if(oldPackage!=newPackage)
+                    {
+                        operation=operation+ "Упаковка: " + oldPackage + "---- > "+ newPackage + "\n";
+                    }
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
                     MyHistory_List.SaveHistory();

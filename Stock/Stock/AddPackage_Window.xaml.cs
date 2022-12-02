@@ -157,8 +157,17 @@ namespace Stock
         {
             try
             {
-                var str = Combo_package_add.Text.Split(' ');
-                if (String.IsNullOrEmpty(str[0]))
+
+                string str = Combo_package_add.Text;
+                string name;
+                string size;
+                int index ;
+                index = str.LastIndexOf(" ");
+                size = str.Substring(index + 1);
+                name = str.Substring(0, index);
+                
+
+                if (String.IsNullOrEmpty(name))
                 {
                     throw new MyExceptionEmpyFieldNameOfPackage("Укажите название упаковки");
                 }
@@ -176,12 +185,12 @@ namespace Stock
                 }
                 for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
                 {
-                    if (MyPackages_List.MyPackages[i].Name_package == str[0] && MyPackages_List.MyPackages[i].Size == str[1])
+                    if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size == size)
                     {
                         MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
 
                         DateTime time = DateTime.Now;
-                        string operation = "Добавлена упаковка: " + str[0] + " " + str[1] + ", " + Pack_Exist_Count.Text + " шт.";
+                        string operation = "Добавлена упаковка: " + name + " " + size + ", " + Pack_Exist_Count.Text + " шт.";
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
                         MyHistory_List.SaveHistory();

@@ -241,7 +241,8 @@ namespace Stock
                         {
                             for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
                             {
-                                if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] == MyPackages_List.MyPackages[j].Name_package && MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[1] == MyPackages_List.MyPackages[j].Size)
+                               // if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] == MyPackages_List.MyPackages[j].Name_package && MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[1] == MyPackages_List.MyPackages[j].Size)
+                                if (MyProducts_List.MyProducts[i].PackageName[k]==MyPackages_List.MyPackages[j].Name_package+" "+MyPackages_List.MyPackages[j].Size)
                                 {
 
 
