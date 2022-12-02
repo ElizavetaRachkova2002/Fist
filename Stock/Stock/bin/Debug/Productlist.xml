@@ -5,16 +5,16 @@
     <Brand>Домик</Brand>
     <Vendor_code>4нп</Vendor_code>
     <Barcode>3356</Barcode>
-    <Count>492530</Count>
-    <Packed>13</Packed>
+    <Count>492529</Count>
+    <Packed>33</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>492517</Not_Packed>
+    <Not_Packed>492496</Not_Packed>
     <PackageName>
       <string>орвсоп 9*10</string>
       <string>ВОЛ 8*64</string>
     </PackageName>
     <Name>ьарпим</Name>
-    <Brak>0</Brak>
+    <Brak>1</Brak>
   </Product>
   <Product>
     <Legal_entity>ИП Дрозд К.К.</Legal_entity>

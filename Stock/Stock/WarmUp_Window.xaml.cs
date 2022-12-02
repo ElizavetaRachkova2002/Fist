@@ -27,6 +27,16 @@ namespace Stock
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
     [Serializable]
+    public class MyExceptionDeletePackage : Exception
+    {
+        public MyExceptionDeletePackage() { }
+        public MyExceptionDeletePackage(string message) : base(message) { }
+        public MyExceptionDeletePackage(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionDeletePackage(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
     public class MyExceptionNotEnoughUnPackadeProducts : Exception
     {
         public MyExceptionNotEnoughUnPackadeProducts() { }
@@ -129,7 +139,7 @@ namespace Stock
                 {
                     throw new MyExceptionCountLessThanZero("Количество товара больше 0");
                 }
-                //--
+                
                 if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
                 {
                     throw new MyExceptionBrakIsDigit("Количество брака является числом");
@@ -147,27 +157,32 @@ namespace Stock
                 bool flag_package = false;
                 bool flag_does_not_exist_package = false;
 
+
+                /////////////////////////Упаковка не существует
+
+                //int z = 0;
                 //for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 //{
                 //    if (MyProducts_List.MyProducts[i].Name == name)
                 //    {
-                //        for (int j = 0; j < MyPackages_List.MyPackages.Count; j++)
+                //        for (int k = 0; k < MyProducts_List.MyProducts[i].PackageName.Count; k++)
                 //        {
-                //            for (int k = 0; k < MyProducts_List.MyProducts[i].PackageName.Count; k++)
+                //            for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
                 //            {
-                //                if (MyProducts_List.MyProducts[i].PackageName != MyPackages_List.MyPackages[j].Name_package)
+                //                if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] != MyPackages_List.MyPackages[j].Name_package && MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[1] != MyPackages_List.MyPackages[j].Size)
                 //                {
-
-                //                    if (MyPackages_List.MyPackages[j].Count_package == 0)
-                //                    {
-                //                        throw new MyExceptionNotEnoughPackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте упаковку.");
-                //                    }
+                //                    z++;
                 //                }
+                //            }
+                //            if (z== 0)
+                //            {
+                //                throw new MyExceptionDeletePackage("Упаковка для данного товара отсутствуует.");
                 //            }
                 //        }
                 //    }
                 //}
 
+                //////////
 
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
@@ -191,7 +206,7 @@ namespace Stock
                         {
                             for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
                             {
-                               if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] == MyPackages_List.MyPackages[j].Name_package)
+                               if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] == MyPackages_List.MyPackages[j].Name_package && MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[1]== MyPackages_List.MyPackages[j].Size)
                                 {
 
 
@@ -267,6 +282,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            catch (MyExceptionDeletePackage ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionCountOfBrakLessZero ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

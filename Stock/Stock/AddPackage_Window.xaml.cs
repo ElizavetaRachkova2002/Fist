@@ -19,6 +19,18 @@ namespace Stock
     /// <summary>
     /// Логика взаимодействия для AddPackage_Window.xaml
     /// </summary>
+    /// 
+
+    [Serializable]
+    public class MyExceptionPackageAlreadyExists : Exception
+    {
+        public MyExceptionPackageAlreadyExists() { }
+        public MyExceptionPackageAlreadyExists(string message) : base(message) { }
+        public MyExceptionPackageAlreadyExists(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionPackageAlreadyExists(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
     public partial class AddPackage_Window : Window
     {
         public AddPackage_Window()
@@ -69,7 +81,7 @@ namespace Stock
                 {
                     throw new MyExceptionEmpyFieldNameOfPackage("Укажите размер упаковки");
                 }
-                if(flag==false)
+                if (flag == false)
                 {
                     throw new MyExceptionWrongSizeOfPackage("Неверный размер упаковки");
                 }
@@ -91,25 +103,26 @@ namespace Stock
                 Pack_New_Size.Clear();
                 int count = int.Parse(Pack_New_Count.Text.Trim());
                 Pack_New_Count.Clear();
-
-
-
+                for (int h = 0; h < MyPackages_List.MyPackages.Count; h++)
+                {
+                    if (MyPackages_List.MyPackages[h].Name_package == name && MyPackages_List.MyPackages[h].Size == size)
+                    {
+                        throw new MyExceptionPackageAlreadyExists("Данная упаковка уже существует");
+                    }
+                }
                 Package package = new Package(name, size, count);
                 MyPackages_List.MyPackages.Add(package);
                 MyPackages_List.SavePackageList();
-
                 DateTime time = DateTime.Now;
                 string operation = "Добавлена новая упаковка: " + name + " " + size + ", " + count.ToString() + " шт.";
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
                 MyHistory_List.SaveHistory();
-
                 this.Close();
             }
             catch (MyExceptionEmpyFieldNameOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
-
             }
             catch (MyExceptionWrongSizeOfPackage ex)
             {
@@ -118,9 +131,8 @@ namespace Stock
             catch (MyExceptionEmpyFieldCountOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
-               
             }
-            catch ( MyExceptionEmptyFieldSizeOfPackage ex)
+            catch (MyExceptionEmptyFieldSizeOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -132,6 +144,10 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            catch (MyExceptionPackageAlreadyExists ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             catch (Exception ex)
             {
                 StreamWriter log;
@@ -139,7 +155,6 @@ namespace Stock
                 { log = new StreamWriter("log.txt"); }
                 else { log = File.AppendText("log.txt"); }
                 log.WriteLine("Data Time:" + DateTime.Now);
-
                 log.WriteLine("Exception Name:" + ex.Message);
                 log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -168,8 +183,6 @@ namespace Stock
                 {
                     throw new MyExceptionCountOfPackageLessZero("Количество товара больше 0");
                 }
-                
-
                 for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
                 {
                     if (MyPackages_List.MyPackages[i].Name_package == str[0] && MyPackages_List.MyPackages[i].Size == str[1])
@@ -183,7 +196,6 @@ namespace Stock
                         MyHistory_List.SaveHistory();
                     }
                 }
-
                 Pack_Exist_Count.Clear();
                 MyPackages_List.SavePackageList();
                 this.Close();
@@ -191,13 +203,11 @@ namespace Stock
             catch (MyExceptionEmpyFieldNameOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
-
             }
             catch (MyExceptionEmpyFieldCountOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-           
             catch (MyExceptionCountOfPackageIsDigit ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -213,7 +223,6 @@ namespace Stock
                 { log = new StreamWriter("log.txt"); }
                 else { log = File.AppendText("log.txt"); }
                 log.WriteLine("Data Time:" + DateTime.Now);
-
                 log.WriteLine("Exception Name:" + ex.Message);
                 log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

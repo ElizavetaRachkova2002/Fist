@@ -1,20 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
-    <_name_package>орвсоп</_name_package>
-    <_count_package>29</_count_package>
-    <Size>9*10</Size>
-    <IsSelected>false</IsSelected>
-    <Name_package>орвсоп</Name_package>
-    <Count_package>29</Count_package>
-  </Package>
-  <Package>
     <_name_package>ВОЛ</_name_package>
-    <_count_package>287</_count_package>
+    <_count_package>267</_count_package>
     <Size>8*64</Size>
     <IsSelected>false</IsSelected>
     <Name_package>ВОЛ</Name_package>
-    <Count_package>287</Count_package>
+    <Count_package>267</Count_package>
   </Package>
   <Package>
     <_name_package>dth</_name_package>

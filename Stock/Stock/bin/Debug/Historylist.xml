@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-02T09:44:38.2183324+03:00</Time>
+    <Operation>ьарпим. Подготовлено к продаже: 20 шт., Брак: 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T09:44:25.198697+03:00</Time>
+    <Operation>Удалена упаковка: орвсоп 9*10</Operation>
+  </History>
+  <History>
     <Time>2022-12-02T08:30:37.8941592+03:00</Time>
     <Operation>Добавлена новая упаковка: 20*20 20*20, 1 шт.</Operation>
   </History>
