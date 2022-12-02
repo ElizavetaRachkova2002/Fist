@@ -18,6 +18,37 @@ namespace Stock
     /// <summary>
     /// Логика взаимодействия для Change_Product_Window.xaml
     /// </summary>
+    /// 
+[Serializable]
+    public class MyExceptionProductAlreadyExistAfterChangeWithThisName : Exception
+    {
+        public MyExceptionProductAlreadyExistAfterChangeWithThisName() { }
+        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message) : base(message) { }
+        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionProductAlreadyExistAfterChangeWithThisName(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionProductAlreadyExistAfterChangewithThisBarcode : Exception
+    {
+        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode() { }
+        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message) : base(message) { }
+        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionProductAlreadyExistAfterChangewithThisBarcode(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
+    public class MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode : Exception
+    {
+        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode() { }
+        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message) : base(message) { }
+        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
     public partial class Change_Product_Window : Window
     {
         string oldname = "";
@@ -44,9 +75,6 @@ namespace Stock
             GiveTBLegalEnity();
 
             Btn_GivePackageList.Visibility = Visibility.Collapsed;
-            
-
-            
             TB_New_Barcode.IsReadOnly = true;
             TB_New_Brand.IsReadOnly = true;
             TB_New_Legal_Entity.IsReadOnly = true;
@@ -70,6 +98,7 @@ namespace Stock
                 TB_New_Legal_Entity.IsReadOnly = false;
                 TB_New_Name.IsReadOnly = false;
                 TB_New_Vendor_Code.IsReadOnly = false;
+                TB_New_Barcode.IsReadOnly=false;
 
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
@@ -120,7 +149,6 @@ namespace Stock
                 { log = new StreamWriter("log.txt"); }
                 else { log = File.AppendText("log.txt"); }
                 log.WriteLine("Data Time:" + DateTime.Now);
-
                 log.WriteLine("Exception Name:" + ex.Message);
                 log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -164,6 +192,50 @@ namespace Stock
 
                 }
 
+                
+               
+               
+                ///проверка на повторение
+                if (oldname == TB_New_Name.Text)
+                { }
+                else
+                {
+                    for (int i = 0;i<MyProducts_List.MyProducts.Count;i++)
+                    {
+                        if (TB_New_Name.Text == MyProducts_List.MyProducts[i].Name)
+                        {
+                          throw new MyExceptionProductAlreadyExistAfterChangeWithThisName("Товар с таким названием уже существует");
+                           
+                        }
+                    }
+                }
+                if (oldVendorCode == TB_New_Vendor_Code.Text)
+                { }
+                else
+                {
+                    for(int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                    {
+                        if (TB_New_Vendor_Code.Text == MyProducts_List.MyProducts[i].Vendor_code)
+                        {
+                            throw new MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode("Товар с таким артикулом уже существует");
+
+                        }
+                    }
+                    
+                }
+                if (oldBarcode == TB_New_Barcode.Text)
+                { }
+                else
+                {
+                    for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                    {
+                        if (ulong.Parse(TB_New_Barcode.Text) == MyProducts_List.MyProducts[i].Barcode)
+                        {
+                            throw new MyExceptionProductAlreadyExistAfterChangewithThisBarcode("Товар с таким штрихкодом уже существует");
+
+                        }
+                    }
+                }
 
                 if (flag_OK == true)
                 {
@@ -193,6 +265,20 @@ namespace Stock
                 else MessageBox.Show("Введите наименование товара для изменения", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
           
+                catch (MyExceptionProductAlreadyExistAfterChangeWithThisName ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
+            catch (MyExceptionProductAlreadyExistAfterChangewithThisBarcode ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionBarcodeOfProductIsDigit ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

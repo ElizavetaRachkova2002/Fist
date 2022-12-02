@@ -1,6 +1,56 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-02T22:29:41.9583769+03:00</Time>
+    <Operation>cevrf. Подготовлено к продаже: 2 шт., Брак: 8 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T22:29:21.9773759+03:00</Time>
+    <Operation>Добавлен новый товар: cevrf, 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T22:28:23.3588165+03:00</Time>
+    <Operation>Изменение товара
+ Название: re ----&gt; re
+ Юр. лицо: ИП ----&gt; ИП
+ Бренд: 40а ----&gt; 40а
+ Артикул: 34 ----&gt; 587
+ Штрих-код: 34 ----&gt; 34
+ Упаковка: Без упаковки ----&gt; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T22:15:47.759037+03:00</Time>
+    <Operation>Добавлен новый товар: re, 34 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T22:12:02.518303+03:00</Time>
+    <Operation>Изменение товара
+ Название: efg ----&gt; d
+ Юр. лицо: ИП ----&gt; ИП
+ Бренд: 40а ----&gt; 40а
+ Артикул: ewr ----&gt; ewr
+ Штрих-код: 3223 ----&gt; 3223
+ Упаковка: gfh rty56y ----&gt; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T21:15:30.2340863+03:00</Time>
+    <Operation>Изменение товара
+ Название: d1 ----&gt; d
+ Юр. лицо: ИП ----&gt; ИП
+ Бренд: 40а ----&gt; 40а
+ Артикул: 11 ----&gt; 1
+ Штрих-код: 2 ----&gt; 2
+ Упаковка: Без упаковки ----&gt; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T21:14:27.6438974+03:00</Time>
+    <Operation>Добавлен новый товар: d1, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T21:13:50.9858582+03:00</Time>
+    <Operation>Добавлен новый товар: d, 1 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-02T19:52:21.2695467+03:00</Time>
     <Operation>Удалена упаковка: gfh rty56y</Operation>
   </History>

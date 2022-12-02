@@ -12,7 +12,67 @@
     <PackageName>
       <string>gfh rty56y</string>
     </PackageName>
-    <Name>efg</Name>
+    <Name>d</Name>
     <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>1</Vendor_code>
+    <Barcode>1</Barcode>
+    <Count>1</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>1</Not_Packed>
+    <PackageName>
+      <string>Без упаковки</string>
+    </PackageName>
+    <Name>d</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>1</Vendor_code>
+    <Barcode>2</Barcode>
+    <Count>1</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>1</Not_Packed>
+    <PackageName>
+      <string>Без упаковки</string>
+    </PackageName>
+    <Name>d</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>587</Vendor_code>
+    <Barcode>34</Barcode>
+    <Count>34</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>34</Not_Packed>
+    <PackageName>
+      <string>Без упаковки</string>
+    </PackageName>
+    <Name>re</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>r324</Vendor_code>
+    <Barcode>324</Barcode>
+    <Count>2</Count>
+    <Packed>2</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>
+      <string>gfh 34t</string>
+    </PackageName>
+    <Name>cevrf</Name>
+    <Brak>8</Brak>
   </Product>
 </ArrayOfProduct>
