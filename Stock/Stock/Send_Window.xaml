@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
         Title="Отправить товар" Height="390" Width="580"
-        ResizeMode="CanMinimize"
+        ResizeMode="CanMinimize" Icon="/Images/send_icon.ico"
         WindowStartupLocation="Manual" Top="200" Left="300" MaxHeight="630">
     <Window.Resources>
         <Style x:Key="FocusVisual">

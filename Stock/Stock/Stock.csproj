@@ -187,5 +187,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Main_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\warmUp_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\history_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\change_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\brak_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\send_icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

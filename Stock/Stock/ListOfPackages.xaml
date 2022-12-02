@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock"
         mc:Ignorable="d"
-        ResizeMode="CanMinimize"
-        Title="ListOfPackages" Height="450" Width="800">
+        ResizeMode="CanMinimize" Icon="/Images/Add_icon.ico"
+        Title="Выбор упаковки" Height="450" Width="800">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
