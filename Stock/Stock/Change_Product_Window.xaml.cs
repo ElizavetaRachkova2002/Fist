@@ -229,7 +229,7 @@ namespace Stock
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
-            catch (OverflowException ex)
+            catch (OverflowException )
             {
                 MessageBox.Show("Значение штрихкода положительное", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }

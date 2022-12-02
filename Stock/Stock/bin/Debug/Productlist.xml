@@ -46,4 +46,65 @@
     <Name>ВЛДФ</Name>
     <Brak>0</Brak>
   </Product>
+  <Product>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>345к</Vendor_code>
+    <Barcode>3253</Barcode>
+    <Count>0</Count>
+    <Packed>0</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>0</Not_Packed>
+    <PackageName>
+      <string>Без упаковки</string>
+    </PackageName>
+    <Name>пкп</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>3545</Vendor_code>
+    <Barcode>234</Barcode>
+    <Count>28</Count>
+    <Packed>23</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>5</Not_Packed>
+    <PackageName>
+      <string>ВОЛ 8*64</string>
+    </PackageName>
+    <Name>кп</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП Дрозд К.К.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>12</Vendor_code>
+    <Barcode>22</Barcode>
+    <Count>1234</Count>
+    <Packed>54</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>1180</Not_Packed>
+    <PackageName>
+      <string>20*20 20*20</string>
+    </PackageName>
+    <Name>ввв</Name>
+    <Brak>0</Brak>
+  </Product>
+  <Product>
+    <Legal_entity>ИП Суриков В.В.</Legal_entity>
+    <Brand>Домик</Brand>
+    <Vendor_code>9358</Vendor_code>
+    <Barcode>65345</Barcode>
+    <Count>900</Count>
+    <Packed>6</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>894</Not_Packed>
+    <PackageName>
+      <string>dth 20*20</string>
+      <string>sdgf 20*20</string>
+    </PackageName>
+    <Name>орапдл</Name>
+    <Brak>0</Brak>
+  </Product>
 </ArrayOfProduct>

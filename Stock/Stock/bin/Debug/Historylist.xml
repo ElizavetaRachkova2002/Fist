@@ -1,6 +1,168 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-02T13:16:34.4068121+03:00</Time>
+    <Operation>Удалена упаковка: sdgf 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T13:16:21.0182479+03:00</Time>
+    <Operation>орапдл. Подготовлено к продаже: 6 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T13:10:59.4706022+03:00</Time>
+    <Operation>Добавлен новый товар: орапдл, 900 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T13:03:32.4488952+03:00</Time>
+    <Operation>ввв. Подготовлено к продаже: 6 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T13:02:55.1193843+03:00</Time>
+    <Operation>ввв. Подготовлено к продаже: 9 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T13:01:24.0529624+03:00</Time>
+    <Operation>ввв. Подготовлено к продаже: 3 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:56:45.3174693+03:00</Time>
+    <Operation>ввв. Подготовлено к продаже: 12 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:54:55.7707043+03:00</Time>
+    <Operation>ввв. Подготовлено к продаже: 12 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:54:30.7374445+03:00</Time>
+    <Operation>ввв. Подготовлено к продаже: 12 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:53:04.3710148+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:52:57.8002239+03:00</Time>
+    <Operation>Добавлен новый товар: ввв, 1234 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:50:24.5864101+03:00</Time>
+    <Operation>Удалена упаковка: ВОЛ 9*10</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:50:09.5636257+03:00</Time>
+    <Operation>Удалена упаковка: вар 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:50:04.430709+03:00</Time>
+    <Operation>Удалена упаковка: dfg 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:49:45.2314259+03:00</Time>
+    <Operation>кп. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:46:17.1092111+03:00</Time>
+    <Operation>Добавлен товар: кп, 6 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:59.8821212+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:50.35984+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:32.123134+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:26.2494041+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:20.831156+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:14.2892831+03:00</Time>
+    <Operation>Удалена упаковка: вапр 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:45:02.7245876+03:00</Time>
+    <Operation>Удалена упаковка: пао 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:56.8746427+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:50.3922087+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:45.4281861+03:00</Time>
+    <Operation>Удалена упаковка: авр 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:39.8996992+03:00</Time>
+    <Operation>Удалена упаковка: 20*20 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:34.6414338+03:00</Time>
+    <Operation>Удалена упаковка: ВОЛ 9*10</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:28.3331101+03:00</Time>
+    <Operation>Удалена упаковка: fdsg 20*20</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:44:21.6753945+03:00</Time>
+    <Operation>кп. Подготовлено к продаже: 10 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:38:00.4944807+03:00</Time>
+    <Operation>Добавлен товар: кп, 10 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:37:27.8479357+03:00</Time>
+    <Operation>кп. Подготовлено к продаже: 12 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:36:50.4739256+03:00</Time>
+    <Operation>Изменение товара
+ Название: кп ----&gt; кп
+ Юр. лицо: ИП Суриков В.В. ----&gt; ИП Суриков В.В.
+ Бренд: Домик ----&gt; Домик
+ Артикул: 3545 ----&gt; 3545
+ Штрих-код: 234 ----&gt; 234
+ Упаковка: ВОЛ 8*64 ----&gt; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:36:29.4672145+03:00</Time>
+    <Operation>Удалена упаковка: ВОЛ 8*64</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:36:16.9683136+03:00</Time>
+    <Operation>Добавлен новый товар: кп, 12 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:35:37.0313925+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 345к Кол-во: 34; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:35:20.2610594+03:00</Time>
+    <Operation>Отправлен товар. . Aртикул: 345к Кол-во: 0; </Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:35:10.9655439+03:00</Time>
+    <Operation>пкп. Подготовлено к продаже: 34 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T12:34:07.5636791+03:00</Time>
+    <Operation>Добавлен новый товар: пкп, 34 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-02T09:44:38.2183324+03:00</Time>
     <Operation>ьарпим. Подготовлено к продаже: 20 шт., Брак: 1 шт.</Operation>
   </History>
