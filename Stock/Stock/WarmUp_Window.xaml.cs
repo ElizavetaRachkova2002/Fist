@@ -123,38 +123,38 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldNameOfProduct("Укажите название товара");
                 }
-                if (String.IsNullOrEmpty(WarmUp_Count.Text))
-                {
-                    throw new MyExceptionEmptyFieldCount("Укажите количество подготовленного к продаже товара");
-                }
-                if (String.IsNullOrEmpty(WarmUp_Brak.Text))
-                {
-                    throw new MyExceptionEmptyFieldBrak("Укажите количество брака товара");
-                }
-                if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
-                {
-                    throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
-                }
-                if (int.Parse(WarmUp_Count.Text) < 0)
-                {
-                    throw new MyExceptionCountLessThanZero("Количество товара больше 0");
-                }
+                //if (String.IsNullOrEmpty(WarmUp_Count.Text))
+                //{
+                //    throw new MyExceptionEmptyFieldCount("Укажите количество подготовленного к продаже товара");
+                //}
+                //if (String.IsNullOrEmpty(WarmUp_Brak.Text))
+                //{
+                //    throw new MyExceptionEmptyFieldBrak("Укажите количество брака товара");
+                //}
+                //if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
+                //{
+                //    throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
+                //}
+                //if (int.Parse(WarmUp_Count.Text) < 0)
+                //{
+                //    throw new MyExceptionCountLessThanZero("Количество товара больше 0");
+                //}
 
-                if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
-                {
-                    throw new MyExceptionBrakIsDigit("Количество брака является числом");
-                }
-                if (int.Parse(WarmUp_Brak.Text) < 0)
-                {
-                    throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
-                }
+                //if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
+                //{
+                //    throw new MyExceptionBrakIsDigit("Количество брака является числом");
+                //}
+                //if (int.Parse(WarmUp_Brak.Text) < 0)
+                //{
+                //    throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
+                //}
 
 
                 string name = Combo_WarmUp_Name.Text;
-                int count = int.Parse(WarmUp_Count.Text);
-                int brak = int.Parse(WarmUp_Brak.Text);
-                bool flag_count = false;
-                bool flag_package = false;
+                //int count = int.Parse(WarmUp_Count.Text);
+                //int brak = int.Parse(WarmUp_Brak.Text);
+                //bool flag_count = false;
+                //bool flag_package = false;
 
 
                 /////////////////////////Упаковка не существует
@@ -190,8 +190,33 @@ namespace Stock
                         }
                     }
                 }
-                
+                int count = int.Parse(WarmUp_Count.Text);
+                int brak = int.Parse(WarmUp_Brak.Text);
+                if (String.IsNullOrEmpty(WarmUp_Count.Text))
+                {
+                    throw new MyExceptionEmptyFieldCount("Укажите количество подготовленного к продаже товара");
+                }
+                if (String.IsNullOrEmpty(WarmUp_Brak.Text))
+                {
+                    throw new MyExceptionEmptyFieldBrak("Укажите количество брака товара");
+                }
+                if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
+                {
+                    throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
+                }
+                if (int.Parse(WarmUp_Count.Text) < 0)
+                {
+                    throw new MyExceptionCountLessThanZero("Количество товара больше 0");
+                }
 
+                if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
+                {
+                    throw new MyExceptionBrakIsDigit("Количество брака является числом");
+                }
+                if (int.Parse(WarmUp_Brak.Text) < 0)
+                {
+                    throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
+                }
                 //////////
 
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
@@ -204,7 +229,7 @@ namespace Stock
                         }
                         if (MyProducts_List.MyProducts[i].Not_Packed < count)
                         {
-                            flag_count = true;
+                            throw new MyExceptionCountOfProductsIsMoreThanWasNotPacked("Кол-во товара больше, чем было не упаковано");
                         }
                     }
                 }
@@ -222,27 +247,27 @@ namespace Stock
 
                                     if (MyPackages_List.MyPackages[j].Count_package < count)
                                     {
-                                        flag_package = true;
-                                        break;
+                                        throw new MyExceptionNotEnoughPackage("Не хватает упаковки");
+
+                                        //flag_package = true;
+                                        //break;
                                     }
                                 }
                             }
                         }
                     }
                 }
+               
+                //if (flag_count == true)
+                //{
+                //    throw new MyExceptionCountOfProductsIsMoreThanWasNotPacked("Кол-во товара больше, чем было не упаковано");
+                //}
+                //else if (flag_package == true)
+                //{
+                //    throw new MyExceptionNotEnoughPackage("Не хватает упаковки");
 
-                if (flag_count == true)
-                {
-                    throw new MyExceptionCountOfProductsIsMoreThanWasNotPacked("Кол-во товара больше, чем было не упаковано");
-
-
-                }
-                else if (flag_package == true)
-                {
-                    throw new MyExceptionNotEnoughPackage("Не хватает упаковки");
-
-                }
-                else
+                //}
+                //else
                 {
 
                     for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)

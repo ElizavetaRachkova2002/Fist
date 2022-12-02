@@ -66,13 +66,7 @@ namespace Stock
         {
             try
             {
-                Regex regex = new Regex(@"\d+\*\d+");
-                bool flag = false;
-                MatchCollection matches = regex.Matches(Pack_New_Size.Text);
-                if (matches.Count > 0)
-                {
-                    flag = true;
-                }
+                
                 if (String.IsNullOrEmpty(Pack_New_Name.Text))
                 {
                     throw new MyExceptionEmpyFieldNameOfPackage("Укажите название упаковки");
@@ -81,10 +75,7 @@ namespace Stock
                 {
                     throw new MyExceptionEmpyFieldNameOfPackage("Укажите размер упаковки");
                 }
-                if (flag == false)
-                {
-                    throw new MyExceptionWrongSizeOfPackage("Неверный размер упаковки");
-                }
+                
                 if (String.IsNullOrEmpty(Pack_New_Count.Text))
                 {
                     throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество упаковки");

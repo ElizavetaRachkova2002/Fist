@@ -68,10 +68,10 @@ namespace Stock
     }
     public class Package
      {
-        public string _name_package; 
+        private string _name_package; 
         public string Size { get; set; }
         public bool IsSelected { get; set; }
-        public int _count_package;
+        private int _count_package;
         public string Name_package
         {
             get { return _name_package; }

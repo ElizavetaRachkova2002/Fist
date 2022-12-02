@@ -1,2 +1,18 @@
 <?xml version="1.0"?>
-<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <Legal_entity>ИП</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>ewr</Vendor_code>
+    <Barcode>3223</Barcode>
+    <Count>32423</Count>
+    <Packed>1</Packed>
+    <IsSelected>false</IsSelected>
+    <Not_Packed>32422</Not_Packed>
+    <PackageName>
+      <string>gfh rty56y</string>
+    </PackageName>
+    <Name>efg</Name>
+    <Brak>0</Brak>
+  </Product>
+</ArrayOfProduct>
