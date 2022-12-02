@@ -183,22 +183,27 @@ namespace Stock
                         }
                     }
                 }
-                ////for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
-                ////{
-                ////    if (MyProducts_List.MyProducts[i].Name == name)
-                ////    {
-                ////        for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
-                ////        {
-                ////            if (MyProducts_List.MyProducts[i].PackageName == MyPackages_List.MyPackages[j].Name_package)
-                ////            {
+                for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
+                {
+                    if (MyProducts_List.MyProducts[i].Name == name)
+                    {
+                        for (int k = 0; k < MyProducts_List.MyProducts[i].PackageName.Count; k++)
+                        {
+                            for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
+                            {
+                               if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] == MyPackages_List.MyPackages[j].Name_package)
+                                {
 
 
-                ////                if (MyPackages_List.MyPackages[j].Count_package < count)
-                ////                { flag_package = true; }
-                ////            }
-                ////        }
-                ////    }
-                ////}
+                                    if (MyPackages_List.MyPackages[j].Count_package < count)
+                                    { flag_package = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
                 if (flag_count == true)
                 {

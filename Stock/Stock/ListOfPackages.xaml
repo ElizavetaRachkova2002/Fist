@@ -72,7 +72,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Path=Name_package}" Width="183"  />
                     <DataGridTextColumn Header="Размер" Binding="{Binding Path=Size}" Width="180" />
-                    <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count_package}" Width="240" />
+                    <DataGridTextColumn Header="Количество" Binding="{Binding Path=Count_package}" Width="216" />
                  
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.Header>

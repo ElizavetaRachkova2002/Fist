@@ -1,6 +1,96 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-02T08:30:37.8941592+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:30:31.4769628+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:30:26.1092663+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 3 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:30:21.1565264+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 4 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:30:14.1325293+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 43 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:59.2594543+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 436 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:54.1085944+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:47.0275835+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:40.8362063+03:00</Time>
+    <Operation>Добавлена новая упаковка: 20*20 20*20, 345 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:32.2553799+03:00</Time>
+    <Operation>Добавлена новая упаковка: яваып 20*20, 45 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:12.8906311+03:00</Time>
+    <Operation>Добавлена новая упаковка: вар 20*20, 467 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:29:06.1471517+03:00</Time>
+    <Operation>Добавлена новая упаковка: вапр 20*20, 457 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:28:59.4765609+03:00</Time>
+    <Operation>Добавлена новая упаковка: авр 20*20, 547 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:28:54.3694612+03:00</Time>
+    <Operation>Добавлена новая упаковка: пао 20*20, 56 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:28:45.9988226+03:00</Time>
+    <Operation>Добавлена новая упаковка: ВОЛ 9*10, 567 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:28:30.0596224+03:00</Time>
+    <Operation>Добавлена новая упаковка: ВОЛ 9*10, 546 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:28:12.4831015+03:00</Time>
+    <Operation>Добавлена новая упаковка: fdsg 20*20, 36 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:28:04.9859782+03:00</Time>
+    <Operation>Добавлена новая упаковка: dfg 20*20, 456 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:27:59.5175376+03:00</Time>
+    <Operation>Добавлена новая упаковка: sdgf 20*20, 345 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:27:53.6871915+03:00</Time>
+    <Operation>Добавлена новая упаковка: dth 20*20, 546 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-02T08:10:58.5056272+03:00</Time>
+    <Operation>Изменение товара
+ Название: ьарпим ----&gt; ьарпим
+ Юр. лицо: ИП Дрозд К.К. ----&gt; ИП Дрозд К.К.
+ Бренд: Домик ----&gt; Домик
+ Артикул: 4нп ----&gt; 4нп
+ Штрих-код: 3356 ----&gt; 3356
+ Упаковка: ЛФРН 9*3 ----&gt; орвсоп 9*10; ВОЛ 8*64</Operation>
+  </History>
+  <History>
     <Time>2022-12-01T22:54:36.0265454+03:00</Time>
     <Operation>Добавлен товар: ьарпим, 34324 шт.</Operation>
   </History>

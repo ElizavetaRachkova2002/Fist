@@ -128,10 +128,10 @@
                       VerticalScrollBarVisibility="Auto" Grid.Row="0" Margin="-0.8,-0.8,218.8,0.8"
             RowBackground="White" AlternatingRowBackground="White" MaxHeight="500" MaxWidth="805" Canvas.Left="10" Canvas.Top="102" Width="630" IsReadOnly="True" FontSize="14">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="153"  />
-                <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="150" />
+                <DataGridTextColumn Header="Бренд" Binding="{Binding Path=Brand}" Width="143"  />
+                <DataGridTextColumn Header="Артикул" Binding="{Binding Path=Vendor_code}" Width="140" />
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="210" />
-                <DataGridTextColumn Header="Брак" Binding="{Binding Path=Brak}" Width="90" />
+                <DataGridTextColumn Header="Брак" Binding="{Binding Path=Brak}" Width="86" />
                    <DataGridTemplateColumn>
                     <DataGridTemplateColumn.Header>
                             <CheckBox x:Name="chkHeader" Checked="CheckBox_Checked"    Unchecked="CheckBox_Unchecked" />
