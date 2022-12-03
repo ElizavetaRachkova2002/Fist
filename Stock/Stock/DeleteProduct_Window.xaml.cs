@@ -47,7 +47,7 @@ namespace Stock
                 else
                 {
 
-                    if (MessageBox.Show("Вы собираетесь безвозвратно удалить товар '" + Combo_product_add.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                    if (MessageBox.Show("Внимание! Товар " + Combo_product_add.Text + " будет удален безвозвратно", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                     {
                         for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
                             if (MyProducts_List.MyProducts[i].Name == Combo_product_add.Text)

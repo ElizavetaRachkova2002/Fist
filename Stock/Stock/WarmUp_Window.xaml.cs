@@ -121,7 +121,7 @@ namespace Stock
             {
                 if (String.IsNullOrEmpty(Combo_WarmUp_Name.Text))
                 {
-                    throw new MyExceptionEmptyFieldNameOfProduct("Укажите название товара");
+                    throw new MyExceptionEmptyFieldNameOfProduct("Укажите название");
                 }
                 //if (String.IsNullOrEmpty(WarmUp_Count.Text))
                 //{
@@ -180,7 +180,7 @@ namespace Stock
                                     if (z == MyPackages_List.MyPackages.Count())
                                     {
                                         z = 0;
-                                        throw new MyExceptionDeletePackage("Упаковка для данного товара отсутствует. Измените параметры товара или добавьте новую упаковку.");
+                                        throw new MyExceptionDeletePackage("Упаковка для данного товара отсутствует. Добавьте упаковку или измените параметры товара.");
                                     }
                                 }
                               z = 0;
@@ -194,28 +194,28 @@ namespace Stock
                 int brak = int.Parse(WarmUp_Brak.Text);
                 if (String.IsNullOrEmpty(WarmUp_Count.Text))
                 {
-                    throw new MyExceptionEmptyFieldCount("Укажите количество подготовленного к продаже товара");
+                    throw new MyExceptionEmptyFieldCount("Если нет подготовленного товара, введите 0");
                 }
                 if (String.IsNullOrEmpty(WarmUp_Brak.Text))
                 {
-                    throw new MyExceptionEmptyFieldBrak("Укажите количество брака товара");
+                    throw new MyExceptionEmptyFieldBrak("Если брак отсутствует введите 0");
                 }
                 if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
                 {
-                    throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
+                    throw new MyExceptionCountOfProductIsDigit("В поле 'подготовлено к продаже' допускаются только цифры");
                 }
                 if (int.Parse(WarmUp_Count.Text) < 0)
                 {
-                    throw new MyExceptionCountLessThanZero("Количество товара больше 0");
+                    throw new MyExceptionCountLessThanZero("В поле 'подготовлено к продаже' допускаются только цифры");
                 }
 
                 if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
                 {
-                    throw new MyExceptionBrakIsDigit("Количество брака является числом");
+                    throw new MyExceptionBrakIsDigit("В поле 'брак' допускаются только цифры");
                 }
                 if (int.Parse(WarmUp_Brak.Text) < 0)
                 {
-                    throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
+                    throw new MyExceptionCountOfBrakLessZero("В поле 'брак' допускаются только цифры");
                 }
                 //////////
 
@@ -225,11 +225,11 @@ namespace Stock
                     {
                         if (int.Parse(WarmUp_Brak.Text) + int.Parse(WarmUp_Count.Text) > MyProducts_List.MyProducts[i].Not_Packed)
                         {
-                            throw new MyExceptionNotEnoughUnPackadeProducts("Количество брака и подготовленого товара к продаже больше чем неупакованного товара");
+                            throw new MyExceptionNotEnoughUnPackadeProducts("Остатки товара меньше, чем Вы пытаетесь упаковать");
                         }
                         if (MyProducts_List.MyProducts[i].Not_Packed < count)
                         {
-                            throw new MyExceptionCountOfProductsIsMoreThanWasNotPacked("Кол-во товара больше, чем было не упаковано");
+                            throw new MyExceptionCountOfProductsIsMoreThanWasNotPacked("Остатки товара меньше, чем Вы пытаетесь упаковать");
                         }
                     }
                 }
