@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using Exceptions;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -22,16 +23,16 @@ namespace Stock
     /// </summary>
     /// 
 
-    [Serializable]
-    public class MyExceptionPackageAlreadyExists : Exception
-    {
-        public MyExceptionPackageAlreadyExists() { }
-        public MyExceptionPackageAlreadyExists(string message) : base(message) { }
-        public MyExceptionPackageAlreadyExists(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionPackageAlreadyExists(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionPackageAlreadyExists : Exception
+    //{
+    //    public MyExceptionPackageAlreadyExists() { }
+    //    public MyExceptionPackageAlreadyExists(string message) : base(message) { }
+    //    public MyExceptionPackageAlreadyExists(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionPackageAlreadyExists(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
     public partial class AddPackage_Window : Window
     {
         public AddPackage_Window()

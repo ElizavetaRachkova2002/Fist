@@ -4,3 +4,9 @@ C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\Pr
 C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.CoreCompileInputs.cache
 C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.dll
 C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.pdb
+C:\Fist\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.dll
+C:\Fist\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.pdb
+C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.AssemblyReference.cache
+C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.CoreCompileInputs.cache
+C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.dll
+C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.pdb

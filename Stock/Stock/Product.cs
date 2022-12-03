@@ -8,129 +8,129 @@ namespace Stock
 {
    
 
-    [Serializable]
-    public class MyExceptionEmptyFieldNameOfProduct : Exception
-    {
-        public MyExceptionEmptyFieldNameOfProduct() { }
-        public MyExceptionEmptyFieldNameOfProduct(string message) : base(message) { }
-        public MyExceptionEmptyFieldNameOfProduct(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldNameOfProduct(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionEmptyFieldNameOfProduct : Exception
+    //{
+    //    public MyExceptionEmptyFieldNameOfProduct() { }
+    //    public MyExceptionEmptyFieldNameOfProduct(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldNameOfProduct(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldNameOfProduct(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
 
 
-    [Serializable]
-    public class MyExceptionEmptyFieldLegalEntity : Exception
-    {
-        public MyExceptionEmptyFieldLegalEntity() { }
-        public MyExceptionEmptyFieldLegalEntity(string message) : base(message) { }
-        public MyExceptionEmptyFieldLegalEntity(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldLegalEntity(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionEmptyFieldLegalEntity : Exception
+    //{
+    //    public MyExceptionEmptyFieldLegalEntity() { }
+    //    public MyExceptionEmptyFieldLegalEntity(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldLegalEntity(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldLegalEntity(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
 
-    [Serializable]
-    public class MyExceptionEmptyFieldBrand : Exception
-    {
-        public MyExceptionEmptyFieldBrand() { }
-        public MyExceptionEmptyFieldBrand(string message) : base(message) { }
-        public MyExceptionEmptyFieldBrand(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldBrand(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionEmptyFieldVendorCode : Exception
-    {
-        public MyExceptionEmptyFieldVendorCode() { }
-        public MyExceptionEmptyFieldVendorCode(string message) : base(message) { }
-        public MyExceptionEmptyFieldVendorCode(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldVendorCode(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionEmptyFieldPackageName : Exception
-    {
-        public MyExceptionEmptyFieldPackageName() { }
-        public MyExceptionEmptyFieldPackageName(string message) : base(message) { }
-        public MyExceptionEmptyFieldPackageName(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldPackageName(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionEmptyFieldBarcode : Exception
-    {
-        public MyExceptionEmptyFieldBarcode() { }
-        public MyExceptionEmptyFieldBarcode(string message) : base(message) { }
-        public MyExceptionEmptyFieldBarcode(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldBarcode(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionEmptyFieldCount : Exception
-    {
-        public MyExceptionEmptyFieldCount() { }
-        public MyExceptionEmptyFieldCount(string message) : base(message) { }
-        public MyExceptionEmptyFieldCount(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldCount(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionCountLessThanZero : Exception
-    {
-        public MyExceptionCountLessThanZero() { }
-        public MyExceptionCountLessThanZero(string message) : base(message) { }
-        public MyExceptionCountLessThanZero(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionCountLessThanZero(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionBarcodeLessThanZero : Exception
-    {
-        public MyExceptionBarcodeLessThanZero() { }
-        public MyExceptionBarcodeLessThanZero(string message) : base(message) { }
-        public MyExceptionBarcodeLessThanZero(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionBarcodeLessThanZero(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionCountOfProductIsDigit : Exception
-    {
-        public MyExceptionCountOfProductIsDigit() { }
-        public MyExceptionCountOfProductIsDigit(string message) : base(message) { }
-        public MyExceptionCountOfProductIsDigit(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionCountOfProductIsDigit(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionBarcodeOfProductIsDigit : Exception
-    {
-        public MyExceptionBarcodeOfProductIsDigit() { }
-        public MyExceptionBarcodeOfProductIsDigit(string message) : base(message) { }
-        public MyExceptionBarcodeOfProductIsDigit(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionBarcodeOfProductIsDigit(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionCountOfProductLessThenCountOfProductForSend : Exception
-    {
-        public MyExceptionCountOfProductLessThenCountOfProductForSend() { }
-        public MyExceptionCountOfProductLessThenCountOfProductForSend(string message) : base(message) { }
-        public MyExceptionCountOfProductLessThenCountOfProductForSend(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionCountOfProductLessThenCountOfProductForSend(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionEmptyFieldBrand : Exception
+    //{
+    //    public MyExceptionEmptyFieldBrand() { }
+    //    public MyExceptionEmptyFieldBrand(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldBrand(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldBrand(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionEmptyFieldVendorCode : Exception
+    //{
+    //    public MyExceptionEmptyFieldVendorCode() { }
+    //    public MyExceptionEmptyFieldVendorCode(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldVendorCode(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldVendorCode(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionEmptyFieldPackageName : Exception
+    //{
+    //    public MyExceptionEmptyFieldPackageName() { }
+    //    public MyExceptionEmptyFieldPackageName(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldPackageName(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldPackageName(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionEmptyFieldBarcode : Exception
+    //{
+    //    public MyExceptionEmptyFieldBarcode() { }
+    //    public MyExceptionEmptyFieldBarcode(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldBarcode(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldBarcode(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionEmptyFieldCount : Exception
+    //{
+    //    public MyExceptionEmptyFieldCount() { }
+    //    public MyExceptionEmptyFieldCount(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldCount(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldCount(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionCountLessThanZero : Exception
+    //{
+    //    public MyExceptionCountLessThanZero() { }
+    //    public MyExceptionCountLessThanZero(string message) : base(message) { }
+    //    public MyExceptionCountLessThanZero(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionCountLessThanZero(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionBarcodeLessThanZero : Exception
+    //{
+    //    public MyExceptionBarcodeLessThanZero() { }
+    //    public MyExceptionBarcodeLessThanZero(string message) : base(message) { }
+    //    public MyExceptionBarcodeLessThanZero(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionBarcodeLessThanZero(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionCountOfProductIsDigit : Exception
+    //{
+    //    public MyExceptionCountOfProductIsDigit() { }
+    //    public MyExceptionCountOfProductIsDigit(string message) : base(message) { }
+    //    public MyExceptionCountOfProductIsDigit(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionCountOfProductIsDigit(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionBarcodeOfProductIsDigit : Exception
+    //{
+    //    public MyExceptionBarcodeOfProductIsDigit() { }
+    //    public MyExceptionBarcodeOfProductIsDigit(string message) : base(message) { }
+    //    public MyExceptionBarcodeOfProductIsDigit(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionBarcodeOfProductIsDigit(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionCountOfProductLessThenCountOfProductForSend : Exception
+    //{
+    //    public MyExceptionCountOfProductLessThenCountOfProductForSend() { }
+    //    public MyExceptionCountOfProductLessThenCountOfProductForSend(string message) : base(message) { }
+    //    public MyExceptionCountOfProductLessThenCountOfProductForSend(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionCountOfProductLessThenCountOfProductForSend(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
     //[Serializable]
     //public class Product 
     //{

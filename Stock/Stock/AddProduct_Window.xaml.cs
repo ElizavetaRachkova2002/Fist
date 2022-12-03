@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using Exceptions;
 using System.Windows.Media;
 using System.IO;
 using System.Windows.Media.Imaging;

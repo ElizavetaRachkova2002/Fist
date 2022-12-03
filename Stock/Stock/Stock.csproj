@@ -35,9 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Exceptions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Exceptions\Exceptions\bin\Debug\Exceptions.dll</HintPath>
+    </Reference>
     <Reference Include="ProductsAndPackages, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.dll</HintPath>
+      <HintPath>..\..\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

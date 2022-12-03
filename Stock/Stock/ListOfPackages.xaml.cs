@@ -25,6 +25,7 @@ namespace Stock
         public ListOfPackages()
         {
             InitializeComponent();
+            
             gridlistpackage.ItemsSource = MyPackages_List.MyPackages;
             
         }

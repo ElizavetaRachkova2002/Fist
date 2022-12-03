@@ -1,0 +1,6 @@
+C:\Users\rachk\source\repos\Exceptions\Exceptions\bin\Debug\Exceptions.dll
+C:\Users\rachk\source\repos\Exceptions\Exceptions\bin\Debug\Exceptions.pdb
+C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.AssemblyReference.cache
+C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.dll
+C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.pdb

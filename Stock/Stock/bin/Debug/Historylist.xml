@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-03T23:47:55.0055427+03:00</Time>
+    <Operation>Удалена упаковка: БОПП пакет 12*15</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T23:47:23.4312982+03:00</Time>
+    <Operation>Добавлен товар: визитница мишка, 3245 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-03T22:30:34.1397275+03:00</Time>
     <Operation>Списан брак: ewrw, 1 шт.</Operation>
   </History>

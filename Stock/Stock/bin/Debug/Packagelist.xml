@@ -1,12 +1,6 @@
 <?xml version="1.0"?>
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
-    <Size>12*15</Size>
-    <IsSelected>false</IsSelected>
-    <Name_package>БОПП пакет</Name_package>
-    <Count_package>3299</Count_package>
-  </Package>
-  <Package>
     <Size>345</Size>
     <IsSelected>false</IsSelected>
     <Name_package>rg</Name_package>

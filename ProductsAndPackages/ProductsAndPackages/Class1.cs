@@ -199,6 +199,58 @@ namespace ProductsAndPackages
             }
         }
     }
+    public class History
+    {
+        public DateTime Time { get; set; }
+        public string Operation { get; set; }
+
+        public History() { }
+
+        public History(DateTime time, string operation)
+        {
+            Time = time;
+            Operation = operation;
+        }
+    }
+    public static class MyHistory_List
+    {
+        public static List<History> MyHistory = new List<History>();
+
+
+        public static void LoadHistory()
+        {
+            List<History> currentH_list = new List<History>();
+            if (File.Exists("Historylist.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<History>));
+                using (Stream reader = new FileStream("Historylist.xml", FileMode.Open))
+                {
+                    List<History> tempList = (List<History>)serializer.Deserialize(reader);
+                    currentH_list.Clear();
+                    DateTime time = DateTime.Now.AddMonths(-3);
+                    foreach (var item in tempList)
+                    {
+                        if (item.Time > time)
+                            currentH_list.Add(item);
+                    }
+                }
+                MyHistory.Clear();
+                MyHistory = currentH_list;
+            }
+
+        }
+
+        public static void SaveHistory()
+        {
+            List<History> currentH_list = new List<History>();
+            currentH_list = MyHistory;
+            XmlSerializer serializer = new XmlSerializer(typeof(List<History>));
+            using (Stream writer = new FileStream("Historylist.xml", FileMode.Create))
+            {
+                serializer.Serialize(writer, currentH_list);
+            }
+        }
+    }
     public static class MyPackages_List
     {
         public static List<Package> MyPackages = new List<Package>();

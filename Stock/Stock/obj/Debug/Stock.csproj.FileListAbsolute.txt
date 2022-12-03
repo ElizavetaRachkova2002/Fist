@@ -205,6 +205,8 @@ C:\Fist\Stock\Stock\obj\Debug\ListOfPackages.baml
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.AssemblyReference.cache
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\ListOfPackages.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\ListOfPackages.baml
-C:\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.dll
 C:\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.pdb
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.CopyComplete
+C:\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.dll
+C:\Fist\Stock\Stock\bin\Debug\Exceptions.dll
+C:\Fist\Stock\Stock\bin\Debug\Exceptions.pdb

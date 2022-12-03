@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using Exceptions;
 using System.IO;
 using System.Windows.Input;
 using ProductsAndPackages;
@@ -20,36 +21,36 @@ namespace Stock
     /// Логика взаимодействия для Change_Product_Window.xaml
     /// </summary>
     /// 
-[Serializable]
-    public class MyExceptionProductAlreadyExistAfterChangeWithThisName : Exception
-    {
-        public MyExceptionProductAlreadyExistAfterChangeWithThisName() { }
-        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message) : base(message) { }
-        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionProductAlreadyExistAfterChangeWithThisName(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionProductAlreadyExistAfterChangewithThisBarcode : Exception
-    {
-        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode() { }
-        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message) : base(message) { }
-        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionProductAlreadyExistAfterChangewithThisBarcode(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode : Exception
-    {
-        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode() { }
-        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message) : base(message) { }
-        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+//[Serializable]
+//    public class MyExceptionProductAlreadyExistAfterChangeWithThisName : Exception
+//    {
+//        public MyExceptionProductAlreadyExistAfterChangeWithThisName() { }
+//        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message) : base(message) { }
+//        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message, Exception inner) : base(message, inner) { }
+//        protected MyExceptionProductAlreadyExistAfterChangeWithThisName(
+//          System.Runtime.Serialization.SerializationInfo info,
+//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+//    }
+//    [Serializable]
+//    public class MyExceptionProductAlreadyExistAfterChangewithThisBarcode : Exception
+//    {
+//        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode() { }
+//        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message) : base(message) { }
+//        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message, Exception inner) : base(message, inner) { }
+//        protected MyExceptionProductAlreadyExistAfterChangewithThisBarcode(
+//          System.Runtime.Serialization.SerializationInfo info,
+//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+//    }
+//    [Serializable]
+//    public class MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode : Exception
+//    {
+//        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode() { }
+//        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message) : base(message) { }
+//        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message, Exception inner) : base(message, inner) { }
+//        protected MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(
+//          System.Runtime.Serialization.SerializationInfo info,
+//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+//    }
     public partial class Change_Product_Window : Window
     {
         string oldname = "";

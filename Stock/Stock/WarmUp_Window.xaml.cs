@@ -12,93 +12,94 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.IO;
 using ProductsAndPackages;
+using Exceptions;
 using System.Windows.Shapes;
 
 namespace Stock
 {
 
-    [Serializable]
-    public class MyExceptionNotEnoughPackage : Exception
-    {
-        public MyExceptionNotEnoughPackage() { }
-        public MyExceptionNotEnoughPackage(string message) : base(message) { }
-        public MyExceptionNotEnoughPackage(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionNotEnoughPackage(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionDeletePackage : Exception
-    {
-        public MyExceptionDeletePackage() { }
-        public MyExceptionDeletePackage(string message) : base(message) { }
-        public MyExceptionDeletePackage(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionDeletePackage(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionNotEnoughUnPackadeProducts : Exception
-    {
-        public MyExceptionNotEnoughUnPackadeProducts() { }
-        public MyExceptionNotEnoughUnPackadeProducts(string message) : base(message) { }
-        public MyExceptionNotEnoughUnPackadeProducts(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionNotEnoughUnPackadeProducts(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionNotEnoughPackage : Exception
+    //{
+    //    public MyExceptionNotEnoughPackage() { }
+    //    public MyExceptionNotEnoughPackage(string message) : base(message) { }
+    //    public MyExceptionNotEnoughPackage(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionNotEnoughPackage(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionDeletePackage : Exception
+    //{
+    //    public MyExceptionDeletePackage() { }
+    //    public MyExceptionDeletePackage(string message) : base(message) { }
+    //    public MyExceptionDeletePackage(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionDeletePackage(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionNotEnoughUnPackadeProducts : Exception
+    //{
+    //    public MyExceptionNotEnoughUnPackadeProducts() { }
+    //    public MyExceptionNotEnoughUnPackadeProducts(string message) : base(message) { }
+    //    public MyExceptionNotEnoughUnPackadeProducts(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionNotEnoughUnPackadeProducts(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
 
-    [Serializable]
-    public class MyExceptionEmptyFieldBrak : Exception
-    {
-        public MyExceptionEmptyFieldBrak() { }
-        public MyExceptionEmptyFieldBrak(string message) : base(message) { }
-        public MyExceptionEmptyFieldBrak(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionEmptyFieldBrak(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionNotEnoughPackaging : Exception
-    {
-        public MyExceptionNotEnoughPackaging() { }
-        public MyExceptionNotEnoughPackaging(string message) : base(message) { }
-        public MyExceptionNotEnoughPackaging(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionNotEnoughPackaging(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionEmptyFieldBrak : Exception
+    //{
+    //    public MyExceptionEmptyFieldBrak() { }
+    //    public MyExceptionEmptyFieldBrak(string message) : base(message) { }
+    //    public MyExceptionEmptyFieldBrak(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionEmptyFieldBrak(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionNotEnoughPackaging : Exception
+    //{
+    //    public MyExceptionNotEnoughPackaging() { }
+    //    public MyExceptionNotEnoughPackaging(string message) : base(message) { }
+    //    public MyExceptionNotEnoughPackaging(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionNotEnoughPackaging(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
 
-    [Serializable]
-    public class MyExceptionBrakIsDigit : Exception
-    {
-        public MyExceptionBrakIsDigit() { }
-        public MyExceptionBrakIsDigit(string message) : base(message) { }
-        public MyExceptionBrakIsDigit(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionBrakIsDigit(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionCountOfBrakLessZero : Exception
-    {
-        public MyExceptionCountOfBrakLessZero() { }
-        public MyExceptionCountOfBrakLessZero(string message) : base(message) { }
-        public MyExceptionCountOfBrakLessZero(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionCountOfBrakLessZero(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
-    [Serializable]
-    public class MyExceptionCountOfProductsIsMoreThanWasNotPacked : Exception
-    {
-        public MyExceptionCountOfProductsIsMoreThanWasNotPacked() { }
-        public MyExceptionCountOfProductsIsMoreThanWasNotPacked(string message) : base(message) { }
-        public MyExceptionCountOfProductsIsMoreThanWasNotPacked(string message, Exception inner) : base(message, inner) { }
-        protected MyExceptionCountOfProductsIsMoreThanWasNotPacked(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    }
+    //[Serializable]
+    //public class MyExceptionBrakIsDigit : Exception
+    //{
+    //    public MyExceptionBrakIsDigit() { }
+    //    public MyExceptionBrakIsDigit(string message) : base(message) { }
+    //    public MyExceptionBrakIsDigit(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionBrakIsDigit(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionCountOfBrakLessZero : Exception
+    //{
+    //    public MyExceptionCountOfBrakLessZero() { }
+    //    public MyExceptionCountOfBrakLessZero(string message) : base(message) { }
+    //    public MyExceptionCountOfBrakLessZero(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionCountOfBrakLessZero(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
+    //[Serializable]
+    //public class MyExceptionCountOfProductsIsMoreThanWasNotPacked : Exception
+    //{
+    //    public MyExceptionCountOfProductsIsMoreThanWasNotPacked() { }
+    //    public MyExceptionCountOfProductsIsMoreThanWasNotPacked(string message) : base(message) { }
+    //    public MyExceptionCountOfProductsIsMoreThanWasNotPacked(string message, Exception inner) : base(message, inner) { }
+    //    protected MyExceptionCountOfProductsIsMoreThanWasNotPacked(
+    //      System.Runtime.Serialization.SerializationInfo info,
+    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    //}
     /// <summary>
     /// Логика взаимодействия для WarmUp_Window.xaml
     /// </summary>
