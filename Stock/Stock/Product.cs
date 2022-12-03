@@ -142,8 +142,8 @@ namespace Stock
         string _brand;
      
         string _vendor_code;
-       
-        ulong _barcode; //штрих
+
+        string _barcode; //штрих
   
        int _count;
         
@@ -186,7 +186,7 @@ namespace Stock
         
         }
       
-        public ulong Barcode {
+        public string Barcode {
             get { return _barcode; }
             set
             {
@@ -196,10 +196,10 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldBarcode("Введите штрихкод товара");
                 }
-                if (value < 0)
-                {
-                    throw new MyExceptionBarcodeLessThanZero("Штрихкод меньше нуля");
-                }
+                //if (value < 0)
+                //{
+                //    throw new MyExceptionBarcodeLessThanZero("Штрихкод меньше нуля");
+                //}
                 //if (value.ToString().All(char.IsDigit))
                 //{
                 //    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
@@ -261,7 +261,7 @@ namespace Stock
         public int Brak { get; set; }
 
         public Product() { }
-        public Product(string name, string legal_enity, string brand, string vendor_code, ulong barcode, int count, int packed, int not_Packed, List<string> packageName, int brak)
+        public Product(string name, string legal_enity, string brand, string vendor_code, string barcode, int count, int packed, int not_Packed, List<string> packageName, int brak)
         {
             Name = name;
             Legal_entity = legal_enity;

@@ -229,7 +229,7 @@ namespace Stock
                 {
                     for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                     {
-                        if (ulong.Parse(TB_New_Barcode.Text) == MyProducts_List.MyProducts[i].Barcode)
+                        if ((TB_New_Barcode.Text) == MyProducts_List.MyProducts[i].Barcode)
                         {
                             throw new MyExceptionProductAlreadyExistAfterChangewithThisBarcode("Товар с таким штрихкодом уже существует");
 
@@ -279,7 +279,7 @@ namespace Stock
                     MyProducts_List.MyProducts[current_product_number].Legal_entity = TB_New_Legal_Entity.Text;
                     MyProducts_List.MyProducts[current_product_number].PackageName=currentPackage_change;
                     MyProducts_List.MyProducts[current_product_number].Vendor_code = TB_New_Vendor_Code.Text;
-                    MyProducts_List.MyProducts[current_product_number].Barcode = ulong.Parse(TB_New_Barcode.Text);
+                    MyProducts_List.MyProducts[current_product_number].Barcode = TB_New_Barcode.Text;
                     MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;
 
                     

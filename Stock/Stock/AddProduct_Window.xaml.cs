@@ -253,14 +253,20 @@ namespace Stock
                     throw new MyExceptionEmptyFieldVendorCode("Введите артикул");
                 }
                 //TB_New_Vendor_Code.Clear();
-                ulong barcode;
+                string barcode;
+                if (TB_New_Barcode.Text.Replace(" ", "")[0]=='-')
+                {
+                    throw new MyExceptionBarcodeOfProductIsDigit("В штрихкоде допускаются только цифры");
+
+                }
                 if (ulong.TryParse(TB_New_Barcode.Text, out ulong _barcode) != true && TB_New_Barcode.Text.Trim() != "")
                 {
                     throw new MyExceptionBarcodeOfProductIsDigit("В штрихкоде допускаются только цифры");
                 }
+             
                 if (TB_New_Barcode.Text.Trim() != "")
                 { 
-                    barcode = ulong.Parse(TB_New_Barcode.Text.Trim()); 
+                    barcode = TB_New_Barcode.Text.Trim(); 
                     
                 }
                

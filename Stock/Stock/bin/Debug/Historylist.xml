@@ -1,6 +1,44 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-03T11:58:00.3294201+03:00</Time>
+    <Operation>Удалён товар: ch</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:56:34.1267645+03:00</Time>
+    <Operation>Добавлен новый товар: ch, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:56:17.2116041+03:00</Time>
+    <Operation>Добавлен новый товар: kjh, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:56:03.4517066+03:00</Time>
+    <Operation>Добавлен новый товар: dtj, 1 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:51:50.5429274+03:00</Time>
+    <Operation>Удалён товар: 754</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:50:47.0909501+03:00</Time>
+    <Operation>Изменение товара 
+Упаковка: Без упаковки---- &gt; 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:49:39.3710437+03:00</Time>
+    <Operation>Добавлен новый товар: 754, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:49:04.5211548+03:00</Time>
+    <Operation>Добавлен новый товар: ghgf, 5 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T11:41:59.1896108+03:00</Time>
+    <Operation>Добавлен новый товар: trhrt, 456 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-03T09:48:52.2207137+03:00</Time>
     <Operation>Изменение товара 
 Название: сумк ----&gt; сумка
