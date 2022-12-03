@@ -48,20 +48,20 @@ namespace Stock
                 string name = Combo_product_add.Text;
                 if (String.IsNullOrEmpty(name))
                 {
-                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете название товара");
+                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название");
                 }
                 if (String.IsNullOrEmpty(TB_Exist_Count.Text))
                 {
-                    throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                    throw new MyExceptionEmptyFieldCount("Введите количество");
                 }
                 if (int.TryParse(TB_Exist_Count.Text, out int _count) != true && TB_Exist_Count.Text.Trim() != "")
                
                 {
-                    throw new MyExceptionCountOfProductIsDigit("Количество товара это число");
+                    throw new MyExceptionCountOfProductIsDigit("В кол-ве допускаются только цифры");
                 }
                 if (int.Parse(TB_Exist_Count.Text) < 0)
                 {
-                    throw new MyExceptionCountLessThanZero("Количество должно быть больше 0");
+                    throw new MyExceptionCountLessThanZero("В кол-ве допускаются только цифры");
                 }
                 
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
@@ -232,31 +232,31 @@ namespace Stock
                 string name = TB_New_Name.Text.Trim();
                 if (String.IsNullOrEmpty(name))
                 {
-                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
+                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название");
                 }
                 //TB_New_Name.Clear();
                 string legal = TB_New_Legal_Entity.Text.Trim();
                 if (String.IsNullOrEmpty(legal))
                 {
-                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо товара");
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите юр. лицо");
                 }
                 //TB_New_Legal_Entity.Items.Clear();
                 string brand = TB_New_Brand.Text.Trim();
                 if (String.IsNullOrEmpty(brand))
                 {
-                    throw new MyExceptionEmptyFieldBrand("Введите бренд товара");
+                    throw new MyExceptionEmptyFieldBrand("Введите бренд");
                 }
                 //TB_New_Brand.Clear();
                 string vendor = TB_New_Vendor_Code.Text.Trim();
                 if (String.IsNullOrEmpty(vendor))
                 {
-                    throw new MyExceptionEmptyFieldVendorCode("Введите артикул товара");
+                    throw new MyExceptionEmptyFieldVendorCode("Введите артикул");
                 }
                 //TB_New_Vendor_Code.Clear();
                 ulong barcode;
                 if (ulong.TryParse(TB_New_Barcode.Text, out ulong _barcode) != true && TB_New_Barcode.Text.Trim() != "")
                 {
-                    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
+                    throw new MyExceptionBarcodeOfProductIsDigit("В штрихкоде допускаются только цифры");
                 }
                 if (TB_New_Barcode.Text.Trim() != "")
                 { 
@@ -273,20 +273,20 @@ namespace Stock
                 string packageN = TB_NewProduct_Package_Name.Text;
                 if (String.IsNullOrEmpty(packageN))
                 {
-                    throw new MyExceptionEmptyFieldPackageName("Выберите упаковку товара");
+                    throw new MyExceptionEmptyFieldPackageName("Выберите упаковку");
                 }
 
 
                 int count;
                 if (int.TryParse(TB_NewProduct_Count.Text, out int _count) != true && TB_NewProduct_Count.Text.Trim() != "")
                 {
-                    throw new MyExceptionCountOfProductIsDigit("Количество товара это число");
+                    throw new MyExceptionCountOfProductIsDigit("В кол-ве допускаются только цифры");
                 }
                 if (TB_NewProduct_Count.Text.Trim() != "")
                 {  count = int.Parse(TB_NewProduct_Count.Text.Trim()); }
                 else
                 {
-                    throw new MyExceptionEmptyFieldCount("Введите количество товара");
+                    throw new MyExceptionEmptyFieldCount("Введите количество");
                 }
                 //TB_NewProduct_Count.Clear();
                 bool flag_name = false;
@@ -350,7 +350,7 @@ namespace Stock
                 }
                 else if (flad_barcode == true)
                 {
-                    MessageBox.Show("Товар с таким штрих-кодом уже существует");
+                    MessageBox.Show("Товар с таким штрихкодом уже существует");
                 }
                 //this.Close();
             }
@@ -402,7 +402,7 @@ namespace Stock
             }
             catch (OverflowException )
             {
-                MessageBox.Show("Значение штрихкода положительное", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("В штрихкоде допускаются только цифры", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {

@@ -1,6 +1,46 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-03T09:48:52.2207137+03:00</Time>
+    <Operation>Изменение товара 
+Название: сумк ----&gt; сумка
+Штрих-код: 2031555045625 ----&gt; 2031555045626
+Упаковка: box 23*324---- &gt; БОПП пакет 12*15
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:47:50.0241387+03:00</Time>
+    <Operation>Изменение товара 
+Название: сумка ----&gt; сумк
+Штрих-код: 2031555045626 ----&gt; 2031555045625
+Упаковка: box 23*324---- &gt; 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:35:29.5085373+03:00</Time>
+    <Operation>Удалена упаковка: рлрб ти75рт</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:35:16.5490918+03:00</Time>
+    <Operation>Удалена упаковка: rwv 3232rdsf</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:35:08.9628042+03:00</Time>
+    <Operation>Удалена упаковка: рсчь ьпои</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:34:55.83374+03:00</Time>
+    <Operation>Удалена упаковка: box 23*324</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:34:21.2137481+03:00</Time>
+    <Operation>Добавлена новая упаковка: рлрб ти75рт, 86 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:34:01.7239233+03:00</Time>
+    <Operation>Добавлена новая упаковка: рсчь ьпои, 7 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-03T09:14:24.8882913+03:00</Time>
     <Operation>Добавлена новая упаковка: rwv 3232rdsf, 23 шт.</Operation>
   </History>

@@ -69,24 +69,24 @@ namespace Stock
                 
                 if (String.IsNullOrEmpty(Pack_New_Name.Text))
                 {
-                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите название упаковки");
+                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите название");
                 }
                 if (String.IsNullOrEmpty(Pack_New_Size.Text))
                 {
-                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите размер упаковки");
+                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите размер");
                 }
                 
                 if (String.IsNullOrEmpty(Pack_New_Count.Text))
                 {
-                    throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество упаковки");
+                    throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество");
                 }
                 if (int.TryParse(Pack_New_Count.Text, out int _count) != true)
                 {
-                    throw new MyExceptionCountOfPackageIsDigit("кол-во товара это число");
+                    throw new MyExceptionCountOfPackageIsDigit("В кол-ве допускаются только цифры");
                 }
                 if (int.Parse(Pack_New_Count.Text) < 0)
                 {
-                    throw new MyExceptionCountOfPackageLessZero("Количество товара больше 0");
+                    throw new MyExceptionCountOfPackageLessZero("В кол-ве допускаются только цифры");
                 }
                 string name = Pack_New_Name.Text.Trim();
                 Pack_New_Name.Clear();
@@ -169,19 +169,19 @@ namespace Stock
 
                 if (String.IsNullOrEmpty(name))
                 {
-                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите название упаковки");
+                    throw new MyExceptionEmpyFieldNameOfPackage("Укажите название");
                 }
                 if (String.IsNullOrEmpty(Pack_Exist_Count.Text))
                 {
-                    throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество упаковки");
+                    throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество");
                 }
                 if (int.TryParse(Pack_Exist_Count.Text, out int count) != true)
                 {
-                    throw new MyExceptionCountOfPackageIsDigit("кол-во товара это число");
+                    throw new MyExceptionCountOfPackageIsDigit("В кол-ве допускаются только цифры");
                 }
                 if (int.Parse(Pack_Exist_Count.Text) < 0)
                 {
-                    throw new MyExceptionCountOfPackageLessZero("Количество товара больше 0");
+                    throw new MyExceptionCountOfPackageLessZero("В кол-ве допускаются только цифры");
                 }
                 for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
                 {

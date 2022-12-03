@@ -162,33 +162,33 @@ namespace Stock
             {
                 if (String.IsNullOrEmpty(TB_New_Name.Text))
                 {
-                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете название товара");
+                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название");
                 }
                 if (String.IsNullOrEmpty(TB_New_Legal_Entity.Text))
                 {
-                    throw new MyExceptionEmptyFieldLegalEntity("Выберете юр лицо товара");
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите юр. лицо");
                 }
                 if (String.IsNullOrEmpty(TB_New_Brand.Text))
                 {
-                    throw new MyExceptionEmptyFieldBrand("Выберете бренд товара");
+                    throw new MyExceptionEmptyFieldBrand("Введите бренд");
                 }
                 if (String.IsNullOrEmpty(TB_New_Vendor_Code.Text))
                 {
-                    throw new MyExceptionEmptyFieldVendorCode("Выберете артикул товара");
+                    throw new MyExceptionEmptyFieldVendorCode("Введите артикул");
 
                 }
                 if (String.IsNullOrEmpty(TB_New_Barcode.Text))
                 {
-                    throw new MyExceptionEmptyFieldBarcode("Выберете штрихкод товара");
+                    throw new MyExceptionEmptyFieldBarcode("Введите штрихкод");
                 }
                 if (ulong.TryParse(TB_New_Barcode.Text, out ulong _barcode) != true && TB_New_Barcode.Text.Trim() != "")
                 {
-                    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
+                    throw new MyExceptionBarcodeOfProductIsDigit("В штрихкоде допускаются только цифры");
                 }
 
                 if (String.IsNullOrEmpty(TB_NewProduct_Package_Name.Text))
                 {
-                    throw new MyExceptionEmptyFieldPackageName("Выберете упаковку товара");
+                    throw new MyExceptionEmptyFieldPackageName("Выберите упаковку");
 
                 }
 
@@ -263,7 +263,7 @@ namespace Stock
                     }
                     if (oldBarcode!= TB_New_Barcode.Text)
                     {
-                        operation = operation + "Штрих-код: " + oldBarcode + " ----> " + TB_New_Barcode.Text + "\n";
+                        operation = operation + "Штрихкод: " + oldBarcode + " ----> " + TB_New_Barcode.Text + "\n";
                     }
                     if(oldPackage!=newPackage)
                     {
@@ -288,7 +288,7 @@ namespace Stock
                     this.Close();
 
                 }
-                else MessageBox.Show("Введите наименование товара для изменения", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                else MessageBox.Show("Введите товар, который хотите удалить", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
           
                 catch (MyExceptionProductAlreadyExistAfterChangeWithThisName ex)
@@ -343,7 +343,7 @@ namespace Stock
             
             catch (OverflowException )
             {
-                MessageBox.Show("Значение штрихкода положительное", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("В штрихкоде допускаются только цифры", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {

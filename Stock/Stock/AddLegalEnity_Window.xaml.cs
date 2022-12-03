@@ -38,7 +38,7 @@ namespace Stock
                 string newName = New_LegalEnity.Text;
                 if (String.IsNullOrEmpty(newName))
                 {
-                   throw new MyExceptionEmptyFieldLegalEntity("Введите название юридического лица");
+                   throw new MyExceptionEmptyFieldLegalEntity("Введите юр. лицо");
                 }
                 MyLegalEnitys_List.MyLegalEnitys.Add(newName);
                 MyLegalEnitys_List.SaveLegalEnityList();
@@ -90,10 +90,10 @@ namespace Stock
             {
                 if (String.IsNullOrEmpty(TB_Delete_LE.Text))
                 {
-                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо для удаления");
+                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо");
 
                 }
-                if (MessageBox.Show("Вы собираетесь безвозвратно удалить юр.лицо '" + TB_Delete_LE.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                if (MessageBox.Show("Внмание! Юр. лицо " + TB_Delete_LE.Text + " будет удалён безвозвратно", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                 {
                     for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
                     {

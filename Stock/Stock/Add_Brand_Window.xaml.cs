@@ -48,9 +48,9 @@ namespace Stock
             {
                 if (string.IsNullOrEmpty(TB_Delete_Br.Text))
                 {
-                    throw new MyExceptionEmptyFieldBrand("Укажите название бренда");
+                    throw new MyExceptionEmptyFieldBrand("Укажите название");
                 }
-                if (MessageBox.Show("Вы собираетесь безвозвратно удалить бренд '" + TB_Delete_Br.Text + "' .", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                if (MessageBox.Show("Внмание! Бренд " + TB_Delete_Br.Text + " будет удалён безвозвратно", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                 {
                     for (int i = 0; i < Brand_List.MyBrand.Count; i++)
                     {
@@ -93,7 +93,7 @@ namespace Stock
             {
                 if (string.IsNullOrEmpty(New_Brand.Text))
                 {
-                    throw new MyExceptionEmptyFieldBrand("Укажите название бренда");
+                    throw new MyExceptionEmptyFieldBrand("Укажите название");
                 }
                 string newName = New_Brand.Text;
                 Brand_List.MyBrand.Add(newName);
