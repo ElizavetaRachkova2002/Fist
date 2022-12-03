@@ -66,52 +66,52 @@ namespace Stock
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
-    public class Package
-     {
-        private string _name_package; 
-        public string Size { get; set; }
-        public bool IsSelected { get; set; }
-        private int _count_package;
-        public string Name_package
-        {
-            get { return _name_package; }
-            set
-            {
-                _name_package = value;
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new MyExceptionEmpyFieldNameOfPackage("Введите название упаковки");
-                }
-            }
-        }
-        public int Count_package
-        {
-            get { return _count_package; }
-            set
-            {
-                _count_package = value;
-                if (String.IsNullOrEmpty(value.ToString()))
-                {
-                    throw new MyExceptionEmpyFieldCountOfPackage("Введите количество упаковки");
-                }
-                if (value<0)
-                {
-                    throw new MyExceptionCountOfPackageLessZero("Введите количество упаковки должно быть большеe 0");
-                }
+    //public class Package
+    // {
+    //    private string _name_package; 
+    //    public string Size { get; set; }
+    //    public bool IsSelected { get; set; }
+    //    private int _count_package;
+    //    public string Name_package
+    //    {
+    //        get { return _name_package; }
+    //        set
+    //        {
+    //            _name_package = value;
+    //            if (String.IsNullOrEmpty(value))
+    //            {
+    //                throw new MyExceptionEmpyFieldNameOfPackage("Введите название упаковки");
+    //            }
+    //        }
+    //    }
+    //    public int Count_package
+    //    {
+    //        get { return _count_package; }
+    //        set
+    //        {
+    //            _count_package = value;
+    //            if (String.IsNullOrEmpty(value.ToString()))
+    //            {
+    //                throw new MyExceptionEmpyFieldCountOfPackage("Введите количество упаковки");
+    //            }
+    //            if (value<0)
+    //            {
+    //                throw new MyExceptionCountOfPackageLessZero("Введите количество упаковки должно быть большеe 0");
+    //            }
                
-            }
-        }
-        public Package() { }
-        public Package(string name, string size, int count)
-        {
-            Name_package = name;
-            Size = size;
-            Count_package = count;
-            IsSelected = false;
-        }
-        public override string ToString()
-        {
-            return string.Format("{0} {1}", Name_package, Size);
-        }
-    }
+    //        }
+    //    }
+    //    public Package() { }
+    //    public Package(string name, string size, int count)
+    //    {
+    //        Name_package = name;
+    //        Size = size;
+    //        Count_package = count;
+    //        IsSelected = false;
+    //    }
+    //    public override string ToString()
+    //    {
+    //        return string.Format("{0} {1}", Name_package, Size);
+    //    }
+    //}
 }

@@ -3,27 +3,12 @@
   <Product>
     <Legal_entity>ООО "Призма"</Legal_entity>
     <Brand>40А</Brand>
-    <Vendor_code>10</Vendor_code>
-    <Barcode>2036964410058</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
-    <PackageName>
-      <string>БОПП пакет 10*15</string>
-    </PackageName>
-    <Name>визитница бульдог</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Legal_entity>ООО "Призма"</Legal_entity>
-    <Brand>40А</Brand>
     <Vendor_code>08</Vendor_code>
     <Barcode>2039653871628</Barcode>
-    <Count>0</Count>
+    <Count>46465</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
+    <Not_Packed>46465</Not_Packed>
     <PackageName>
       <string>БОПП пакет 10*15</string>
     </PackageName>
@@ -93,61 +78,16 @@
   <Product>
     <Legal_entity>ООО "Призма"</Legal_entity>
     <Brand>40А</Brand>
-    <Vendor_code>02</Vendor_code>
-    <Barcode>2029211132629</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
+    <Vendor_code>ewr</Vendor_code>
+    <Barcode>32453</Barcode>
+    <Count>222</Count>
+    <Packed>101</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
+    <Not_Packed>121</Not_Packed>
     <PackageName>
-      <string>БОПП пакет 10*15</string>
+      <string>Без упаковки</string>
     </PackageName>
-    <Name>кридитница голубая</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Legal_entity>ООО "Призма"</Legal_entity>
-    <Brand>40А</Brand>
-    <Vendor_code>01</Vendor_code>
-    <Barcode>2028250054626</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
-    <PackageName>
-      <string>БОПП пакет 10*15</string>
-    </PackageName>
-    <Name>кредитница розовая</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Legal_entity>ООО "Призма"</Legal_entity>
-    <Brand>40А</Brand>
-    <Vendor_code>03</Vendor_code>
-    <Barcode>2029224966624</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
-    <PackageName>
-      <string>БОПП пакет 10*15</string>
-    </PackageName>
-    <Name>кредитница желтая</Name>
-    <Brak>0</Brak>
-  </Product>
-  <Product>
-    <Legal_entity>ООО "Призма"</Legal_entity>
-    <Brand>40А</Brand>
-    <Vendor_code>07</Vendor_code>
-    <Barcode>2031555045626</Barcode>
-    <Count>0</Count>
-    <Packed>0</Packed>
-    <IsSelected>false</IsSelected>
-    <Not_Packed>0</Not_Packed>
-    <PackageName>
-      <string>БОПП пакет 12*15</string>
-    </PackageName>
-    <Name>сумка</Name>
+    <Name>ewrw</Name>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

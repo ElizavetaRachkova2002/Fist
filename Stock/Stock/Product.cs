@@ -131,150 +131,150 @@ namespace Stock
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
-    [Serializable]
-    public class Product //: IDataErrorInfo
-    {
+    //[Serializable]
+    //public class Product 
+    //{
     
-        private string _name;
+    //    private string _name;
       
-         string _legal_entity;
+    //     string _legal_entity;
        
-        string _brand;
+    //    string _brand;
      
-        string _vendor_code;
+    //    string _vendor_code;
 
-        string _barcode; //штрих
+    //    string _barcode; //штрих
   
-       int _count;
+    //   int _count;
         
-         List<string> _packageName;
+    //     List<string> _packageName;
 
        
-        public string Legal_entity {
-            get { return _legal_entity; }
-            set
-            {
-                _legal_entity = value;
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо товара");
-                }
-            }
-        }
-        public string Brand
-        {
-            get { return _brand; }
-            set
-            {
-                _brand = value;
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new MyExceptionEmptyFieldBrand("Введите бренд товара");
-                }
-            }
-        }
-        public string Vendor_code {
-            get { return _vendor_code; }
-            set
-            {
-                _vendor_code = value;
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new MyExceptionEmptyFieldVendorCode("Введите артикул товара");
-                }
-            }
+    //    public string Legal_entity {
+    //        get { return _legal_entity; }
+    //        set
+    //        {
+    //            _legal_entity = value;
+    //            if (String.IsNullOrEmpty(value))
+    //            {
+    //                throw new MyExceptionEmptyFieldLegalEntity("Введите юридическое лицо товара");
+    //            }
+    //        }
+    //    }
+    //    public string Brand
+    //    {
+    //        get { return _brand; }
+    //        set
+    //        {
+    //            _brand = value;
+    //            if (String.IsNullOrEmpty(value))
+    //            {
+    //                throw new MyExceptionEmptyFieldBrand("Введите бренд товара");
+    //            }
+    //        }
+    //    }
+    //    public string Vendor_code {
+    //        get { return _vendor_code; }
+    //        set
+    //        {
+    //            _vendor_code = value;
+    //            if (String.IsNullOrEmpty(value))
+    //            {
+    //                throw new MyExceptionEmptyFieldVendorCode("Введите артикул товара");
+    //            }
+    //        }
         
-        }
+    //    }
       
-        public string Barcode {
-            get { return _barcode; }
-            set
-            {
-                _barcode = value;
+    //    public string Barcode {
+    //        get { return _barcode; }
+    //        set
+    //        {
+    //            _barcode = value;
 
-                if (value.ToString() == "")
-                {
-                    throw new MyExceptionEmptyFieldBarcode("Введите штрихкод товара");
-                }
-                //if (value < 0)
-                //{
-                //    throw new MyExceptionBarcodeLessThanZero("Штрихкод меньше нуля");
-                //}
-                //if (value.ToString().All(char.IsDigit))
-                //{
-                //    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
-                //}
-            }
-        } //штрих
-        public int Count {
-            get { return _count; }
-            set
-            {
-                _count = value;
-                if (String.IsNullOrEmpty(value.ToString()))
-                {
-                    throw new MyExceptionEmptyFieldCount("Введите количество товара");
-                }
-                if (value < 0)
-                {
-                    throw new MyExceptionCountLessThanZero("Количество меньше нуля");
-                }
-                //if (int.TryParse(Pack_Exist_Count.Text, out int count) != true)
-                //{
-                //    throw new MyExceptionCountOfPackageLessZero("кол-во товара это число");
-                //}
-            }
-        }
-        public int Packed { get; set; }
-        public bool IsSelected { get; set; }
-        public int Not_Packed { get; set; }
+    //            if (value.ToString() == "")
+    //            {
+    //                throw new MyExceptionEmptyFieldBarcode("Введите штрихкод товара");
+    //            }
+    //            //if (value < 0)
+    //            //{
+    //            //    throw new MyExceptionBarcodeLessThanZero("Штрихкод меньше нуля");
+    //            //}
+    //            //if (value.ToString().All(char.IsDigit))
+    //            //{
+    //            //    throw new MyExceptionBarcodeOfProductIsDigit("Штрихкод товара это число");
+    //            //}
+    //        }
+    //    } //штрих
+    //    public int Count {
+    //        get { return _count; }
+    //        set
+    //        {
+    //            _count = value;
+    //            if (String.IsNullOrEmpty(value.ToString()))
+    //            {
+    //                throw new MyExceptionEmptyFieldCount("Введите количество товара");
+    //            }
+    //            if (value < 0)
+    //            {
+    //                throw new MyExceptionCountLessThanZero("Количество меньше нуля");
+    //            }
+    //            //if (int.TryParse(Pack_Exist_Count.Text, out int count) != true)
+    //            //{
+    //            //    throw new MyExceptionCountOfPackageLessZero("кол-во товара это число");
+    //            //}
+    //        }
+    //    }
+    //    public int Packed { get; set; }
+    //    public bool IsSelected { get; set; }
+    //    public int Not_Packed { get; set; }
         
-        public List<string> PackageName
-        {
-            get { return _packageName; }
-            set
-            {
+    //    public List<string> PackageName
+    //    {
+    //        get { return _packageName; }
+    //        set
+    //        {
                 
-                for (int i = 0; i < value.Count; i++)
-                    if (String.IsNullOrEmpty(value[i]))
-                    {
-                        throw new MyExceptionEmptyFieldBrand("Введите упаковку для товара");
-                    }
-                _packageName = value;
-            }
-        }
+    //            for (int i = 0; i < value.Count; i++)
+    //                if (String.IsNullOrEmpty(value[i]))
+    //                {
+    //                    throw new MyExceptionEmptyFieldBrand("Введите упаковку для товара");
+    //                }
+    //            _packageName = value;
+    //        }
+    //    }
 
 
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                _name = value;
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
-                }
-            }
-        }
+    //    public string Name
+    //    {
+    //        get { return _name; }
+    //        set
+    //        {
+    //            _name = value;
+    //            if (String.IsNullOrEmpty(value))
+    //            {
+    //                throw new MyExceptionEmptyFieldNameOfProduct("Введите название товара");
+    //            }
+    //        }
+    //    }
 
-        public int Brak { get; set; }
+    //    public int Brak { get; set; }
 
-        public Product() { }
-        public Product(string name, string legal_enity, string brand, string vendor_code, string barcode, int count, int packed, int not_Packed, List<string> packageName, int brak)
-        {
-            Name = name;
-            Legal_entity = legal_enity;
-            Brand = brand;
-            Vendor_code = vendor_code;
-            Barcode = barcode;
-            Count = count;
-            Packed = packed;
-            Not_Packed = not_Packed;
-            PackageName = packageName;
-            Brak = brak;
-            IsSelected = false;
-        }        
+    //    public Product() { }
+    //    public Product(string name, string legal_enity, string brand, string vendor_code, string barcode, int count, int packed, int not_Packed, List<string> packageName, int brak)
+    //    {
+    //        Name = name;
+    //        Legal_entity = legal_enity;
+    //        Brand = brand;
+    //        Vendor_code = vendor_code;
+    //        Barcode = barcode;
+    //        Count = count;
+    //        Packed = packed;
+    //        Not_Packed = not_Packed;
+    //        PackageName = packageName;
+    //        Brak = brak;
+    //        IsSelected = false;
+    //    }        
 
-    }
+    //}
 }

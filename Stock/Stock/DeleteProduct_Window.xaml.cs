@@ -11,6 +11,7 @@ using System.IO;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using ProductsAndPackages;
 using System.Windows.Shapes;
 
 namespace Stock

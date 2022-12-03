@@ -10,9 +10,9 @@
         WindowStartupLocation="Manual"
         Top="200" Left="250">
 
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <local:Product/>
-    </Window.DataContext>
+    </Window.DataContext>-->
 
     <Window.Resources>
         <Style x:Key="FocusVisual">

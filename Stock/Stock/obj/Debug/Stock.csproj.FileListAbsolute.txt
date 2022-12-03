@@ -147,7 +147,6 @@ Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock.exe
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Stock.pdb
-C:\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
 Z:\Документы\Desktop\Проект МП\Fist\Stock\Stock\obj\Debug\Send_Window.baml
@@ -206,3 +205,6 @@ C:\Fist\Stock\Stock\obj\Debug\ListOfPackages.baml
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.AssemblyReference.cache
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\ListOfPackages.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\ListOfPackages.baml
+C:\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.dll
+C:\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.pdb
+C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.CopyComplete

@@ -1,0 +1,6 @@
+C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.dll
+C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.pdb
+C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.AssemblyReference.cache
+C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.CoreCompileInputs.cache
+C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.dll
+C:\Users\rachk\source\repos\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.pdb

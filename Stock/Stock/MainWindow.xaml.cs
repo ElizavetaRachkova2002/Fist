@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using ProductsAndPackages;
 using System.Xml.Serialization;
 using System.IO;
 using System.Windows.Media;

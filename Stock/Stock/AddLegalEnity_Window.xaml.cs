@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.IO;
+using ProductsAndPackages;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
