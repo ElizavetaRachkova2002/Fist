@@ -2,7 +2,7 @@
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
     <Size>10*15</Size>
-    <IsSelected>true</IsSelected>
+    <IsSelected>false</IsSelected>
     <Name_package>БОПП пакет</Name_package>
     <Count_package>0</Count_package>
   </Package>
@@ -11,5 +11,17 @@
     <IsSelected>false</IsSelected>
     <Name_package>БОПП пакет</Name_package>
     <Count_package>0</Count_package>
+  </Package>
+  <Package>
+    <Size>23*324</Size>
+    <IsSelected>false</IsSelected>
+    <Name_package>box</Name_package>
+    <Count_package>1</Count_package>
+  </Package>
+  <Package>
+    <Size>3232rdsf</Size>
+    <IsSelected>false</IsSelected>
+    <Name_package>rwv</Name_package>
+    <Count_package>23</Count_package>
   </Package>
 </ArrayOfPackage>

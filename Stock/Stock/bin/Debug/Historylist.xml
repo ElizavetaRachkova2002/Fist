@@ -1,6 +1,20 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-03T09:14:24.8882913+03:00</Time>
+    <Operation>Добавлена новая упаковка: rwv 3232rdsf, 23 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:14:10.1264442+03:00</Time>
+    <Operation>Изменение товара 
+Упаковка: БОПП пакет 12*15---- &gt; box 23*324
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-03T09:13:36.3691799+03:00</Time>
+    <Operation>Добавлена новая упаковка: box 23*324, 1 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-03T00:23:12.6751796+03:00</Time>
     <Operation>Изменение товара 
 Упаковка: БОПП пакет 10*15---- &gt; БОПП пакет 12*15

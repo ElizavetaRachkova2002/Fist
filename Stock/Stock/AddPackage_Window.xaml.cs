@@ -90,7 +90,7 @@ namespace Stock
                 }
                 string name = Pack_New_Name.Text.Trim();
                 Pack_New_Name.Clear();
-                string size = Pack_New_Size.Text.Trim();
+                string size = Pack_New_Size.Text.Trim().Replace(" ","");
                 Pack_New_Size.Clear();
                 int count = int.Parse(Pack_New_Count.Text.Trim());
                 Pack_New_Count.Clear();
