@@ -93,20 +93,20 @@ namespace Stock
             }
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionEmptyFieldCount ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
                 catch (MyExceptionCountOfProductIsDigit ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (MyExceptionCountLessThanZero ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
             catch (Exception ex)
@@ -122,17 +122,8 @@ namespace Stock
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
                 this.Close();
             }
-
-
-
         }
-        //private void TB_NewProduct_Count_Error(object sender, ValidationErrorEventArgs e)
-        //{
-        //    if (e.Action == ValidationErrorEventAction.Added)
-        //    {
-        //        MessageBox.Show(e.Error.ErrorContent.ToString());
-        //    }
-        //}
+        
         private void BtnAddNewProduct_Click(object sender, RoutedEventArgs e)
         {
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
@@ -148,7 +139,6 @@ namespace Stock
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightGray);
 
             MyProducts_List.SaveProductList();
-
         }
 
         private void BtnExistingProduct_Click(object sender, RoutedEventArgs e)
@@ -169,17 +159,10 @@ namespace Stock
 
         }
 
-        //public void AddNewLE(string name)
-        //{
-        //    TB_New_Legal_Entity.Items.Add(name);
-        //}
-
         public void GiveTBLegalEnity()
         {
 
             TB_New_Legal_Entity.Items.Clear();
-          //   MyLegalEnitys_List.LoadLegalEnityList();
-
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
                 TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
@@ -198,27 +181,12 @@ namespace Stock
             }
         }
 
-        //public void GiveTBPackage()
-        //{
-        //    int now = TB_NewProduct_Package_Name.SelectedIndex;
-        //    TB_NewProduct_Package_Name.Items.Clear();
-        //    MyPackages_List.LoadPackageList();
-        //    for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
-        //    {
-        //        TB_NewProduct_Package_Name.Items.Add(MyPackages_List.MyPackages[i].ToString());
-        //    }
-        //    TB_NewProduct_Package_Name.Items.Add("Без упаковки");
-        //    TB_NewProduct_Package_Name.SelectedIndex = now;
-
-
-
-        //}
-
+        
         public void GiveTBProduct()
         {
 
             Combo_product_add.Items.Clear();
-      //      MyProducts_List.LoadProductList();
+            MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -236,25 +204,25 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldNameOfProduct("Введите название");
                 }
-                //TB_New_Name.Clear();
+               
                 string legal = TB_New_Legal_Entity.Text.Trim();
                 if (String.IsNullOrEmpty(legal))
                 {
                     throw new MyExceptionEmptyFieldLegalEntity("Введите юр. лицо");
                 }
-                //TB_New_Legal_Entity.Items.Clear();
+                
                 string brand = TB_New_Brand.Text.Trim();
                 if (String.IsNullOrEmpty(brand))
                 {
                     throw new MyExceptionEmptyFieldBrand("Введите бренд");
                 }
-                //TB_New_Brand.Clear();
+                
                 string vendor = TB_New_Vendor_Code.Text.Trim();
                 if (String.IsNullOrEmpty(vendor))
                 {
                     throw new MyExceptionEmptyFieldVendorCode("Введите артикул");
                 }
-                //TB_New_Vendor_Code.Clear();
+                
                 string barcode;
                 if (TB_New_Barcode.Text.Replace(" ", "")[0]=='-')
                 {
@@ -335,7 +303,6 @@ namespace Stock
                     TB_New_Brand.Items.Clear();
                     TB_New_Vendor_Code.Clear();
                     TB_New_Barcode.Clear();
-                    //TB_NewProduct_Package_Name.Items.Clear();
                     TB_NewProduct_Count.Clear();
 
 
@@ -433,7 +400,6 @@ namespace Stock
         {
             if (MyLegalEnitys_List.AddNewLE == true)
             {
-                //AddNewLE(MyLegalEnitys_List.NewLE);
                 GiveTBLegalEnity();
                 MyLegalEnitys_List.AddNewLE = false;
             }
@@ -443,16 +409,12 @@ namespace Stock
         {
             if (Brand_List.AddNewBr == true)
             {
-                //AddNewLE(MyLegalEnitys_List.NewLE);
                 GiveTBBrand();
                 Brand_List.AddNewBr = false;
             }
         }
 
-        private void TB_NewProduct_Package_Name_MouseEnter(object sender, MouseEventArgs e)
-        {
-            //GiveTBPackage();
-        }
+        
 
         private void Add_Brand_Click(object sender, RoutedEventArgs e)
         {
@@ -477,7 +439,6 @@ namespace Stock
                 else
                 TB_NewProduct_Package_Name.Text = TB_NewProduct_Package_Name.Text + "; " + listOfPackages.currentPackage[i];
             }
-            //string[] cur = new string[listOfPackages.currentPackage.Count];
             currentPackageList=listOfPackages.currentPackage;
             
         }

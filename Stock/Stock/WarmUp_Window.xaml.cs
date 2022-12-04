@@ -17,89 +17,6 @@ using System.Windows.Shapes;
 
 namespace Stock
 {
-
-    //[Serializable]
-    //public class MyExceptionNotEnoughPackage : Exception
-    //{
-    //    public MyExceptionNotEnoughPackage() { }
-    //    public MyExceptionNotEnoughPackage(string message) : base(message) { }
-    //    public MyExceptionNotEnoughPackage(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionNotEnoughPackage(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-    //[Serializable]
-    //public class MyExceptionDeletePackage : Exception
-    //{
-    //    public MyExceptionDeletePackage() { }
-    //    public MyExceptionDeletePackage(string message) : base(message) { }
-    //    public MyExceptionDeletePackage(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionDeletePackage(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-    //[Serializable]
-    //public class MyExceptionNotEnoughUnPackadeProducts : Exception
-    //{
-    //    public MyExceptionNotEnoughUnPackadeProducts() { }
-    //    public MyExceptionNotEnoughUnPackadeProducts(string message) : base(message) { }
-    //    public MyExceptionNotEnoughUnPackadeProducts(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionNotEnoughUnPackadeProducts(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-
-    //[Serializable]
-    //public class MyExceptionEmptyFieldBrak : Exception
-    //{
-    //    public MyExceptionEmptyFieldBrak() { }
-    //    public MyExceptionEmptyFieldBrak(string message) : base(message) { }
-    //    public MyExceptionEmptyFieldBrak(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionEmptyFieldBrak(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-    //[Serializable]
-    //public class MyExceptionNotEnoughPackaging : Exception
-    //{
-    //    public MyExceptionNotEnoughPackaging() { }
-    //    public MyExceptionNotEnoughPackaging(string message) : base(message) { }
-    //    public MyExceptionNotEnoughPackaging(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionNotEnoughPackaging(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-
-    //[Serializable]
-    //public class MyExceptionBrakIsDigit : Exception
-    //{
-    //    public MyExceptionBrakIsDigit() { }
-    //    public MyExceptionBrakIsDigit(string message) : base(message) { }
-    //    public MyExceptionBrakIsDigit(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionBrakIsDigit(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-    //[Serializable]
-    //public class MyExceptionCountOfBrakLessZero : Exception
-    //{
-    //    public MyExceptionCountOfBrakLessZero() { }
-    //    public MyExceptionCountOfBrakLessZero(string message) : base(message) { }
-    //    public MyExceptionCountOfBrakLessZero(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionCountOfBrakLessZero(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
-    //[Serializable]
-    //public class MyExceptionCountOfProductsIsMoreThanWasNotPacked : Exception
-    //{
-    //    public MyExceptionCountOfProductsIsMoreThanWasNotPacked() { }
-    //    public MyExceptionCountOfProductsIsMoreThanWasNotPacked(string message) : base(message) { }
-    //    public MyExceptionCountOfProductsIsMoreThanWasNotPacked(string message, Exception inner) : base(message, inner) { }
-    //    protected MyExceptionCountOfProductsIsMoreThanWasNotPacked(
-    //      System.Runtime.Serialization.SerializationInfo info,
-    //      System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-    //}
     /// <summary>
     /// Логика взаимодействия для WarmUp_Window.xaml
     /// </summary>
@@ -125,41 +42,9 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldNameOfProduct("Укажите название");
                 }
-                //if (String.IsNullOrEmpty(WarmUp_Count.Text))
-                //{
-                //    throw new MyExceptionEmptyFieldCount("Укажите количество подготовленного к продаже товара");
-                //}
-                //if (String.IsNullOrEmpty(WarmUp_Brak.Text))
-                //{
-                //    throw new MyExceptionEmptyFieldBrak("Укажите количество брака товара");
-                //}
-                //if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
-                //{
-                //    throw new MyExceptionCountOfProductIsDigit("Количество товара является числом");
-                //}
-                //if (int.Parse(WarmUp_Count.Text) < 0)
-                //{
-                //    throw new MyExceptionCountLessThanZero("Количество товара больше 0");
-                //}
-
-                //if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
-                //{
-                //    throw new MyExceptionBrakIsDigit("Количество брака является числом");
-                //}
-                //if (int.Parse(WarmUp_Brak.Text) < 0)
-                //{
-                //    throw new MyExceptionCountOfBrakLessZero("Количество брака больше 0");
-                //}
-
-
+                
                 string name = Combo_WarmUp_Name.Text;
-                //int count = int.Parse(WarmUp_Count.Text);
-                //int brak = int.Parse(WarmUp_Brak.Text);
-                //bool flag_count = false;
-                //bool flag_package = false;
-
-
-                /////////////////////////Упаковка не существует
+                
 
                 int z = 0;
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
@@ -173,7 +58,7 @@ namespace Stock
                             else {
                                for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
                                     {
-                                   // if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] != MyPackages_List.MyPackages[j].Name_package && MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[1] != MyPackages_List.MyPackages[j].Size)
+                                   
                                     if (MyProducts_List.MyProducts[i].PackageName[k]!=MyPackages_List.MyPackages[j].Name_package+" "+MyPackages_List.MyPackages[j].Size)
                                     {
 
@@ -243,7 +128,7 @@ namespace Stock
                         {
                             for (int j = 0; j < MyPackages_List.MyPackages.Count(); j++)
                             {
-                               // if (MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[0] == MyPackages_List.MyPackages[j].Name_package && MyProducts_List.MyProducts[i].PackageName[k].Split(' ')[1] == MyPackages_List.MyPackages[j].Size)
+                               
                                 if (MyProducts_List.MyProducts[i].PackageName[k]==MyPackages_List.MyPackages[j].Name_package+" "+MyPackages_List.MyPackages[j].Size)
                                 {
 
@@ -252,8 +137,6 @@ namespace Stock
                                     {
                                         throw new MyExceptionNotEnoughPackage("Не хватает упаковки");
 
-                                        //flag_package = true;
-                                        //break;
                                     }
                                 }
                             }
@@ -261,17 +144,7 @@ namespace Stock
                     }
                 }
                
-                //if (flag_count == true)
-                //{
-                //    throw new MyExceptionCountOfProductsIsMoreThanWasNotPacked("Кол-во товара больше, чем было не упаковано");
-                //}
-                //else if (flag_package == true)
-                //{
-                //    throw new MyExceptionNotEnoughPackage("Не хватает упаковки");
-
-                //}
-                //else
-                {
+                
 
                     for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                     {
@@ -311,7 +184,7 @@ namespace Stock
                     //App.Current.Shutdown();
 
                     this.Close();
-                }
+                
             }
             catch (MyExceptionCountOfProductsIsMoreThanWasNotPacked ex)
             {

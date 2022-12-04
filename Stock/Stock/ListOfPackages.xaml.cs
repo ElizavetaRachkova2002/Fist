@@ -57,11 +57,7 @@ namespace Stock
 
 
         }
-        private void Btn_part_brak_Click(object sender, RoutedEventArgs e)
-        {
-
-
-        }
+        
 
         private void btn_add_packages_Click(object sender, RoutedEventArgs e)
         {

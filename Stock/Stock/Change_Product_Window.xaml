@@ -27,7 +27,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <Style x:Key="ButtonStyleChange" TargetType="{x:Type Button}">
+        <Style x:Key="StyleChange" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
@@ -39,44 +39,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="ButtonStyleOK" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Border CornerRadius="5" x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -102,10 +65,11 @@
             </Setter>
         </Style>
     </Window.Resources>
+    
     <Grid>
         <TextBlock FontSize="18" Margin="29,32,428,421.4" Text="Название:"/>
         <ComboBox x:Name="Combo_Current_Product"   Canvas.Left="128" Canvas.Top="35" Height="29" Margin="162,32,36.8,0" VerticalAlignment="Top" />
-        <Button  x:Name="Btn_Change_OK" Content="Просмотр" FontSize="14"  Click="Btn_Change_OK_Click" Background="#FFB4D2FA" Margin="396,82,37,370.4" Style="{DynamicResource ButtonStyleOK}"/>
+        <Button  x:Name="Btn_Change_OK" Content="Просмотр" FontSize="14"  Click="Btn_Change_OK_Click" Background="#FFB4D2FA" Margin="396,82,37,370.4" Style="{DynamicResource StyleChange}"/>
         <Canvas Name="BrdAddNewProduct" Background="White" Width="497" Margin="29,129,26,16.4" >
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Text="Юр. лицо:" Canvas.Left="23" Canvas.Top="81"/>
@@ -114,7 +78,7 @@
             <TextBlock Width="100" FontSize="18" Text="Штрихкод:" Canvas.Left="23" Canvas.Top="214"/>
             <TextBlock Width="100" FontSize="18" Text="Упаковка:" Canvas.Left="23" Canvas.Top="262"/>
 
-            <Button  x:Name="Btn_Add_New_Product"  Width="109" Height="24" Content="Изменить" FontSize="14" Canvas.Left="378" Canvas.Top="292" Click="Btn_Change_Product_Click" Background="#FFB4D2FA" Style="{DynamicResource ButtonStyleChange}"/>
+            <Button  x:Name="Btn_Add_New_Product"  Width="109" Height="24" Content="Изменить" FontSize="14" Canvas.Left="378" Canvas.Top="292" Click="Btn_Change_Product_Click" Background="#FFB4D2FA" Style="{DynamicResource StyleChange}"/>
             <ComboBox x:Name="TB_New_Legal_Entity" MouseEnter="TB_New_Legal_Entity_MouseDown" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26" >
             </ComboBox>
             <ComboBox x:Name="TB_New_Brand" MouseEnter="TB_New_Brand_MouseDown" Canvas.Left="128" Canvas.Top="126" Width="359" Height="26" >

@@ -49,7 +49,7 @@ namespace Stock
                 else
 
                 {
-                    if (MessageBox.Show("Внимание! Упаковка " + Combo_package.Text + " будет удалена безвозвратна", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
+                    if (MessageBox.Show("Внимание! Упаковка " + Combo_package.Text + " будет удалена безвозвратно", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No) == MessageBoxResult.Yes)
                     {
                         for (int i = 0; i < MyPackages_List.MyPackages.Count(); i++)
                         {

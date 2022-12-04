@@ -95,7 +95,7 @@ namespace Stock
                             }
 
                         
-                        //this.Close();
+                        
                     }
                 }
                 DateTime time = DateTime.Now;
@@ -206,8 +206,7 @@ namespace Stock
                 Name_countValue = Name_countValue + "_" + (RowCount - 1).ToString();
                 CountValue.Name = Name_countValue;
                 CountValue.FontSize = 12;
-                //New.Height = 120;
-                //New.Margin = new Thickness(0, 0, 0, 0);
+                
 
                 Rectangle rec = new Rectangle();
 
@@ -218,7 +217,7 @@ namespace Stock
                 rec.Fill = Brushes.LightSkyBlue;
                 rec.Stroke = Brushes.LightSkyBlue;
 
-                //ComboBox NameValue = new ComboBox();
+                
                 New.Children.Add(NameValue);
                 Canvas.SetTop(NameValue, 15);
                 Canvas.SetLeft(NameValue, 150);

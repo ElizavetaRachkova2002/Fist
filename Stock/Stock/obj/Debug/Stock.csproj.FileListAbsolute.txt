@@ -176,7 +176,6 @@ Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\WarmUp_Window.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\App.g.cs
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\GeneratedInternalTypeHelper.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.cache
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.lref
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.baml
@@ -210,3 +209,8 @@ C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.CopyComplete
 C:\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.dll
 C:\Fist\Stock\Stock\bin\Debug\Exceptions.dll
 C:\Fist\Stock\Stock\bin\Debug\Exceptions.pdb
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Exceptions.dll
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.dll
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Exceptions.pdb
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.pdb
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csproj.CopyComplete

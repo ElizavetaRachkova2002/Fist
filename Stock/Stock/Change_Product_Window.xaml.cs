@@ -21,36 +21,7 @@ namespace Stock
     /// Логика взаимодействия для Change_Product_Window.xaml
     /// </summary>
     /// 
-//[Serializable]
-//    public class MyExceptionProductAlreadyExistAfterChangeWithThisName : Exception
-//    {
-//        public MyExceptionProductAlreadyExistAfterChangeWithThisName() { }
-//        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message) : base(message) { }
-//        public MyExceptionProductAlreadyExistAfterChangeWithThisName(string message, Exception inner) : base(message, inner) { }
-//        protected MyExceptionProductAlreadyExistAfterChangeWithThisName(
-//          System.Runtime.Serialization.SerializationInfo info,
-//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-//    }
-//    [Serializable]
-//    public class MyExceptionProductAlreadyExistAfterChangewithThisBarcode : Exception
-//    {
-//        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode() { }
-//        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message) : base(message) { }
-//        public MyExceptionProductAlreadyExistAfterChangewithThisBarcode(string message, Exception inner) : base(message, inner) { }
-//        protected MyExceptionProductAlreadyExistAfterChangewithThisBarcode(
-//          System.Runtime.Serialization.SerializationInfo info,
-//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-//    }
-//    [Serializable]
-//    public class MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode : Exception
-//    {
-//        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode() { }
-//        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message) : base(message) { }
-//        public MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(string message, Exception inner) : base(message, inner) { }
-//        protected MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode(
-//          System.Runtime.Serialization.SerializationInfo info,
-//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-//    }
+
     public partial class Change_Product_Window : Window
     {
         string oldname = "";
@@ -114,7 +85,6 @@ namespace Stock
                         oldBand = MyProducts_List.MyProducts[i].Brand;
                         TB_New_Barcode.Text = MyProducts_List.MyProducts[i].Barcode.ToString();
                         oldBarcode= MyProducts_List.MyProducts[i].Barcode.ToString();
-                        //  TB_NewProduct_Package_Name.Text = MyProducts_List.MyProducts[i].PackageName;
                         for (int j=0;j<MyProducts_List.MyProducts[i].PackageName.Count;j++)
                         {
 
@@ -242,10 +212,6 @@ namespace Stock
                 if (flag_OK == true)
                 {
                     DateTime time = DateTime.Now;
-
-                    //string operation = "Изменение товара"+"\n Название: " + oldname+ " ----> " + TB_New_Name.Text + "\n Юр. лицо: " + oldLE + " ----> "+ TB_New_Legal_Entity.Text
-                    //    + "\n Бренд: " + oldBand + " ----> "+ TB_New_Brand.Text + "\n Артикул: " + oldVendorCode + " ----> " + TB_New_Vendor_Code.Text + "\n Штрих-код: " + oldBarcode
-                    //    + " ----> "+ TB_New_Barcode.Text + "\n Упаковка: " + oldPackage + " ----> "+ newPackage ;
                     string operation = "Изменение товара \n";
                     if(oldname!= TB_New_Name.Text)
                     {
@@ -383,15 +349,12 @@ namespace Stock
             }
         }
 
-        
-
         private void Add_LegalEnity_Click(object sender, RoutedEventArgs e)
         {
             addLegalEnity_Window = new AddLegalEnity_Window();
             addLegalEnity_Window.Owner = this;
             addLegalEnity_Window.ShowDialog();
         }
-
 
         public void GiveTBLegalEnity()
         {
@@ -416,8 +379,6 @@ namespace Stock
                 TB_New_Brand.Items.Add(Brand_List.MyBrand[i]);
             }
         }
-
-       
 
         public void GiveTBProduct()
         {

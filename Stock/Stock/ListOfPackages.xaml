@@ -12,7 +12,7 @@
             <Setter Property="Control.Template">
                 <Setter.Value>
                     <ControlTemplate>
-                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -26,7 +26,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <Style x:Key="ButtonStyleAddPackages" TargetType="{x:Type Button}">
+        <Style x:Key="StyleListPackage" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
@@ -38,7 +38,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="7" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                        <Border CornerRadius="5" x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -82,7 +82,7 @@
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" />
-                                <!--<CheckBox IsChecked="{Binding IsChecked, ElementName=chkHeader, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" />-->
+                               
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -90,7 +90,7 @@
             </DataGrid>
             
         </Border>
-        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_add_packages" Content="Добавить" Margin="648,166,25.6,214" Width="110" Height="33" FontSize="16"  Background="#FFB4D2FA" Click="btn_add_packages_Click"/>
-        <Button Style="{DynamicResource ButtonStyleAddPackages}" x:Name="btn_WithoutPackage" Content="Без упаковки" Margin="642,222,16.6,158" Width="110" Height="33" FontSize="16"  Background="#FFB4D2FA" Click="btn_without_Package_Click"/>
+        <Button Style="{DynamicResource StyleListPackage}" x:Name="btn_add_packages" Content="Добавить" Margin="648,166,25.6,214" Width="110" Height="33" FontSize="16"  Background="#FFB4D2FA" Click="btn_add_packages_Click"/>
+        <Button Style="{DynamicResource StyleListPackage}" x:Name="btn_WithoutPackage" Content="Без упаковки" Margin="642,222,16.6,158" Width="110" Height="33" FontSize="16"  Background="#FFB4D2FA" Click="btn_without_Package_Click"/>
     </Grid>
 </Window>

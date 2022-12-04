@@ -13,13 +13,12 @@
     <!--<Window.DataContext>
         <local:Product/>
     </Window.DataContext>-->
-
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
                     <ControlTemplate>
-                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -33,7 +32,7 @@
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <Style x:Key="ButtonAddExistingProduct" TargetType="{x:Type Button}">
+        <Style x:Key="StyleAddProduct" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
@@ -45,7 +44,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="7" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                        <Border CornerRadius="5" x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -70,70 +69,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="FocusVisual1">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <SolidColorBrush x:Key="Button.Static.Background1" Color="#FFDDDDDD"/>
-        <SolidColorBrush x:Key="Button.Static.Border1" Color="#FF707070"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background1" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border1" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background1" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border1" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
-        <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
-        <Style x:Key="ButtonAddNewProduct" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>
-            <Setter Property="Background" Value="{StaticResource Button.Static.Background1}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border1}"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="7" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background1}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border1}"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background1}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border1}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background1}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border1}"/>
-                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground1}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <ControlTemplate x:Key="validationFailed">
-            <StackPanel Orientation="Horizontal">
-                <Border BorderBrush="Violet" BorderThickness="2">
-                    <AdornedElementPlaceholder />
-                </Border>
-                <TextBlock Foreground="Red" FontSize="26" FontWeight="Bold">!</TextBlock>
-            </StackPanel>
-        </ControlTemplate>
     </Window.Resources>
 
     <Grid Margin="0,0,4,0.4">
@@ -143,7 +78,7 @@
         <Canvas x:Name="BrdAddExistingProduct" Background="White" Width="497" Margin="0,44,-0.2,6.4">
             <TextBlock Width="100" FontSize="18" Margin="23,32,373.8,267.2" Text="Название:"/>
             <TextBlock Width="100" FontSize="18" Margin="23,82,373.8,267.2" Text="Количество:"/>
-            <Button Style="{DynamicResource ButtonAddExistingProduct}" x:Name="Btn_Add_Existing_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA"/>
+            <Button Style="{DynamicResource StyleAddProduct}" x:Name="Btn_Add_Existing_Product" Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_Existing_Product_Click" Background="#FFB4D2FA"/>
             <ComboBox x:Name="Combo_product_add"   Canvas.Left="128" Canvas.Top="35" Width="359" Height="22" />
             <TextBox x:Name="TB_Exist_Count" Height="24" Canvas.Left="160" TextWrapping="Wrap" Canvas.Top="85" Width="327"/>
         </Canvas>
@@ -155,7 +90,7 @@
             <TextBlock Width="100" FontSize="18" Text="Штрихкод:" Canvas.Left="23" Canvas.Top="214"/>
             <TextBlock Width="100" FontSize="18" Text="Упаковка:" Canvas.Left="23" Canvas.Top="262"/>
             <TextBlock Width="100" FontSize="18" Text="Кол-во" Canvas.Left="23" Canvas.Top="301"/>
-            <Button Style="{DynamicResource ButtonAddNewProduct}" x:Name="Btn_Add_New_Product"  Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Product_Click" Background="#FFB4D2FA"/>
+            <Button Style="{DynamicResource StyleAddProduct}" x:Name="Btn_Add_New_Product"  Width="120" Height="40" Content="Добавить" FontSize="20" Canvas.Left="367" Canvas.Top="292" Click="Btn_Add_New_Product_Click" Background="#FFB4D2FA"/>
             <ComboBox x:Name="TB_New_Legal_Entity" Canvas.Left="128" Canvas.Top="81" Width="359" Height="26" GotMouseCapture="TB_New_Legal_Entity_MouseDown">
             </ComboBox>
             <TextBox x:Name="TB_New_Name" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="32" Width="359"/>
@@ -167,20 +102,12 @@
                 </TextBox.Text>
             </TextBox>
             <TextBox x:Name="TB_New_Barcode" Height="24" Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="214" Width="359">
-                <!--<TextBox.Text>
-                    <Binding Path="Barcode" >
-                        
-                    </Binding>
-                </TextBox.Text>-->
+                
             </TextBox>
             <ComboBox x:Name="TB_New_Brand" Canvas.Left="128" Canvas.Top="124" Width="359" Height="26" GotMouseCapture="TB_New_Brand_MouseDown">
             </ComboBox>
             <TextBox x:Name="TB_NewProduct_Count" Height="24"  Canvas.Left="128" TextWrapping="Wrap" Canvas.Top="301" Width="231" >
-                <!--<TextBox.Text >
-                    <Binding Path="Count" >
-
-                    </Binding>
-                </TextBox.Text>-->
+               
             </TextBox>
 
 
