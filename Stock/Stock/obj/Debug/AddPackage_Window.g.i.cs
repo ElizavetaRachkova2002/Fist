@@ -140,7 +140,7 @@ namespace Stock {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Stock;component/addpackage_window.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Мой склад;component/addpackage_window.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\AddPackage_Window.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -160,9 +160,6 @@ C:\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
 C:\Fist\Stock\Stock\obj\Debug\Change_Product_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\History_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\Send_Window.baml
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Stock.exe.config
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Stock.exe
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Stock.pdb
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csprojAssemblyReference.cache
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddPackage_Window.g.cs
@@ -176,8 +173,6 @@ Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Send_Window.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\WarmUp_Window.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\App.g.cs
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.cache
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.lref
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddLegalEnity_Window.baml
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddPackage_Window.baml
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\AddProduct_Window.baml
@@ -189,12 +184,9 @@ Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\MainWindow.baml
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Send_Window.baml
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\WarmUp_Window.baml
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.g.resources
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.Properties.Resources.resources
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csproj.GenerateResource.cache
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.exe
-Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.pdb
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Add_Brand_Window.g.cs
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Add_Brand_Window.baml
 C:\Fist\Stock\Stock\obj\Debug\Add_Brand_Window.g.cs
@@ -214,3 +206,11 @@ Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Exceptions.pdb
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\ProductsAndPackages.pdb
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Stock.csproj.CopyComplete
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Мой склад.exe.config
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Мой склад.exe
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\bin\Debug\Мой склад.pdb
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад_MarkupCompile.cache
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад_MarkupCompile.lref
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад.g.resources
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад.exe
+Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад.pdb

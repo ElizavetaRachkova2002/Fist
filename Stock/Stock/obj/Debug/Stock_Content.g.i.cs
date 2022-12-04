@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("box.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("main_icon.ico")]
 
 

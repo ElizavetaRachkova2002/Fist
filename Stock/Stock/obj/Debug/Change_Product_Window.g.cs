@@ -156,7 +156,7 @@ namespace Stock {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Stock;component/change_product_window.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Мой склад;component/change_product_window.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\Change_Product_Window.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
