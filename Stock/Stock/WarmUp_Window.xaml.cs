@@ -77,16 +77,33 @@ namespace Stock
                         }
                     }
                 }
-                int count = int.Parse(WarmUp_Count.Text);
-                int brak = int.Parse(WarmUp_Brak.Text);
+                //int count = int.Parse(WarmUp_Count.Text);
+                //int brak = int.Parse(WarmUp_Brak.Text);
                 if (String.IsNullOrEmpty(WarmUp_Count.Text))
                 {
                     throw new MyExceptionEmptyFieldCount("Если нет подготовленного товара, введите 0");
                 }
-                if (String.IsNullOrEmpty(WarmUp_Brak.Text))
+                //if (String.IsNullOrEmpty(WarmUp_Brak.Text))
+                //{
+                //    throw new MyExceptionEmptyFieldBrak("Если брак отсутствует введите 0");
+                //}
+
+
+                ///
+                bool contains_symbols_WarmUp = false;
+                foreach (char ch in WarmUp_Count.Text)
                 {
-                    throw new MyExceptionEmptyFieldBrak("Если брак отсутствует введите 0");
+                    if (char.IsDigit(ch) != true)
+                    {
+                        contains_symbols_WarmUp = true;
+                        break;
+                    }
                 }
+                if ((WarmUp_Count.Text.Count()) > 9 && contains_symbols_WarmUp == false)
+                {
+                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
+                }
+                ////
                 if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
                 {
                     throw new MyExceptionCountOfProductIsDigit("В поле 'подготовлено к продаже' допускаются только цифры");
@@ -96,15 +113,39 @@ namespace Stock
                     throw new MyExceptionCountLessThanZero("В поле 'подготовлено к продаже' допускаются только цифры");
                 }
 
-                if (int.TryParse(WarmUp_Brak.Text, out int _brak) != true)
+                
+                if (String.IsNullOrEmpty(WarmUp_Brak.Text))
                 {
+                    throw new MyExceptionEmptyFieldBrak("Если брак отсутствует введите 0");
+                }
+
+                //
+                bool contains_symbols_Brak = false;
+                foreach (char ch in WarmUp_Brak.Text)
+                {
+                    if (char.IsDigit(ch) != true)
+                    {
+                        contains_symbols_Brak = true;
+                        break;
+                    }
+                }
+                if ((WarmUp_Brak.Text.Count()) > 9 && contains_symbols_Brak == false)
+                {
+                    throw new MyExceptionCountTypeIsInt("За один раз можно заброковать не более 999999999 единиц товара");
+                }
+                //
+
+                if (contains_symbols_Brak == true)
+                {
+                    contains_symbols_Brak= false;
                     throw new MyExceptionBrakIsDigit("В поле 'брак' допускаются только цифры");
                 }
                 if (int.Parse(WarmUp_Brak.Text) < 0)
                 {
                     throw new MyExceptionCountOfBrakLessZero("В поле 'брак' допускаются только цифры");
                 }
-                //////////
+                int count = int.Parse(WarmUp_Count.Text);
+                int brak = int.Parse(WarmUp_Brak.Text);
 
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
@@ -190,6 +231,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            catch (MyExceptionCountTypeIsInt ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionBrakIsDigit ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -198,7 +244,8 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
+            
+            
             catch (MyExceptionCountOfBrakLessZero ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

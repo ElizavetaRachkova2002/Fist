@@ -1,6 +1,31 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-05T00:44:03.9917624+03:00</Time>
+    <Operation>Добавлена упаковка: jkb 545, 999999999 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-05T00:43:50.9564632+03:00</Time>
+    <Operation>Добавлена новая упаковка: jkb 545, 999999999 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-05T00:36:15.7372248+03:00</Time>
+    <Operation>Отправлен товар. 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-05T00:28:39.1498069+03:00</Time>
+    <Operation>Добавлен товар: визитница бульдог, 999999999 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-05T00:24:16.0566116+03:00</Time>
+    <Operation>Добавлен товар: визитница бульдог, 879879 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-05T00:24:06.8551199+03:00</Time>
+    <Operation>Добавлен товар: визитница бульдог, 9898 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-04T11:22:10.3787419+03:00</Time>
     <Operation>Удалена упаковка: БОПП пакет 10*12</Operation>
   </History>

@@ -54,8 +54,24 @@ namespace Stock
                     if (String.IsNullOrEmpty(TBCount_List[j].Text))
                     {
                         throw new MyExceptionEmptyFieldCount(string.Format("Введите количество товара {0}", ComboName_List[j].Text));
-
                     }
+
+                    ///
+                    bool contains_symbols_send = false;
+                    foreach (char ch in TBCount_List[j].Text)
+                    {
+                        if (char.IsDigit(ch) != true)
+                        {
+                            contains_symbols_send = true;
+                            break;
+                        }
+                    }
+                    if ((TBCount_List[j].Text.Count()) > 9 && contains_symbols_send == false)
+                    {
+                        throw new MyExceptionCountTypeIsInt("За один раз возможно отправить не более 999999999 единиц товара");
+                    }
+                    ////
+                    
                     if (int.TryParse(TBCount_List[j].Text, out int _count1) != true)
                     {
                         throw new MyExceptionCountOfProductIsDigit(string.Format("Количество товара является числом в {0}", ComboName_List[j].Text));
@@ -112,6 +128,11 @@ namespace Stock
                 }
                 this.Close();
             }
+            catch (MyExceptionCountTypeIsInt ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionCountOfProductLessThenCountOfProductForSend ex)
                  {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

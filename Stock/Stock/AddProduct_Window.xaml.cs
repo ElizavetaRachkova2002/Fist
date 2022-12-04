@@ -20,6 +20,28 @@ namespace Stock
     /// <summary>
     /// Логика взаимодействия для AddProduct_Window.xaml
     /// </summary>
+    /// 
+[Serializable]
+    public class MyExceptionCountTypeIsInt : Exception
+    {
+        public MyExceptionCountTypeIsInt() { }
+        public MyExceptionCountTypeIsInt(string message) : base(message) { }
+        public MyExceptionCountTypeIsInt(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionCountTypeIsInt(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+
+    [Serializable]
+    public class MyExceptionInvalidCount : Exception
+    {
+        public MyExceptionInvalidCount() { }
+        public MyExceptionInvalidCount(string message) : base(message) { }
+        public MyExceptionInvalidCount(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionInvalidCount(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
     public partial class AddProduct_Window : Window
     {
         public AddLegalEnity_Window addLegalEnity_Window;
@@ -56,22 +78,41 @@ namespace Stock
                 {
                     throw new MyExceptionEmptyFieldCount("Введите количество");
                 }
-                if (int.TryParse(TB_Exist_Count.Text, out int _count) != true && TB_Exist_Count.Text.Trim() != "")
+                bool contains_symbols = false;
+                foreach (char ch in TB_Exist_Count.Text)
+                {
+                    if (char.IsDigit(ch) != true)
+                    {
+                        contains_symbols = true;
+                        break;
+                    }
+                }
+                if ((TB_Exist_Count.Text.Count()) > 9  && contains_symbols==false)
+                {
+                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
+                }
+                if (contains_symbols==true && TB_Exist_Count.Text.Trim() != "")
                
                 {
+                    contains_symbols = false;
                     throw new MyExceptionCountOfProductIsDigit("В кол-ве допускаются только цифры");
+                    
                 }
+                
                 if (int.Parse(TB_Exist_Count.Text) < 0)
                 {
                     throw new MyExceptionCountLessThanZero("В кол-ве допускаются только цифры");
                 }
-                
+               
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
 
                     if (MyProducts_List.MyProducts[i].Name == name)
                     {
-
+                        if(MyProducts_List.MyProducts[i].Count+ int.Parse(TB_Exist_Count.Text) <0 || MyProducts_List.MyProducts[i].Count + int.Parse(TB_Exist_Count.Text) >2000000000)
+                        {
+                            throw new MyExceptionInvalidCount("Кол-во данного товара превышает норму(не более 2 млрд )");
+                        }
                         MyProducts_List.MyProducts[i].Count += int.Parse(TB_Exist_Count.Text);
                         MyProducts_List.MyProducts[i].Not_Packed += int.Parse(TB_Exist_Count.Text);
 
@@ -91,6 +132,15 @@ namespace Stock
                     }
                 }
             }
+            catch (MyExceptionCountTypeIsInt ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (MyExceptionInvalidCount ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionEmptyFieldNameOfProduct ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -254,16 +304,35 @@ namespace Stock
 
 
                 int count;
-                if (int.TryParse(TB_NewProduct_Count.Text, out int _count) != true && TB_NewProduct_Count.Text.Trim() != "")
-                {
-                    throw new MyExceptionCountOfProductIsDigit("В кол-ве допускаются только цифры");
-                }
-                if (TB_NewProduct_Count.Text.Trim() != "")
-                {  count = int.Parse(TB_NewProduct_Count.Text.Trim()); }
-                else
+                if (String.IsNullOrEmpty(TB_NewProduct_Count.Text))
                 {
                     throw new MyExceptionEmptyFieldCount("Введите количество");
                 }
+                bool contains_symbols = false;
+                foreach (char ch in TB_NewProduct_Count.Text)
+                {
+                    if (char.IsDigit(ch) != true)
+                    {
+                        contains_symbols = true;
+                        break;
+                    }
+                }
+                if ((TB_NewProduct_Count.Text.Count()) > 10 && contains_symbols == false)
+                {
+                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
+                }
+                ////////////////////////////////
+                 
+                if (contains_symbols == true)
+                {
+                    contains_symbols=false;
+                    throw new MyExceptionCountOfProductIsDigit("В кол-ве допускаются только цифры");
+                }
+                 count = int.Parse(TB_NewProduct_Count.Text.Trim()); 
+                //else
+                //{
+                //    throw new MyExceptionEmptyFieldCount("Введите количество");
+                //}
                 //TB_NewProduct_Count.Clear();
                 bool flag_name = false;
                 bool flag_vendor = false;
@@ -341,6 +410,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            catch (MyExceptionCountTypeIsInt ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionBarcodeLessThanZero ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

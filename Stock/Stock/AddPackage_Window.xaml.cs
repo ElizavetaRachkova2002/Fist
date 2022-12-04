@@ -73,8 +73,23 @@ namespace Stock
                 {
                     throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество");
                 }
-                if (int.TryParse(Pack_New_Count.Text, out int _count) != true)
+
+                bool contains_symbols_package_new = false;
+                foreach (char ch in Pack_New_Count.Text)
                 {
+                    if (char.IsDigit(ch) != true)
+                    {
+                        contains_symbols_package_new = true;
+                        break;
+                    }
+                }
+                if ((Pack_New_Count.Text.Count()) > 9 && contains_symbols_package_new == false)
+                {
+                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц упаковки");
+                }
+                if (contains_symbols_package_new == true)
+                {
+                    contains_symbols_package_new = false;
                     throw new MyExceptionCountOfPackageIsDigit("В кол-ве допускаются только цифры");
                 }
                 if (int.Parse(Pack_New_Count.Text) < 0)
@@ -104,6 +119,11 @@ namespace Stock
                 MyHistory_List.SaveHistory();
                 this.Close();
             }
+            catch (MyExceptionCountTypeIsInt ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionEmpyFieldNameOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -168,8 +188,22 @@ namespace Stock
                 {
                     throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество");
                 }
-                if (int.TryParse(Pack_Exist_Count.Text, out int count) != true)
+                bool contains_symbols_package_exist = false;
+                foreach (char ch in Pack_Exist_Count.Text)
                 {
+                    if (char.IsDigit(ch) != true)
+                    {
+                        contains_symbols_package_exist = true;
+                        break;
+                    }
+                }
+                if ((Pack_Exist_Count.Text.Count()) > 9 && contains_symbols_package_exist == false)
+                {
+                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц упаковки");
+                }
+                if (contains_symbols_package_exist == true)
+                {
+                    contains_symbols_package_exist = false;
                     throw new MyExceptionCountOfPackageIsDigit("В кол-ве допускаются только цифры");
                 }
                 if (int.Parse(Pack_Exist_Count.Text) < 0)
@@ -180,6 +214,11 @@ namespace Stock
                 {
                     if (MyPackages_List.MyPackages[i].Name_package == name && MyPackages_List.MyPackages[i].Size == size)
                     {
+
+                        if (MyPackages_List.MyPackages[i].Count_package + int.Parse(Pack_Exist_Count.Text) < 0 || MyPackages_List.MyPackages[i].Count_package + int.Parse(Pack_Exist_Count.Text) > 2000000000)
+                        {
+                            throw new MyExceptionInvalidCount("Кол-во данного товара превышает норму(не более 2 млрд )");
+                        }
                         MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
 
                         DateTime time = DateTime.Now;
@@ -197,6 +236,17 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            catch (MyExceptionInvalidCount ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (MyExceptionCountTypeIsInt ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
+                
+
             catch (MyExceptionEmpyFieldCountOfPackage ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

@@ -12,4 +12,10 @@
     <Name_package>БОПП пакет</Name_package>
     <Count_package>0</Count_package>
   </Package>
+  <Package>
+    <Size>545</Size>
+    <IsSelected>false</IsSelected>
+    <Name_package>jkb</Name_package>
+    <Count_package>1999999998</Count_package>
+  </Package>
 </ArrayOfPackage>
