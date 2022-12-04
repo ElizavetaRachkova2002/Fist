@@ -77,21 +77,13 @@ C:\Users\rachk\source\repos\Fist\Stock\Stock\obj\Debug\Stock.csproj.GenerateReso
 C:\Users\rachk\source\repos\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
 C:\Users\rachk\source\repos\Fist\Stock\Stock\obj\Debug\Stock.exe
 C:\Users\rachk\source\repos\Fist\Stock\Stock\obj\Debug\Stock.pdb
-C:\Fist\Stock\Stock\bin\Debug\Stock.exe.config
-C:\Fist\Stock\Stock\bin\Debug\Stock.exe
-C:\Fist\Stock\Stock\bin\Debug\Stock.pdb
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.SuggestedBindingRedirects.cache
 C:\Fist\Stock\Stock\obj\Debug\MainWindow.g.cs
 C:\Fist\Stock\Stock\obj\Debug\App.g.cs
-C:\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.cache
-C:\Fist\Stock\Stock\obj\Debug\Stock_MarkupCompile.lref
 C:\Fist\Stock\Stock\obj\Debug\MainWindow.baml
-C:\Fist\Stock\Stock\obj\Debug\Stock.g.resources
 C:\Fist\Stock\Stock\obj\Debug\Stock.Properties.Resources.resources
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.GenerateResource.cache
 C:\Fist\Stock\Stock\obj\Debug\Stock.csproj.CoreCompileInputs.cache
-C:\Fist\Stock\Stock\obj\Debug\Stock.exe
-C:\Fist\Stock\Stock\obj\Debug\Stock.pdb
 C:\Fist\Stock\Stock\obj\Debug\List_Brak.g.cs
 C:\Fist\Stock\Stock\obj\Debug\List_Brak.baml
 Z:\Документы\Desktop\Проект\Fist\Stock\Stock\obj\Debug\List_Brak.g.cs
@@ -214,3 +206,11 @@ Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад.g.resources
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад.exe
 Z:\Документы\Desktop\Проект для Саши\Fist\Stock\Stock\obj\Debug\Мой склад.pdb
+C:\Fist\Stock\Stock\bin\Debug\Мой склад.exe.config
+C:\Fist\Stock\Stock\bin\Debug\Мой склад.exe
+C:\Fist\Stock\Stock\bin\Debug\Мой склад.pdb
+C:\Fist\Stock\Stock\obj\Debug\Мой склад_MarkupCompile.cache
+C:\Fist\Stock\Stock\obj\Debug\Мой склад_MarkupCompile.lref
+C:\Fist\Stock\Stock\obj\Debug\Мой склад.g.resources
+C:\Fist\Stock\Stock\obj\Debug\Мой склад.exe
+C:\Fist\Stock\Stock\obj\Debug\Мой склад.pdb

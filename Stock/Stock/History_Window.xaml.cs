@@ -31,8 +31,13 @@ namespace Stock
             try
             {
                 History history = HistoryGrid.SelectedItem as History;
-
-                MessageBox.Show(history.Operation);
+                if (history != null)
+                {
+                    MessageBox.Show(history.Operation);
+                    HistoryGrid.SelectedItem = null;
+                }
+                else { }
+                history = null;
             }
             catch (Exception ex)
             {
@@ -45,7 +50,7 @@ namespace Stock
                 log.WriteLine("Exception Name:" + ex.Message);
                 log.Close();
                 MessageBox.Show("Ошибка. Попробуйте повторить действие снова", "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
-               
+
             }
         }
         private void HistoryGrid_MouseEnter(object sender, MouseEventArgs e)

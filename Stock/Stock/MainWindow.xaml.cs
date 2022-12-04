@@ -72,6 +72,7 @@ namespace Stock
             if (package != null)
             {
                 MessageBox.Show(" Наименование: " + package.Name_package + "\n Размер: " + package.Size + "\n Количество: " + package.Count_package);
+                packageGrid.SelectedItem=null;
             }
             else { }
         }
@@ -91,6 +92,7 @@ namespace Stock
                 MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
                    "\n Упаковка: " + pack + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
                    + "\n К продаже : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
+                productGrid.SelectedItem = null;
             }
             else { }
         }
