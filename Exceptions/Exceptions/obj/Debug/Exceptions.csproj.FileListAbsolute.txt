@@ -4,3 +4,9 @@ C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.As
 C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
 C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.dll
 C:\Users\rachk\source\repos\Exceptions\Exceptions\obj\Debug\Exceptions.pdb
+C:\Fist\Exceptions\Exceptions\bin\Debug\Exceptions.dll
+C:\Fist\Exceptions\Exceptions\bin\Debug\Exceptions.pdb
+C:\Fist\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.AssemblyReference.cache
+C:\Fist\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+C:\Fist\Exceptions\Exceptions\obj\Debug\Exceptions.dll
+C:\Fist\Exceptions\Exceptions\obj\Debug\Exceptions.pdb

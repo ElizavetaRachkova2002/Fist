@@ -292,6 +292,27 @@ namespace Exceptions
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
     [Serializable]
+    public class MyExceptionCountTypeIsInt : Exception
+    {
+        public MyExceptionCountTypeIsInt() { }
+        public MyExceptionCountTypeIsInt(string message) : base(message) { }
+        public MyExceptionCountTypeIsInt(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionCountTypeIsInt(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+
+    [Serializable]
+    public class MyExceptionInvalidCount : Exception
+    {
+        public MyExceptionInvalidCount() { }
+        public MyExceptionInvalidCount(string message) : base(message) { }
+        public MyExceptionInvalidCount(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionInvalidCount(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
+    [Serializable]
     public class MyExceptionWrongSizeOfPackage : Exception
     {
         public MyExceptionWrongSizeOfPackage() { }

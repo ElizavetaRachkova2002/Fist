@@ -217,7 +217,7 @@ namespace Stock
 
                         if (MyPackages_List.MyPackages[i].Count_package + int.Parse(Pack_Exist_Count.Text) < 0 || MyPackages_List.MyPackages[i].Count_package + int.Parse(Pack_Exist_Count.Text) > 2000000000)
                         {
-                            throw new MyExceptionInvalidCount("Кол-во данного товара превышает норму(не более 2 млрд )");
+                            throw new MyExceptionInvalidCount("Кол-во данной упаковки превышает норму(не более 2 млрд )");
                         }
                         MyPackages_List.MyPackages[i].Count_package += int.Parse(Pack_Exist_Count.Text);
 
