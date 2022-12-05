@@ -58,7 +58,7 @@ namespace Stock
 
                     ///
                     bool contains_symbols_send = false;
-                    foreach (char ch in TBCount_List[j].Text)
+                    foreach (char ch in TBCount_List[j].Text.Trim())
                     {
                         if (char.IsDigit(ch) != true)
                         {
@@ -66,7 +66,7 @@ namespace Stock
                             break;
                         }
                     }
-                    if ((TBCount_List[j].Text.Count()) > 9 && contains_symbols_send == false)
+                    if ((TBCount_List[j].Text.Trim().Count()) > 9 && contains_symbols_send == false)
                     {
                         throw new MyExceptionCountTypeIsInt("За один раз возможно отправить не более 999999999 единиц товара");
                     }

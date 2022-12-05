@@ -59,7 +59,7 @@ namespace Stock
                     throw new MyExceptionEmptyFieldCount("Введите количество");
                 }
                 bool contains_symbols = false;
-                foreach (char ch in TB_Exist_Count.Text)
+                foreach (char ch in TB_Exist_Count.Text.Trim())
                 {
                     if (char.IsDigit(ch) != true)
                     {
@@ -67,7 +67,7 @@ namespace Stock
                         break;
                     }
                 }
-                if ((TB_Exist_Count.Text.Count()) > 9  && contains_symbols==false)
+                if ((TB_Exist_Count.Text.Trim().Count()) > 9  && contains_symbols==false)
                 {
                     throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
                 }
@@ -289,7 +289,7 @@ namespace Stock
                     throw new MyExceptionEmptyFieldCount("Введите количество");
                 }
                 bool contains_symbols = false;
-                foreach (char ch in TB_NewProduct_Count.Text)
+                foreach (char ch in TB_NewProduct_Count.Text.Trim())
                 {
                     if (char.IsDigit(ch) != true)
                     {
@@ -297,7 +297,7 @@ namespace Stock
                         break;
                     }
                 }
-                if ((TB_NewProduct_Count.Text.Count()) > 10 && contains_symbols == false)
+                if ((TB_NewProduct_Count.Text.Trim().Count()) > 10 && contains_symbols == false)
                 {
                     throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
                 }

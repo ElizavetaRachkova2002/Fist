@@ -75,7 +75,7 @@ namespace Stock
                 }
 
                 bool contains_symbols_package_new = false;
-                foreach (char ch in Pack_New_Count.Text)
+                foreach (char ch in Pack_New_Count.Text.Trim())
                 {
                     if (char.IsDigit(ch) != true)
                     {
@@ -83,7 +83,7 @@ namespace Stock
                         break;
                     }
                 }
-                if ((Pack_New_Count.Text.Count()) > 9 && contains_symbols_package_new == false)
+                if ((Pack_New_Count.Text.Trim().Count()) > 9 && contains_symbols_package_new == false)
                 {
                     throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц упаковки");
                 }
@@ -189,7 +189,7 @@ namespace Stock
                     throw new MyExceptionEmpyFieldCountOfPackage("Укажите количество");
                 }
                 bool contains_symbols_package_exist = false;
-                foreach (char ch in Pack_Exist_Count.Text)
+                foreach (char ch in Pack_Exist_Count.Text.Trim())
                 {
                     if (char.IsDigit(ch) != true)
                     {
@@ -197,7 +197,7 @@ namespace Stock
                         break;
                     }
                 }
-                if ((Pack_Exist_Count.Text.Count()) > 9 && contains_symbols_package_exist == false)
+                if ((Pack_Exist_Count.Text.Trim().Count()) > 9 && contains_symbols_package_exist == false)
                 {
                     throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц упаковки");
                 }

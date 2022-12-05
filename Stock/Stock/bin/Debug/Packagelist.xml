@@ -4,18 +4,24 @@
     <Size>10*15</Size>
     <IsSelected>false</IsSelected>
     <Name_package>БОПП пакет</Name_package>
-    <Count_package>0</Count_package>
+    <Count_package>1000</Count_package>
   </Package>
   <Package>
     <Size>12*15</Size>
     <IsSelected>false</IsSelected>
     <Name_package>БОПП пакет</Name_package>
-    <Count_package>0</Count_package>
+    <Count_package>9</Count_package>
   </Package>
   <Package>
     <Size>545</Size>
     <IsSelected>false</IsSelected>
     <Name_package>jkb</Name_package>
     <Count_package>1999999998</Count_package>
+  </Package>
+  <Package>
+    <Size>9800</Size>
+    <IsSelected>false</IsSelected>
+    <Name_package>9647</Name_package>
+    <Count_package>986</Count_package>
   </Package>
 </ArrayOfPackage>

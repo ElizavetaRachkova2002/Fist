@@ -99,7 +99,7 @@ namespace Stock
                         break;
                     }
                 }
-                if ((WarmUp_Count.Text.Count()) > 9 && contains_symbols_WarmUp == false)
+                if ((WarmUp_Count.Text.Trim().Count()) > 9 && contains_symbols_WarmUp == false)
                 {
                     throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
                 }
@@ -121,7 +121,7 @@ namespace Stock
 
                 //
                 bool contains_symbols_Brak = false;
-                foreach (char ch in WarmUp_Brak.Text)
+                foreach (char ch in WarmUp_Brak.Text.Trim())
                 {
                     if (char.IsDigit(ch) != true)
                     {
@@ -129,7 +129,7 @@ namespace Stock
                         break;
                     }
                 }
-                if ((WarmUp_Brak.Text.Count()) > 9 && contains_symbols_Brak == false)
+                if ((WarmUp_Brak.Text.Trim().Count()) > 9 && contains_symbols_Brak == false)
                 {
                     throw new MyExceptionCountTypeIsInt("За один раз можно заброковать не более 999999999 единиц товара");
                 }
