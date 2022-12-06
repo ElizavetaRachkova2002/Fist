@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using ProductsAndPackages;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace Stock
 {
@@ -31,7 +32,7 @@ namespace Stock
         {
 
             Combo_product_add.Items.Clear();
-            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
             //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
@@ -61,11 +62,11 @@ namespace Stock
                                 string operation = "Удалён товар: " + Combo_product_add.Text;
                                 History Now = new History(time, operation);
                                 MyHistory_List.MyHistory.Insert(0, Now);
-                                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                                Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                                 //MyHistory_List.SaveHistory();
                                 break;
                             }
-                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
                         //MyProducts_List.SaveProductList();
 
 

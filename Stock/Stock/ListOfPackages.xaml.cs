@@ -13,6 +13,7 @@ using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace Stock
 {
@@ -36,7 +37,7 @@ namespace Stock
                 MyPackages_List.MyPackages[i].IsSelected = false;
 
             }
-            Serializer.SaveList(MyPackages_List.MyPackages, "Packagelist.xml");
+            Serializer.SaveList(MyPackages_List.MyPackages, ConfigurationManager.AppSettings.Get("Packagelist"));
            // MyPackages_List.SavePackageList();
             gridlistpackage.Items.Refresh();
 
@@ -53,7 +54,7 @@ namespace Stock
 
             }
             gridlistpackage.Items.Refresh();
-            Serializer.SaveList(MyPackages_List.MyPackages, "Packagelist.xml");
+            Serializer.SaveList(MyPackages_List.MyPackages, ConfigurationManager.AppSettings.Get("Packagelist"));
             //MyPackages_List.SavePackageList();
 
 

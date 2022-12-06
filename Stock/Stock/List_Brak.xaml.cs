@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Xml.Serialization;
 using System.Data;
+using System.Configuration;
 
 namespace Stock
 {
@@ -37,7 +38,7 @@ namespace Stock
                 MyProducts_List.MyProducts[i].IsSelected = false;
 
             }
-            Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+            Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
             //MyProducts_List.SaveProductList();
             gridlistbrak.Items.Refresh();
 
@@ -54,7 +55,7 @@ namespace Stock
               
             }
             gridlistbrak.Items.Refresh();
-            Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+            Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
             //MyProducts_List.SaveProductList();
            
 
@@ -74,13 +75,13 @@ namespace Stock
                         string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
-                        Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                        Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                         //MyHistory_List.SaveHistory();
                         MyProducts_List.MyProducts[i].Brak = 0;
                     }
                     MyProducts_List.MyProducts[i].IsSelected = false;
                 }
-                Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
                 //MyProducts_List.SaveProductList();
                 gridlistbrak.Items.Refresh();
             }

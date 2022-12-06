@@ -47,6 +47,7 @@
       <HintPath>..\..\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />

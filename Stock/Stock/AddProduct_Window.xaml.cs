@@ -14,6 +14,7 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ProductsAndPackages;
+using System.Configuration;
 
 namespace Stock
 {
@@ -100,11 +101,11 @@ namespace Stock
                         string operation = "Добавлен товар: " + name + ", " + TB_Exist_Count.Text + " шт.";
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
-                        Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                        Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                         //MyHistory_List.SaveHistory();
                         TB_Exist_Count.Clear();
 
-                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
                         //MyProducts_List.SaveProductList();
                         this.Close();
                         this.Owner.Visibility = Visibility.Visible;
@@ -160,10 +161,10 @@ namespace Stock
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
             BrdAddNewProduct.Visibility = Visibility.Visible;
             TB_New_Legal_Entity.Items.Clear();
-            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
             //MyLegalEnitys_List.LoadLegalEnityList();
             GiveTBLegalEnity();
-            Brand_List.MyBrand = Serializer.LoadList<string>("Brandlist.xml");
+            Brand_List.MyBrand = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("Brandlist"));
 
             //Brand_List.LoadBrandList();
             GiveTBBrand();
@@ -171,7 +172,7 @@ namespace Stock
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightGray);
 
-            Serializer.SaveList<Product>(MyProducts_List.MyProducts,"ProductList.xml");
+            Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
         }
 
         private void BtnExistingProduct_Click(object sender, RoutedEventArgs e)
@@ -196,7 +197,7 @@ namespace Stock
         {
 
             TB_New_Legal_Entity.Items.Clear();
-            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
                 TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
@@ -207,7 +208,7 @@ namespace Stock
         {
 
             TB_New_Brand.Items.Clear();
-            Brand_List.MyBrand = Serializer.LoadList<string>("Brandlist.xml");
+            Brand_List.MyBrand = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("Brandlist"));
             //Brand_List.LoadBrandList();
 
             for (int i = 0; i < Brand_List.MyBrand.Count; i++)
@@ -221,7 +222,7 @@ namespace Stock
         {
 
             Combo_product_add.Items.Clear();
-            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
             //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
@@ -351,7 +352,7 @@ namespace Stock
                 {
                     Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, currentPackageList, 0);
                     MyProducts_List.MyProducts.Add(new_product);
-                    Serializer.SaveList<Product>(MyProducts_List.MyProducts, "ProductList.xml");
+                    Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
                     //MyProducts_List.SaveProductList();
 
                     TB_New_Name.Clear();
@@ -367,7 +368,7 @@ namespace Stock
                     string operation = "Добавлен новый товар: " + name + ", " + count.ToString() + " шт.";
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
-                    Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                    Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                     //MyHistory_List.SaveHistory();
                     this.Owner.Visibility = Visibility.Visible;
                     this.Close();

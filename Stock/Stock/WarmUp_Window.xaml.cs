@@ -14,6 +14,7 @@ using System.IO;
 using ProductsAndPackages;
 using Exceptions;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace Stock
 {
@@ -215,15 +216,15 @@ namespace Stock
                             string operation = name + ". Подготовлено к продаже: " + count.ToString() + " шт., Брак: " + brak + " шт.";
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
-                            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                            Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                             //MyHistory_List.SaveHistory();
                             break;
 
                         }
                     }
-                Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
                 //MyProducts_List.SaveProductList();
-                Serializer.SaveList<Package>(MyPackages_List.MyPackages, "Packagelist.xml");
+                Serializer.SaveList<Package>(MyPackages_List.MyPackages, ConfigurationManager.AppSettings.Get("Packagelist"));
                 //MyPackages_List.SavePackageList();
                     //App.Current.Shutdown();
 

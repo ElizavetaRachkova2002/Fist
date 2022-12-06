@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace Stock
 {
@@ -36,14 +37,15 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
-            MyPackages_List.MyPackages = Serializer.LoadList<Package>("Packagelist.xml");
+            MyPackages_List.MyPackages = Serializer.LoadList<Package>(ConfigurationManager.AppSettings.Get("Packagelist"));
             //MyPackages_List.LoadPackageList();
-            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
             //MyProducts_List.LoadProductList();
-            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
             //MyLegalEnitys_List.LoadLegalEnityList();
-            MyHistory_List.LoadHistory();
-            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+            Serializer.LoadHistoryList(ConfigurationManager.AppSettings.Get("Historylist"));
+            var currentConfig = ConfigurationManager.AppSettings.Get("Historylist");
+            Serializer.SaveList<History>(MyHistory_List.MyHistory, currentConfig);
            // MyHistory_List.SaveHistory();
 
             packageGrid.ItemsSource = MyPackages_List.MyPackages;

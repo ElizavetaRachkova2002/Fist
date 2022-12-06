@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Configuration;
 
 namespace Stock
 {
@@ -36,8 +37,8 @@ namespace Stock
         {
 
             TB_Delete_Br.Items.Clear();
-            string fileName = "Brandlist.xml";
-            Brand_List.MyBrand=Serializer.LoadList<string>(fileName);
+            
+            Brand_List.MyBrand=Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("Brandlist"));
 
             for (int i = 0; i < Brand_List.MyBrand.Count; i++)
             {
@@ -64,11 +65,12 @@ namespace Stock
                             DateTime time = DateTime.Now;
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
-                            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                            Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                             break;
                         }
                     }
-                    Serializer.SaveList<string>(Brand_List.MyBrand, "Brandlist.xml");
+                    var currentConfig = ConfigurationManager.AppSettings.Get("Brandlist");
+                    Serializer.SaveList<string>(Brand_List.MyBrand, currentConfig);
                     //Brand_List.SaveBrandList();
                     this.Close();
                 }  
@@ -101,7 +103,9 @@ namespace Stock
                 }
                 string newName = New_Brand.Text;
                 Brand_List.MyBrand.Add(newName);
-                Serializer.SaveList<string>(Brand_List.MyBrand, "Brandlist.xml");
+                var currentConfig = ConfigurationManager.AppSettings.Get("Brandlist");
+                Serializer.SaveList<string>(Brand_List.MyBrand, currentConfig);
+                //Serializer.SaveList<string>(Brand_List.MyBrand, ConfigurationManager.AppSettings.Get("Brandlist"));
                 //Brand_List.SaveBrandList();
                 Brand_List.NewBr = newName;
                 Brand_List.AddNewBr = true;
@@ -109,7 +113,7 @@ namespace Stock
                 DateTime time = DateTime.Now;
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
-                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
                 //MyHistory_List.SaveHistory();
                 this.Close();
             }
