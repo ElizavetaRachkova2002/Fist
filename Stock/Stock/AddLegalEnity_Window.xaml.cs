@@ -43,7 +43,8 @@ namespace Stock
                    throw new MyExceptionEmptyFieldLegalEntity("Введите юр. лицо");
                 }
                 MyLegalEnitys_List.MyLegalEnitys.Add(newName);
-                MyLegalEnitys_List.SaveLegalEnityList();
+                Serializer.SaveList(MyLegalEnitys_List.MyLegalEnitys, "LegalEnitylist.xml");
+                //MyLegalEnitys_List.SaveLegalEnityList();
                 MyLegalEnitys_List.NewLE = newName;
                 MyLegalEnitys_List.AddNewLE = true;
                 string operation = "Добавлено новое юр. лицо: " + New_LegalEnity.Text;
@@ -52,7 +53,8 @@ namespace Stock
 
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
-                MyHistory_List.SaveHistory();
+                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                //MyHistory_List.SaveHistory();
                 this.Close();
             }
             catch (MyExceptionEmptyFieldLegalEntity ex)
@@ -78,7 +80,8 @@ namespace Stock
         {
 
             TB_Delete_LE.Items.Clear();
-            MyLegalEnitys_List.LoadLegalEnityList();
+            MyLegalEnitys_List.MyLegalEnitys= Serializer.LoadList<string>("LegalEnitylist.xml");
+            //MyLegalEnitys_List.LoadLegalEnityList();
 
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
@@ -108,14 +111,16 @@ namespace Stock
 
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
-                            MyHistory_List.SaveHistory();
+                            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                            //MyHistory_List.SaveHistory();
 
                             break;
 
                         }
 
                     }
-                    MyLegalEnitys_List.SaveLegalEnityList();
+                    Serializer.SaveList(MyLegalEnitys_List.MyLegalEnitys, "LegalEnitylist.xml");
+                    //MyLegalEnitys_List.SaveLegalEnityList();
                     this.Close();
                 }
             }

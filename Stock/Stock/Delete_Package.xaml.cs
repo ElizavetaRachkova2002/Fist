@@ -31,7 +31,8 @@ namespace Stock
         {
 
             Combo_package.Items.Clear();
-            MyPackages_List.LoadPackageList();
+            MyPackages_List.MyPackages = Serializer.LoadList<Package>("Packagelist.xml");
+            //MyPackages_List.LoadPackageList();
             
             for (int i = 0; i < MyPackages_List.MyPackages.Count; i++)
             {
@@ -65,11 +66,13 @@ namespace Stock
 
                                 History Now = new History(time, operation);
                                 MyHistory_List.MyHistory.Insert(0, Now);
-                                MyHistory_List.SaveHistory();
+                                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                                //MyHistory_List.SaveHistory();
                                 break;
                             }
                         }
-                        MyPackages_List.SavePackageList();
+                        Serializer.SaveList(MyPackages_List.MyPackages, "Packagelist.xml");
+                        //MyPackages_List.SavePackageList();
 
                         this.Close();
                     } }

@@ -215,13 +215,16 @@ namespace Stock
                             string operation = name + ". Подготовлено к продаже: " + count.ToString() + " шт., Брак: " + brak + " шт.";
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
-                            MyHistory_List.SaveHistory();
+                            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                            //MyHistory_List.SaveHistory();
                             break;
 
                         }
                     }
-                    MyProducts_List.SaveProductList();
-                    MyPackages_List.SavePackageList();
+                Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                //MyProducts_List.SaveProductList();
+                Serializer.SaveList<Package>(MyPackages_List.MyPackages, "Packagelist.xml");
+                //MyPackages_List.SavePackageList();
                     //App.Current.Shutdown();
 
                     this.Close();

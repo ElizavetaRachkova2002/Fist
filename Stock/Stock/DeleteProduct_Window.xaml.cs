@@ -31,7 +31,8 @@ namespace Stock
         {
 
             Combo_product_add.Items.Clear();
-            MyProducts_List.LoadProductList();
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -60,11 +61,12 @@ namespace Stock
                                 string operation = "Удалён товар: " + Combo_product_add.Text;
                                 History Now = new History(time, operation);
                                 MyHistory_List.MyHistory.Insert(0, Now);
-                                MyHistory_List.SaveHistory();
+                                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                                //MyHistory_List.SaveHistory();
                                 break;
                             }
-
-                        MyProducts_List.SaveProductList();
+                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                        //MyProducts_List.SaveProductList();
 
 
                         this.Close();

@@ -37,8 +37,8 @@ namespace Stock
                 MyProducts_List.MyProducts[i].IsSelected = false;
 
             }
-
-            MyProducts_List.SaveProductList();
+            Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+            //MyProducts_List.SaveProductList();
             gridlistbrak.Items.Refresh();
 
         }
@@ -54,7 +54,8 @@ namespace Stock
               
             }
             gridlistbrak.Items.Refresh();
-            MyProducts_List.SaveProductList();
+            Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+            //MyProducts_List.SaveProductList();
            
 
         }
@@ -73,13 +74,14 @@ namespace Stock
                         string operation = "Списан брак: " + MyProducts_List.MyProducts[i].Name + ", " + MyProducts_List.MyProducts[i].Brak.ToString() + " шт.";
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
+                        Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                        //MyHistory_List.SaveHistory();
                         MyProducts_List.MyProducts[i].Brak = 0;
                     }
                     MyProducts_List.MyProducts[i].IsSelected = false;
                 }
-
-                MyProducts_List.SaveProductList();
+                Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                //MyProducts_List.SaveProductList();
                 gridlistbrak.Items.Refresh();
             }
             catch (Exception ex)

@@ -111,12 +111,14 @@ namespace Stock
                 }
                 Package package = new Package(name, size, count);
                 MyPackages_List.MyPackages.Add(package);
-                MyPackages_List.SavePackageList();
+                Serializer.SaveList<Package>(MyPackages_List.MyPackages, "Packagelist.xml");
+                //MyPackages_List.SavePackageList();
                 DateTime time = DateTime.Now;
                 string operation = "Добавлена новая упаковка: " + name + " " + size + ", " + count.ToString() + " шт.";
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
-                MyHistory_List.SaveHistory();
+                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                //MyHistory_List.SaveHistory();
                 this.Close();
             }
             catch (MyExceptionCountTypeIsInt ex)
@@ -225,11 +227,13 @@ namespace Stock
                         string operation = "Добавлена упаковка: " + name + " " + size + ", " + Pack_Exist_Count.Text + " шт.";
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
+                        Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                        //MyHistory_List.SaveHistory();
                     }
                 }
                 Pack_Exist_Count.Clear();
-                MyPackages_List.SavePackageList();
+                Serializer.SaveList<Package>(MyPackages_List.MyPackages, "Packagelist.xml");
+                //MyPackages_List.SavePackageList();
                 this.Close();
             }
             catch (MyExceptionEmpyFieldNameOfPackage ex)

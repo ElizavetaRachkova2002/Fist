@@ -36,12 +36,15 @@ namespace Stock
         public MainWindow()
         {
             InitializeComponent();
-
-            MyPackages_List.LoadPackageList();
-            MyProducts_List.LoadProductList();
-            MyLegalEnitys_List.LoadLegalEnityList();
+            MyPackages_List.MyPackages = Serializer.LoadList<Package>("Packagelist.xml");
+            //MyPackages_List.LoadPackageList();
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            //MyProducts_List.LoadProductList();
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
+            //MyLegalEnitys_List.LoadLegalEnityList();
             MyHistory_List.LoadHistory();
-            MyHistory_List.SaveHistory();
+            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+           // MyHistory_List.SaveHistory();
 
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             MainContent.Visibility = Visibility.Visible;

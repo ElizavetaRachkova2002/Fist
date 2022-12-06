@@ -117,8 +117,10 @@ namespace Stock
                 DateTime time = DateTime.Now;
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
-                MyHistory_List.SaveHistory();
-                MyProducts_List.SaveProductList();
+                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                //MyHistory_List.SaveHistory();
+                Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                //MyProducts_List.SaveProductList();
                
 
                 if (flag == true)
@@ -173,7 +175,8 @@ namespace Stock
         {
 
             Combo_product_send_1.Items.Clear();
-            MyProducts_List.LoadProductList();
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            //MyProducts_List.LoadProductList();
 
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
@@ -252,7 +255,8 @@ namespace Stock
                 ComboName_List.Add(NameValue); 
                 NameValue.Items.Clear();
                 NameValue.FontSize = 12;
-                MyProducts_List.LoadProductList();
+                MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+                //MyProducts_List.LoadProductList();
                 for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
                 {
                     NameValue.Items.Add(MyProducts_List.MyProducts[i].Name);

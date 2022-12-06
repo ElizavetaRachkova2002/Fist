@@ -100,11 +100,12 @@ namespace Stock
                         string operation = "Добавлен товар: " + name + ", " + TB_Exist_Count.Text + " шт.";
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
-                        MyHistory_List.SaveHistory();
+                        Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                        //MyHistory_List.SaveHistory();
                         TB_Exist_Count.Clear();
 
-
-                        MyProducts_List.SaveProductList();
+                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                        //MyProducts_List.SaveProductList();
                         this.Close();
                         this.Owner.Visibility = Visibility.Visible;
 
@@ -159,16 +160,18 @@ namespace Stock
             BrdAddExistingProduct.Visibility = Visibility.Collapsed;
             BrdAddNewProduct.Visibility = Visibility.Visible;
             TB_New_Legal_Entity.Items.Clear();
-
-            MyLegalEnitys_List.LoadLegalEnityList();
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
+            //MyLegalEnitys_List.LoadLegalEnityList();
             GiveTBLegalEnity();
-            Brand_List.LoadBrandList();
+            Brand_List.MyBrand = Serializer.LoadList<string>("Brandlist.xml");
+
+            //Brand_List.LoadBrandList();
             GiveTBBrand();
 
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
             BtnExistingProduct.Background = new SolidColorBrush(Colors.LightGray);
 
-            MyProducts_List.SaveProductList();
+            Serializer.SaveList<Product>(MyProducts_List.MyProducts,"ProductList.xml");
         }
 
         private void BtnExistingProduct_Click(object sender, RoutedEventArgs e)
@@ -193,6 +196,7 @@ namespace Stock
         {
 
             TB_New_Legal_Entity.Items.Clear();
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
                 TB_New_Legal_Entity.Items.Add(MyLegalEnitys_List.MyLegalEnitys[i]);
@@ -203,7 +207,8 @@ namespace Stock
         {
 
             TB_New_Brand.Items.Clear();
-            Brand_List.LoadBrandList();
+            Brand_List.MyBrand = Serializer.LoadList<string>("Brandlist.xml");
+            //Brand_List.LoadBrandList();
 
             for (int i = 0; i < Brand_List.MyBrand.Count; i++)
             {
@@ -216,7 +221,8 @@ namespace Stock
         {
 
             Combo_product_add.Items.Clear();
-            MyProducts_List.LoadProductList();
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -345,7 +351,8 @@ namespace Stock
                 {
                     Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, currentPackageList, 0);
                     MyProducts_List.MyProducts.Add(new_product);
-                    MyProducts_List.SaveProductList();
+                    Serializer.SaveList<Product>(MyProducts_List.MyProducts, "ProductList.xml");
+                    //MyProducts_List.SaveProductList();
 
                     TB_New_Name.Clear();
                     TB_New_Legal_Entity.Items.Clear();
@@ -360,7 +367,8 @@ namespace Stock
                     string operation = "Добавлен новый товар: " + name + ", " + count.ToString() + " шт.";
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
+                    Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                    //MyHistory_List.SaveHistory();
                     this.Owner.Visibility = Visibility.Visible;
                     this.Close();
                 }

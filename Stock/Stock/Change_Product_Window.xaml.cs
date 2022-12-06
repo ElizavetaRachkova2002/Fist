@@ -239,7 +239,8 @@ namespace Stock
                     }
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
-                    MyHistory_List.SaveHistory();
+                    Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                    //MyHistory_List.SaveHistory();
                     
                     
 
@@ -250,8 +251,8 @@ namespace Stock
                     MyProducts_List.MyProducts[current_product_number].Barcode = TB_New_Barcode.Text;
                     MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;
 
-                    
-                    MyProducts_List.SaveProductList();
+                    Serializer.SaveList<Product>(MyProducts_List.MyProducts, "Productlist.xml");
+                    //MyProducts_List.SaveProductList();
 
                     this.Close();
 
@@ -360,7 +361,8 @@ namespace Stock
         {
 
             TB_New_Legal_Entity.Items.Clear();
-            MyLegalEnitys_List.LoadLegalEnityList();
+            MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>("LegalEnitylist.xml");
+            //MyLegalEnitys_List.LoadLegalEnityList();
 
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
@@ -372,7 +374,8 @@ namespace Stock
         {
 
             TB_New_Brand.Items.Clear();
-            Brand_List.LoadBrandList();
+            Brand_List.MyBrand = Serializer.LoadList<string>("Brandlist.xml");
+            //Brand_List.LoadBrandList();
 
             for (int i = 0; i < Brand_List.MyBrand.Count; i++)
             {
@@ -384,7 +387,8 @@ namespace Stock
         {
 
             Combo_Current_Product.Items.Clear();
-            MyProducts_List.LoadProductList();
+            MyProducts_List.MyProducts = Serializer.LoadList<Product>("Productlist.xml");
+            //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_Current_Product.Items.Add(MyProducts_List.MyProducts[i].Name);

@@ -36,8 +36,8 @@ namespace Stock
                 MyPackages_List.MyPackages[i].IsSelected = false;
 
             }
-
-            MyPackages_List.SavePackageList();
+            Serializer.SaveList(MyPackages_List.MyPackages, "Packagelist.xml");
+           // MyPackages_List.SavePackageList();
             gridlistpackage.Items.Refresh();
 
         }
@@ -53,7 +53,8 @@ namespace Stock
 
             }
             gridlistpackage.Items.Refresh();
-            MyPackages_List.SavePackageList();
+            Serializer.SaveList(MyPackages_List.MyPackages, "Packagelist.xml");
+            //MyPackages_List.SavePackageList();
 
 
         }

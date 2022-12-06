@@ -36,7 +36,8 @@ namespace Stock
         {
 
             TB_Delete_Br.Items.Clear();
-            Brand_List.LoadBrandList();
+            string fileName = "Brandlist.xml";
+            Brand_List.MyBrand=Serializer.LoadList<string>(fileName);
 
             for (int i = 0; i < Brand_List.MyBrand.Count; i++)
             {
@@ -63,11 +64,12 @@ namespace Stock
                             DateTime time = DateTime.Now;
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
-                            MyHistory_List.SaveHistory();
+                            Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
                             break;
                         }
                     }
-                    Brand_List.SaveBrandList();
+                    Serializer.SaveList<string>(Brand_List.MyBrand, "Brandlist.xml");
+                    //Brand_List.SaveBrandList();
                     this.Close();
                 }  
             }
@@ -99,14 +101,16 @@ namespace Stock
                 }
                 string newName = New_Brand.Text;
                 Brand_List.MyBrand.Add(newName);
-                Brand_List.SaveBrandList();
+                Serializer.SaveList<string>(Brand_List.MyBrand, "Brandlist.xml");
+                //Brand_List.SaveBrandList();
                 Brand_List.NewBr = newName;
                 Brand_List.AddNewBr = true;
                 string operation = "Добавлен новый бренд: " + New_Brand.Text;
                 DateTime time = DateTime.Now;
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
-                MyHistory_List.SaveHistory();
+                Serializer.SaveList<History>(MyHistory_List.MyHistory, "Historylist.xml");
+                //MyHistory_List.SaveHistory();
                 this.Close();
             }
             catch (MyExceptionEmptyFieldBrand ex)

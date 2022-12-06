@@ -10,3 +10,9 @@ C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.cs
 C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.CoreCompileInputs.cache
 C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.dll
 C:\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.pdb
+Z:\Документы\Desktop\Новая папка (2)\Fist\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.dll
+Z:\Документы\Desktop\Новая папка (2)\Fist\ProductsAndPackages\ProductsAndPackages\bin\Debug\ProductsAndPackages.pdb
+Z:\Документы\Desktop\Новая папка (2)\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csprojAssemblyReference.cache
+Z:\Документы\Desktop\Новая папка (2)\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.csproj.CoreCompileInputs.cache
+Z:\Документы\Desktop\Новая папка (2)\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.dll
+Z:\Документы\Desktop\Новая папка (2)\Fist\ProductsAndPackages\ProductsAndPackages\obj\Debug\ProductsAndPackages.pdb

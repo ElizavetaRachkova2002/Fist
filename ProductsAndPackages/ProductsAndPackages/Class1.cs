@@ -9,6 +9,40 @@ using System.Threading.Tasks;
 namespace ProductsAndPackages
 {
     [Serializable]
+
+    public static class Serializer
+    {
+        public static void SaveList<T>(List<T> MySerializeList, string fileName)
+        {
+            List<T> currentLE_list = new List<T>();
+            currentLE_list = MySerializeList;
+            XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
+            using (Stream writer = new FileStream(fileName, FileMode.Create))
+            {
+                serializer.Serialize(writer, currentLE_list);
+            }
+        }
+
+        public static List<T> LoadList<T>( string fileName)
+        {
+            if (File.Exists(fileName))
+            {
+                List<T> tempList;
+                XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
+                using (Stream reader = new FileStream(fileName, FileMode.Open))
+                {
+                    tempList = (List<T>)serializer.Deserialize(reader);
+                    
+                }
+                return tempList;
+            }
+            List<T> NullList = new List<T>();
+            return NullList;
+
+        }
+
+    }
+
     public class Product
     {
 
@@ -165,39 +199,6 @@ namespace ProductsAndPackages
         public static List<Product> MyProducts = new List<Product>();
 
 
-        public static void LoadProductList()
-        {
-            if (File.Exists("Productlist.xml"))
-            {
-                List<Product> currentPr_list = new List<Product>();
-                XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
-                using (Stream reader = new FileStream("Productlist.xml", FileMode.Open))
-                {
-                    List<Product> tempList = (List<Product>)serializer.Deserialize(reader);
-                    currentPr_list.Clear();
-                    foreach (var item in tempList)
-                        currentPr_list.Add(item);
-                }
-                MyProducts.Clear();
-                Product[] cur = new Product[currentPr_list.Count];
-                currentPr_list.CopyTo(cur);
-                for (int i = 0; i < currentPr_list.Count; i++)
-
-                    MyProducts.Add(cur[i]);
-            }
-
-
-        }
-
-        public static void SaveProductList()
-        {
-
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
-            using (Stream writer = new FileStream("Productlist.xml", FileMode.Create))
-            {
-                serializer.Serialize(writer, MyProducts);
-            }
-        }
     }
     public class History
     {
@@ -240,47 +241,12 @@ namespace ProductsAndPackages
 
         }
 
-        public static void SaveHistory()
-        {
-            List<History> currentH_list = new List<History>();
-            currentH_list = MyHistory;
-            XmlSerializer serializer = new XmlSerializer(typeof(List<History>));
-            using (Stream writer = new FileStream("Historylist.xml", FileMode.Create))
-            {
-                serializer.Serialize(writer, currentH_list);
-            }
-        }
     }
     public static class MyPackages_List
     {
         public static List<Package> MyPackages = new List<Package>();
 
-        public static void LoadPackageList()
-        {
-            if (File.Exists("Packagelist.xml"))
-            {
-                List<Package> currentPac_list = new List<Package>();
-                XmlSerializer serializer = new XmlSerializer(typeof(List<Package>));
-                using (Stream reader = new FileStream("Packagelist.xml", FileMode.Open))
-                {
-                    List<Package> tempList = (List<Package>)serializer.Deserialize(reader);
-                    currentPac_list.Clear();
-                    foreach (var item in tempList)
-                        currentPac_list.Add(item);
-                }
-                MyPackages_List.MyPackages.Clear();
-                MyPackages_List.MyPackages = currentPac_list;
-            }
-        }
-
-        public static void SavePackageList()
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Package>));
-            using (Stream writer = new FileStream("Packagelist.xml", FileMode.Create))
-            {
-                serializer.Serialize(writer, MyPackages);
-            }
-        }
+        
     }
 
     public static class MyLegalEnitys_List
@@ -289,35 +255,7 @@ namespace ProductsAndPackages
         public static string NewLE = "";
         public static bool AddNewLE = false;
 
-        public static void LoadLegalEnityList()
-        {
-            List<string> currentLE_list = new List<string>();
-            if (File.Exists("LegalEnitylist.xml"))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<string>));
-                using (Stream reader = new FileStream("LegalEnitylist.xml", FileMode.Open))
-                {
-                    List<string> tempList = (List<string>)serializer.Deserialize(reader);
-                    currentLE_list.Clear();
-                    foreach (var item in tempList)
-                        currentLE_list.Add(item);
-                }
-                MyLegalEnitys.Clear();
-                MyLegalEnitys = currentLE_list;
-            }
-
-        }
-
-        public static void SaveLegalEnityList()
-        {
-            List<string> currentLE_list = new List<string>();
-            currentLE_list = MyLegalEnitys;
-            XmlSerializer serializer = new XmlSerializer(typeof(List<string>));
-            using (Stream writer = new FileStream("LegalEnitylist.xml", FileMode.Create))
-            {
-                serializer.Serialize(writer, currentLE_list);
-            }
-        }
+        
 
     }
 
@@ -328,34 +266,6 @@ namespace ProductsAndPackages
         public static string NewBr = "";
         public static bool AddNewBr = false;
 
-        public static void LoadBrandList()
-        {
-            List<string> currentLE_list = new List<string>();
-            if (File.Exists("Brandlist.xml"))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<string>));
-                using (Stream reader = new FileStream("Brandlist.xml", FileMode.Open))
-                {
-                    List<string> tempList = (List<string>)serializer.Deserialize(reader);
-                    currentLE_list.Clear();
-                    foreach (var item in tempList)
-                        currentLE_list.Add(item);
-                }
-                MyBrand.Clear();
-                MyBrand = currentLE_list;
-            }
-
-        }
-
-        public static void SaveBrandList()
-        {
-            List<string> currentLE_list = new List<string>();
-            currentLE_list = MyBrand;
-            XmlSerializer serializer = new XmlSerializer(typeof(List<string>));
-            using (Stream writer = new FileStream("Brandlist.xml", FileMode.Create))
-            {
-                serializer.Serialize(writer, currentLE_list);
-            }
-        }
+        
     }
 }
