@@ -34,3 +34,7 @@ Data Time:05.12.2022 0:25:10
 Exception Name:Значение было недопустимо малым или недопустимо большим для Int32.
 Data Time:05.12.2022 0:35:20
 Exception Name:За один раз возможно отправить не более 999999999 единиц товара
+Data Time:07.12.2022 14:26:11
+Exception Name:Не удалось привести тип объекта "System.Windows.Controls.Button" к типу "System.Windows.Controls.CheckBox".
+Data Time:07.12.2022 14:29:10
+Exception Name:Не удалось привести тип объекта "System.Windows.Controls.Button" к типу "System.Windows.Controls.CheckBox".

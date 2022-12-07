@@ -83,7 +83,17 @@ namespace Stock
                 }
                 Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
                 //MyProducts_List.SaveProductList();
+
+                ///
+                chkHeader.IsChecked = false;
+               //chkHeader.IsEnabled = false;
+                ///
                 gridlistbrak.Items.Refresh();
+
+
+                
+
+
             }
             catch (Exception ex)
             {

@@ -1,2 +1,9 @@
 <?xml version="1.0"?>
-<ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Package>
+    <Size>565</Size>
+    <IsSelected>false</IsSelected>
+    <Name_package>ghj</Name_package>
+    <Count_package>38</Count_package>
+  </Package>
+</ArrayOfPackage>
