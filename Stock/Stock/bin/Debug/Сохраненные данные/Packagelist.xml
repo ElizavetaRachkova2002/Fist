@@ -1,9 +1,15 @@
 <?xml version="1.0"?>
 <ArrayOfPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Package>
-    <Size>565</Size>
+    <Size>10*15</Size>
     <IsSelected>false</IsSelected>
-    <Name_package>ghj</Name_package>
-    <Count_package>38</Count_package>
+    <Name_package>БОПП пакет</Name_package>
+    <Count_package>990</Count_package>
+  </Package>
+  <Package>
+    <Size>12*15</Size>
+    <IsSelected>false</IsSelected>
+    <Name_package>БОПП пакет</Name_package>
+    <Count_package>1000</Count_package>
   </Package>
 </ArrayOfPackage>

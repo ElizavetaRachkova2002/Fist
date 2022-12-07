@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <Legal_entity>670</Legal_entity>
-    <Brand>7895</Brand>
-    <Vendor_code>546</Vendor_code>
-    <Barcode>5654</Barcode>
-    <Count>61</Count>
-    <Packed>14</Packed>
+    <Legal_entity>ООО "Призма"</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>01</Vendor_code>
+    <Barcode>97644876447545</Barcode>
+    <Count>0</Count>
+    <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>47</Not_Packed>
+    <Not_Packed>0</Not_Packed>
     <PackageName>
-      <string>ghj 565</string>
+      <string>БОПП пакет 10*15</string>
     </PackageName>
-    <Name>dfgf</Name>
+    <Name>визитница котик</Name>
     <Brak>0</Brak>
   </Product>
   <Product>
-    <Legal_entity>670</Legal_entity>
-    <Brand>7895</Brand>
-    <Vendor_code>sdf</Vendor_code>
-    <Barcode>34</Barcode>
-    <Count>30</Count>
-    <Packed>3</Packed>
+    <Legal_entity>ООО "Призма"</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>05</Vendor_code>
+    <Barcode>97644876447546</Barcode>
+    <Count>89</Count>
+    <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>27</Not_Packed>
+    <Not_Packed>89</Not_Packed>
     <PackageName>
-      <string>ghj 565</string>
+      <string>БОПП пакет 10*15</string>
     </PackageName>
-    <Name>sdfv</Name>
-    <Brak>0</Brak>
+    <Name>визитница мишка</Name>
+    <Brak>1</Brak>
   </Product>
   <Product>
-    <Legal_entity>670</Legal_entity>
-    <Brand>7895</Brand>
-    <Vendor_code>ewr</Vendor_code>
-    <Barcode>3</Barcode>
-    <Count>32</Count>
-    <Packed>1</Packed>
+    <Legal_entity>ООО "Призма"</Legal_entity>
+    <Brand>40а</Brand>
+    <Vendor_code>03</Vendor_code>
+    <Barcode>97644876447542</Barcode>
+    <Count>0</Count>
+    <Packed>0</Packed>
     <IsSelected>false</IsSelected>
-    <Not_Packed>31</Not_Packed>
+    <Not_Packed>0</Not_Packed>
     <PackageName>
-      <string>ghj 565</string>
+      <string>БОПП пакет 12*15</string>
     </PackageName>
-    <Name>rwe</Name>
+    <Name>сумка</Name>
     <Brak>0</Brak>
   </Product>
 </ArrayOfProduct>

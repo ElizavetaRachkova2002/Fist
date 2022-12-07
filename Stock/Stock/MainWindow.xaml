@@ -111,7 +111,7 @@
 
             </Grid.ColumnDefinitions>
             <Button Style="{DynamicResource StyleMainWindow}" x:Name="AddPackage" Grid.Column="0" Content=" Добавить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White" Click="AddPackage_Click"/>
-            <Button Style="{DynamicResource StyleMainWindow}" x:Name="DeletePackage" Grid.Column="1" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="90" Background="White"  Click="Delete_Package_Click" Margin="0.2,0,0,4.8"/>
+            <Button Style="{DynamicResource StyleMainWindow}" x:Name="DeletePackage" Grid.Column="1" Content="Удалить" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="90" Background="White"  Click="Delete_Package_Click" Margin="0.2,0,0,4.8"/>
 
 
 
