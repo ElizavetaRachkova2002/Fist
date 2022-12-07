@@ -46,7 +46,7 @@ namespace Stock
                 if (string.IsNullOrEmpty(Combo_product_add.Text))
                 {
 
-                    throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
+                    throw new MyExceptionEmptyFieldNameOfProduct("Выберите товар");
                 }
                 else
                 {

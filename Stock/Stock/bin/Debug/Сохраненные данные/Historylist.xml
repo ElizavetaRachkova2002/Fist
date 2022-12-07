@@ -1,6 +1,66 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-07T22:41:56.7896474+03:00</Time>
+    <Operation>Добавлен товар: визитница котик, 000877 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:27:55.6611401+03:00</Time>
+    <Operation>Удалено юр. лицо: 9999</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:27:42.2540154+03:00</Time>
+    <Operation>Добавлен новый бренд: 40а</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:27:32.9265554+03:00</Time>
+    <Operation>Удален бренд: 40а</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:27:13.3804592+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: 9999</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:26:46.5484859+03:00</Time>
+    <Operation>Удалено юр. лицо: 8888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:26:30.9959146+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: 8888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:24:30.7378596+03:00</Time>
+    <Operation>Удалено юр. лицо: 888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:24:04.8759732+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: 888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:22:07.1012324+03:00</Time>
+    <Operation>Удален бренд: 888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:20:53.6889617+03:00</Time>
+    <Operation>Добавлен новый бренд: 888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:16:29.6195792+03:00</Time>
+    <Operation>Удален бренд: 888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:16:21.4440616+03:00</Time>
+    <Operation>Добавлен новый бренд: 888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:13:51.798493+03:00</Time>
+    <Operation>Удалено юр. лицо: 8888</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T22:13:40.4303493+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: 8888</Operation>
+  </History>
+  <History>
     <Time>2022-12-07T21:56:42.8097811+03:00</Time>
     <Operation>Изменение товара: сумка 
 Штрихкод: 97644876447542 ----&gt; 976448764475498

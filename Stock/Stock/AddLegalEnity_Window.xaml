@@ -70,7 +70,7 @@
         <Button x:Name="Btn_Delete_LE" Content="Удалить" Margin="216,0,0,127" Click="Btn_Delete_LE_Click"/>
         <Canvas x:Name="Canvas_Add" Margin="0,40,0,0" Background="White">
             <TextBlock HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Text="Наименование:"  FontSize="16" Canvas.Left="10" Canvas.Top="23"/>
-            <TextBox x:Name="New_LegalEnity" FontSize="14" Canvas.Left="137" Canvas.Top="26" Width="271" />
+            <TextBox x:Name="New_LegalEnity" FontSize="14" Canvas.Left="137" Canvas.Top="26" Width="271" Height="20" MaxHeight="20" MaxWidth="271"/>
             <Button Style="{DynamicResource StyleLE}" x:Name="Add_New_LegalEnity" Content="Добавить" FontSize="14"  Background="#FFB4D2FA" Click="Add_New_LegalEnity_Click" Grid.Row="1" Canvas.Left="306" Canvas.Top="75" Width="102"/>
         </Canvas>
         <Canvas x:Name="Canvas_Delete" Margin="0,40,0,5" Background="White" >

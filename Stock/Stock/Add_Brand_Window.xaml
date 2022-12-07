@@ -69,7 +69,7 @@
         <Button x:Name="Btn_Delete_Br" Content="Удалить" Margin="216,0,0,127" Click="Btn_Delete_Br_Click"/>
         <Canvas x:Name="Canvas_Add" Margin="0,40,0,0" Background="White">
             <TextBlock HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Text="Наименование:"  FontSize="16" Canvas.Left="10" Canvas.Top="23"/>
-            <TextBox x:Name="New_Brand" FontSize="14" Canvas.Left="137" Canvas.Top="26" Width="271" />
+            <TextBox x:Name="New_Brand" FontSize="14" Canvas.Left="137" Canvas.Top="26" Width="271" Height="20" MaxHeight="20" MaxWidth="271"/>
             <Button  x:Name="Add_New_Brand"  Content="Добавить" FontSize="14"  Background="#FFB4D2FA" Click="Add_New_Brand_Click" Grid.Row="1" Canvas.Left="306" Canvas.Top="75" Width="102" Style="{DynamicResource StyleBrand}"/>
         </Canvas>
         <Canvas x:Name="Canvas_Delete" Margin="0,40,0,5" Background="White" >

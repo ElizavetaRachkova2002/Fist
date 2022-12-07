@@ -70,7 +70,7 @@ namespace Stock
                 }
                 if ((TB_Exist_Count.Text.Trim().Count()) > 9  && contains_symbols==false)
                 {
-                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
+                    throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц товара");
                 }
                 if (contains_symbols==true && TB_Exist_Count.Text.Trim() != "")
                
@@ -306,7 +306,7 @@ namespace Stock
                 }
                 if ((TB_NewProduct_Count.Text.Trim().Count()) > 10 && contains_symbols == false)
                 {
-                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
+                    throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц товара");
                 }
                 ////////////////////////////////
                  

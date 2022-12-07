@@ -69,7 +69,7 @@ namespace Stock
                     }
                     if ((TBCount_List[j].Text.Trim().Count()) > 9 && contains_symbols_send == false)
                     {
-                        throw new MyExceptionCountTypeIsInt("За один раз возможно отправить не более 999999999 единиц товара");
+                        throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно отправить не более 999999999 единиц товара");
                     }
                     ////
                     

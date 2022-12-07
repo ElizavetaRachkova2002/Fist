@@ -86,7 +86,7 @@ namespace Stock
                 }
                 if ((Pack_New_Count.Text.Trim().Count()) > 9 && contains_symbols_package_new == false)
                 {
-                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц упаковки");
+                    throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц упаковки");
                 }
                 if (contains_symbols_package_new == true)
                 {
@@ -202,7 +202,7 @@ namespace Stock
                 }
                 if ((Pack_Exist_Count.Text.Trim().Count()) > 9 && contains_symbols_package_exist == false)
                 {
-                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц упаковки");
+                    throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц упаковки");
                 }
                 if (contains_symbols_package_exist == true)
                 {

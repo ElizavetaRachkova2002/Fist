@@ -33,6 +33,7 @@ namespace Stock
         string oldPackage = "";
         string newPackage = "";
 
+        
 
         bool flag_OK = false;
         public List<string> currentPackage_change = new List<string>();

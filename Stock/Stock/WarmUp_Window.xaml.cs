@@ -102,7 +102,7 @@ namespace Stock
                 }
                 if ((WarmUp_Count.Text.Trim().Count()) > 9 && contains_symbols_WarmUp == false)
                 {
-                    throw new MyExceptionCountTypeIsInt("За один раз возможно добавить не более 999999999 единиц товара");
+                    throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц товара");
                 }
                 ////
                 if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
@@ -132,7 +132,7 @@ namespace Stock
                 }
                 if ((WarmUp_Brak.Text.Trim().Count()) > 9 && contains_symbols_Brak == false)
                 {
-                    throw new MyExceptionCountTypeIsInt("За один раз можно заброковать не более 999999999 единиц товара");
+                    throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз можно заброковать не более 999999999 единиц товара");
                 }
                 //
 
