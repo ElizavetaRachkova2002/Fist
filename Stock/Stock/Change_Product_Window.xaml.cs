@@ -22,7 +22,16 @@ namespace Stock
     /// Логика взаимодействия для Change_Product_Window.xaml
     /// </summary>
     /// 
-
+//[Serializable]
+//    public class MyExceptionProductIsNotSelected : Exception
+//    {
+//        public MyExceptionProductIsNotSelected() { }
+//        public MyExceptionProductIsNotSelected(string message) : base(message) { }
+//        public MyExceptionProductIsNotSelected(string message, Exception inner) : base(message, inner) { }
+//        protected MyExceptionProductIsNotSelected(
+//          System.Runtime.Serialization.SerializationInfo info,
+//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+//    }
     public partial class Change_Product_Window : Window
     {
         string oldname = "";
@@ -62,7 +71,7 @@ namespace Stock
         {
             try
             {
-
+                
                 if (String.IsNullOrEmpty(Combo_Current_Product.Text))
                 {
                     throw new MyExceptionEmptyFieldNameOfProduct("Выберете товар");
@@ -134,6 +143,10 @@ namespace Stock
         {
             try 
             {
+                if (flag_OK == false)
+                {
+                    throw new MyExceptionProductIsNotSelected("Выберите товар и нажмите на кнопку 'Просмотр'");
+                }
                 if (String.IsNullOrEmpty(TB_New_Name.Text))
                 {
                     throw new MyExceptionEmptyFieldNameOfProduct("Введите название");
@@ -266,6 +279,11 @@ namespace Stock
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            catch (MyExceptionProductIsNotSelected ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             catch (MyExceptionProductAlreadyExistAfterChangeWithThisVendorCode ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка заполнения", MessageBoxButton.OK, MessageBoxImage.Error);

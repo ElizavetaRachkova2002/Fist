@@ -301,7 +301,16 @@ namespace Exceptions
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
-
+    [Serializable]
+    public class MyExceptionProductIsNotSelected : Exception
+    {
+        public MyExceptionProductIsNotSelected() { }
+        public MyExceptionProductIsNotSelected(string message) : base(message) { }
+        public MyExceptionProductIsNotSelected(string message, Exception inner) : base(message, inner) { }
+        protected MyExceptionProductIsNotSelected(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
     [Serializable]
     public class MyExceptionInvalidCount : Exception
     {
