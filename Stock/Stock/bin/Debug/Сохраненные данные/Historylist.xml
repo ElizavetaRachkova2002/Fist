@@ -1,2 +1,34 @@
 <?xml version="1.0"?>
-<ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <History>
+    <Time>2022-12-07T21:56:42.8097811+03:00</Time>
+    <Operation>Изменение товара: сумка 
+Штрихкод: 97644876447542 ----&gt; 976448764475498
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T21:56:06.8657866+03:00</Time>
+    <Operation>Изменение товара:визитница котик 
+Артикул: 01 ----&gt; 09
+Упаковка: БОПП пакет 10*15---- &gt; Без упаковки
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T21:47:09.4940886+03:00</Time>
+    <Operation>Изменение товара 
+Артикул: 04 ----&gt; 01
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T21:46:29.344961+03:00</Time>
+    <Operation>Изменение товара 
+Упаковка: БОПП пакет 10*15---- &gt; БОПП пакет 12*15
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T21:46:04.1413212+03:00</Time>
+    <Operation>Изменение товара 
+Артикул: 01 ----&gt; 04
+</Operation>
+  </History>
+</ArrayOfHistory>

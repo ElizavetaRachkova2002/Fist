@@ -213,7 +213,7 @@ namespace Stock
                 if (flag_OK == true)
                 {
                     DateTime time = DateTime.Now;
-                    string operation = "Изменение товара \n";
+                    string operation = "Изменение товара: "+TB_New_Name.Text+" \n";
                     if(oldname!= TB_New_Name.Text)
                     {
                         operation = operation + "Название: " + oldname + " ----> " + TB_New_Name.Text + "\n";
@@ -234,9 +234,9 @@ namespace Stock
                     {
                         operation = operation + "Штрихкод: " + oldBarcode + " ----> " + TB_New_Barcode.Text + "\n";
                     }
-                    if(oldPackage!=newPackage)
+                    if(oldPackage!=TB_NewProduct_Package_Name.Text)
                     {
-                        operation=operation+ "Упаковка: " + oldPackage + "---- > "+ newPackage + "\n";
+                        operation=operation+ "Упаковка: " + oldPackage + "---- > "+ TB_NewProduct_Package_Name.Text + "\n";
                     }
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);

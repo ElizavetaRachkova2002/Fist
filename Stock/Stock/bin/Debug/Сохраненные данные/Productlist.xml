@@ -3,14 +3,14 @@
   <Product>
     <Legal_entity>ООО "Призма"</Legal_entity>
     <Brand>40а</Brand>
-    <Vendor_code>01</Vendor_code>
+    <Vendor_code>09</Vendor_code>
     <Barcode>97644876447545</Barcode>
     <Count>0</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
     <Not_Packed>0</Not_Packed>
     <PackageName>
-      <string>БОПП пакет 10*15</string>
+      <string>Без упаковки</string>
     </PackageName>
     <Name>визитница котик</Name>
     <Brak>0</Brak>
@@ -25,7 +25,7 @@
     <IsSelected>false</IsSelected>
     <Not_Packed>89</Not_Packed>
     <PackageName>
-      <string>БОПП пакет 10*15</string>
+      <string>БОПП пакет 12*15</string>
     </PackageName>
     <Name>визитница мишка</Name>
     <Brak>1</Brak>
@@ -34,7 +34,7 @@
     <Legal_entity>ООО "Призма"</Legal_entity>
     <Brand>40а</Brand>
     <Vendor_code>03</Vendor_code>
-    <Barcode>97644876447542</Barcode>
+    <Barcode>976448764475498</Barcode>
     <Count>0</Count>
     <Packed>0</Packed>
     <IsSelected>false</IsSelected>
