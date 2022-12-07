@@ -1,94 +1,59 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
-    <Time>2022-12-07T22:41:56.7896474+03:00</Time>
-    <Operation>Добавлен товар: визитница котик, 000877 шт.</Operation>
+    <Time>2022-12-07T23:49:34.173454+03:00</Time>
+    <Operation>Добавлен новый товар: сумка, 0 шт.</Operation>
   </History>
   <History>
-    <Time>2022-12-07T22:27:55.6611401+03:00</Time>
-    <Operation>Удалено юр. лицо: 9999</Operation>
+    <Time>2022-12-07T23:48:36.7170978+03:00</Time>
+    <Operation>Добавлен новый товар: кредитница желтая, 0 шт.</Operation>
   </History>
   <History>
-    <Time>2022-12-07T22:27:42.2540154+03:00</Time>
+    <Time>2022-12-07T23:47:08.5611052+03:00</Time>
+    <Operation>Добавлен новый товар: кредитница розовая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:45:43.6218242+03:00</Time>
+    <Operation>Добавлен новый товар: кридитница голубая, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:44:37.6617117+03:00</Time>
+    <Operation>Добавлен новый товар: Бейдж Морти, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:43:19.5917721+03:00</Time>
+    <Operation>Добавлен новый товар: Бейдж Рик, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:42:28.142091+03:00</Time>
+    <Operation>Добавлен новый товар: визитница собачка, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:41:32.402496+03:00</Time>
+    <Operation>Добавлен новый товар: визитница котик, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:40:08.7902337+03:00</Time>
+    <Operation>Добавлен новый товар: визитница мишка, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:38:56.4797058+03:00</Time>
+    <Operation>Добавлен новый товар: визитница бульдог, 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-07T23:37:22.6320434+03:00</Time>
     <Operation>Добавлен новый бренд: 40а</Operation>
   </History>
   <History>
-    <Time>2022-12-07T22:27:32.9265554+03:00</Time>
-    <Operation>Удален бренд: 40а</Operation>
+    <Time>2022-12-07T23:37:13.7816292+03:00</Time>
+    <Operation>Добавлено новое юр. лицо: ООО "Призма"</Operation>
   </History>
   <History>
-    <Time>2022-12-07T22:27:13.3804592+03:00</Time>
-    <Operation>Добавлено новое юр. лицо: 9999</Operation>
+    <Time>2022-12-07T23:36:32.8151279+03:00</Time>
+    <Operation>Добавлена новая упаковка: БОПП пакет 12*15, 1000 шт.</Operation>
   </History>
   <History>
-    <Time>2022-12-07T22:26:46.5484859+03:00</Time>
-    <Operation>Удалено юр. лицо: 8888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:26:30.9959146+03:00</Time>
-    <Operation>Добавлено новое юр. лицо: 8888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:24:30.7378596+03:00</Time>
-    <Operation>Удалено юр. лицо: 888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:24:04.8759732+03:00</Time>
-    <Operation>Добавлено новое юр. лицо: 888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:22:07.1012324+03:00</Time>
-    <Operation>Удален бренд: 888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:20:53.6889617+03:00</Time>
-    <Operation>Добавлен новый бренд: 888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:16:29.6195792+03:00</Time>
-    <Operation>Удален бренд: 888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:16:21.4440616+03:00</Time>
-    <Operation>Добавлен новый бренд: 888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:13:51.798493+03:00</Time>
-    <Operation>Удалено юр. лицо: 8888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T22:13:40.4303493+03:00</Time>
-    <Operation>Добавлено новое юр. лицо: 8888</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T21:56:42.8097811+03:00</Time>
-    <Operation>Изменение товара: сумка 
-Штрихкод: 97644876447542 ----&gt; 976448764475498
-</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T21:56:06.8657866+03:00</Time>
-    <Operation>Изменение товара:визитница котик 
-Артикул: 01 ----&gt; 09
-Упаковка: БОПП пакет 10*15---- &gt; Без упаковки
-</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T21:47:09.4940886+03:00</Time>
-    <Operation>Изменение товара 
-Артикул: 04 ----&gt; 01
-</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T21:46:29.344961+03:00</Time>
-    <Operation>Изменение товара 
-Упаковка: БОПП пакет 10*15---- &gt; БОПП пакет 12*15
-</Operation>
-  </History>
-  <History>
-    <Time>2022-12-07T21:46:04.1413212+03:00</Time>
-    <Operation>Изменение товара 
-Артикул: 01 ----&gt; 04
-</Operation>
+    <Time>2022-12-07T23:36:08.1941404+03:00</Time>
+    <Operation>Добавлена новая упаковка: БОПП пакет 10*15, 1000 шт.</Operation>
   </History>
 </ArrayOfHistory>

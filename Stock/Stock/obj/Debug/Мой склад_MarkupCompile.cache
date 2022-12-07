@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Fist\Stock\Stock\obj\Debug\
+Z:\Документы\Desktop\Мой склад\Fist\Stock\Stock\obj\Debug\
 Stock
 none
 false
 DEBUG;TRACE
-C:\Fist\Stock\Stock\App.xaml
-13-1776187364
+Z:\Документы\Desktop\Мой склад\Fist\Stock\Stock\App.xaml
+131356544395
 
-17-630710234
-171701622107
+17-574899588
+171081412542
 AddLegalEnity_Window.xaml;AddPackage_Window.xaml;AddProduct_Window.xaml;Add_Brand_Window.xaml;Change_Product_Window.xaml;DeleteProduct_Window.xaml;Delete_Package.xaml;History_Window.xaml;ListOfPackages.xaml;List_Brak.xaml;MainWindow.xaml;Send_Window.xaml;WarmUp_Window.xaml;
 
 False

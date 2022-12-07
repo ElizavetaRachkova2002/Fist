@@ -461,18 +461,18 @@ namespace Stock
 
         private void TB_New_Legal_Entity_MouseDown(object sender, MouseEventArgs e)
         {
+            GiveTBLegalEnity();
             if (MyLegalEnitys_List.AddNewLE == true)
             {
-                GiveTBLegalEnity();
                 MyLegalEnitys_List.AddNewLE = false;
             }
         }
 
         private void TB_New_Brand_MouseDown(object sender, MouseEventArgs e)
         {
+            GiveTBBrand();
             if (Brand_List.AddNewBr == true)
             {
-                GiveTBBrand();
                 Brand_List.AddNewBr = false;
             }
         }
