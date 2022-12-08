@@ -105,7 +105,7 @@ namespace Stock
                     throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц товара");
                 }
                 ////
-                if (int.TryParse(WarmUp_Count.Text, out int _count1) != true)
+                if (int.TryParse(WarmUp_Count.Text, out int count_for_sale) != true)
                 {
                     throw new MyExceptionCountOfProductIsDigit("В поле 'подготовлено к продаже' допускаются только цифры");
                 }

@@ -1,6 +1,77 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-08T09:52:54.0983002+03:00</Time>
+    <Operation>Отправлен товар. 
+Название: визитница котик, Aртикул: 04, Кол-во: 1; 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:52:43.8966883+03:00</Time>
+    <Operation>визитница котик. Подготовлено к продаже: 1 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:38:04.4331055+03:00</Time>
+    <Operation>Отправлен товар. 
+Название: сумка, Aртикул: 07, Кол-во: 2; 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:37:55.3791289+03:00</Time>
+    <Operation>сумка. Подготовлено к продаже: 2 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:36:10.0503206+03:00</Time>
+    <Operation>Отправлен товар. 
+Название: визитница котик, Aртикул: 04, Кол-во: 12; 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:28:20.5394703+03:00</Time>
+    <Operation>Отправлен товар. 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:28:08.3491861+03:00</Time>
+    <Operation>визитница котик. Подготовлено к продаже: 12 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:27:45.0805989+03:00</Time>
+    <Operation>Добавлен товар: визитница котик, 12 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:26:59.6115599+03:00</Time>
+    <Operation>Отправлен товар. 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:25:27.4354131+03:00</Time>
+    <Operation>Отправлен товар. 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:24:46.7417742+03:00</Time>
+    <Operation>Отправлен товар. 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:24:28.2637662+03:00</Time>
+    <Operation>Отправлен товар. 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:23:15.1820695+03:00</Time>
+    <Operation>визитница котик. Подготовлено к продаже: 11 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:22:47.215107+03:00</Time>
+    <Operation>Добавлен товар: визитница котик, 12 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-08T09:22:19.8249367+03:00</Time>
+    <Operation>Добавлен товар: сумка, 2 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-07T23:49:34.173454+03:00</Time>
     <Operation>Добавлен новый товар: сумка, 0 шт.</Operation>
   </History>

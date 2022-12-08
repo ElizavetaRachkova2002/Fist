@@ -45,7 +45,7 @@ namespace Stock
                     operation = "Отправлен товар. " + TB_Comment.Text + ". \n";
                 else operation = "Отправлен товар. \n";
 
-                bool flag = false;
+                
                 for (int j = 0; j < ComboName_List.Count; j++)
                 {
                     if (String.IsNullOrEmpty(ComboName_List[j].Text))
@@ -73,7 +73,7 @@ namespace Stock
                     }
                     ////
                     
-                    if (int.TryParse(TBCount_List[j].Text, out int _count1) != true)
+                    if (int.TryParse(TBCount_List[j].Text, out int count_of_product) != true)
                     {
                         throw new MyExceptionCountOfProductIsDigit(string.Format("Количество товара является числом в {0}", ComboName_List[j].Text));
                     }
@@ -91,14 +91,15 @@ namespace Stock
                         {
                             if (MyProducts_List.MyProducts[i].Packed < count)
                             {
-                                flag = true;
+                                
+                                throw new MyExceptionCountOfProductLessThenCountOfProductForSend("Кол-во упакованного товара меньше, чем Вы выбрали");
+
+                                
                             }
                         }
                     }
 
-                    if (flag == false)
-                    {
-
+                   
                         for (int i = 0; i < MyProducts_List.MyProducts.Count(); i++)
                             if (MyProducts_List.MyProducts[i].Name == name)
                             {
@@ -113,7 +114,7 @@ namespace Stock
 
                         
                         
-                    }
+                    
                 }
                 DateTime time = DateTime.Now;
                 History Now = new History(time, operation);
@@ -124,11 +125,7 @@ namespace Stock
                 //MyProducts_List.SaveProductList();
                
 
-                if (flag == true)
-                {
-                    throw new MyExceptionCountOfProductLessThenCountOfProductForSend("Кол-во упакованного товара меньше, чем Вы выбрали");
-                    
-                }
+                
                 this.Close();
             }
             catch (MyExceptionCountTypeIsInt ex)

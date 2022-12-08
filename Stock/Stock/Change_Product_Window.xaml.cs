@@ -22,16 +22,7 @@ namespace Stock
     /// Логика взаимодействия для Change_Product_Window.xaml
     /// </summary>
     /// 
-//[Serializable]
-//    public class MyExceptionProductIsNotSelected : Exception
-//    {
-//        public MyExceptionProductIsNotSelected() { }
-//        public MyExceptionProductIsNotSelected(string message) : base(message) { }
-//        public MyExceptionProductIsNotSelected(string message, Exception inner) : base(message, inner) { }
-//        protected MyExceptionProductIsNotSelected(
-//          System.Runtime.Serialization.SerializationInfo info,
-//          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
-//    }
+
     public partial class Change_Product_Window : Window
     {
         string oldname = "";
