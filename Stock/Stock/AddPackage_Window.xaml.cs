@@ -113,13 +113,11 @@ namespace Stock
                 Package package = new Package(name, size, count);
                 MyPackages_List.MyPackages.Add(package);
                 Serializer.SaveList<Package>(MyPackages_List.MyPackages, ConfigurationManager.AppSettings.Get("Packagelist"));
-                //MyPackages_List.SavePackageList();
                 DateTime time = DateTime.Now;
                 string operation = "Добавлена новая упаковка: " + name + " " + size + ", " + count.ToString() + " шт.";
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
                 Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                //MyHistory_List.SaveHistory();
                 this.Close();
             }
             catch (MyExceptionCountTypeIsInt ex)
@@ -229,12 +227,10 @@ namespace Stock
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
                         Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                        //MyHistory_List.SaveHistory();
                     }
                 }
                 Pack_Exist_Count.Clear();
                 Serializer.SaveList<Package>(MyPackages_List.MyPackages, ConfigurationManager.AppSettings.Get("Packagelist"));
-                //MyPackages_List.SavePackageList();
                 this.Close();
             }
             catch (MyExceptionEmpyFieldNameOfPackage ex)

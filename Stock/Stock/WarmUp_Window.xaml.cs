@@ -78,19 +78,12 @@ namespace Stock
                         }
                     }
                 }
-                //int count = int.Parse(WarmUp_Count.Text);
-                //int brak = int.Parse(WarmUp_Brak.Text);
+                
                 if (String.IsNullOrEmpty(WarmUp_Count.Text))
                 {
                     throw new MyExceptionEmptyFieldCount("Если нет подготовленного товара, введите 0");
                 }
-                //if (String.IsNullOrEmpty(WarmUp_Brak.Text))
-                //{
-                //    throw new MyExceptionEmptyFieldBrak("Если брак отсутствует введите 0");
-                //}
-
-
-                ///
+                
                 bool contains_symbols_WarmUp = false;
                 foreach (char ch in WarmUp_Count.Text)
                 {
@@ -104,7 +97,7 @@ namespace Stock
                 {
                     throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц товара");
                 }
-                ////
+                
                 if (int.TryParse(WarmUp_Count.Text, out int count_for_sale) != true)
                 {
                     throw new MyExceptionCountOfProductIsDigit("В поле 'подготовлено к продаже' допускаются только цифры");
@@ -217,16 +210,12 @@ namespace Stock
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
                             Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                            //MyHistory_List.SaveHistory();
                             break;
 
                         }
                     }
                 Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-                //MyProducts_List.SaveProductList();
                 Serializer.SaveList<Package>(MyPackages_List.MyPackages, ConfigurationManager.AppSettings.Get("Packagelist"));
-                //MyPackages_List.SavePackageList();
-                    //App.Current.Shutdown();
 
                     this.Close();
                 

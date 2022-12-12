@@ -38,15 +38,11 @@ namespace Stock
         {
             InitializeComponent();
             MyPackages_List.MyPackages = Serializer.LoadList<Package>(ConfigurationManager.AppSettings.Get("Packagelist"));
-            //MyPackages_List.LoadPackageList();
             MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
-            //MyProducts_List.LoadProductList();
             MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
-            //MyLegalEnitys_List.LoadLegalEnityList();
             Serializer.LoadHistoryList(ConfigurationManager.AppSettings.Get("Historylist"));
             var currentConfig = ConfigurationManager.AppSettings.Get("Historylist");
             Serializer.SaveList<History>(MyHistory_List.MyHistory, currentConfig);
-           // MyHistory_List.SaveHistory();
 
             packageGrid.ItemsSource = MyPackages_List.MyPackages;
             MainContent.Visibility = Visibility.Visible;
@@ -95,7 +91,7 @@ namespace Stock
                     else pack=pack+"; "+ product.PackageName[i];
                 }
                 MessageBox.Show(" Наименование: " + product.Name + "\n Юр. лицо: " + product.Legal_entity + "\n Бренд: " + product.Brand + "\n Артикул: " + product.Vendor_code + "\n Штрих-код: " + product.Barcode +
-                   "\n Упаковка: " + pack + "\n Кол-во брака : " + product.Brak +  /*"\n Размер упаковки : " +*/ /*product.PackageSize +*/ "\n Количество : " + product.Count
+                   "\n Упаковка: " + pack + "\n Кол-во брака : " + product.Brak +   "\n Количество : " + product.Count
                    + "\n К продаже : " + product.Packed + "\n Не упаковано : " + product.Not_Packed);
                 productGrid.SelectedItem = null;
             }

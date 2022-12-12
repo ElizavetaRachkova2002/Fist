@@ -45,7 +45,6 @@ namespace Stock
                 }
                 MyLegalEnitys_List.MyLegalEnitys.Add(newName);
                 Serializer.SaveList(MyLegalEnitys_List.MyLegalEnitys, ConfigurationManager.AppSettings.Get("LegalEnitylist"));
-                //MyLegalEnitys_List.SaveLegalEnityList();
                 MyLegalEnitys_List.NewLE = newName;
                 MyLegalEnitys_List.AddNewLE = true;
                 string operation = "Добавлено новое юр. лицо: " + New_LegalEnity.Text;
@@ -55,7 +54,6 @@ namespace Stock
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
                 Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                //MyHistory_List.SaveHistory();
                 this.Close();
             }
             catch (MyExceptionEmptyFieldLegalEntity ex)
@@ -82,7 +80,6 @@ namespace Stock
 
             TB_Delete_LE.Items.Clear();
             MyLegalEnitys_List.MyLegalEnitys= Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
-            //MyLegalEnitys_List.LoadLegalEnityList();
 
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
@@ -113,7 +110,6 @@ namespace Stock
                             History Now = new History(time, operation);
                             MyHistory_List.MyHistory.Insert(0, Now);
                             Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                            //MyHistory_List.SaveHistory();
 
                             break;
 
@@ -121,7 +117,6 @@ namespace Stock
 
                     }
                     Serializer.SaveList(MyLegalEnitys_List.MyLegalEnitys, ConfigurationManager.AppSettings.Get("LegalEnitylist"));
-                    //MyLegalEnitys_List.SaveLegalEnityList();
                     this.Close();
                 }
             }

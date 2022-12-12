@@ -39,7 +39,6 @@ namespace Stock
 
             }
             Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-            //MyProducts_List.SaveProductList();
             gridlistbrak.Items.Refresh();
 
         }
@@ -56,7 +55,6 @@ namespace Stock
             }
             gridlistbrak.Items.Refresh();
             Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-            //MyProducts_List.SaveProductList();
            
 
         }
@@ -76,23 +74,15 @@ namespace Stock
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
                         Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                        //MyHistory_List.SaveHistory();
                         MyProducts_List.MyProducts[i].Brak = 0;
                     }
                     MyProducts_List.MyProducts[i].IsSelected = false;
                 }
                 Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-                //MyProducts_List.SaveProductList();
-
-                ///
-                chkHeader.IsChecked = false;
-               //chkHeader.IsEnabled = false;
-                ///
-                gridlistbrak.Items.Refresh();
-
 
                 
-
+                chkHeader.IsChecked = false;                
+                gridlistbrak.Items.Refresh();
 
             }
             catch (Exception ex)

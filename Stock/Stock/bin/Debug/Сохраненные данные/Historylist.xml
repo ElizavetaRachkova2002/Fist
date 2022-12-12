@@ -1,6 +1,20 @@
 <?xml version="1.0"?>
 <ArrayOfHistory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <History>
+    <Time>2022-12-12T18:32:25.330967+03:00</Time>
+    <Operation>Отправлен товар. 
+Название: визитница собачка, Aртикул: 09, Кол-во: 10; 
+</Operation>
+  </History>
+  <History>
+    <Time>2022-12-12T18:32:16.4910665+03:00</Time>
+    <Operation>визитница собачка. Подготовлено к продаже: 10 шт., Брак: 0 шт.</Operation>
+  </History>
+  <History>
+    <Time>2022-12-12T18:32:05.1420936+03:00</Time>
+    <Operation>Добавлен товар: визитница собачка, 10 шт.</Operation>
+  </History>
+  <History>
     <Time>2022-12-08T09:52:54.0983002+03:00</Time>
     <Operation>Отправлен товар. 
 Название: визитница котик, Aртикул: 04, Кол-во: 1; 

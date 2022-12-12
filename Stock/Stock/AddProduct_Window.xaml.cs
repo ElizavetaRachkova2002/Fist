@@ -102,12 +102,9 @@ namespace Stock
                         History Now = new History(time, operation);
                         MyHistory_List.MyHistory.Insert(0, Now);
                         Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                        //MyHistory_List.SaveHistory();
                         TB_Exist_Count.Clear();
 
-                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-                        //MyProducts_List.SaveProductList();
-                        this.Close();
+                        Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));                        this.Close();
                         this.Owner.Visibility = Visibility.Visible;
 
 
@@ -162,11 +159,8 @@ namespace Stock
             BrdAddNewProduct.Visibility = Visibility.Visible;
             TB_New_Legal_Entity.Items.Clear();
             MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
-            //MyLegalEnitys_List.LoadLegalEnityList();
             GiveTBLegalEnity();
             Brand_List.MyBrand = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("Brandlist"));
-
-            //Brand_List.LoadBrandList();
             GiveTBBrand();
 
             BtnAddNewProduct.Background = new SolidColorBrush(Colors.LightSkyBlue);
@@ -223,7 +217,6 @@ namespace Stock
 
             Combo_product_add.Items.Clear();
             MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
-            //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -308,7 +301,7 @@ namespace Stock
                 {
                     throw new MyExceptionCountTypeIsInt("Данное поле не может содержать более девяти символов. За один раз возможно добавить не более 999999999 единиц товара");
                 }
-                ////////////////////////////////
+                
                  
                 if (contains_symbols == true)
                 {
@@ -316,11 +309,7 @@ namespace Stock
                     throw new MyExceptionCountOfProductIsDigit("В кол-ве допускаются только цифры");
                 }
                  count = int.Parse(TB_NewProduct_Count.Text.Trim()); 
-                //else
-                //{
-                //    throw new MyExceptionEmptyFieldCount("Введите количество");
-                //}
-                //TB_NewProduct_Count.Clear();
+                
                 bool flag_name = false;
                 bool flag_vendor = false;
                 bool flad_barcode = false;
@@ -353,8 +342,7 @@ namespace Stock
                     Product new_product = new Product(name, legal, brand, vendor, barcode, count, 0, count, currentPackageList, 0);
                     MyProducts_List.MyProducts.Add(new_product);
                     Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-                    //MyProducts_List.SaveProductList();
-
+                    
                     TB_New_Name.Clear();
                     TB_New_Legal_Entity.Items.Clear();
                     TB_New_Brand.Items.Clear();
@@ -362,14 +350,11 @@ namespace Stock
                     TB_New_Barcode.Clear();
                     TB_NewProduct_Count.Clear();
 
-
-
                     DateTime time = DateTime.Now;
                     string operation = "Добавлен новый товар: " + name + ", " + count.ToString() + " шт.";
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
                     Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                    //MyHistory_List.SaveHistory();
                     this.Owner.Visibility = Visibility.Visible;
                     this.Close();
                 }
@@ -385,7 +370,7 @@ namespace Stock
                 {
                     MessageBox.Show("Товар с таким штрихкодом уже существует");
                 }
-                //this.Close();
+                
             }
             catch (MyExceptionCountLessThanZero ex)
             {

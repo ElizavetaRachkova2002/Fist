@@ -71,7 +71,6 @@ namespace Stock
                     }
                     var currentConfig = ConfigurationManager.AppSettings.Get("Brandlist");
                     Serializer.SaveList<string>(Brand_List.MyBrand, currentConfig);
-                    //Brand_List.SaveBrandList();
                     this.Close();
                 }  
             }
@@ -105,8 +104,6 @@ namespace Stock
                 Brand_List.MyBrand.Add(newName);
                 var currentConfig = ConfigurationManager.AppSettings.Get("Brandlist");
                 Serializer.SaveList<string>(Brand_List.MyBrand, currentConfig);
-                //Serializer.SaveList<string>(Brand_List.MyBrand, ConfigurationManager.AppSettings.Get("Brandlist"));
-                //Brand_List.SaveBrandList();
                 Brand_List.NewBr = newName;
                 Brand_List.AddNewBr = true;
                 string operation = "Добавлен новый бренд: " + New_Brand.Text;
@@ -114,7 +111,6 @@ namespace Stock
                 History Now = new History(time, operation);
                 MyHistory_List.MyHistory.Insert(0, Now);
                 Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                //MyHistory_List.SaveHistory();
                 this.Close();
             }
             catch (MyExceptionEmptyFieldBrand ex)

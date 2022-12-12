@@ -246,7 +246,6 @@ namespace Stock
                     History Now = new History(time, operation);
                     MyHistory_List.MyHistory.Insert(0, Now);
                     Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                    //MyHistory_List.SaveHistory();
                     
                     
 
@@ -258,7 +257,6 @@ namespace Stock
                     MyProducts_List.MyProducts[current_product_number].Brand = TB_New_Brand.Text;
 
                     Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-                    //MyProducts_List.SaveProductList();
 
                     this.Close();
 
@@ -373,7 +371,6 @@ namespace Stock
 
             TB_New_Legal_Entity.Items.Clear();
             MyLegalEnitys_List.MyLegalEnitys = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("LegalEnitylist"));
-            //MyLegalEnitys_List.LoadLegalEnityList();
 
             for (int i = 0; i < MyLegalEnitys_List.MyLegalEnitys.Count; i++)
             {
@@ -386,7 +383,6 @@ namespace Stock
 
             TB_New_Brand.Items.Clear();
             Brand_List.MyBrand = Serializer.LoadList<string>(ConfigurationManager.AppSettings.Get("Brandlist"));
-            //Brand_List.LoadBrandList();
 
             for (int i = 0; i < Brand_List.MyBrand.Count; i++)
             {
@@ -399,7 +395,6 @@ namespace Stock
 
             Combo_Current_Product.Items.Clear();
             MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
-            //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_Current_Product.Items.Add(MyProducts_List.MyProducts[i].Name);

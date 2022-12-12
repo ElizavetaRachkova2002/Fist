@@ -33,7 +33,6 @@ namespace Stock
 
             Combo_product_add.Items.Clear();
             MyProducts_List.MyProducts = Serializer.LoadList<Product>(ConfigurationManager.AppSettings.Get("Productlist"));
-            //MyProducts_List.LoadProductList();
             for (int i = 0; i < MyProducts_List.MyProducts.Count; i++)
             {
                 Combo_product_add.Items.Add(MyProducts_List.MyProducts[i].Name);
@@ -63,11 +62,9 @@ namespace Stock
                                 History Now = new History(time, operation);
                                 MyHistory_List.MyHistory.Insert(0, Now);
                                 Serializer.SaveList<History>(MyHistory_List.MyHistory, ConfigurationManager.AppSettings.Get("Historylist"));
-                                //MyHistory_List.SaveHistory();
                                 break;
                             }
                         Serializer.SaveList<Product>(MyProducts_List.MyProducts, ConfigurationManager.AppSettings.Get("Productlist"));
-                        //MyProducts_List.SaveProductList();
 
 
                         this.Close();
